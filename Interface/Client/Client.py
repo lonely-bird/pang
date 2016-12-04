@@ -10,7 +10,7 @@ __Interface__TransitDataSize = 1024
 __Interface__MessagePartitionSymbol = '\r\n'
 __Interface__FeedbackPartitionSymbol = ' '
 __Interface__HOST = '127.0.0.1'
-__Interface__PORT = 12345
+__Interface__PORT = 5
 
 def __Interface__SocketInit():
     try:
@@ -90,10 +90,15 @@ def step(Motion):
         Buffer, Ignore , ShouldBeEmpty = Buffer.partition(__Interface__MessagePartitionSymbol)
         return __Interface__ParseFeedback(Buffer)
 
+def __Interface__FeedBackPrint(FeedBack):
+    print('FeedBacks:'),
+    for i in FeedBack:
+        print ('%d' % (i)),
+    print 
+
 if __Interface__SelfTest:
-    while True:
-        FeedBack = step(0)
-        print('FeedBacks:'),
-        for i in FeedBack:
-            print ('%d' % (i)),
-        print
+    FeedBack = step('R')
+    __Interface__FeedBackPrint(FeedBack)
+    FeedBack = step(0)
+    __Interface__FeedBackPrint(FeedBack)
+    print
