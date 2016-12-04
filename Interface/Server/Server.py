@@ -24,15 +24,15 @@ while True:
         sys.stderr.write("[ERROR] %s\n" % msg[1])
         while True:
             pass
-    if(Confirm == 'END'):
+    if(Confirm == 'END\r\n'):
         break
-    elif(Confirm == '0' or Confirm == '1'):
+    elif(Confirm == '0\r\n' or Confirm == '1\r\n'):
         pass
     else:
         print('Confirm Error!\n')
         while True:
             pass
     
-    csock.send('123 -2321 -3233\0')
+    csock.send('123 -2321 -3233\r\n')
 
 csock.close()

@@ -4,9 +4,10 @@ import time
 
 ### Let the variable 0 to avoid SelfTesting
 __Interface__SelfTest = 0
-####
+###
+
 __Interface__TransitDataSize = 1024
-__Interface__MessagePartitionSymbol = '\0'
+__Interface__MessagePartitionSymbol = '\r\n'
 __Interface__FeedbackPartitionSymbol = ' '
 __Interface__HOST = '127.0.0.1'
 __Interface__PORT = 12345
@@ -37,9 +38,13 @@ def __Interface__ParseFeedback(Buffer):
         FeedBack.append(float(NowProcess))
     return FeedBack
 
+__Interface__Sock = __Interface__SocketInit()
 def Disconnect():
+    global __Interface__Sock
     __Interface__Sock.close()
 def Connect():
+    return 
+    global __Interface__Sock
     __Interface__Sock = __Interface__SocketInit()
 def render(): pass
 
@@ -54,7 +59,7 @@ def reset():
 def step(Motion):
     Buffer = ''
     try:
-        __Interface__Sock.send(str(Motion))
+        __Interface__Sock.send(str(Motion) + __Interface__MessagePartitionSymbol)
     except socket.error as msg:
         sys.stderr.write("[ERROR] %s\n" % msg[1])
         while True:
@@ -77,8 +82,8 @@ def step(Motion):
         if __Interface__MessagePartitionSymbol not in Buffer:
             continue
         
-        if(Buffer[len(Buffer)-1] != __Interface__MessagePartitionSymbol):
-            print('Message Partition Error!: Last char should be %c\n',__Interface__MessagePartitionSymbol)
+        if(Buffer[len(Buffer)-len(__Interface__MessagePartitionSymbol):len(Buffer)] != __Interface__MessagePartitionSymbol):
+            print('Message Partition Error!: Last char should be %s' % (__Interface__MessagePartitionSymbol))
             while True:
                 pass
         
