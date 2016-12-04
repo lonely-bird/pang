@@ -51,7 +51,7 @@ def __Interface__ParseFeedback(Buffer):
 def step(Motion):
     Buffer = ''
     try:
-        __Interface__Sock.send(str(Motion) + __Interface__MessagePartitionSymbol)
+        __Interface__Sock.send((str(Motion) + __Interface__MessagePartitionSymbol).encode())
     except socket.error as msg:
         sys.stderr.write("[ERROR] %s\n" % msg[1])
         while True:
@@ -70,7 +70,7 @@ def step(Motion):
             while True:
                 pass
         
-        Buffer += NewComingdata
+        Buffer += NewComingdata.decode()
         if __Interface__MessagePartitionSymbol not in Buffer:
             continue
         
@@ -94,7 +94,7 @@ def render(): pass
 
 def reset():
     try:
-        __Interface__Sock.send('Restart')
+        __Interface__Sock.send(('R').encode())
     except socket.error as msg:
         sys.stderr.write("[ERROR] %s\n" % msg[1])
         while True:
