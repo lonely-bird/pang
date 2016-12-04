@@ -1,0 +1,11 @@
+C:\Users\Motivation\Desktop\C# Code\Lolipop AI interface\Lolipop AI interface\bin\Debug\Lolipop AI interface.exe.config
+C:\Users\Motivation\Desktop\C# Code\Lolipop AI interface\Lolipop AI interface\bin\Debug\Lolipop AI interface.exe
+C:\Users\Motivation\Desktop\C# Code\Lolipop AI interface\Lolipop AI interface\bin\Debug\Lolipop AI interface.pdb
+C:\Users\Motivation\Desktop\C# Code\Lolipop AI interface\Lolipop AI interface\bin\Debug\Motivation.dll
+C:\Users\Motivation\Desktop\C# Code\Lolipop AI interface\Lolipop AI interface\bin\Debug\Motivation.pdb
+C:\Users\Motivation\Desktop\C# Code\Lolipop AI interface\Lolipop AI interface\bin\Debug\Motivation.xml
+C:\Users\Motivation\Desktop\C# Code\Lolipop AI interface\Lolipop AI interface\obj\Debug\Lolipop_AI_interface.Properties.Resources.resources
+C:\Users\Motivation\Desktop\C# Code\Lolipop AI interface\Lolipop AI interface\obj\Debug\Lolipop AI interface.csproj.GenerateResource.Cache
+C:\Users\Motivation\Desktop\C# Code\Lolipop AI interface\Lolipop AI interface\obj\Debug\Lolipop AI interface.exe
+C:\Users\Motivation\Desktop\C# Code\Lolipop AI interface\Lolipop AI interface\obj\Debug\Lolipop AI interface.pdb
+C:\Users\Motivation\Desktop\C# Code\Lolipop AI interface\Lolipop AI interface\obj\Debug\Lolipop AI interface.csprojResolveAssemblyReference.cache
