@@ -1,0 +1,10 @@
+C:\Users\Motivation\Desktop\C# Code\Lolipop AI interface - client simulate\Lolipop AI interface - client simulate\bin\Release\Lolipop AI interface - client simulate.exe.config
+C:\Users\Motivation\Desktop\C# Code\Lolipop AI interface - client simulate\Lolipop AI interface - client simulate\bin\Release\Lolipop AI interface - client simulate.exe
+C:\Users\Motivation\Desktop\C# Code\Lolipop AI interface - client simulate\Lolipop AI interface - client simulate\bin\Release\Lolipop AI interface - client simulate.pdb
+C:\Users\Motivation\Desktop\C# Code\Lolipop AI interface - client simulate\Lolipop AI interface - client simulate\bin\Release\Motivation.dll
+C:\Users\Motivation\Desktop\C# Code\Lolipop AI interface - client simulate\Lolipop AI interface - client simulate\bin\Release\Motivation.pdb
+C:\Users\Motivation\Desktop\C# Code\Lolipop AI interface - client simulate\Lolipop AI interface - client simulate\bin\Release\Motivation.xml
+C:\Users\Motivation\Desktop\C# Code\Lolipop AI interface - client simulate\Lolipop AI interface - client simulate\obj\Release\Lolipop_AI_interface___client_simulate.Properties.Resources.resources
+C:\Users\Motivation\Desktop\C# Code\Lolipop AI interface - client simulate\Lolipop AI interface - client simulate\obj\Release\Lolipop AI interface - client simulate.csproj.GenerateResource.Cache
+C:\Users\Motivation\Desktop\C# Code\Lolipop AI interface - client simulate\Lolipop AI interface - client simulate\obj\Release\Lolipop AI interface - client simulate.exe
+C:\Users\Motivation\Desktop\C# Code\Lolipop AI interface - client simulate\Lolipop AI interface - client simulate\obj\Release\Lolipop AI interface - client simulate.pdb
