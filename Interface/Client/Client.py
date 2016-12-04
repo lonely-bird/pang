@@ -6,6 +6,7 @@ import time
 __Interface__SelfTest = 0
 ###
 
+__Interface__eps = 0.5
 __Interface__TransitDataSize = 1024
 __Interface__MessagePartitionSymbol = '\r\n'
 __Interface__FeedbackPartitionSymbol = ' '
@@ -36,25 +37,16 @@ def __Interface__ParseFeedback(Buffer):
             break
         NowProcess, Ignore, Buffer = Buffer.partition(__Interface__FeedbackPartitionSymbol)
         FeedBack.append(float(NowProcess))
-    return FeedBack
+    done = FeedBack[0]< __Interface__eps
+    reward = FeedBack[0]
+    _ = done
+    observation = []
+    toappend = [1,2,4,5,6,7]
+    for i in toappend:
+        observation.append(FeedBack[i])
 
-__Interface__Sock = __Interface__SocketInit()
-def Disconnect():
-    global __Interface__Sock
-    __Interface__Sock.close()
-def Connect():
-    return 
-    global __Interface__Sock
-    __Interface__Sock = __Interface__SocketInit()
-def render(): pass
-
-def reset():
-    try:
-        __Interface__Sock.send('Restart')
-    except socket.error as msg:
-        sys.stderr.write("[ERROR] %s\n" % msg[1])
-        while True:
-            pass
+    Return_List = [observation,reward,done,_]
+    return Return_List
 
 def step(Motion):
     Buffer = ''
@@ -90,10 +82,33 @@ def step(Motion):
         Buffer, Ignore , ShouldBeEmpty = Buffer.partition(__Interface__MessagePartitionSymbol)
         return __Interface__ParseFeedback(Buffer)
 
+__Interface__Sock = __Interface__SocketInit()
+def Disconnect():
+    global __Interface__Sock
+    __Interface__Sock.close()
+def Connect():
+    return 
+    global __Interface__Sock
+    __Interface__Sock = __Interface__SocketInit()
+def render(): pass
+
+def reset():
+    try:
+        __Interface__Sock.send('Restart')
+    except socket.error as msg:
+        sys.stderr.write("[ERROR] %s\n" % msg[1])
+        while True:
+            pass
+
+
 def __Interface__FeedBackPrint(FeedBack):
     print('FeedBacks:'),
     for i in FeedBack:
-        print ('%d' % (i)),
+        if (type(i)!=list):
+            print ('%f' %(i))
+        else:
+            for j in i:
+                print ('%f' % (j)),
     print 
 
 if __Interface__SelfTest:
