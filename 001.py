@@ -24,7 +24,7 @@ while random_episodes < 10:
         env.reset()
 ####################################################################################################
 # hyperparameters
-H = 10 # number of hidden layer neurons
+H = 1 # number of hidden layer neurons
 batch_size = 50 # every how many episodes to do a param update?
 learning_rate = 1e-2 # feel free to play with this to train faster or more stably.
 gamma = 0.99 # discount factor for reward
@@ -67,7 +67,7 @@ def discount_rewards(r):
     """ take 1D float array of rewards and compute discounted reward """
     discounted_r = np.zeros_like(r)
     running_add = 0
-    for t in reversed(xrange(0, r.size)):
+    for t in reversed(range(0, r.size)):
         running_add = running_add * gamma + r[t]
         discounted_r[t] = running_add
     return discounted_r
@@ -100,7 +100,7 @@ with tf.Session() as sess:
             rendering = True
             
         # Make sure the observation is in a shape the network can handle.
-        x = np.reshape(observation,[1,D])
+        x = np.reshape(observation,(1,D))
         
         # Run the policy network and get an action to take. 
         tfprob = sess.run(probability,feed_dict={observations: x})
@@ -156,5 +156,3 @@ with tf.Session() as sess:
         
 print (episode_number,'Episodes completed.')
 ####################################################################################################
-while True:
-    pass
