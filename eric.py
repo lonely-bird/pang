@@ -93,12 +93,7 @@ def Connect():
 def render(): pass
 
 def reset():
-    try:
-        __Interface__Sock.send(('R').encode())
-    except socket.error as msg:
-        sys.stderr.write("[ERROR] %s\n" % msg[1])
-        while True:
-            pass
+    return step('R')[0]
 
 
 def __Interface__FeedBackPrint(FeedBack):
