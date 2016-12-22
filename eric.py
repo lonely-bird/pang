@@ -5,7 +5,9 @@ import time
 ### Let the variable 0 to avoid SelfTesting
 __Interface__SelfTest = 0
 ###
-
+__Interface__game_side_time = 0.0
+__Interface__AI_side_time = 0.0
+__Interface__global_time_clock = time.clock()
 __Interface__eps = 0.5
 __Interface__TransitDataSize = 1024
 __Interface__MessagePartitionSymbol = '\r\n'
@@ -49,6 +51,10 @@ def __Interface__ParseFeedback(Buffer):
     return Return_List
 
 def step(Motion):
+    t0 = time.clock()
+    global __Interface__global_time_clock
+    global __Interface__AI_side_time
+    __Interface__AI_side_time += t0 - __Interface__global_time_clock
     Buffer = ''
     try:
         __Interface__Sock.send((str(Motion) + __Interface__MessagePartitionSymbol).encode())
@@ -80,7 +86,15 @@ def step(Motion):
                 pass
         
         Buffer, Ignore , ShouldBeEmpty = Buffer.partition(__Interface__MessagePartitionSymbol)
-        return __Interface__ParseFeedback(Buffer)
+
+        ret = __Interface__ParseFeedback(Buffer)        
+        
+        t1 = time.clock()
+        __Interface__global_time_clock = t1
+        global __Interface__game_side_time
+        __Interface__game_side_time += t1-t0
+
+        return ret
 
 __Interface__Sock = __Interface__SocketInit()
 def Disconnect():
