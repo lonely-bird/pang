@@ -20,6 +20,8 @@ while random_episodes < 10:
     if done:
         random_episodes += 1
         print ("Reward for this episode was:",reward_sum)
+        print('AI time consumes:%f' % (env.__Interface__AI_side_time))
+        print('Game time consumes:%f'% (env.__Interface__game_side_time))
         reward_sum = 0
         env.reset()
 ####################################################################################################
@@ -145,7 +147,8 @@ with tf.Session() as sess:
                 # Give a summary of how well our network is doing for each batch of episodes.
                 running_reward = reward_sum if running_reward is None else running_reward * 0.99 + reward_sum * 0.01
                 print ('Average reward for episode %f.  Total average reward %f.' % (reward_sum/batch_size, running_reward/batch_size))
-                
+                print('AI time consumes:%f' % (env.__Interface__AI_side_time))
+                print('Game time consumes:%f'% (env.__Interface__game_side_time))
                 if reward_sum/batch_size > 7122: 
                     print ("Task solved in",episode_number,'episodes!')
                     break
