@@ -16,9 +16,11 @@ struct Eric
     tuple<vector<int>,int,bool> step(int action)
     {
         //TODO
+        return make_tuple(vector<int>(),int(),bool());
     }
     vector<int> reset()
     {
         //TODO
+        return vector<int>();
     }
 };

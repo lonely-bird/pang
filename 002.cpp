@@ -43,15 +43,15 @@ void work()
         tie(aprob,h) = policy_forward(x);
         int action = uni() < aprob;
 
-        xs.pb(x);
-        hs.pb(h);
-        dlogps.pb(action - aprob);
+        xs.push_back(x);
+        hs.push_back(h);
+        dlogps.push_back(action - aprob);
 
         int reward;bool done;
         tie(observation,reward,done) = env.step(action);
         reward_sum += reward;
 
-        drs.pb(reward);
+        drs.push_back(reward);
 
         if(done)
         {
@@ -76,7 +76,7 @@ void work()
                 for(auto &z:discounted_epr) z/=stdev;
             }
 
-            REP(i,SZ(epdlogp)) epdlogp[i] *= discounted_epr[i];
+            REP(i,epdlogp.size()) epdlogp[i] *= discounted_epr[i];
             Model grad=policy_backward(eph,epdlogp,epx);
             grad_buffer += grad;
 
@@ -103,7 +103,7 @@ void work()
                 {
                     assert(freopen("model.sav","w",stdout));
                     REP(i,H) REP(j,D) printf("%.16f ",model.W1[i][j]);
-                    REP(i,H) printf("%.16f ",&model.W2[i]);
+                    REP(i,H) printf("%.16f ",model.W2[i]);
                     fclose(stdout);
                 }
             }

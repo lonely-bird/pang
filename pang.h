@@ -2,7 +2,7 @@
 const int H = 200;//quantity of hidden neurons
 const int batch_size = 10; // every how many episodes to do a param update?
 const double learning_rate = 1e-4;
-const double gamma = 0.99; // discount factor for reward
+const double dgamma = 0.99; // discount factor for reward
 const double decay_rate = 0.99; // decay factor for RMSProp leaky sum of grad^2
 const bool resume = false; // load previous model?
 const bool render = false;
@@ -58,7 +58,7 @@ struct Model
                 W2[i]=gauss()/sqrt(H);
         }
     }
-    void operator +=(const Model &m) const
+    void operator +=(const Model &m)
     {
         REP(i,H) REP(j,D) W1[i][j]+=m.W1[i][j];
         REP(i,H) W2[i]+=m.W2[i];
@@ -70,7 +70,7 @@ double sigmoid(const double &x){return 1/(1 + exp(-x));}
 vector<int> prepro(const vector<int> &obs)
 {
     assert((int)obs.size()==D);
-    for(int &z:obs) assert(0<=z && z<=1);
+    for(const int &z:obs) assert(0<=z && z<=1);
     return obs;
 }
 
@@ -81,7 +81,7 @@ vector<double> discount_rewards(const vector<int> &r)
     for(int t=(int)r.size()-1;t>=0;t--)
     {
         if(r[t]) add=0;//refer to reward def. : pass a obstacle : 1, normal: 0, dead: -1
-        add = add * gamma + r[t];
+        add = add * dgamma + r[t];
         ret[t] = add;
     }
     return ret;
@@ -96,13 +96,13 @@ pair<double,vector<double> > policy_forward(const vector<int> &obs)
         x=0;
     
     double logp=0;
-    REP(i,D)
+    REP(i,H)
         logp+=model.W2[i]*h[i];
     double p = sigmoid(logp);
     return make_pair(p,h);
 } 
 
-Model policy_backward(const vector<VD> &eph,const vector<double> &epdlogp,const vector<VD> &epx)
+Model policy_backward(const vector<VD> &eph,const vector<double> &epdlogp,const vector<VI> &epx)
 {
     assert(eph.size() == epdlogp.size());
     const int Q=eph.size();
