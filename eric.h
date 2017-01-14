@@ -1,4 +1,3 @@
-#pragma comment(lib, "Ws2_32.lib")
 #include <WinSock2.h>
 struct Socket
 {
@@ -14,8 +13,8 @@ private:
 	{
 		WSAData wsaData;
 		WORD DLLVersion;
-		DLLVersion = MAKEWORD(2, 1);
-		return WSAStartup(DLLVersion, &wsaData);
+		DLLVersion = MAKEWORD(2, 2);
+		return !WSAStartup(DLLVersion, &wsaData);
 	}
 	void InitSocketData()
 	{
@@ -27,10 +26,10 @@ private:
 	}
 	bool Connect()
 	{
-		if (!InitWinsock()) { printf("Initwinsock Error!\n"); exit(EXIT_FAILURE); }
+		if (!InitWinsock()) { printf("Initwinsock Error!\n"); while(1); }
 
 		InitSocketData();
-		return connect(sConnect, (SOCKADDR*)&addr, sizeof(addr));
+		return !connect(sConnect, (SOCKADDR*)&addr, sizeof(addr));
 	}
 	int StringToInteger(const char* const s, const int& len, int& p)
 	{
@@ -42,7 +41,7 @@ private:
 		}
 		return num;
 	}
-	bool ParseFeedBack(const char* const s, const int& len, tuple<vector<int>, int, bool>& result)
+	bool ParseFeedback(const char* const s, const int& len, tuple<vector<int>, int, bool>& result)
 	{
 		vector<int> buffer;
 		for (int p = 0; p<len;p++)
@@ -66,7 +65,7 @@ public:
 		Send[0] = Action + '0';
 		for(int i=0;MessagePartitionSymbol[i];i++)
 			Send[i+1]=MessagePartitionSymbol[i];
-		if (!send(sConnect, Send, (int)strlen(Send), 0)) { printf("Action Sending Error!\n"); exit(EXIT_FAILURE); }
+		if (!send(sConnect, Send, (int)strlen(Send), 0)) { printf("Action Sending Error!\n"); while(1); }
 	}
 
 	tuple<vector<int>, int, bool> ReceiveRewards()
@@ -76,28 +75,29 @@ public:
 		for (;;)
 		{
 			ZeroMemory(Recv, 5);
-			if (!recv(sConnect, Recv, sizeof(Recv), 0)) { printf("Message Receiving Error!\n"); exit(EXIT_FAILURE); }
+			if (!recv(sConnect, Recv, sizeof(Recv), 0)) { printf("Message Receiving Error!\n"); while(1); }
 
 			bool HavePartitionSymbol = 0;
 			for (int i = 0; Recv[i]; i++)
 			{
 				Buffer[BufferLen++] = Recv[i];
-				if (Recv[i] == MessagePartitionSymbol[0] &&
-						Recv[i+1]== MessagePartitionSymbol[1]) HavePartitionSymbol = true;
 			}
+			for(int i=0;i<BufferLen;i++)
+				if (Buffer[i] == MessagePartitionSymbol[0] &&
+						Buffer[i+1]== MessagePartitionSymbol[1]) {HavePartitionSymbol = true; break;}
 			if (HavePartitionSymbol) break;
 		}
 		tuple<vector<int>, int, bool> result;
-		if (!ParseFeedback(Buffer, BufferLen, result)) {printf("FeedBackParsing Error!\n"); exit(EXIT_FAILURE);}
+		if (!ParseFeedback(Buffer, BufferLen, result)) {printf("FeedBackParsing Error!\n"); while(1);}
 		return result;
 	}
 	Socket()
 	{
-		if (!Connect()) { printf("Connection Error!\n"); exit(EXIT_FAILURE); }
+		if (!Connect()) { printf("Connection Error!\n"); while(1); }
 	}
 	~Socket()
 	{
-		if (!closesocket(sConnect)) { printf("Disconnection Error!\n"); exit(EXIT_FAILURE); }
+		if (!closesocket(sConnect)) { printf("Disconnection Error!\n"); while(1); }
 	}
 };
 const char* Socket::Server_Address = "127.0.0.1";

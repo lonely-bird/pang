@@ -1,6 +1,8 @@
+#define _WINSOCK_DEPRECATED_NO_WARNINGS
+#define _CRT_SECURE_NO_WARNINGS
+#pragma comment(lib, "Ws2_32.lib")
 #include "pang.h"
 #include "eric.h"
-
 void init()
 {
     if(resume)
@@ -18,24 +20,24 @@ void init()
     }
 }
 
+Eric env;
 void work()
 {
-    Eric env;
+	printf("HI\n");
     vector<int> observation = env.reset();
     vector<int> prev_x;
     vector<VI> xs;
     vector<VD> hs;
     vector<double> dlogps;
     vector<int> drs;
-    double running_reward = nan("");
+	double running_reward = 1; running_reward /= (running_reward - 1);
     long long reward_sum = 0;
     long long episode_number=0;
-    
     while(1)
     {
         if(render) env.render();
 
-        const auto &cur_x = prepro(observation);
+        auto cur_x = prepro(observation);
         vector<int> x = (prev_x.empty()?vector<int>(D,0):cur_x-prev_x);
         prev_x = cur_x;
 
@@ -94,7 +96,7 @@ void work()
 
                 grad_buffer.reset(0);
 
-                running_reward = isnan(running_reward) ? reward_sum : running_reward * 0.99 + reward_sum * 0.01;
+                running_reward = isinf(running_reward) ? reward_sum : running_reward * 0.99 + reward_sum * 0.01;
                 fprintf(stderr,"Episode %03lld avg. reward = %.3lf, Long-term avg. reward = %.3lf\n",\
                         episode_number/batch_size,reward_sum*1.0/batch_size,running_reward*1.0/batch_size);
                 reward_sum = 0;
@@ -111,7 +113,7 @@ void work()
             observation = env.reset();
             prev_x.clear();
         }
-    }    
+    }
 }
 int main()
 {
