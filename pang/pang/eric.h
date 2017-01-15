@@ -62,7 +62,8 @@ public:
 	void SendAction(const int& Action)
 	{
 		char Send[5];
-		Send[0] = Action + '0';
+		if (Action >= 'A' && Action <= 'Z') Send[0] = Action;
+		else Send[0] = Action + '0';
 		for(int i=0;MessagePartitionSymbol[i];i++)
 			Send[i+1]=MessagePartitionSymbol[i];
 		if (!send(sConnect, Send, (int)strlen(Send), 0)) { printf("Action Sending Error!\n"); while(1); }
@@ -78,7 +79,7 @@ public:
 			if (!recv(sConnect, Recv, sizeof(Recv), 0)) { printf("Message Receiving Error!\n"); while(1); }
 
 			bool HavePartitionSymbol = 0;
-			for (int i = 0; Recv[i]; i++)
+			for (int i = 0; Recv[i] > 0; i++)
 			{
 				Buffer[BufferLen++] = Recv[i];
 			}

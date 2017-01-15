@@ -18,6 +18,13 @@
       <Platform>x64</Platform>
     </ProjectConfiguration>
   </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="002.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="eric.h" />
+    <ClInclude Include="pang.h" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{6740BA30-AD84-4F1F-892D-59A774FAB9BE}</ProjectGuid>
     <RootNamespace>pang</RootNamespace>
@@ -77,10 +84,10 @@
       <AdditionalOptions>/F 2147483647 %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
     <Link>
-      <StackReserveSize>214748</StackReserveSize>
+      <StackReserveSize>20971520</StackReserveSize>
     </Link>
     <Link>
-      <StackCommitSize>214748</StackCommitSize>
+      <StackCommitSize>20971520</StackCommitSize>
     </Link>
     <Link>
       <LargeAddressAware>true</LargeAddressAware>
@@ -119,13 +126,6 @@
       <OptimizeReferences>true</OptimizeReferences>
     </Link>
   </ItemDefinitionGroup>
-  <ItemGroup>
-    <ClCompile Include="..\..\002.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="..\..\eric.h" />
-    <ClInclude Include="..\..\pang.h" />
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

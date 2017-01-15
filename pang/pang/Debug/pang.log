@@ -1,3 +1,4 @@
-﻿  LINK : 最後的累加連結找不到或未建置 D:\SourceControl\ytp_2\pang\Debug\pang.exe，正在執行完整連結
+﻿  002.cpp
+d:\sourcecontrol\ytp_2\pang\pang\eric.h(58): warning C4800: 'int': 強制將 bool 的值定為 'true' 或 'false' (效能警告)
   pang.vcxproj -> D:\SourceControl\ytp_2\pang\Debug\pang.exe
   pang.vcxproj -> D:\SourceControl\ytp_2\pang\Debug\pang.pdb (Partial PDB)
