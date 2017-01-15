@@ -23,6 +23,7 @@ namespace Lolipop_AI_interface
         Bitmap bmp = new Bitmap(750, 750);
         public Form1()
         {
+            //MessageBox.Show(Color.FromArgb(127,127,127).ToString());
             this.Size = new Size(1200, 750);
             this.FormClosing += Form1_FormClosing;
             {
