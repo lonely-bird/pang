@@ -23,7 +23,6 @@ void init()
 Eric env;
 void work()
 {
-	printf("HI\n");
     vector<int> observation = env.reset();
     vector<int> prev_x;
     vector<VI> xs;

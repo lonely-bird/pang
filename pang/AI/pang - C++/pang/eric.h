@@ -3,6 +3,7 @@ struct Socket
 {
 	SOCKADDR_IN addr;
 	SOCKET sConnect;
+	char Buffer[80*80*9],Recv[80*80*3];
 	static const int PORT = 5;
 	static const char* Server_Address;
 	static const int TransitDataSize = 1024;
@@ -55,7 +56,11 @@ private:
 		int reward = buffer[buffer.size() - 1];
 		buffer.pop_back();
 
-		result = std::make_tuple(buffer, reward, (bool)done);
+		vector<int> TMP;
+		for (int i = 0; i < buffer.size(); i += 3)
+			if (buffer[i] == 235 && buffer[i + 1] == 235 && buffer[i + 2] == 235) TMP.push_back(0);
+			else TMP.push_back(1);
+		result = std::make_tuple(TMP, reward, (bool)done);
 		return true;
 	}
 public:
@@ -72,7 +77,6 @@ public:
 	tuple<vector<int>, int, bool> ReceiveRewards()
 	{
 		int BufferLen = 0;
-		char Recv[5], Buffer[100];
 		for (;;)
 		{
 			ZeroMemory(Recv, 5);

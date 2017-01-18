@@ -95,28 +95,70 @@ namespace Lolipop_AI_interface
         int obstacleCount = 1;
         public MyTableLayoutPanel controlPanel;
         MyInputField generalSettings;
+        MyCheckBox imageFeedBack;
+        MyCheckBox showImageFeedBack;
+        Size imageFeedBackSize = new Size(586, 705);
         public Game()
         {
-            controlPanel = new MyTableLayoutPanel(2, 1, "AA", "A");
+            controlPanel = new MyTableLayoutPanel(3, 1, "AAS300", "A");
             {
-                generalSettings = new MyInputField();
-                generalSettings.AddField("Port", SocketHandler.port.ToString()).TextChanged += (o, e) => { try { SocketHandler.port = int.Parse((o as MyTextBox).Text); } catch (Exception) { MessageBox.Show("格式不正確"); } };
-                generalSettings.AddField("darryMode", darryMode.ToString()).TextChanged += (o, e) => { try { darryMode = bool.Parse((o as MyTextBox).Text); } catch (Exception) { MessageBox.Show("格式不正確"); } };
-                generalSettings.AddField("max_upward_speed", max_upward_speed.ToString()).TextChanged += (o, e) => { try { max_upward_speed = double.Parse((o as MyTextBox).Text); } catch (Exception) { MessageBox.Show("格式不正確"); } };
-                generalSettings.AddField("alpha", alpha.ToString()).TextChanged += (o, e) => { try { alpha = double.Parse((o as MyTextBox).Text); } catch (Exception) { MessageBox.Show("格式不正確"); } };
-                generalSettings.AddField("重利", gravity.ToString()).TextChanged += (o, e) => { try { gravity = double.Parse((o as MyTextBox).Text); } catch (Exception) { MessageBox.Show("格式不正確"); } };
-                generalSettings.AddField("升力", liftForce.ToString()).TextChanged += (o, e) => { try { liftForce = double.Parse((o as MyTextBox).Text); } catch (Exception) { MessageBox.Show("格式不正確"); } };
-                generalSettings.AddField("可見障礙物數量", obstacleCount.ToString()).TextChanged += (o, e) => { try { obstacleCount = int.Parse((o as MyTextBox).Text); } catch (Exception) { MessageBox.Show("格式不正確"); } };
-                generalSettings.AddField("存活區的範圍", rangeY.ToString()).TextChanged += (o, e) => { try { rangeY = Interval.Parse((o as MyTextBox).Text); } catch (Exception) { MessageBox.Show("格式不正確"); } };
-                generalSettings.AddField("障礙物距離的範圍", obstacleDistance.ToString()).TextChanged += (o, e) => { try { obstacleDistance = Interval.Parse((o as MyTextBox).Text); } catch (Exception) { MessageBox.Show("格式不正確"); } };
-                generalSettings.AddField("障礙物寬度(通過時間)的範圍", obstacleWidth.ToString()).TextChanged += (o, e) => { try { obstacleWidth = Interval.Parse((o as MyTextBox).Text); } catch (Exception) { MessageBox.Show("格式不正確"); } };
-                generalSettings.AddField("障礙物通道底部高度的範圍", obstacleY.ToString()).TextChanged += (o, e) => { try { obstacleY = Interval.Parse((o as MyTextBox).Text); } catch (Exception) { MessageBox.Show("格式不正確"); } };
-                generalSettings.AddField("障礙物通道寬度的範圍", obstacleHeight.ToString()).TextChanged += (o, e) => { try { obstacleHeight = Interval.Parse((o as MyTextBox).Text); } catch (Exception) { MessageBox.Show("格式不正確"); } };
-                controlPanel.AddControl(generalSettings, 1, 0);
+                {
+                    imageFeedBack = new MyCheckBox("Image Feed Back");
+                    imageFeedBack.Checked = true;
+                    controlPanel.AddControl(imageFeedBack, 0, 0);
+                }
+                {
+                    showImageFeedBack = new MyCheckBox("Show Image Feed Back");
+                    showImageFeedBack.Checked = false;
+                    showImageFeedBack.CheckedChanged += ShowImageFeedBack_CheckedChanged;
+                    controlPanel.AddControl(showImageFeedBack, 0, 0);
+                }
+                {
+                    Panel pnl = new Panel();
+                    {
+                        pnl.Dock = DockStyle.Fill;
+                        pnl.AutoScroll = true;
+                        {
+                            generalSettings = new MyInputField();
+                            generalSettings.Dock = DockStyle.Top;
+                            generalSettings.AddField("Image Feed Back Width", imageFeedBackSize.Width.ToString()).TextChanged += (o, e) => { try { imageFeedBackSize.Width = int.Parse((o as MyTextBox).Text); } catch (Exception) { MessageBox.Show("格式不正確"); } };
+                            generalSettings.AddField("Image Feed Back Height", imageFeedBackSize.Height.ToString()).TextChanged += (o, e) => { try { imageFeedBackSize.Height = int.Parse((o as MyTextBox).Text); } catch (Exception) { MessageBox.Show("格式不正確"); } };
+                            generalSettings.AddField("Port", SocketHandler.port.ToString()).TextChanged += (o, e) => { try { SocketHandler.port = int.Parse((o as MyTextBox).Text); } catch (Exception) { MessageBox.Show("格式不正確"); } };
+                            generalSettings.AddField("darryMode", darryMode.ToString()).TextChanged += (o, e) => { try { darryMode = bool.Parse((o as MyTextBox).Text); } catch (Exception) { MessageBox.Show("格式不正確"); } };
+                            generalSettings.AddField("max_upward_speed", max_upward_speed.ToString()).TextChanged += (o, e) => { try { max_upward_speed = double.Parse((o as MyTextBox).Text); } catch (Exception) { MessageBox.Show("格式不正確"); } };
+                            generalSettings.AddField("alpha", alpha.ToString()).TextChanged += (o, e) => { try { alpha = double.Parse((o as MyTextBox).Text); } catch (Exception) { MessageBox.Show("格式不正確"); } };
+                            generalSettings.AddField("重利", gravity.ToString()).TextChanged += (o, e) => { try { gravity = double.Parse((o as MyTextBox).Text); } catch (Exception) { MessageBox.Show("格式不正確"); } };
+                            generalSettings.AddField("升力", liftForce.ToString()).TextChanged += (o, e) => { try { liftForce = double.Parse((o as MyTextBox).Text); } catch (Exception) { MessageBox.Show("格式不正確"); } };
+                            generalSettings.AddField("可見障礙物數量", obstacleCount.ToString()).TextChanged += (o, e) => { try { obstacleCount = int.Parse((o as MyTextBox).Text); } catch (Exception) { MessageBox.Show("格式不正確"); } };
+                            generalSettings.AddField("存活區的範圍", rangeY.ToString()).TextChanged += (o, e) => { try { rangeY = Interval.Parse((o as MyTextBox).Text); } catch (Exception) { MessageBox.Show("格式不正確"); } };
+                            generalSettings.AddField("障礙物距離的範圍", obstacleDistance.ToString()).TextChanged += (o, e) => { try { obstacleDistance = Interval.Parse((o as MyTextBox).Text); } catch (Exception) { MessageBox.Show("格式不正確"); } };
+                            generalSettings.AddField("障礙物寬度(通過時間)的範圍", obstacleWidth.ToString()).TextChanged += (o, e) => { try { obstacleWidth = Interval.Parse((o as MyTextBox).Text); } catch (Exception) { MessageBox.Show("格式不正確"); } };
+                            generalSettings.AddField("障礙物通道底部高度的範圍", obstacleY.ToString()).TextChanged += (o, e) => { try { obstacleY = Interval.Parse((o as MyTextBox).Text); } catch (Exception) { MessageBox.Show("格式不正確"); } };
+                            generalSettings.AddField("障礙物通道寬度的範圍", obstacleHeight.ToString()).TextChanged += (o, e) => { try { obstacleHeight = Interval.Parse((o as MyTextBox).Text); } catch (Exception) { MessageBox.Show("格式不正確"); } };
+                            pnl.Controls.Add(generalSettings);
+                        }
+                    }
+                    controlPanel.AddControl(pnl, 2, 0);
+                }
             }
             Reset();
             Update(true);
         }
+        private void ShowImageFeedBack_CheckedChanged(object sender, EventArgs e)
+        {
+            if ((sender as MyCheckBox).Checked)
+            {
+                Form f = new Form();
+                f.Show();
+                f.BackgroundImageLayout = ImageLayout.None;
+                ImageFeedBackProduced += (Bitmap bmp) =>
+                 {
+                     f.Invoke(new Action(() => { f.Width = bmp.Width + 20;f.Height = bmp.Height + 50; f.BackgroundImage = bmp; }));
+                 };
+            }
+            else ImageFeedBackProduced = null;
+        }
+
         private static Random random = new Random();
         class Interval
         {
@@ -184,28 +226,61 @@ namespace Lolipop_AI_interface
             if (location < rangeY.minimum || rangeY.maximum < location) gameState = 0;
             if (obstacles.First().distance == 0 && (location < obstacles.First().lower_y || obstacles.First().upper_y < location)) gameState = 0;
         }
+        delegate void ImageFeedBackProducedEventHandler(Bitmap bmp);
+        event ImageFeedBackProducedEventHandler ImageFeedBackProduced;
         public string getFeedBack()
         {
-            StringBuilder answer = new StringBuilder();
-            answer.Append(gameState);
-            answer.Append(' ');
-            answer.Append(location);
-            answer.Append(' ');
-            answer.Append(velocity);
-            answer.Append(' ');
-            answer.Append(obstacleCount);
-            for (int i = 0; i < obstacleCount; i++)
+            if (imageFeedBack.Checked)
             {
-                answer.Append(' ');
-                answer.Append(obstacles.ElementAt(i).distance);
-                answer.Append(' ');
-                answer.Append(obstacles.ElementAt(i).width);
-                answer.Append(' ');
-                answer.Append(obstacles.ElementAt(i).lower_y);
-                answer.Append(' ');
-                answer.Append(obstacles.ElementAt(i).upper_y);
+                Bitmap bmp = new Bitmap(imageFeedBackSize.Width,imageFeedBackSize.Height);
+                drawImage(bmp);
+                BitmapData bd = bmp.LockBits(new Rectangle(0, 0, bmp.Width, bmp.Height), ImageLockMode.ReadOnly, PixelFormat.Format32bppArgb);
+                StringBuilder answer = new StringBuilder();
+                unsafe
+                {
+                    byte* p = (byte*)bd.Scan0.ToPointer();
+                    for (int i = 0; i < bmp.Height; i++)
+                    {
+                        for (int j = 0; j < bmp.Width; j++)
+                        {
+                            answer.Append(p[j * 4 + 2]);
+                            answer.Append(' ');
+                            answer.Append(p[j * 4 + 1]);
+                            answer.Append(' ');
+                            answer.Append(p[j * 4 + 0]);
+                            answer.Append(' ');
+                        }
+                        p += bd.Stride;
+                    }
+                }
+                bmp.UnlockBits(bd);
+                ImageFeedBackProduced?.Invoke(bmp);
+                answer.Remove(answer.Length - 1, 1);
+                return answer.ToString();
             }
-            return answer.ToString();
+            else
+            {
+                StringBuilder answer = new StringBuilder();
+                answer.Append(gameState);
+                answer.Append(' ');
+                answer.Append(location);
+                answer.Append(' ');
+                answer.Append(velocity);
+                answer.Append(' ');
+                answer.Append(obstacleCount);
+                for (int i = 0; i < obstacleCount; i++)
+                {
+                    answer.Append(' ');
+                    answer.Append(obstacles.ElementAt(i).distance);
+                    answer.Append(' ');
+                    answer.Append(obstacles.ElementAt(i).width);
+                    answer.Append(' ');
+                    answer.Append(obstacles.ElementAt(i).lower_y);
+                    answer.Append(' ');
+                    answer.Append(obstacles.ElementAt(i).upper_y);
+                }
+                return answer.ToString();
+            }
         }
     }
 }
