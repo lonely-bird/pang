@@ -160,6 +160,11 @@ namespace Lolipop_AI_interface
         }
 
         private static Random random = new Random();
+        int newReward;
+        int newDone
+        {
+            get { return gameState; }
+        }
         class Interval
         {
             public int minimum, maximum;
@@ -191,6 +196,7 @@ namespace Lolipop_AI_interface
         public void Reset()
         {
             gameState = 1;
+            newReward = 0;
             location = (double)(rangeY.minimum + rangeY.maximum) / 2.0;
             velocity = 0.0;
             obstacles.Clear();
@@ -199,7 +205,7 @@ namespace Lolipop_AI_interface
         public void Update(bool keyState)
         {
             if (gameState == 0) return;
-
+            newReward = 0;
 
             if (darryMode)
             {
@@ -217,14 +223,21 @@ namespace Lolipop_AI_interface
             }
             location += velocity;
 
-            if (obstacleCount > 0 && obstacles.First().width == 0) obstacles.Dequeue();
+            if (obstacleCount > 0 && obstacles.First().width == 0)
+            {
+                obstacles.Dequeue();
+                newReward++;
+            }
             while (obstacles.Count < obstacleCount) obstacles.Enqueue(new GameObstacle(this));
             Debug.Assert(obstacles.Count > 0);
             if (obstacles.First().distance == 0) obstacles.First().width--;
             else obstacles.First().distance--;
 
-            if (location < rangeY.minimum || rangeY.maximum < location) gameState = 0;
-            if (obstacles.First().distance == 0 && (location < obstacles.First().lower_y || obstacles.First().upper_y < location)) gameState = 0;
+            if ((location < rangeY.minimum || rangeY.maximum < location) || (obstacles.First().distance == 0 && (location < obstacles.First().lower_y || obstacles.First().upper_y < location)))
+            {
+                gameState = 0;
+                newReward = -1;
+            }
         }
         delegate void ImageFeedBackProducedEventHandler(Bitmap bmp);
         event ImageFeedBackProducedEventHandler ImageFeedBackProduced;
@@ -256,6 +269,10 @@ namespace Lolipop_AI_interface
                 bmp.UnlockBits(bd);
                 ImageFeedBackProduced?.Invoke(bmp);
                 answer.Remove(answer.Length - 1, 1);
+                answer.Append(' ');
+                answer.Append(newReward);
+                answer.Append(' ');
+                answer.Append(newDone);
                 return answer.ToString();
             }
             else
