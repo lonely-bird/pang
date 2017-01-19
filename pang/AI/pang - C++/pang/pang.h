@@ -6,7 +6,7 @@ const double dgamma = 0.99; // discount factor for reward
 const double decay_rate = 0.99; // decay factor for RMSProp leaky sum of grad^2
 const bool resume = false; // load previous model?
 const bool render = false;
-const int D = 80 * 80; //input dimen.
+const int D = 20 * 20; //input dimen.
 /*************************************Global Variables***************************************/
 #include <cmath>
 #include <random>

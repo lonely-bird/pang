@@ -37,3 +37,11 @@ D:\Users\Motivation\OneDrive\Synced Documents\C# Code\Lolipop AI interface 2\Lol
 D:\Users\Motivation\OneDrive\Synced Documents\C# Code\Lolipop AI interface 2\Lolipop AI interface\obj\Release\Lolipop_AI_interface.Properties.Resources.resources
 D:\Users\Motivation\OneDrive\Synced Documents\C# Code\Lolipop AI interface 2\Lolipop AI interface\obj\Release\Lolipop AI interface.csproj.GenerateResource.Cache
 D:\Users\Motivation\OneDrive\Synced Documents\C# Code\Lolipop AI interface 2\Lolipop AI interface\obj\Release\Lolipop AI interface.csprojResolveAssemblyReference.cache
+D:\Users\fsps6\OneDrive\Synced Documents\C# Code\Lolipop AI interface 2\Lolipop AI interface\bin\Release\Lolipop AI interface.exe.config
+D:\Users\fsps6\OneDrive\Synced Documents\C# Code\Lolipop AI interface 2\Lolipop AI interface\obj\Release\Lolipop AI interface.exe
+D:\Users\fsps6\OneDrive\Synced Documents\C# Code\Lolipop AI interface 2\Lolipop AI interface\obj\Release\Lolipop AI interface.pdb
+D:\Users\fsps6\OneDrive\Synced Documents\C# Code\Lolipop AI interface 2\Lolipop AI interface\bin\Release\Lolipop AI interface.exe
+D:\Users\fsps6\OneDrive\Synced Documents\C# Code\Lolipop AI interface 2\Lolipop AI interface\bin\Release\Lolipop AI interface.pdb
+D:\Users\fsps6\OneDrive\Synced Documents\C# Code\Lolipop AI interface 2\Lolipop AI interface\obj\Release\Lolipop AI interface.csprojResolveAssemblyReference.cache
+D:\Users\fsps6\OneDrive\Synced Documents\C# Code\Lolipop AI interface 2\Lolipop AI interface\obj\Release\Lolipop_AI_interface.Properties.Resources.resources
+D:\Users\fsps6\OneDrive\Synced Documents\C# Code\Lolipop AI interface 2\Lolipop AI interface\obj\Release\Lolipop AI interface.csproj.GenerateResource.Cache

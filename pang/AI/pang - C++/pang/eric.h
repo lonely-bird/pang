@@ -3,7 +3,8 @@ struct Socket
 {
 	SOCKADDR_IN addr;
 	SOCKET sConnect;
-	char Buffer[80*80*9],Recv[80*80*3];
+	static const int D = 20 * 20;
+	char Buffer[D*80],Recv[D*40];
 	static const int PORT = 5;
 	static const char* Server_Address;
 	static const int TransitDataSize = 1024;
@@ -50,7 +51,7 @@ private:
 			int num = StringToInteger(s, len, p);
 			buffer.push_back(num);
 		}
-
+		assert((int)buffer.size() == 1202);
 		int done = buffer[buffer.size() - 1];
 		buffer.pop_back();
 		int reward = buffer[buffer.size() - 1];
@@ -79,17 +80,19 @@ public:
 		int BufferLen = 0;
 		for (;;)
 		{
-			ZeroMemory(Recv, 5);
+			ZeroMemory(Recv, D*5);
 			if (!recv(sConnect, Recv, sizeof(Recv), 0)) { printf("Message Receiving Error!\n"); while(1); }
-
+			// wait a long time here?
 			bool HavePartitionSymbol = 0;
-			for (int i = 0; Recv[i] > 0; i++)
-			{
-				Buffer[BufferLen++] = Recv[i];
-			}
-			for(int i=0;i<BufferLen;i++)
+			for (int i = 0; Recv[i] > 0; i++) Buffer[BufferLen++] = Recv[i];
+			for (int i = 0; i < BufferLen; i++)
 				if (Buffer[i] == MessagePartitionSymbol[0] &&
-						Buffer[i+1]== MessagePartitionSymbol[1]) {HavePartitionSymbol = true; break;}
+						Buffer[i+1]== MessagePartitionSymbol[1])
+				{
+					HavePartitionSymbol = true;
+					assert(i + 1 == BufferLen - 1);
+					break;
+				}
 			if (HavePartitionSymbol) break;
 		}
 		tuple<vector<int>, int, bool> result;
