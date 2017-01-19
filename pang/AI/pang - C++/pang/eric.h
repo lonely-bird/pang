@@ -3,7 +3,6 @@ struct Socket
 {
 	SOCKADDR_IN addr;
 	SOCKET sConnect;
-	static const int D = 20 * 20;
 	char Buffer[D*80],Recv[D*40];
 	static const int PORT = 5;
 	static const char* Server_Address;
