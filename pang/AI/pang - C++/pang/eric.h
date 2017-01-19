@@ -3,7 +3,6 @@ struct Socket
 {
 	SOCKADDR_IN addr;
 	SOCKET sConnect;
-	static const int D = 20 * 20;
 	char Buffer[D*80],Recv[D*40];
 	static const int PORT = 5;
 	static const char* Server_Address;
@@ -28,7 +27,7 @@ private:
 	}
 	bool Connect()
 	{
-		if (!InitWinsock()) { printf("Initwinsock Error!\n"); while(1); }
+		if (!InitWinsock()) { printf("Initwinsock Error!\n"); assert(0); }
 
 		InitSocketData();
 		return !connect(sConnect, (SOCKADDR*)&addr, sizeof(addr));
@@ -70,9 +69,10 @@ public:
 		char Send[5];
 		if (Action >= 'A' && Action <= 'Z') Send[0] = Action;
 		else Send[0] = Action + '0';
-		for(int i=0;MessagePartitionSymbol[i];i++)
+		for (int i = 0; MessagePartitionSymbol[i]; i++)
 			Send[i+1]=MessagePartitionSymbol[i];
-		if (!send(sConnect, Send, (int)strlen(Send), 0)) { printf("Action Sending Error!\n"); while(1); }
+		Send[3] = '\0';
+		if (!send(sConnect, Send, (int)strlen(Send), 0)) { printf("Action Sending Error!\n"); assert (0); }
 	}
 
 	tuple<vector<int>, int, bool> ReceiveRewards()
@@ -81,7 +81,7 @@ public:
 		for (;;)
 		{
 			ZeroMemory(Recv, D*5);
-			if (!recv(sConnect, Recv, sizeof(Recv), 0)) { printf("Message Receiving Error!\n"); while(1); }
+			if (!recv(sConnect, Recv, sizeof(Recv), 0)) { printf("Message Receiving Error!\n"); assert(0); }
 			// wait a long time here?
 			bool HavePartitionSymbol = 0;
 			for (int i = 0; Recv[i] > 0; i++) Buffer[BufferLen++] = Recv[i];
@@ -96,16 +96,16 @@ public:
 			if (HavePartitionSymbol) break;
 		}
 		tuple<vector<int>, int, bool> result;
-		if (!ParseFeedback(Buffer, BufferLen, result)) {printf("FeedBackParsing Error!\n"); while(1);}
+		if (!ParseFeedback(Buffer, BufferLen, result)) {printf("FeedBackParsing Error!\n"); assert(0);}
 		return result;
 	}
 	Socket()
 	{
-		if (!Connect()) { printf("Connection Error!\n"); while(1); }
+		if (!Connect()) { printf("Connection Error!\n"); assert(0); }
 	}
 	~Socket()
 	{
-		if (!closesocket(sConnect)) { printf("Disconnection Error!\n"); while(1); }
+		if (!closesocket(sConnect)) { printf("Disconnection Error!\n"); assert(0); }
 	}
 };
 const char* Socket::Server_Address = "127.0.0.1";
