@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>QWOP</title>
+	</head>
+	<body>
+		<div id="stage" style="backgroundColor:rgb(128,128,128); width:100px; height:100px"></div>
+
+<script> 
+function showSWF(urlString, elementID){ 
+    var displayContainer = document.getElementById(elementID); 
+    var flash = createSWFObject(urlString, 'opaque', 650, 650); 
+    displayContainer.appendChild(flash);
+} 
+function createSWFObject(urlString, wmodeString, width, height){ 
+    var SWFObject = document.createElement("object"); 
+    SWFObject.setAttribute("type","application/x-shockwave-flash"); 
+    SWFObject.setAttribute("width","100%"); 
+    SWFObject.setAttribute("height","100%"); 
+    var movieParam = document.createElement("param"); 
+    movieParam.setAttribute("name","movie"); 
+    movieParam.setAttribute("value",urlString); 
+    SWFObject.appendChild(movieParam); 
+    var wmodeParam = document.createElement("param"); 
+    wmodeParam.setAttribute("name","wmode"); 
+    wmodeParam.setAttribute("value",wmodeString); 
+    SWFObject.appendChild(wmodeParam);      
+    return SWFObject; 
+}
+console.log("a");
+showSWF("QWOP.swf","stage");
+console.log("b");
+</script>
+
+	</body>
+</html>
