@@ -1,0 +1,10 @@
+D:\Users\fsps6\OneDrive\Synced Documents\C# Code\QWOP AI\QWOP AI interface 3\QWOP AI interface 2\bin\Debug\QWOP AI interface 2.exe.config
+D:\Users\fsps6\OneDrive\Synced Documents\C# Code\QWOP AI\QWOP AI interface 3\QWOP AI interface 2\bin\Debug\QWOP AI interface 2.exe
+D:\Users\fsps6\OneDrive\Synced Documents\C# Code\QWOP AI\QWOP AI interface 3\QWOP AI interface 2\bin\Debug\QWOP AI interface 2.pdb
+D:\Users\fsps6\OneDrive\Synced Documents\C# Code\QWOP AI\QWOP AI interface 3\QWOP AI interface 2\bin\Debug\Motivation.pdb
+D:\Users\fsps6\OneDrive\Synced Documents\C# Code\QWOP AI\QWOP AI interface 3\QWOP AI interface 2\bin\Debug\Motivation.xml
+D:\Users\fsps6\OneDrive\Synced Documents\C# Code\QWOP AI\QWOP AI interface 3\QWOP AI interface 2\obj\Debug\QWOP AI interface 3.csprojResolveAssemblyReference.cache
+D:\Users\fsps6\OneDrive\Synced Documents\C# Code\QWOP AI\QWOP AI interface 3\QWOP AI interface 2\obj\Debug\QWOP_AI_interface_2.Properties.Resources.resources
+D:\Users\fsps6\OneDrive\Synced Documents\C# Code\QWOP AI\QWOP AI interface 3\QWOP AI interface 2\obj\Debug\QWOP AI interface 3.csproj.GenerateResource.Cache
+D:\Users\fsps6\OneDrive\Synced Documents\C# Code\QWOP AI\QWOP AI interface 3\QWOP AI interface 2\obj\Debug\QWOP AI interface 2.exe
+D:\Users\fsps6\OneDrive\Synced Documents\C# Code\QWOP AI\QWOP AI interface 3\QWOP AI interface 2\obj\Debug\QWOP AI interface 2.pdb
