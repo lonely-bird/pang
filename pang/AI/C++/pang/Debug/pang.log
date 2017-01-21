@@ -1,0 +1,5 @@
+﻿  Main.cpp
+d:\sourcecontrol\ytp_2\pang\ai\pang - c++\pang\source code\socket.h(60): warning C4018: '<': signed/unsigned 不相符
+d:\sourcecontrol\ytp_2\pang\ai\pang - c++\pang\source code\socket.h(63): warning C4800: 'int': 強制將 bool 的值定為 'true' 或 'false' (效能警告)
+  pang.vcxproj -> D:\SourceControl\ytp_2\pang\AI\pang - C++\Debug\pang.exe
+  pang.vcxproj -> D:\SourceControl\ytp_2\pang\AI\pang - C++\Debug\pang.pdb (Partial PDB)
