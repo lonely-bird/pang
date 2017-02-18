@@ -1,0 +1,5 @@
+﻿  002.cpp
+d:\users\motivation\onedrive\sync\pang-master\pang\ai\pang - c++\pang\eric.h(67): warning C4018: '<': signed/unsigned mismatch
+d:\users\motivation\onedrive\sync\pang-master\pang\ai\pang - c++\pang\eric.h(73): warning C4800: 'int': forcing value to bool 'true' or 'false' (performance warning)
+  pang.vcxproj -> D:\Users\Motivation\OneDrive\Sync\pang-master\pang\AI\pang - C++\Debug\pang.exe
+  pang.vcxproj -> D:\Users\Motivation\OneDrive\Sync\pang-master\pang\AI\pang - C++\Debug\pang.pdb (Partial PDB)
