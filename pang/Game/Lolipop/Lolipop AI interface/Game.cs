@@ -45,21 +45,21 @@ namespace Lolipop_AI_interface
                 {
                     g.Clear(backgroundColor);
                     {
-                        var r = rectangleOf(locationOf(new PointF(0, (float)location)), 10);
-                        g.DrawEllipse(new Pen(podColor,3), r.X, r.Y, r.Width, r.Height);
+                        var r = rectangleOf(locationOf(new PointF(0, (float)location)), 1);
+                        g.DrawEllipse(new Pen(podColor,1), r.X, r.Y, r.Width, r.Height);
                     }
-                    g.DrawLine(new Pen(boundColor,3), locationOf(new PointF(scope.X, rangeY.maximum)), locationOf(new PointF(scope.X + scope.Width, rangeY.maximum)));
-                    g.DrawLine(new Pen(boundColor,3), locationOf(new PointF(scope.X, rangeY.minimum)), locationOf(new PointF(scope.X + scope.Width, rangeY.minimum)));
+                    g.DrawLine(new Pen(boundColor,1), locationOf(new PointF(scope.X, rangeY.maximum)), locationOf(new PointF(scope.X + scope.Width, rangeY.maximum)));
+                    g.DrawLine(new Pen(boundColor,1), locationOf(new PointF(scope.X, rangeY.minimum)), locationOf(new PointF(scope.X + scope.Width, rangeY.minimum)));
                     int x = 0;
                     foreach (var o in obstacles)
                     {
                         {
                             var r = getRectangle(locationOf(new PointF(x + o.distance, rangeY.minimum)), locationOf(new PointF(x + o.distance + o.width, o.lower_y)));
-                            g.DrawRectangle(new Pen(obstacleColor,3), r.X, r.Y, r.Width, r.Height);
+                            g.DrawRectangle(new Pen(obstacleColor,1), r.X, r.Y, r.Width, r.Height);
                         }
                         {
                             var r = getRectangle(locationOf(new PointF(x + o.distance, o.upper_y)), locationOf(new PointF(x + o.distance + o.width, rangeY.maximum)));
-                            g.DrawRectangle(new Pen(obstacleColor,3), r.X, r.Y, r.Width, r.Height);
+                            g.DrawRectangle(new Pen(obstacleColor,1), r.X, r.Y, r.Width, r.Height);
                         }
                         x += o.distance + o.width;
                     }
