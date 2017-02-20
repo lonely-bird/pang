@@ -34,6 +34,7 @@ void work()
     long long episode_number=0;
     while(1)
     {
+		//puts("a");
         if(render) env.render();
 
         auto cur_x = prepro(observation);
@@ -53,9 +54,10 @@ void work()
         reward_sum += reward;
 
         drs.push_back(reward);
-
-        if(done)
+		//puts("b");
+        if(!done)
         {
+			puts("!done");
             episode_number++;
 
             vector<VI> epx;epx.swap(xs);
@@ -63,6 +65,7 @@ void work()
             vector<double> epdlogp;epdlogp.swap(dlogps);
             vector<int> epr;epr.swap(drs);
 
+			puts("a");
             vector<double> discounted_epr = discount_rewards(epr);
             {
                 double mean=0;
@@ -77,10 +80,15 @@ void work()
                 for(auto &z:discounted_epr) z/=stdev;
             }
 
+			puts("b");
             REP(i,epdlogp.size()) epdlogp[i] *= discounted_epr[i];
+			puts("b1");
+			printf("%u %u %u\n", eph.size(), epdlogp.size(), epx.size());
             Model grad=policy_backward(eph,epdlogp,epx);
+			puts("b2");
             grad_buffer += grad;
 
+			puts("c");
             if(episode_number % batch_size == 0)
             {
                 REP(i,H) REP(j,D)
@@ -109,6 +117,7 @@ void work()
                 }
             }
 
+			puts("d");
             observation = env.reset();
             prev_x.clear();
         }

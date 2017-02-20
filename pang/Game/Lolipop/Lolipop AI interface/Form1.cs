@@ -119,7 +119,8 @@ namespace Lolipop_AI_interface
         }
         private void SocketHandler_logAppended(string log)
         {
-            Do(() => { TXB.AppendText(log + "\r\n"); });
+            if(TXB.InvokeRequired) TXB.Invoke(new Action(() => { TXB.AppendText(log + "\r\n"); }));
+            else TXB.AppendText(log + "\r\n");
         }
 
         MyTextBox TXB;
