@@ -23,6 +23,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="eric.h" />
+    <ClInclude Include="game.h" />
     <ClInclude Include="pang.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">

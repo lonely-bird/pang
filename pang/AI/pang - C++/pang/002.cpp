@@ -1,10 +1,10 @@
-#define _WINSOCK_DEPRECATED_NO_WARNINGS
-#define _CRT_SECURE_NO_WARNINGS
-#pragma comment(lib, "Ws2_32.lib")
 #include "pang.h"
 #include "eric.h"
 void init()
 {
+	int resume;
+	printf("Load previous model.sav? [0/1]\n");
+	scanf("%d", &resume);
     if(resume)
     {
         assert(freopen("model.sav","r",stdin));
@@ -32,18 +32,26 @@ void work()
 	double running_reward = 1; running_reward /= (running_reward - 1);
     long long reward_sum = 0;
     long long episode_number=0;
+
+	auto con = [&](vector<int> a, vector<int> b)
+	{
+		a.insert(a.end(), b.begin(), b.end());
+		return a;
+	};
     while(1)
     {
 		//puts("a");
         if(render) env.render();
 
         auto cur_x = prepro(observation);
-        vector<int> x = (prev_x.empty()?vector<int>(D,0):cur_x-prev_x);
+		vector<int> x = (prev_x.empty() ? con(cur_x, cur_x) : con(cur_x, prev_x));
         prev_x = cur_x;
 
         double aprob;VD h;
         tie(aprob,h) = policy_forward(x);
         int action = uni() < aprob;
+		static int acnt = 0;
+		if (++acnt % 100 == 0) printf("aprob = %.3f\n", aprob);
 
         xs.push_back(x);
         hs.push_back(h);
@@ -59,13 +67,14 @@ void work()
         {
 			puts("!done");
             episode_number++;
+			printf("EPIS NUM = %d\n", episode_number);
 
             vector<VI> epx;epx.swap(xs);
             vector<VD> eph;eph.swap(hs);
             vector<double> epdlogp;epdlogp.swap(dlogps);
             vector<int> epr;epr.swap(drs);
 
-			puts("a");
+			//puts("a");
             vector<double> discounted_epr = discount_rewards(epr);
             {
                 double mean=0;
@@ -80,15 +89,15 @@ void work()
                 for(auto &z:discounted_epr) z/=stdev;
             }
 
-			puts("b");
+			//puts("b");
             REP(i,epdlogp.size()) epdlogp[i] *= discounted_epr[i];
-			puts("b1");
-			printf("%u %u %u\n", eph.size(), epdlogp.size(), epx.size());
+			//puts("b1");
+			//printf("%u %u %u\n", eph.size(), epdlogp.size(), epx.size());
             Model grad=policy_backward(eph,epdlogp,epx);
-			puts("b2");
+			//puts("b2");
             grad_buffer += grad;
 
-			puts("c");
+			//puts("c");
             if(episode_number % batch_size == 0)
             {
                 REP(i,H) REP(j,D)
@@ -108,16 +117,17 @@ void work()
                         episode_number/batch_size,reward_sum*1.0/batch_size,running_reward*1.0/batch_size);
                 reward_sum = 0;
 
-                if(episode_number % (10 * batch_size) == 0)
+                if(episode_number % batch_size == 0)
                 {
-                    assert(freopen("model.sav","w",stdout));
-                    REP(i,H) REP(j,D) printf("%.16f ",model.W1[i][j]);
-                    REP(i,H) printf("%.16f ",model.W2[i]);
-                    fclose(stdout);
+					FILE* pFile = fopen("model.sav", "w");
+					assert(pFile);
+                    REP(i,H) REP(j,D) fprintf(pFile,"%.16f ",model.W1[i][j]);
+                    REP(i,H) fprintf(pFile,"%.16f ",model.W2[i]);
+                    fclose(pFile);
                 }
             }
 
-			puts("d");
+			//puts("d");
             observation = env.reset();
             prev_x.clear();
         }

@@ -44,10 +44,6 @@ namespace Lolipop_AI_interface
                 using (Graphics g = Graphics.FromImage(bmp))
                 {
                     g.Clear(backgroundColor);
-                    {
-                        var r = rectangleOf(locationOf(new PointF(0, (float)location)), 1);
-                        g.DrawEllipse(new Pen(podColor,1), r.X, r.Y, r.Width, r.Height);
-                    }
                     g.DrawLine(new Pen(boundColor,1), locationOf(new PointF(scope.X, rangeY.maximum)), locationOf(new PointF(scope.X + scope.Width, rangeY.maximum)));
                     g.DrawLine(new Pen(boundColor,1), locationOf(new PointF(scope.X, rangeY.minimum)), locationOf(new PointF(scope.X + scope.Width, rangeY.minimum)));
                     int x = 0;
@@ -62,6 +58,10 @@ namespace Lolipop_AI_interface
                             g.DrawRectangle(new Pen(obstacleColor,1), r.X, r.Y, r.Width, r.Height);
                         }
                         x += o.distance + o.width;
+                    }
+                    {
+                        var r = rectangleOf(locationOf(new PointF(0, (float)location)), 1);
+                        g.DrawRectangle(new Pen(podColor, 1), r.X, r.Y, r.Width, r.Height);
                     }
                     //g.DrawLine(new Pen(Color.FromArgb(0, 0, 0)), new Point(), new Point(bmp.Width, bmp.Height));
                     if (gameState == 0) g.DrawString("Game Over", new Font("Consolas", 40, FontStyle.Bold), new SolidBrush(Color.FromArgb(0, 0, 255)), new PointF(0.2f * bmp.Width, 0.2f * bmp.Height));
@@ -86,7 +86,7 @@ namespace Lolipop_AI_interface
             }
         }
         Interval rangeY = new Interval(0, 1000);
-        Interval obstacleDistance = new Interval(1000, 2000);
+        Interval obstacleDistance = new Interval(150, 250);
         Interval obstacleWidth = new Interval(100, 200);
         Interval obstacleY = new Interval(0, 500);
         Interval obstacleHeight = new Interval(250, 500);
@@ -97,7 +97,7 @@ namespace Lolipop_AI_interface
         MyInputField generalSettings;
         MyCheckBox imageFeedBack;
         MyCheckBox showImageFeedBack;
-        Size imageFeedBackSize = new Size(586, 705);
+        Size imageFeedBackSize = new Size(10,40); //new Size(586, 705);
         public Game()
         {
             controlPanel = new MyTableLayoutPanel(3, 1, "AAS300", "A");
@@ -149,6 +149,7 @@ namespace Lolipop_AI_interface
             if ((sender as MyCheckBox).Checked)
             {
                 Form f = new Form();
+                f.ControlBox = false;
                 f.Show();
                 f.BackgroundImageLayout = ImageLayout.None;
                 ImageFeedBackProduced += (Bitmap bmp) =>
