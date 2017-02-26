@@ -1,4 +1,3 @@
-#include <WinSock2.h>
 #include<cassert>
 #include<cstdio>
 struct Socket
@@ -57,7 +56,8 @@ private:
 		}
 		/*for (int i = 1200-20; i < buffer.size(); i++)printf("%d ", buffer[i]);
 		printf("buffer.size=%d\n", (int)buffer.size());*/
-		assert((int)buffer.size() == 1202);
+		//printf("%d\n", (int)buffer.size());
+		assert((int)buffer.size() == INP * 3 + 2);
 		int done = buffer.back();
 		buffer.pop_back();
 		int reward = buffer.back();
@@ -66,10 +66,13 @@ private:
 		vector<int> TMP;
 		for (int i = 0; i < buffer.size(); i += 3)
 		{
-			if (buffer[i] == 255 && buffer[i + 1] == 255 && buffer[i + 2] == 255) TMP.push_back(0);
-			else TMP.push_back(1);
+			TMP.push_back(buffer[i] < 255);
+			TMP.push_back(buffer[i + 1] < 255);
 		}
 		//printf("TMP.size=%d\n", (int)TMP.size());
+
+		if (done != 1) reward *= -1;
+
 		result = std::make_tuple(TMP, reward, (bool)done);
 		if (reward != 0)printf("reward=%d\n", reward);
 		if (done != 1)printf("done=%d\n", done);
@@ -146,14 +149,23 @@ struct Eric
 {
 	Socket soc;
 public:
+	clock_t st;
 	void render()
     {
 		return;
 	}
     tuple<vector<int>,int,bool> step(const int& action)
     {
+		clock_t t1 = clock();
+
 		soc.SendAction(action);
 		auto answer= soc.ReceiveRewards();
+
+		clock_t t2 = clock();
+		static int cnt = 0;
+		if (++cnt % 100 == 0) printf("AI : %.3lfms, Game : %.3lfms\n", 1000.0*(t1 - st) / CLOCKS_PER_SEC, 1000.0*(t2 - t1) / CLOCKS_PER_SEC);
+		st = t2;
+
 		return answer;
 	}
     vector<int> reset()
