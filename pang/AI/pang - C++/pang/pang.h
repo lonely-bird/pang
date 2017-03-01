@@ -145,27 +145,27 @@ Model policy_backward(const vector<VD> &eph,const vector<double> &epdlogp,const 
     auto &dW1=ret.W1;
     auto &dW2=ret.W2;
 
-	printf("H,Q,D %d %d %d\n", H, Q, D);
+	//printf("H,Q,D %d %d %d\n", H, Q, D);
 
 	auto t = clock();
     REP(j,Q) REP(i,H)
         dW2[i]+=eph[j][i]*epdlogp[j];
 
-	printf("%.3lf sec\n", 1.0*(clock() - t) / CLOCKS_PER_SEC);
+	//printf("%.3lf sec\n", 1.0*(clock() - t) / CLOCKS_PER_SEC);
 	t = clock();
 
     vector<vector<double> > dht(H,vector<double>(Q,0));
     REP(i,H) REP(j,Q)
         dht[i][j]=(eph[j][i]<=0?0:epdlogp[j]*model.W2[i]);
 
-	printf("%.3lf sec\n", 1.0*(clock() - t) / CLOCKS_PER_SEC);
+	//printf("%.3lf sec\n", 1.0*(clock() - t) / CLOCKS_PER_SEC);
 	t = clock();
 
     //REP(i,H) REP(j,Q) REP(k,D)
     //    dW1[i][k]+=dht[i][j]*epx[j][k];
 	matrix_mul(H, Q, D, dht, epx, dW1);
 
-	printf("%.3lf sec\n", 1.0*(clock() - t) / CLOCKS_PER_SEC);
+	//printf("%.3lf sec\n", 1.0*(clock() - t) / CLOCKS_PER_SEC);
 	t = clock();
     return ret;
 }

@@ -21,6 +21,27 @@ void init()
 }
 
 Eric env;
+//unsigned int Rand()
+//{
+//	static unsigned int seed = 0x20170227;
+//	seed *= 0xdefaced;
+//	seed += 94441;
+//	return seed += seed >> 20;
+//}
+double explore_rate = 0.20;
+#include<cmath>
+double emphasize(double v)
+{
+	return v;
+	static double pv = 0.0, pa = 0.0;
+	const double p = 2.0;
+	double ans;
+	if (v < 0.5)ans= pow(v, p) / pow(0.5, p)/2.0;
+	else ans= 1.0 - pow(1.0 - v, p) / pow(0.5, p)/2.0;
+	assert((pv < v) == (pa < ans));
+	pv = v, pa = ans;
+	return ans;
+}
 void work()
 {
     vector<int> observation = env.reset();
@@ -49,9 +70,11 @@ void work()
 
         double aprob;VD h;
         tie(aprob,h) = policy_forward(x);
-        int action = uni() < aprob;
+        int action = /*uni()*/0.5 < emphasize(aprob);
+		//if (Rand() % 1000000 < 1000000.0*explore_rate)action = Rand() & 1;
+		if (uni() < explore_rate)action = uni() < 0.5;
 		static int acnt = 0;
-		if (++acnt % 100 == 0) printf("aprob = %.3f\n", aprob);
+		if (++acnt % 5000 == 0) printf("(%.3f)", aprob);
 
         xs.push_back(x);
         hs.push_back(h);
@@ -61,13 +84,14 @@ void work()
         tie(observation,reward,done) = env.step(action);
         reward_sum += reward;
 
-        drs.push_back(reward);
+        drs.push_back(min(reward,0));
 		//puts("b");
         if(!done)
         {
-			puts("!done");
+			//puts("!done");
             episode_number++;
-			printf("EPIS NUM = %d\n", episode_number);
+			putchar('.');
+			//printf("EPIS NUM = %d\n", episode_number);
 
             vector<VI> epx;epx.swap(xs);
             vector<VD> eph;eph.swap(hs);
@@ -113,8 +137,18 @@ void work()
                 grad_buffer.reset(0);
 
                 running_reward = isinf(running_reward) ? reward_sum : running_reward * 0.99 + reward_sum * 0.01;
-                fprintf(stderr,"Episode %03lld avg. reward = %.3lf, Long-term avg. reward = %.3lf\n",\
-                        episode_number/batch_size,reward_sum*1.0/batch_size,running_reward*1.0/batch_size);
+				printf("AI : %.3lf s, Game : %.3lf s\n", timeConsumedByAI / 1000.0, timeConsumedByGame / 1000.0);
+                fprintf(stderr,"Episode %03lld avg. reward = %.3lf, Long-term avg. reward = %.3lf, explore rate = %.3f\n",\
+                        episode_number/batch_size,reward_sum*1.0/batch_size,running_reward*1.0/batch_size,explore_rate);
+				{
+					FILE* rec = fopen("rec.txt", "a");
+					for (int i = 0; i < 10; i++)fprintf(rec, ".");
+					fprintf(rec, "AI : %.3lf s, Game : %.3lf s\n", timeConsumedByAI / 1000.0, timeConsumedByGame / 1000.0);
+					fprintf(rec, "Episode %03lld avg. reward = %.3lf, Long-term avg. reward = %.3lf\n", \
+						episode_number / batch_size, reward_sum*1.0 / batch_size, running_reward*1.0 / batch_size);
+					fclose(rec);
+				}
+				timeConsumedByAI = timeConsumedByGame = 0.0;
                 reward_sum = 0;
 
                 if(episode_number % batch_size == 0)
@@ -125,6 +159,7 @@ void work()
                     REP(i,H) fprintf(pFile,"%.16f ",model.W2[i]);
                     fclose(pFile);
                 }
+				if (explore_rate >= 0.05)explore_rate *= 0.98;
             }
 
 			//puts("d");
