@@ -11,8 +11,10 @@ void clip(int &val, int min, int max) {
         val = max;
 }
 void clip(int &val1, int &val2, int min, int max) {
-    clip(val1, min, max);
-    clip(val2, val1, max);
+    if(val1 < min)
+        val1 = min;
+    if(val2 > max)
+        val2 = max;
 }
 
 Image::Image(int w, int h, Color c) :
@@ -22,20 +24,6 @@ const Color *Image::operator [] (int y) const {
 }
 Color *Image::operator [] (int y) {
     return m_data.data() + y * width();
-}
-void Image::draw_line(int x1, int y1, int x2, int y2, Color color) {
-    clip(x1, x2, 0, width() - 1);
-    clip(y1, y2, 0, height() - 1);
-    if(x1 == x2) {
-        for(int y = y1; y <= y2; y++)
-            m_data[y * width() + x1] = color;
-    } else if(y1 == y2) {
-        for(int x = x1; x <= x2; x++)
-            m_data[y1 * width() + x] = color;
-    } else {
-        assert(false);
-        __builtin_unreachable();
-    }
 }
 void Image::fill_rectangle(int x1, int y1, int x2, int y2, Color color) {
     clip(x1, x2, 0, width() - 1);
@@ -57,7 +45,6 @@ constexpr int image_width = 10, image_height = 40;
 constexpr Color background_color {255, 255, 255};
 constexpr Color pod_color {0, 0, 0};
 constexpr Color obstacle_color {255, 0, 0};
-constexpr Color bound_color {255, 255, 0};
 
 template<typename Engine>
 Obstacle random_obstacle(Engine &m_engine) {
@@ -79,15 +66,12 @@ int Emulator::score() const {
     return m_score;
 }
 Image Emulator::observe() const {
-    constexpr int vw = obstacle_count * obstacle_width.max + 3;
+    static_assert(obstacle_count == 1);
+    constexpr int vw = obstacle_distance.max;
     constexpr int vh = range_y.max - range_y.min;
     constexpr int w = image_width;
     constexpr int h = image_height;
     Image img(w, h, background_color);
-
-    // draw boundary
-    img.draw_line(0, 0, w, 0, bound_color);
-    img.draw_line(0, h, w, h, bound_color);
 
     // draw m_obstacles
     int offset = 0;
