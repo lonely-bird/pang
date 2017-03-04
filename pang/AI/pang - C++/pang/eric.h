@@ -9,7 +9,7 @@ struct Socket
 	SOCKET sConnect;
 	char Buffer[10000000/*D*80*/];
 	queue<char>Recv;
-	static const int PORT = 5;
+	static const int PORT = 6001;
 	static const char* Server_Address;
 	static const int TransitDataSize = 1024;
 	static const char* MessagePartitionSymbol;
@@ -67,13 +67,13 @@ private:
 		printf("%d %d\n", (int)buffer.size(), INP * 3 + 2);*/
 		//printf("buffer.size()=%d\n", (int)buffer.size());
 		assert((int)buffer.size() == INP * 3 + 2);
-		int done = buffer.back();
+		bool done = (buffer.back()!=0);
 		buffer.pop_back();
 		int reward = buffer.back();
 		buffer.pop_back();
 		assert(buffer.size() % 3 == 0);
 		vector<int> TMP;
-		for (int i = 0; i < buffer.size(); i += 3)
+		for (int i = 0; i < (int)buffer.size(); i += 3)
 		{
 			TMP.push_back(buffer[i] < 255);
 			TMP.push_back(buffer[i + 1] < 255);
@@ -94,7 +94,7 @@ private:
 		}*/
 		if (done != 1) reward *= -1;
 
-		result = std::make_tuple(TMP, reward, (bool)done);
+		result = std::make_tuple(TMP, reward, done);
 		if (reward != 0)
 		{
 			if(reward>0)printf("%d", reward);

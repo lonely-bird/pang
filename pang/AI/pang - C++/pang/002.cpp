@@ -1,5 +1,6 @@
 #include "pang.h"
 #include "eric.h"
+//#include <numeric>
 void init()
 {
 	int resume;
@@ -28,7 +29,7 @@ Eric env;
 //	seed += 94441;
 //	return seed += seed >> 20;
 //}
-double explore_rate = 0.20;
+double explore_rate = 0.0;
 #include<cmath>
 double emphasize(double v)
 {
@@ -50,7 +51,7 @@ void work()
     vector<VD> hs;
     vector<double> dlogps;
     vector<int> drs;
-	double running_reward = 1; running_reward /= (running_reward - 1);
+	double running_reward = numeric_limits<double>::infinity();// 1; running_reward /= (running_reward - 1);
     long long reward_sum = 0;
     long long episode_number=0;
 
@@ -65,12 +66,12 @@ void work()
         if(render) env.render();
 
         auto cur_x = prepro(observation);
-		vector<int> x = (prev_x.empty() ? con(cur_x, cur_x) : con(cur_x, prev_x));
+		vector<int> x = cur_x;// (prev_x.empty() ? con(cur_x, cur_x) : con(cur_x, prev_x));
         prev_x = cur_x;
 
         double aprob;VD h;
         tie(aprob,h) = policy_forward(x);
-        int action = /*uni()*/0.5 < emphasize(aprob);
+        int action = (uni() < emphasize(aprob));
 		//if (Rand() % 1000000 < 1000000.0*explore_rate)action = Rand() & 1;
 		if (uni() < explore_rate)action = uni() < 0.5;
 		static int acnt = 0;
@@ -150,7 +151,6 @@ void work()
 				}
 				timeConsumedByAI = timeConsumedByGame = 0.0;
                 reward_sum = 0;
-
                 if(episode_number % batch_size == 0)
                 {
 					FILE* pFile = fopen("model.sav", "w");
@@ -159,6 +159,7 @@ void work()
                     REP(i,H) fprintf(pFile,"%.16f ",model.W2[i]);
                     fclose(pFile);
                 }
+				model.Perturbate();
 				if (explore_rate >= 0.05)explore_rate *= 0.98;
             }
 

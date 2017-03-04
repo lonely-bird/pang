@@ -8,3 +8,13 @@ D:\Users\fsps6\OneDrive\Synced Documents\C# Code\QWOP AI\QWOP AI interface 3\QWO
 D:\Users\fsps6\OneDrive\Synced Documents\C# Code\QWOP AI\QWOP AI interface 3\QWOP AI interface 2\obj\Debug\QWOP AI interface 3.csproj.GenerateResource.Cache
 D:\Users\fsps6\OneDrive\Synced Documents\C# Code\QWOP AI\QWOP AI interface 3\QWOP AI interface 2\obj\Debug\QWOP AI interface 2.exe
 D:\Users\fsps6\OneDrive\Synced Documents\C# Code\QWOP AI\QWOP AI interface 3\QWOP AI interface 2\obj\Debug\QWOP AI interface 2.pdb
+C:\Users\fsps6\Downloads\pang-GPU\QWOP\Game\QWOP interface\QWOP AI interface 2\bin\Debug\QWOP AI interface 2.exe.config
+C:\Users\fsps6\Downloads\pang-GPU\QWOP\Game\QWOP interface\QWOP AI interface 2\obj\Debug\QWOP AI interface 2.exe
+C:\Users\fsps6\Downloads\pang-GPU\QWOP\Game\QWOP interface\QWOP AI interface 2\obj\Debug\QWOP AI interface 2.pdb
+C:\Users\fsps6\Downloads\pang-GPU\QWOP\Game\QWOP interface\QWOP AI interface 2\bin\Debug\QWOP AI interface 2.exe
+C:\Users\fsps6\Downloads\pang-GPU\QWOP\Game\QWOP interface\QWOP AI interface 2\bin\Debug\QWOP AI interface 2.pdb
+C:\Users\fsps6\Downloads\pang-GPU\QWOP\Game\QWOP interface\QWOP AI interface 2\bin\Debug\Motivation.pdb
+C:\Users\fsps6\Downloads\pang-GPU\QWOP\Game\QWOP interface\QWOP AI interface 2\bin\Debug\Motivation.xml
+C:\Users\fsps6\Downloads\pang-GPU\QWOP\Game\QWOP interface\QWOP AI interface 2\obj\Debug\QWOP AI interface 3.csprojResolveAssemblyReference.cache
+C:\Users\fsps6\Downloads\pang-GPU\QWOP\Game\QWOP interface\QWOP AI interface 2\obj\Debug\QWOP_AI_interface_2.Properties.Resources.resources
+C:\Users\fsps6\Downloads\pang-GPU\QWOP\Game\QWOP interface\QWOP AI interface 2\obj\Debug\QWOP AI interface 3.csproj.GenerateResource.Cache

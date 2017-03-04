@@ -112,7 +112,7 @@ namespace Lolipop_AI_interface
         void InitializeSocket()
         {
             socket = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
-            socket.Bind(new IPEndPoint(IPAddress.Any, 5));
+            socket.Bind(new IPEndPoint(IPAddress.Any, port));
             socket.Listen(10);
         }
         Socket socket;

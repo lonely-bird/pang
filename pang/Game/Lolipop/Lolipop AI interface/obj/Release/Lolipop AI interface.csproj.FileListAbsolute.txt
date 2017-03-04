@@ -53,3 +53,10 @@ C:\Users\fsps6\Downloads\pang-GPU\pang\Game\Lolipop\Lolipop AI interface\bin\Rel
 C:\Users\fsps6\Downloads\pang-GPU\pang\Game\Lolipop\Lolipop AI interface\obj\Release\Lolipop AI interface.csprojResolveAssemblyReference.cache
 C:\Users\fsps6\Downloads\pang-GPU\pang\Game\Lolipop\Lolipop AI interface\obj\Release\Lolipop_AI_interface.Properties.Resources.resources
 C:\Users\fsps6\Downloads\pang-GPU\pang\Game\Lolipop\Lolipop AI interface\obj\Release\Lolipop AI interface.csproj.GenerateResource.Cache
+C:\Users\user007\Desktop\pang-GPU\pang\Game\Lolipop\Lolipop AI interface\bin\Release\Lolipop AI interface.exe.config
+C:\Users\user007\Desktop\pang-GPU\pang\Game\Lolipop\Lolipop AI interface\obj\Release\Lolipop AI interface.exe
+C:\Users\user007\Desktop\pang-GPU\pang\Game\Lolipop\Lolipop AI interface\obj\Release\Lolipop AI interface.pdb
+C:\Users\user007\Desktop\pang-GPU\pang\Game\Lolipop\Lolipop AI interface\bin\Release\Lolipop AI interface.exe
+C:\Users\user007\Desktop\pang-GPU\pang\Game\Lolipop\Lolipop AI interface\bin\Release\Lolipop AI interface.pdb
+C:\Users\user007\Desktop\pang-GPU\pang\Game\Lolipop\Lolipop AI interface\obj\Release\Lolipop_AI_interface.Properties.Resources.resources
+C:\Users\user007\Desktop\pang-GPU\pang\Game\Lolipop\Lolipop AI interface\obj\Release\Lolipop AI interface.csproj.GenerateResource.Cache

@@ -127,6 +127,10 @@
     <Link>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
+      <HeapReserveSize>214748364</HeapReserveSize>
+      <HeapCommitSize>214748364</HeapCommitSize>
+      <StackReserveSize>214748364</StackReserveSize>
+      <StackCommitSize>214748364</StackCommitSize>
     </Link>
   </ItemDefinitionGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using Motivation;
 using System.Drawing.Imaging;
 using System.Diagnostics;
+using System.Threading;
 
 namespace QWOP_AI_interface_3
 {
@@ -63,7 +64,7 @@ namespace QWOP_AI_interface_3
                     TLPmain.AddControl(TXBoutput, 0, 0);
                 }
                 {
-                    TLPbtn = new MyTableLayoutPanel(1, 3, "P", "PPP");
+                    TLPbtn = new MyTableLayoutPanel(1, 5, "A", $"AAAPS{Database.scopeSize.Width}");
                     {
                         BTNstart = new MyButton("Start");
                         BTNstart.Click += BTNstart_Click;
@@ -79,6 +80,16 @@ namespace QWOP_AI_interface_3
                         CHBpressKey.CheckedChanged += CHBpressKey_CheckedChanged;
                         TLPbtn.AddControl(CHBpressKey, 0, 2);
                     }
+                    {
+                        LBL = new MyLabel("");
+                        TLPbtn.AddControl(LBL, 0, 3);
+                    }
+                    {
+                        PBX = new PictureBox();
+                        PBX.Dock = DockStyle.Fill;
+                        PBX.SizeMode = PictureBoxSizeMode.AutoSize;
+                        TLPbtn.AddControl(PBX, 0, 4);
+                    }
                     TLPmain.AddControl(TLPbtn, 1, 0);
                 }
                 this.Controls.Add(TLPmain);
@@ -86,36 +97,85 @@ namespace QWOP_AI_interface_3
             socketHandler = new SocketHandler();
             socketHandler.logAppended += SocketHandler_logAppended;
             socketHandler.msgReceived += SocketHandler_msgReceived;
-            System.Threading.Thread thread = new System.Threading.Thread(() =>
             {
-                int pre_count = 0;
-                while (true)
+                Thread thread = new Thread(() =>
                 {
-                    System.Threading.Thread.Sleep(5000);
-                    if (socketHandler.dataConnectionCounter != pre_count) SocketHandler_logAppended((pre_count = socketHandler.dataConnectionCounter).ToString() + " communications");
-                }
-            });
-            thread.IsBackground = true;
-            thread.Start();
+                    int pre_count = 0;
+                    while (true)
+                    {
+                        Thread.Sleep(5000);
+                        if (socketHandler.dataConnectionCounter != pre_count) SocketHandler_logAppended((pre_count = socketHandler.dataConnectionCounter).ToString() + " communications");
+                    }
+                });
+                thread.IsBackground = true;
+                thread.Start();
+            }
+            {
+                Thread thread = new Thread(() =>
+                  {
+                      while (true)
+                      {
+                          Thread.Sleep(500);
+                          PBX.Invoke(new Action(() =>
+                          {
+                              var bmp = getFeedBackImage();
+                              if (bmp == null) LBL.Text = "Unavailable";
+                              else
+                              {
+                                  BitmapData bd = bmp.LockBits(new Rectangle(new Point(0, 0), bmp.Size), ImageLockMode.ReadOnly, PixelFormat.Format32bppArgb);
+                                  int sum = 0;
+                                  unsafe
+                                  {
+                                      byte* p = (byte*)bd.Scan0.ToPointer();
+                                      for (int i = 0; i < bd.Height; i++)
+                                      {
+                                          for (int j = 0; j < bd.Width; j++)
+                                          {
+                                              byte* q = p + (j * 4);
+                                              sum += q[2];
+                                              sum += q[1];
+                                              sum += q[0];
+                                          }
+                                          p += bd.Stride;
+                                      }
+                                  }
+                                  bmp.UnlockBits(bd);
+                                  LBL.Text = (IsLive(sum) ? "Alive" : "Dead")+"\r\n"+sum.ToString();
+                              }
+                              var preImg = PBX.Image;
+                              PBX.Image = bmp;
+                              if (preImg != null) preImg.Dispose();
+                          }));
+                      }
+                  });
+                thread.IsBackground = true;
+                thread.Start();
+            }
         }
-
+        private bool IsLive(int sum) { return sum < (1160000+1140000)/*(2685000 + 2090000)*/ / 2; }
         private void CHBpressKey_CheckedChanged(object sender, EventArgs e)
         {
             pressKey = (sender as MyCheckBox).Checked;
         }
 
+        private Bitmap getFeedBackImage()
+        {
+            if (Database.scopeLocation == Database.failedPoint) return null;
+            Bitmap bmp = new Bitmap(Database.scopeSize.Width, Database.scopeSize.Height);
+            using (Graphics g = Graphics.FromImage(bmp))
+            {
+                g.CopyFromScreen(Database.scopeLocation, new Point(0, 0), Database.feedBackSize);
+                IntPtr dc1 = g.GetHdc();
+                g.ReleaseHdc(dc1);
+            }
+            return bmp;
+        }
         private string getFeedBack()
         {
             StringBuilder answer = new StringBuilder();
             int sum = 0;
-            using (Bitmap bmp = new Bitmap(Database.scopeSize.Width, Database.scopeSize.Height))
             {
-                using (Graphics g = Graphics.FromImage(bmp))
-                {
-                    g.CopyFromScreen(Database.scopeLocation, new Point(0, 0), Database.scopeSize);
-                    IntPtr dc1 = g.GetHdc();
-                    g.ReleaseHdc(dc1);
-                }
+                Bitmap bmp = getFeedBackImage();
                 BitmapData bd = bmp.LockBits(new Rectangle(new Point(0, 0), bmp.Size), ImageLockMode.ReadOnly, PixelFormat.Format32bppArgb);
                 unsafe
                 {
@@ -142,9 +202,10 @@ namespace QWOP_AI_interface_3
                     }
                 }
                 bmp.UnlockBits(bd);
+                bmp.Dispose();
             }
             Do(() => { this.Text = sum.ToString(); });
-            bool isLive = (sum < (2685000 + 2090000) / 2);
+            bool isLive = IsLive(sum);
             answer.Append(' ');
             answer.Append(isLive ? 1 : 0);
             return answer.ToString();
@@ -158,9 +219,9 @@ namespace QWOP_AI_interface_3
                 case 'W':
                 case 'O':
                 case 'P': break;
-                default: throw new Exception($"key={msg}");
+                default: Log($"Invalid key: {msg}"); break;
             }
-            if(pressKey)SendKeys.SendWait(msg.ToString());
+            if (pressKey) SendKeys.SendWait(msg.ToString());
             writer.WriteLine(getFeedBack());
             writer.Flush();
         }
@@ -227,7 +288,7 @@ namespace QWOP_AI_interface_3
                         {
                             if (isValid(y, x))
                             {
-                                Database.scopeLocation = new Point(x, y);
+                                Database.scopeLocation = new Point(x, y+33);
                                 answer = true;
                             }
                         }
@@ -243,12 +304,12 @@ namespace QWOP_AI_interface_3
             Process.GetCurrentProcess().Kill();
         }
         bool pressKey = false;
-        private MyTableLayoutPanel TLPmain;
-        private MyTableLayoutPanel TLPbtn;
-        private MyButton BTNstart;
-        private MyButton BTNscan;
+        private MyTableLayoutPanel TLPmain,TLPbtn;
+        private MyButton BTNstart,BTNscan;
         private MyCheckBox CHBpressKey;
         private MyTextBox TXBoutput;
+        private PictureBox PBX;
+        private MyLabel LBL;
         SocketHandler socketHandler;
     }
 }
