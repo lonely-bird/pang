@@ -1,6 +1,6 @@
 CFLAGS  += -std=c++14 -Wall -Wextra -Wshadow -g -O3
 LDFLAGS +=
-LIBS    += 
+LIBS    += -lncurses
 TARGET  = lolipop
 OBJECTS = lolipop.o emulator.o learning.o
 

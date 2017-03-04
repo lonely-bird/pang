@@ -106,7 +106,6 @@ class Learning {
     int m_episode = 0;
     std::vector<std::valarray<double>> m_saved_feature, m_saved_mid;
     std::vector<double> m_saved_pd, m_saved_reward;
-    double m_explore_rate;
 
     using seed_type = decltype(m_engine)::result_type;
     constexpr static seed_type default_seed = decltype(m_engine)::default_seed;

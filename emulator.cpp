@@ -34,8 +34,8 @@ void Image::fill_rectangle(int x1, int y1, int x2, int y2, Color color) {
 }
 
 constexpr Interval<int> range_y { 0, 1000 };
-constexpr Interval<int> obstacle_distance { 150, 250 };
-constexpr Interval<int> obstacle_width { 100, 200 };
+constexpr Interval<int> obstacle_distance { 100, 200 };
+constexpr Interval<int> obstacle_width { 10, 20 };
 constexpr Interval<int> obstacle_y { 0, 500 };
 constexpr Interval<int> obstacle_height { 250, 500 };
 constexpr double gravity = -0.1, lift_force = 0.1;
@@ -116,9 +116,13 @@ void Emulator::update(bool key_pressed) {
     if(!m_alive)
         return;
 
+#if 0
     double acceleration = key_pressed ? lift_force : gravity;
     m_velocity += acceleration;
     m_location += m_velocity;
+#else
+    m_location += key_pressed ? 5 : -5;
+#endif
 
     while(!m_obstacles.empty() && m_obstacles.front().width <= 0) {
         m_obstacles.erase(m_obstacles.begin());

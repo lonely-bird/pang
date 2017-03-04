@@ -5,6 +5,9 @@
 namespace emulator {
 struct Color {
     unsigned char red, green, blue;
+    bool operator == (const Color &rhs) const {
+        return red == rhs.red && green == rhs.green && blue == rhs.blue;
+    }
 };
 class Image {
     int m_width, m_height;

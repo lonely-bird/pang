@@ -134,7 +134,7 @@ Learning::Learning(int n, int f, seed_type seed) :
         m_neurons(n), m_features(f), m_model(n, f),
         m_gradbuf(n, f), m_rmsprop(n, f), m_engine(seed),
         m_episode(0), m_saved_feature(), m_saved_mid(),
-        m_saved_pd(), m_saved_reward(), m_explore_rate(0.0) {
+        m_saved_pd(), m_saved_reward() {
     m_model.randomize(m_engine);
 }
 bool Learning::play(std::valarray<double> feature) {
@@ -144,11 +144,7 @@ bool Learning::play(std::valarray<double> feature) {
             mid[i] = 0;
 
     double p = sigmoid(inner_product(m_model.w2(), mid));
-    //bool action = p > 0.5;
     bool action = std::bernoulli_distribution(p)(m_engine);
-
-    if(std::bernoulli_distribution(m_explore_rate / 2)(m_engine))
-        action = !action;
 
     m_saved_feature.push_back(feature);
     m_saved_mid.push_back(mid);
@@ -225,8 +221,6 @@ void Learning::batch_work() {
     learn(m_model.w2(), m_gradbuf.w2(), m_rmsprop.w2());
 
     m_gradbuf.reset();
-    if(m_explore_rate >= 0.05)
-        m_explore_rate *= 0.98;
 }
 }
 
