@@ -117,6 +117,7 @@ constexpr double sigmoid(double x) {
 void discount_rewards(std::valarray<double> &r) {
     double add = 0;
     for(int i = (int) r.size() - 1; i >= 0; i--) {
+        if(r[i]) add=0;
         add = add * dgamma + r[i];
         r[i] = add;
     }
@@ -133,7 +134,7 @@ Learning::Learning(int n, int f, seed_type seed) :
         m_neurons(n), m_features(f), m_model(n, f),
         m_gradbuf(n, f), m_rmsprop(n, f), m_engine(seed),
         m_episode(0), m_saved_feature(), m_saved_mid(),
-        m_saved_pd(), m_saved_reward(), m_explore_rate(0.2) {
+        m_saved_pd(), m_saved_reward(), m_explore_rate(0.0) {
     m_model.randomize(m_engine);
 }
 bool Learning::play(std::valarray<double> feature) {
@@ -143,7 +144,8 @@ bool Learning::play(std::valarray<double> feature) {
             mid[i] = 0;
 
     double p = sigmoid(inner_product(m_model.w2(), mid));
-    bool action = p > 0.5;
+    //bool action = p > 0.5;
+    bool action = std::bernoulli_distribution(p)(m_engine);
 
     if(std::bernoulli_distribution(m_explore_rate / 2)(m_engine))
         action = !action;
