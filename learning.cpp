@@ -43,6 +43,7 @@ std::valarray<T> operator * (const Matrix<T> &lhs,
         const std::valarray<T> &rhs) {
     assert(lhs.columns() == (int) rhs.size());
     std::valarray<T> result(lhs.rows());
+#pragma omp parallel for
     for(int i = 0; i < lhs.rows(); i++)
         for(int j = 0; j < lhs.columns(); j++)
             result[i] += lhs[i][j] * rhs[j];
@@ -62,6 +63,7 @@ template<typename T>
 Matrix<T> operator * (const Matrix<T> &lhs, const Matrix<T> &rhs) {
     assert(lhs.columns() == rhs.rows());
     Matrix<T> result(lhs.rows(), rhs.columns());
+#pragma omp parallel for
     for(int i = 0; i < lhs.rows(); i++)
         for(int k = 0; k < lhs.columns(); k++)
             for(int j = 0; j < rhs.columns(); j++)

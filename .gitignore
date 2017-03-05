@@ -4,3 +4,4 @@ lolipop
 gmon.out
 *.gprof
 model-*.sav
+oprofile_data
