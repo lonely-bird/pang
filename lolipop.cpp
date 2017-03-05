@@ -64,7 +64,7 @@ int main() {
     initscr();
     constexpr int neuron_size = 200;
     constexpr int feature_size = 800;
-    constexpr unsigned max_iteration = 1000000;
+    constexpr unsigned max_iteration = std::numeric_limits<unsigned>::max();
     emulator::Emulator emulator;
     learning::Learning learning(neuron_size, feature_size/*, seed*/);
     std::map<int, int> score_stat;

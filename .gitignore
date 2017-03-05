@@ -1,3 +1,5 @@
 lolipop
 *.zip
 *.o
+gmon.out
+*.gprof

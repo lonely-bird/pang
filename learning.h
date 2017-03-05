@@ -12,20 +12,42 @@ class Matrix {
     int m_rows, m_columns;
     std::valarray<T> m_data;
     struct CRow {
-        const std::valarray<T> &ref;
-        int offset;
+        const std::valarray<T> &m_ref;
+        int m_offset, m_size;
         T operator [] (int column) const {
-            return ref[offset + column];
+            assert(0 <= column);
+            assert(column < m_size);
+            return m_ref[m_offset + column];
+        }
+        decltype(m_ref[std::slice()]) arr() const {
+            return m_ref[std::slice(m_offset, m_size, 1)];
+        }
+        operator decltype(m_ref[std::slice()])() const {
+            return arr();
         }
     };
     struct Row {
-        std::valarray<T> &ref;
-        int offset;
+        std::valarray<T> &m_ref;
+        int m_offset, m_size;
         T operator [] (int column) const {
-            return ref[offset + column];
+            return (*const_cast<Row*>(this))[column];
         }
         T &operator [] (int column) {
-            return ref[offset + column];
+            assert(0 <= column);
+            assert(column < m_size);
+            return m_ref[m_offset + column];
+        }
+        decltype(m_ref[std::slice()]) arr() const {
+            return m_ref[std::slice(m_offset, m_size, 1)];
+        }
+        decltype(m_ref[std::slice()]) arr() {
+            return m_ref[std::slice(m_offset, m_size, 1)];
+        }
+        operator decltype(m_ref[std::slice()])() const {
+            return arr();
+        }
+        operator decltype(m_ref[std::slice()])() {
+            return arr();
         }
     };
 public:
@@ -42,15 +64,21 @@ public:
     std::valarray<T> &data() {
         return m_data;
     }
+    T *pointer() {
+        return &m_data[0];
+    }
+    const T *pointer() const {
+        return (const_cast<Matrix*>(this))->pointer();
+    }
     CRow operator [] (int row) const {
         assert(0 <= row);
         assert(row < m_rows);
-        return CRow { m_data, row * m_columns };
+        return CRow { m_data, row * m_columns, m_columns };
     }
     Row operator [] (int row) {
         assert(0 <= row);
         assert(row < m_rows);
-        return Row { m_data, row * m_columns };
+        return Row { m_data, row * m_columns, m_columns };
     }
     Matrix &operator = (T rhs) {
         m_data = rhs;

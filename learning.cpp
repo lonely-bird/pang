@@ -63,8 +63,8 @@ Matrix<T> operator * (const Matrix<T> &lhs, const Matrix<T> &rhs) {
     assert(lhs.columns() == rhs.rows());
     Matrix<T> result(lhs.rows(), rhs.columns());
     for(int i = 0; i < lhs.rows(); i++)
-        for(int j = 0; j < rhs.columns(); j++)
-            for(int k = 0; k < lhs.columns(); k++)
+        for(int k = 0; k < lhs.columns(); k++)
+            for(int j = 0; j < rhs.columns(); j++)
                 result[i][j] += lhs[i][k] * rhs[k][j];
     return std::move(result);
 }
