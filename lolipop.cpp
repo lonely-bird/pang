@@ -2,6 +2,7 @@
 #include "learning.h"
 #include <algorithm>
 #include <cstdio>
+#include <cstring>
 #include <ctime>
 #include <chrono>
 #include <map>
@@ -70,7 +71,35 @@ std::string make_save_name() {
     return s;
 }
 
-int main() {
+int main(int argc, char **argv) {
+    std::string load_name;
+    std::string save_name = make_save_name();
+
+    for(int i = 1; i < argc; ) {
+        const char *s = argv[i];
+        auto is = [s](const char *t) {
+            return std::strcmp(s, t) == 0;
+        };
+        if(is("-l") || is("--load")) {
+            if(i + 1 >= argc) {
+                std::cerr << "Argument expected after " << argv[i] << std::endl;
+                return 1;
+            }
+            load_name = argv[i + 1];
+            i += 2;
+        } else if(is("-s") || is("--save")) {
+            if(i + 1 >= argc) {
+                std::cerr << "Argument expected after " << argv[i] << std::endl;
+                return 1;
+            }
+            save_name = argv[i + 1];
+            i += 2;
+        } else {
+            std::cerr << "Unknown argument " << argv[i] << std::endl;
+            return 1;
+        }
+    }
+
     initscr();
     constexpr int neuron_size = 200;
     constexpr int feature_size = 800;
@@ -79,7 +108,10 @@ int main() {
     emulator::Emulator emulator;
     learning::Learning learning(neuron_size, feature_size/*, seed*/);
     std::map<int, int> score_stat;
-    std::string save_name = make_save_name();
+
+    if(!load_name.empty()) {
+        std::ifstream(load_name) >> learning;
+    }
 
     refresh();
     WINDOW *w_info = newwin(LINES, COLS - 42, 0, 0);
