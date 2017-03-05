@@ -2,6 +2,7 @@
 #define LOLIPOP_LEARNING_H
 #include <algorithm>
 #include <cassert>
+#include <iostream>
 #include <random>
 #include <utility>
 #include <valarray>
@@ -139,13 +140,16 @@ class Learning {
     constexpr static seed_type default_seed = decltype(m_engine)::default_seed;
 public:
     Learning(int n, int f, seed_type seed = default_seed);
-    // TODO method for load/save
     bool play(std::valarray<double> feature);
     void feedback(double reward);
     void game_over();
     // TODO method for display
 private:
     void batch_work();
+    friend std::istream &operator >> (std::istream &in, Learning &);
+    friend std::ostream &operator << (std::ostream &, const Learning &);
 };
+std::istream &operator >> (std::istream &, Learning &);
+std::ostream &operator << (std::ostream &, const Learning &);
 }
 #endif // LOLIPOP_LEARNING_H

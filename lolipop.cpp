@@ -2,9 +2,12 @@
 #include "learning.h"
 #include <algorithm>
 #include <cstdio>
+#include <ctime>
 #include <chrono>
 #include <map>
 #include <ncurses.h>
+#include <fstream>
+#include <string>
 #include <thread>
 #include <utility>
 #include <vector>
@@ -60,14 +63,23 @@ void paint_image(WINDOW *w, const emulator::Image &img) {
     wrefresh(w);
 }
 
+std::string make_save_name() {
+    std::string s("model-");
+    s += std::time(nullptr);
+    s += ".sav";
+    return s;
+}
+
 int main() {
     initscr();
     constexpr int neuron_size = 200;
     constexpr int feature_size = 800;
     constexpr unsigned max_iteration = std::numeric_limits<unsigned>::max();
+    constexpr unsigned save_iteration = 100;
     emulator::Emulator emulator;
     learning::Learning learning(neuron_size, feature_size/*, seed*/);
     std::map<int, int> score_stat;
+    std::string save_name = make_save_name();
 
     refresh();
     WINDOW *w_info = newwin(LINES, COLS - 42, 0, 0);
@@ -103,6 +115,9 @@ int main() {
         for(auto p : score_stat)
             wprintw(w_info, "Scored %d : %d\n", p.first, p.second);
         wrefresh(w_info);
+
+        if((iteration + 1) % save_iteration == 0)
+            std::ofstream(save_name) << learning;
     }
     endwin();
 }

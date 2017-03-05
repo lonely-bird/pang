@@ -3,3 +3,4 @@ lolipop
 *.o
 gmon.out
 *.gprof
+model-*.sav

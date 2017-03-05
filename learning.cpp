@@ -222,6 +222,30 @@ void Learning::batch_work() {
 
     m_gradbuf.reset();
 }
+std::istream &operator >> (std::istream &in, Learning &x) {
+    Matrix<double> &w1 = x.m_model.w1();
+    std::valarray<double> &w2 = x.m_model.w2();
+
+    in >> std::hexfloat;
+    for(int i = 0; i < w1.rows(); i++)
+        for(int j = 0; j < w1.columns(); j++)
+            in >> w1[i][j];
+    for(int i = 0; i < (int) w2.size(); i++)
+        in >> w2[i];
+    return in >> std::defaultfloat;
+}
+std::ostream &operator << (std::ostream &out, const Learning &x) {
+    const Matrix<double> &w1 = x.m_model.w1();
+    const std::valarray<double> &w2 = x.m_model.w2();
+
+    out << std::hexfloat;
+    for(int i = 0; i < w1.rows(); i++)
+        for(int j = 0; j < w1.columns(); j++)
+            out << w1[i][j] << (j == w1.columns() - 1 ? '\n' : ' ');
+    for(int i = 0; i < (int) w2.size(); i++)
+        out << w2[i] << (i == (int) w2.size() - 1 ? '\n' : ' ');
+    return out << std::defaultfloat;
+}
 }
 
 
