@@ -65,7 +65,7 @@ void paint_image(WINDOW *w, const emulator::Image &img) {
 
 std::string make_save_name() {
     std::string s("model-");
-    s += std::time(nullptr);
+    s += std::to_string(std::time(nullptr));
     s += ".sav";
     return s;
 }
