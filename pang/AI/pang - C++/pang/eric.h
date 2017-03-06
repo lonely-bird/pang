@@ -1,12 +1,15 @@
-#include <WinSock2.h>
 #include<cassert>
 #include<cstdio>
+#include<queue>
+#include "game.h"
+const bool useBuildInGame = false;
 struct Socket
 {
 	SOCKADDR_IN addr;
 	SOCKET sConnect;
-	char Buffer[10000000/*D*80*/],Recv[10000000/*D*40*/];
-	static const int PORT = 5;
+	char Buffer[10000000/*D*80*/];
+	queue<char>Recv;
+	static const int PORT = 6001;
 	static const char* Server_Address;
 	static const int TransitDataSize = 1024;
 	static const char* MessagePartitionSymbol;
@@ -14,6 +17,7 @@ struct Socket
 private:
 	bool InitWinsock()
 	{
+		if (useBuildInGame)return true;
 		WSAData wsaData;
 		WORD DLLVersion;
 		DLLVersion = MAKEWORD(2, 2);
@@ -21,6 +25,7 @@ private:
 	}
 	void InitSocketData()
 	{
+		if (useBuildInGame)return;
 		sConnect = socket(AF_INET, SOCK_STREAM, NULL);
 
 		addr.sin_addr.s_addr = inet_addr(Server_Address);
@@ -29,6 +34,7 @@ private:
 	}
 	bool Connect()
 	{
+		if (useBuildInGame)return true;
 		if (!InitWinsock()) { printf("Initwinsock Error!\n"); assert(0); }
 
 		InitSocketData();
@@ -57,25 +63,48 @@ private:
 		}
 		/*for (int i = 1200-20; i < buffer.size(); i++)printf("%d ", buffer[i]);
 		printf("buffer.size=%d\n", (int)buffer.size());*/
-		assert((int)buffer.size() == 1202);
-		int done = buffer.back();
+		/*printf("s=%s\n", s);
+		printf("%d %d\n", (int)buffer.size(), INP * 3 + 2);*/
+		//printf("buffer.size()=%d\n", (int)buffer.size());
+		assert((int)buffer.size() == INP * 3 + 2);
+		bool done = (buffer.back()!=0);
 		buffer.pop_back();
 		int reward = buffer.back();
 		buffer.pop_back();
 		assert(buffer.size() % 3 == 0);
 		vector<int> TMP;
-		for (int i = 0; i < buffer.size(); i += 3)
+		for (int i = 0; i < (int)buffer.size(); i += 3)
 		{
-			if (buffer[i] == 255 && buffer[i + 1] == 255 && buffer[i + 2] == 255) TMP.push_back(0);
-			else TMP.push_back(1);
+			TMP.push_back(buffer[i] < 255);
+			TMP.push_back(buffer[i + 1] < 255);
 		}
 		//printf("TMP.size=%d\n", (int)TMP.size());
-		result = std::make_tuple(TMP, reward, (bool)done);
-		if (reward != 0)printf("reward=%d\n", reward);
-		if (done != 1)printf("done=%d\n", done);
+		/*static vector<int>pre;
+		int n = TMP.size();
+		if (pre.empty())
+		{
+			for (int i = 0; i < n; i++)TMP.push_back(TMP[i]),pre.push_back(TMP[i]);
+		}
+		else
+		{
+			assert(pre.size() == TMP.size());
+			for (int i = 0; i < n; i++)TMP.push_back(pre[i]);
+			pre.clear();
+			for (int i = 0; i < n; i++)pre.push_back(TMP[i]);
+		}*/
+		if (done != 1) reward *= -1;
+
+		result = std::make_tuple(TMP, reward, done);
+		if (reward != 0)
+		{
+			if(reward>0)printf("%d", reward);
+			else assert(reward == -1);
+		}
+		/*if (done != 1)printf("done=%d\n", done);*/
 		return true;
 	}
 public:
+	string feedBackFromBuildInGame;
 	void SendAction(const int& Action)
 	{
 		char Send[5];
@@ -84,6 +113,11 @@ public:
 		for (int i = 0; MessagePartitionSymbol[i]; i++)
 			Send[i+1]=MessagePartitionSymbol[i];
 		Send[3] = '\0';
+		if (useBuildInGame)
+		{
+			feedBackFromBuildInGame = Game::Do(Send[0]);
+			return;
+		}
 		//printf("send: %s", Send);
 		if (!send(sConnect, Send, (int)strlen(Send), 0)) { printf("Action Sending Error!\n"); assert (0); }
 	}
@@ -91,39 +125,60 @@ public:
 	tuple<vector<int>, int, bool> ReceiveRewards()
 	{
 		int BufferLen = 0;
-		//puts("receiving...");
-		for (;;)
+		if (useBuildInGame)
 		{
-			//ZeroMemory(Recv, D*5);
-			//if (!recv(sConnect, Recv, sizeof(Recv), 0)) { printf("Message Receiving Error!\n"); assert(0); }
-			char r[1];
-			if (!recv(sConnect, r, sizeof(r), 0)) { printf("Message Receiving Error!\n"); assert(0); }
-			// wait a long time here?
-			//printf("receive: %s\n", Recv);
-			bool HavePartitionSymbol = 0;
-			/*for (int i = 0; Recv[i] > 0; i++)
+			BufferLen = (int)feedBackFromBuildInGame.size();
+			for (int i = 0; i < BufferLen; i++)
 			{
-				Buffer[BufferLen++] = Recv[i];
-			}*/
-			Buffer[BufferLen++] = r[0];
-			/*for (int i = 0; i < BufferLen; i++)
-				if (Buffer[i] == MessagePartitionSymbol[0] &&
-						Buffer[i+1]== MessagePartitionSymbol[1])
+				Buffer[i] = feedBackFromBuildInGame[i];
+			}
+			Buffer[BufferLen++] = MessagePartitionSymbol[0];
+			Buffer[BufferLen++] = MessagePartitionSymbol[1];
+		}
+		else
+		{
+			//puts("receiving...");
+			for (;;)
+			{
+				//ZeroMemory(Recv, D*5);
+				//if (!recv(sConnect, Recv, sizeof(Recv), 0)) { printf("Message Receiving Error!\n"); assert(0); }
+				static char r[1024];
+				int n;
+				if (!(n=recv(sConnect, r, sizeof(r), 0))) { printf("Message Receiving Error!\n"); assert(0); }
+				// wait a long time here?
+				//printf("receive: %s\n", Recv);
+				bool HavePartitionSymbol = 0;
+				for (int i = 0; i<n; i++)
 				{
+					Recv.push(r[i]);
+				}
+				/*for (int i = 0; Recv[i] > 0; i++)
+				{
+					Buffer[BufferLen++] = Recv[i];
+				}*/
+					/*for (int i = 0; i < BufferLen; i++)
+					if (Buffer[i] == MessagePartitionSymbol[0] &&
+					Buffer[i+1]== MessagePartitionSymbol[1])
+					{
 					HavePartitionSymbol = true;
 					printf("i=%d,BufferLen=%d\n", i, BufferLen);
 					assert(i + 1 == BufferLen - 1);
 					break;
-				}*/
-			if (BufferLen>=2&&Buffer[BufferLen-2] == MessagePartitionSymbol[0] &&
-				Buffer[BufferLen- 1] == MessagePartitionSymbol[1])
-			{
-				HavePartitionSymbol = true;
-				//printf("i=%d,BufferLen=%d\n", i, BufferLen);
-				//assert(i + 1 == BufferLen - 1);
-				break;
+					}*/
+				while (!Recv.empty())
+				{
+					Buffer[BufferLen++] = Recv.front(); Recv.pop();
+					if (BufferLen >= 2 && Buffer[BufferLen - 2] == MessagePartitionSymbol[0] &&
+						Buffer[BufferLen - 1] == MessagePartitionSymbol[1])
+					{
+						HavePartitionSymbol = true;
+						//printf("i=%d,BufferLen=%d\n", i, BufferLen);
+						//assert(i + 1 == BufferLen - 1);
+						break;
+					}
+				}
+				if (HavePartitionSymbol) break;
 			}
-			if (HavePartitionSymbol) break;
 		}
 		//puts("received");
 		tuple<vector<int>, int, bool> result;
@@ -142,18 +197,29 @@ public:
 };
 const char* Socket::Server_Address = "127.0.0.1";
 const char* Socket::MessagePartitionSymbol = "\r\n";
+double timeConsumedByAI = 0.0, timeConsumedByGame = 0.0;
 struct Eric
 {
 	Socket soc;
 public:
+	clock_t st;
 	void render()
     {
 		return;
 	}
     tuple<vector<int>,int,bool> step(const int& action)
     {
+		clock_t t1 = clock();
+
 		soc.SendAction(action);
 		auto answer= soc.ReceiveRewards();
+
+		clock_t t2 = clock();
+		static int cnt = 0;
+		//if (++cnt % 100 == 0) printf("AI : %.3lfms, Game : %.3lfms\n", 1000.0*(t1 - st) / CLOCKS_PER_SEC, 1000.0*(t2 - t1) / CLOCKS_PER_SEC);
+		timeConsumedByAI += 1000.0*(t1 - st) / CLOCKS_PER_SEC, timeConsumedByGame += 1000.0*(t2 - t1) / CLOCKS_PER_SEC;
+		st = t2;
+
 		return answer;
 	}
     vector<int> reset()

@@ -1,10 +1,11 @@
-#define _WINSOCK_DEPRECATED_NO_WARNINGS
-#define _CRT_SECURE_NO_WARNINGS
-#pragma comment(lib, "Ws2_32.lib")
 #include "pang.h"
 #include "eric.h"
+//#include <numeric>
 void init()
 {
+	int resume;
+	printf("Load previous model.sav? [0/1]\n");
+	scanf("%d", &resume);
     if(resume)
     {
         assert(freopen("model.sav","r",stdin));
@@ -21,6 +22,27 @@ void init()
 }
 
 Eric env;
+//unsigned int Rand()
+//{
+//	static unsigned int seed = 0x20170227;
+//	seed *= 0xdefaced;
+//	seed += 94441;
+//	return seed += seed >> 20;
+//}
+double explore_rate = 0.0;
+#include<cmath>
+double emphasize(double v)
+{
+	return v;
+	static double pv = 0.0, pa = 0.0;
+	const double p = 2.0;
+	double ans;
+	if (v < 0.5)ans= pow(v, p) / pow(0.5, p)/2.0;
+	else ans= 1.0 - pow(1.0 - v, p) / pow(0.5, p)/2.0;
+	assert((pv < v) == (pa < ans));
+	pv = v, pa = ans;
+	return ans;
+}
 void work()
 {
     vector<int> observation = env.reset();
@@ -29,21 +51,31 @@ void work()
     vector<VD> hs;
     vector<double> dlogps;
     vector<int> drs;
-	double running_reward = 1; running_reward /= (running_reward - 1);
+	double running_reward = numeric_limits<double>::infinity();// 1; running_reward /= (running_reward - 1);
     long long reward_sum = 0;
     long long episode_number=0;
+
+	auto con = [&](vector<int> a, vector<int> b)
+	{
+		a.insert(a.end(), b.begin(), b.end());
+		return a;
+	};
     while(1)
     {
 		//puts("a");
         if(render) env.render();
 
         auto cur_x = prepro(observation);
-        vector<int> x = (prev_x.empty()?vector<int>(D,0):cur_x-prev_x);
+		vector<int> x = cur_x;// (prev_x.empty() ? con(cur_x, cur_x) : con(cur_x, prev_x));
         prev_x = cur_x;
 
         double aprob;VD h;
         tie(aprob,h) = policy_forward(x);
-        int action = uni() < aprob;
+        int action = (uni() < emphasize(aprob));
+		//if (Rand() % 1000000 < 1000000.0*explore_rate)action = Rand() & 1;
+		if (uni() < explore_rate)action = uni() < 0.5;
+		static int acnt = 0;
+		if (++acnt % 5000 == 0) printf("(%.3f)", aprob);
 
         xs.push_back(x);
         hs.push_back(h);
@@ -53,19 +85,21 @@ void work()
         tie(observation,reward,done) = env.step(action);
         reward_sum += reward;
 
-        drs.push_back(reward);
+        drs.push_back(min(reward,0));
 		//puts("b");
         if(!done)
         {
-			puts("!done");
+			//puts("!done");
             episode_number++;
+			putchar('.');
+			//printf("EPIS NUM = %d\n", episode_number);
 
             vector<VI> epx;epx.swap(xs);
             vector<VD> eph;eph.swap(hs);
             vector<double> epdlogp;epdlogp.swap(dlogps);
             vector<int> epr;epr.swap(drs);
 
-			puts("a");
+			//puts("a");
             vector<double> discounted_epr = discount_rewards(epr);
             {
                 double mean=0;
@@ -80,15 +114,15 @@ void work()
                 for(auto &z:discounted_epr) z/=stdev;
             }
 
-			puts("b");
+			//puts("b");
             REP(i,epdlogp.size()) epdlogp[i] *= discounted_epr[i];
-			puts("b1");
-			printf("%u %u %u\n", eph.size(), epdlogp.size(), epx.size());
+			//puts("b1");
+			//printf("%u %u %u\n", eph.size(), epdlogp.size(), epx.size());
             Model grad=policy_backward(eph,epdlogp,epx);
-			puts("b2");
+			//puts("b2");
             grad_buffer += grad;
 
-			puts("c");
+			//puts("c");
             if(episode_number % batch_size == 0)
             {
                 REP(i,H) REP(j,D)
@@ -104,20 +138,32 @@ void work()
                 grad_buffer.reset(0);
 
                 running_reward = isinf(running_reward) ? reward_sum : running_reward * 0.99 + reward_sum * 0.01;
-                fprintf(stderr,"Episode %03lld avg. reward = %.3lf, Long-term avg. reward = %.3lf\n",\
-                        episode_number/batch_size,reward_sum*1.0/batch_size,running_reward*1.0/batch_size);
+				printf("AI : %.3lf s, Game : %.3lf s\n", timeConsumedByAI / 1000.0, timeConsumedByGame / 1000.0);
+                fprintf(stderr,"Episode %03lld avg. reward = %.3lf, Long-term avg. reward = %.3lf, explore rate = %.3f\n",\
+                        episode_number/batch_size,reward_sum*1.0/batch_size,running_reward*1.0/batch_size,explore_rate);
+				{
+					FILE* rec = fopen("rec.txt", "a");
+					for (int i = 0; i < 10; i++)fprintf(rec, ".");
+					fprintf(rec, "AI : %.3lf s, Game : %.3lf s\n", timeConsumedByAI / 1000.0, timeConsumedByGame / 1000.0);
+					fprintf(rec, "Episode %03lld avg. reward = %.3lf, Long-term avg. reward = %.3lf\n", \
+						episode_number / batch_size, reward_sum*1.0 / batch_size, running_reward*1.0 / batch_size);
+					fclose(rec);
+				}
+				timeConsumedByAI = timeConsumedByGame = 0.0;
                 reward_sum = 0;
-
-                if(episode_number % (10 * batch_size) == 0)
+                if(episode_number % batch_size == 0)
                 {
-                    assert(freopen("model.sav","w",stdout));
-                    REP(i,H) REP(j,D) printf("%.16f ",model.W1[i][j]);
-                    REP(i,H) printf("%.16f ",model.W2[i]);
-                    fclose(stdout);
+					FILE* pFile = fopen("model.sav", "w");
+					assert(pFile);
+                    REP(i,H) REP(j,D) fprintf(pFile,"%.16f ",model.W1[i][j]);
+                    REP(i,H) fprintf(pFile,"%.16f ",model.W2[i]);
+                    fclose(pFile);
                 }
+				model.Perturbate();
+				if (explore_rate >= 0.05)explore_rate *= 0.98;
             }
 
-			puts("d");
+			//puts("d");
             observation = env.reset();
             prev_x.clear();
         }

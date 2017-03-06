@@ -20,7 +20,7 @@ namespace Lolipop_AI_interface
         bool darryMode = false;
         class GameVisualizer
         {
-            public void drawImage(Image bmp, int gameState, double location,Interval rangeY, Rectangle scope, Queue<GameObstacle>obstacles)
+            public void drawImage(Image bmp, int gameState, double location,Interval rangeY, Rectangle scope, Queue<GameObstacle>obstacles,double velocity,bool humanFriendly)
             {
                 Color backgroundColor = Color.FromArgb(255, 255, 255)
                     ,podColor=Color.FromArgb(0,0,0)
@@ -30,7 +30,7 @@ namespace Lolipop_AI_interface
                    {
                        float ratioX = (p.X - scope.X) / scope.Width
                        , ratioY = (p.Y - scope.Y) / scope.Height;
-                       return new PointF(bmp.Width*ratioX,bmp.Height*ratioY);
+                       return new PointF(1+(bmp.Width-1)*ratioX,bmp.Height*ratioY);
                    });
                 var rectangleOf = new Func<PointF, float, RectangleF>((PointF p, float l) =>
                     {
@@ -44,10 +44,6 @@ namespace Lolipop_AI_interface
                 using (Graphics g = Graphics.FromImage(bmp))
                 {
                     g.Clear(backgroundColor);
-                    {
-                        var r = rectangleOf(locationOf(new PointF(0, (float)location)), 1);
-                        g.DrawEllipse(new Pen(podColor,1), r.X, r.Y, r.Width, r.Height);
-                    }
                     g.DrawLine(new Pen(boundColor,1), locationOf(new PointF(scope.X, rangeY.maximum)), locationOf(new PointF(scope.X + scope.Width, rangeY.maximum)));
                     g.DrawLine(new Pen(boundColor,1), locationOf(new PointF(scope.X, rangeY.minimum)), locationOf(new PointF(scope.X + scope.Width, rangeY.minimum)));
                     int x = 0;
@@ -55,13 +51,23 @@ namespace Lolipop_AI_interface
                     {
                         {
                             var r = getRectangle(locationOf(new PointF(x + o.distance, rangeY.minimum)), locationOf(new PointF(x + o.distance + o.width, o.lower_y)));
-                            g.DrawRectangle(new Pen(obstacleColor,1), r.X, r.Y, r.Width, r.Height);
+                            g.FillRectangle(new SolidBrush(obstacleColor), r.X, r.Y, r.Width, r.Height);
                         }
                         {
                             var r = getRectangle(locationOf(new PointF(x + o.distance, o.upper_y)), locationOf(new PointF(x + o.distance + o.width, rangeY.maximum)));
-                            g.DrawRectangle(new Pen(obstacleColor,1), r.X, r.Y, r.Width, r.Height);
+                            g.FillRectangle(new SolidBrush(obstacleColor), r.X, r.Y, r.Width, r.Height);
                         }
                         x += o.distance + o.width;
+                    }
+                    {
+                        var r = rectangleOf(locationOf(new PointF(0, (float)location)),humanFriendly?10: 1);
+                        g.FillRectangle(new SolidBrush(podColor), r.X, r.Y, r.Width, r.Height);
+                    }
+                    {
+                        PointF o = new PointF(0, (float)((scope.Height / 2.0) / scope.Height * bmp.Height));
+                        PointF p = new PointF(0, (float)((scope.Height / 2.0 + velocity * 50.0) / scope.Height * bmp.Height));
+                        //var r = rectangleOf(p, 1);
+                        g.DrawLine(new Pen(podColor, 1), o,p);
                     }
                     //g.DrawLine(new Pen(Color.FromArgb(0, 0, 0)), new Point(), new Point(bmp.Width, bmp.Height));
                     if (gameState == 0) g.DrawString("Game Over", new Font("Consolas", 40, FontStyle.Bold), new SolidBrush(Color.FromArgb(0, 0, 255)), new PointF(0.2f * bmp.Width, 0.2f * bmp.Height));
@@ -70,9 +76,9 @@ namespace Lolipop_AI_interface
             }
         }
         GameVisualizer visualizer = new GameVisualizer();
-        public void drawImage(Image bmp)
+        public void drawImage(Image bmp,bool humanFriendly=false)
         {
-            visualizer.drawImage(bmp,gameState, location,rangeY, new Rectangle(-1, rangeY.minimum - 1, obstacleCount * obstacleDistance.maximum + 3, rangeY.maximum - rangeY.minimum + 3), obstacles);
+            visualizer.drawImage(bmp,gameState, location,rangeY, new Rectangle(-1, rangeY.minimum - 1, obstacleCount * obstacleDistance.maximum + 3, rangeY.maximum - rangeY.minimum + 3), obstacles,velocity, humanFriendly);
         }
         class GameObstacle
         {
@@ -86,7 +92,7 @@ namespace Lolipop_AI_interface
             }
         }
         Interval rangeY = new Interval(0, 1000);
-        Interval obstacleDistance = new Interval(1000, 2000);
+        Interval obstacleDistance = new Interval(150, 250);
         Interval obstacleWidth = new Interval(100, 200);
         Interval obstacleY = new Interval(0, 500);
         Interval obstacleHeight = new Interval(250, 500);
@@ -97,7 +103,7 @@ namespace Lolipop_AI_interface
         MyInputField generalSettings;
         MyCheckBox imageFeedBack;
         MyCheckBox showImageFeedBack;
-        Size imageFeedBackSize = new Size(586, 705);
+        Size imageFeedBackSize = new Size(10,40); //new Size(586, 705);
         public Game()
         {
             controlPanel = new MyTableLayoutPanel(3, 1, "AAS300", "A");
@@ -149,6 +155,7 @@ namespace Lolipop_AI_interface
             if ((sender as MyCheckBox).Checked)
             {
                 Form f = new Form();
+                f.ControlBox = false;
                 f.Show();
                 f.BackgroundImageLayout = ImageLayout.None;
                 ImageFeedBackProduced += (Bitmap bmp) =>

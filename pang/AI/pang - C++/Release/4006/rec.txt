@@ -1,0 +1,2670 @@
+..........AI : 7.931 s, Game : 0.673 s
+Episode 001 avg. reward = -1.000, Long-term avg. reward = -1.000
+..........AI : 3.191 s, Game : 0.512 s
+Episode 002 avg. reward = -1.000, Long-term avg. reward = -1.000
+..........AI : 4.336 s, Game : 0.798 s
+Episode 003 avg. reward = -0.900, Long-term avg. reward = -0.999
+..........AI : 4.022 s, Game : 0.674 s
+Episode 004 avg. reward = -1.000, Long-term avg. reward = -0.999
+..........AI : 4.642 s, Game : 0.871 s
+Episode 005 avg. reward = -0.800, Long-term avg. reward = -0.997
+..........AI : 3.318 s, Game : 0.585 s
+Episode 006 avg. reward = -1.000, Long-term avg. reward = -0.997
+..........AI : 3.961 s, Game : 0.770 s
+Episode 007 avg. reward = -0.900, Long-term avg. reward = -0.996
+..........AI : 3.961 s, Game : 0.751 s
+Episode 008 avg. reward = -1.000, Long-term avg. reward = -0.996
+..........AI : 4.267 s, Game : 0.772 s
+Episode 009 avg. reward = -0.900, Long-term avg. reward = -0.995
+..........AI : 6.099 s, Game : 1.154 s
+Episode 010 avg. reward = -0.900, Long-term avg. reward = -0.994
+..........AI : 5.284 s, Game : 0.844 s
+Episode 011 avg. reward = -1.000, Long-term avg. reward = -0.994
+..........AI : 5.515 s, Game : 0.978 s
+Episode 012 avg. reward = -0.800, Long-term avg. reward = -0.992
+..........AI : 8.130 s, Game : 1.411 s
+Episode 013 avg. reward = -0.700, Long-term avg. reward = -0.989
+..........AI : 8.839 s, Game : 1.450 s
+Episode 014 avg. reward = -0.700, Long-term avg. reward = -0.987
+..........AI : 6.153 s, Game : 1.068 s
+Episode 015 avg. reward = -0.900, Long-term avg. reward = -0.986
+..........AI : 8.365 s, Game : 1.353 s
+Episode 016 avg. reward = -0.700, Long-term avg. reward = -0.983
+..........AI : 13.780 s, Game : 2.305 s
+Episode 017 avg. reward = -0.500, Long-term avg. reward = -0.978
+..........AI : 9.290 s, Game : 1.338 s
+Episode 018 avg. reward = -1.000, Long-term avg. reward = -0.978
+..........AI : 16.477 s, Game : 2.259 s
+Episode 019 avg. reward = -0.500, Long-term avg. reward = -0.973
+..........AI : 14.998 s, Game : 1.972 s
+Episode 020 avg. reward = -0.600, Long-term avg. reward = -0.970
+..........AI : 18.560 s, Game : 2.610 s
+Episode 021 avg. reward = -0.300, Long-term avg. reward = -0.963
+..........AI : 10.247 s, Game : 1.554 s
+Episode 022 avg. reward = -1.000, Long-term avg. reward = -0.963
+..........AI : 11.933 s, Game : 1.842 s
+Episode 023 avg. reward = -0.800, Long-term avg. reward = -0.962
+..........AI : 27.852 s, Game : 3.814 s
+Episode 024 avg. reward = -0.100, Long-term avg. reward = -0.953
+..........AI : 17.490 s, Game : 2.561 s
+Episode 025 avg. reward = -0.400, Long-term avg. reward = -0.948
+..........AI : 23.256 s, Game : 3.371 s
+Episode 026 avg. reward = -0.100, Long-term avg. reward = -0.939
+..........AI : 22.618 s, Game : 3.308 s
+Episode 027 avg. reward = -0.300, Long-term avg. reward = -0.933
+..........AI : 10.463 s, Game : 1.442 s
+Episode 028 avg. reward = -0.900, Long-term avg. reward = -0.932
+..........AI : 17.319 s, Game : 2.517 s
+Episode 029 avg. reward = -0.400, Long-term avg. reward = -0.927
+..........AI : 21.971 s, Game : 3.240 s
+Episode 030 avg. reward = -0.200, Long-term avg. reward = -0.920
+..........AI : 21.210 s, Game : 3.027 s
+Episode 031 avg. reward = -0.100, Long-term avg. reward = -0.912
+..........AI : 13.123 s, Game : 1.855 s
+Episode 032 avg. reward = -0.700, Long-term avg. reward = -0.909
+..........AI : 14.576 s, Game : 1.979 s
+Episode 033 avg. reward = -0.700, Long-term avg. reward = -0.907
+..........AI : 10.870 s, Game : 1.485 s
+Episode 034 avg. reward = -0.900, Long-term avg. reward = -0.907
+..........AI : 19.640 s, Game : 2.796 s
+Episode 035 avg. reward = -0.400, Long-term avg. reward = -0.902
+..........AI : 18.861 s, Game : 2.668 s
+Episode 036 avg. reward = -0.300, Long-term avg. reward = -0.896
+..........AI : 19.088 s, Game : 2.752 s
+Episode 037 avg. reward = -0.500, Long-term avg. reward = -0.892
+..........AI : 17.516 s, Game : 2.439 s
+Episode 038 avg. reward = -0.500, Long-term avg. reward = -0.888
+..........AI : 15.222 s, Game : 2.184 s
+Episode 039 avg. reward = -0.600, Long-term avg. reward = -0.885
+..........AI : 17.552 s, Game : 2.518 s
+Episode 040 avg. reward = -0.400, Long-term avg. reward = -0.881
+..........AI : 14.573 s, Game : 2.158 s
+Episode 041 avg. reward = -0.600, Long-term avg. reward = -0.878
+..........AI : 12.551 s, Game : 1.839 s
+Episode 042 avg. reward = -0.800, Long-term avg. reward = -0.877
+..........AI : 16.074 s, Game : 2.297 s
+Episode 043 avg. reward = -0.600, Long-term avg. reward = -0.874
+..........AI : 19.630 s, Game : 2.845 s
+Episode 044 avg. reward = -0.300, Long-term avg. reward = -0.868
+..........AI : 20.577 s, Game : 3.049 s
+Episode 045 avg. reward = -0.400, Long-term avg. reward = -0.864
+..........AI : 18.394 s, Game : 2.805 s
+Episode 046 avg. reward = -0.300, Long-term avg. reward = -0.858
+..........AI : 16.278 s, Game : 2.378 s
+Episode 047 avg. reward = -0.600, Long-term avg. reward = -0.856
+..........AI : 14.394 s, Game : 2.155 s
+Episode 048 avg. reward = -0.700, Long-term avg. reward = -0.854
+..........AI : 17.528 s, Game : 2.527 s
+Episode 049 avg. reward = -0.400, Long-term avg. reward = -0.849
+..........AI : 18.290 s, Game : 2.704 s
+Episode 050 avg. reward = -0.300, Long-term avg. reward = -0.844
+..........AI : 20.138 s, Game : 3.064 s
+Episode 051 avg. reward = -0.300, Long-term avg. reward = -0.839
+..........AI : 17.057 s, Game : 2.518 s
+Episode 052 avg. reward = -0.500, Long-term avg. reward = -0.835
+..........AI : 15.796 s, Game : 2.325 s
+Episode 053 avg. reward = -0.500, Long-term avg. reward = -0.832
+..........AI : 23.270 s, Game : 3.544 s
+Episode 054 avg. reward = -0.100, Long-term avg. reward = -0.824
+..........AI : 26.019 s, Game : 3.911 s
+Episode 055 avg. reward = 0.200, Long-term avg. reward = -0.814
+..........AI : 20.767 s, Game : 3.035 s
+Episode 056 avg. reward = -0.300, Long-term avg. reward = -0.809
+..........AI : 26.230 s, Game : 3.853 s
+Episode 057 avg. reward = 0.200, Long-term avg. reward = -0.799
+..........AI : 13.116 s, Game : 1.899 s
+Episode 058 avg. reward = -0.700, Long-term avg. reward = -0.798
+..........AI : 14.260 s, Game : 2.179 s
+Episode 059 avg. reward = -0.600, Long-term avg. reward = -0.796
+..........AI : 21.075 s, Game : 3.086 s
+Episode 060 avg. reward = 0.000, Long-term avg. reward = -0.788
+..........AI : 10.887 s, Game : 1.548 s
+Episode 061 avg. reward = -0.800, Long-term avg. reward = -0.788
+..........AI : 18.090 s, Game : 2.631 s
+Episode 062 avg. reward = -0.400, Long-term avg. reward = -0.784
+..........AI : 24.148 s, Game : 3.707 s
+Episode 063 avg. reward = 0.100, Long-term avg. reward = -0.775
+..........AI : 23.444 s, Game : 3.463 s
+Episode 064 avg. reward = -0.100, Long-term avg. reward = -0.769
+..........AI : 24.835 s, Game : 3.815 s
+Episode 065 avg. reward = 0.200, Long-term avg. reward = -0.759
+..........AI : 26.748 s, Game : 4.052 s
+Episode 066 avg. reward = 0.200, Long-term avg. reward = -0.749
+..........AI : 19.330 s, Game : 2.763 s
+Episode 067 avg. reward = -0.500, Long-term avg. reward = -0.747
+..........AI : 20.328 s, Game : 2.814 s
+Episode 068 avg. reward = -0.600, Long-term avg. reward = -0.745
+..........AI : 22.245 s, Game : 3.165 s
+Episode 069 avg. reward = -0.400, Long-term avg. reward = -0.742
+..........AI : 28.643 s, Game : 4.012 s
+Episode 070 avg. reward = 0.100, Long-term avg. reward = -0.734
+..........AI : 34.128 s, Game : 4.751 s
+Episode 071 avg. reward = 0.500, Long-term avg. reward = -0.721
+..........AI : 15.298 s, Game : 2.091 s
+Episode 072 avg. reward = -0.800, Long-term avg. reward = -0.722
+..........AI : 24.607 s, Game : 3.434 s
+Episode 073 avg. reward = -0.300, Long-term avg. reward = -0.718
+..........AI : 30.431 s, Game : 4.391 s
+Episode 074 avg. reward = 0.100, Long-term avg. reward = -0.710
+..........AI : 51.987 s, Game : 7.583 s
+Episode 075 avg. reward = 1.500, Long-term avg. reward = -0.688
+..........AI : 42.470 s, Game : 6.120 s
+Episode 076 avg. reward = 0.800, Long-term avg. reward = -0.673
+..........AI : 29.033 s, Game : 4.151 s
+Episode 077 avg. reward = 0.100, Long-term avg. reward = -0.665
+..........AI : 26.737 s, Game : 3.729 s
+Episode 078 avg. reward = -0.100, Long-term avg. reward = -0.659
+..........AI : 60.513 s, Game : 9.022 s
+Episode 079 avg. reward = 1.900, Long-term avg. reward = -0.634
+..........AI : 40.263 s, Game : 5.795 s
+Episode 080 avg. reward = 0.800, Long-term avg. reward = -0.619
+..........AI : 28.550 s, Game : 3.896 s
+Episode 081 avg. reward = -0.100, Long-term avg. reward = -0.614
+..........AI : 35.456 s, Game : 5.101 s
+Episode 082 avg. reward = 0.500, Long-term avg. reward = -0.603
+..........AI : 49.690 s, Game : 7.076 s
+Episode 083 avg. reward = 1.200, Long-term avg. reward = -0.585
+..........AI : 39.267 s, Game : 5.655 s
+Episode 084 avg. reward = 0.600, Long-term avg. reward = -0.573
+..........AI : 39.033 s, Game : 5.428 s
+Episode 085 avg. reward = 0.500, Long-term avg. reward = -0.562
+..........AI : 37.064 s, Game : 5.014 s
+Episode 086 avg. reward = 0.300, Long-term avg. reward = -0.554
+..........AI : 43.826 s, Game : 6.442 s
+Episode 087 avg. reward = 1.000, Long-term avg. reward = -0.538
+..........AI : 38.124 s, Game : 5.340 s
+Episode 088 avg. reward = 0.500, Long-term avg. reward = -0.528
+..........AI : 35.014 s, Game : 4.910 s
+Episode 089 avg. reward = 0.400, Long-term avg. reward = -0.519
+..........AI : 20.045 s, Game : 2.814 s
+Episode 090 avg. reward = -0.400, Long-term avg. reward = -0.517
+..........AI : 40.270 s, Game : 5.690 s
+Episode 091 avg. reward = 0.800, Long-term avg. reward = -0.504
+..........AI : 34.032 s, Game : 4.758 s
+Episode 092 avg. reward = 0.300, Long-term avg. reward = -0.496
+..........AI : 23.587 s, Game : 3.368 s
+Episode 093 avg. reward = -0.200, Long-term avg. reward = -0.493
+..........AI : 23.762 s, Game : 3.387 s
+Episode 094 avg. reward = -0.200, Long-term avg. reward = -0.490
+..........AI : 26.813 s, Game : 3.836 s
+Episode 095 avg. reward = -0.100, Long-term avg. reward = -0.486
+..........AI : 22.546 s, Game : 3.306 s
+Episode 096 avg. reward = -0.200, Long-term avg. reward = -0.484
+..........AI : 39.085 s, Game : 5.450 s
+Episode 097 avg. reward = 0.700, Long-term avg. reward = -0.472
+..........AI : 42.477 s, Game : 6.065 s
+Episode 098 avg. reward = 1.000, Long-term avg. reward = -0.457
+..........AI : 25.889 s, Game : 3.690 s
+Episode 099 avg. reward = -0.100, Long-term avg. reward = -0.453
+..........AI : 59.448 s, Game : 8.558 s
+Episode 100 avg. reward = 1.900, Long-term avg. reward = -0.430
+..........AI : 35.192 s, Game : 5.043 s
+Episode 101 avg. reward = 0.500, Long-term avg. reward = -0.421
+..........AI : 38.863 s, Game : 5.407 s
+Episode 102 avg. reward = 0.600, Long-term avg. reward = -0.410
+..........AI : 23.225 s, Game : 3.281 s
+Episode 103 avg. reward = -0.300, Long-term avg. reward = -0.409
+..........AI : 21.910 s, Game : 2.957 s
+Episode 104 avg. reward = -0.400, Long-term avg. reward = -0.409
+..........AI : 47.975 s, Game : 6.941 s
+Episode 105 avg. reward = 1.200, Long-term avg. reward = -0.393
+..........AI : 26.948 s, Game : 3.873 s
+Episode 106 avg. reward = 0.000, Long-term avg. reward = -0.389
+..........AI : 34.529 s, Game : 4.505 s
+Episode 107 avg. reward = 0.300, Long-term avg. reward = -0.382
+..........AI : 23.662 s, Game : 3.380 s
+Episode 108 avg. reward = -0.200, Long-term avg. reward = -0.380
+..........AI : 29.683 s, Game : 4.108 s
+Episode 109 avg. reward = 0.100, Long-term avg. reward = -0.376
+..........AI : 63.955 s, Game : 9.112 s
+Episode 110 avg. reward = 2.100, Long-term avg. reward = -0.351
+..........AI : 38.139 s, Game : 5.169 s
+Episode 111 avg. reward = 0.400, Long-term avg. reward = -0.343
+..........AI : 45.903 s, Game : 6.610 s
+Episode 112 avg. reward = 1.200, Long-term avg. reward = -0.328
+..........AI : 32.004 s, Game : 4.440 s
+Episode 113 avg. reward = 0.200, Long-term avg. reward = -0.323
+..........AI : 32.187 s, Game : 4.693 s
+Episode 114 avg. reward = 0.300, Long-term avg. reward = -0.316
+..........AI : 39.308 s, Game : 5.470 s
+Episode 115 avg. reward = 0.500, Long-term avg. reward = -0.308
+..........AI : 17.509 s, Game : 2.248 s
+Episode 116 avg. reward = -0.700, Long-term avg. reward = -0.312
+..........AI : 38.399 s, Game : 5.246 s
+Episode 117 avg. reward = 0.500, Long-term avg. reward = -0.304
+..........AI : 24.870 s, Game : 3.307 s
+Episode 118 avg. reward = -0.100, Long-term avg. reward = -0.302
+..........AI : 25.396 s, Game : 3.512 s
+Episode 119 avg. reward = -0.100, Long-term avg. reward = -0.300
+..........AI : 25.830 s, Game : 3.761 s
+Episode 120 avg. reward = -0.100, Long-term avg. reward = -0.298
+..........AI : 18.413 s, Game : 2.575 s
+Episode 121 avg. reward = -0.600, Long-term avg. reward = -0.301
+..........AI : 41.670 s, Game : 6.148 s
+Episode 122 avg. reward = 1.000, Long-term avg. reward = -0.288
+..........AI : 15.805 s, Game : 2.217 s
+Episode 123 avg. reward = -0.700, Long-term avg. reward = -0.292
+..........AI : 17.272 s, Game : 2.419 s
+Episode 124 avg. reward = -0.500, Long-term avg. reward = -0.294
+..........AI : 21.292 s, Game : 3.028 s
+Episode 125 avg. reward = -0.300, Long-term avg. reward = -0.294
+..........AI : 25.477 s, Game : 3.665 s
+Episode 126 avg. reward = -0.100, Long-term avg. reward = -0.292
+..........AI : 31.727 s, Game : 4.402 s
+Episode 127 avg. reward = 0.200, Long-term avg. reward = -0.287
+..........AI : 27.309 s, Game : 3.925 s
+Episode 128 avg. reward = 0.200, Long-term avg. reward = -0.283
+..........AI : 30.530 s, Game : 4.477 s
+Episode 129 avg. reward = 0.200, Long-term avg. reward = -0.278
+..........AI : 21.006 s, Game : 3.353 s
+Episode 130 avg. reward = -0.100, Long-term avg. reward = -0.276
+..........AI : 12.870 s, Game : 1.826 s
+Episode 131 avg. reward = -0.800, Long-term avg. reward = -0.281
+..........AI : 35.042 s, Game : 4.833 s
+Episode 132 avg. reward = 0.300, Long-term avg. reward = -0.275
+..........AI : 29.381 s, Game : 4.077 s
+Episode 133 avg. reward = 0.200, Long-term avg. reward = -0.271
+..........AI : 27.436 s, Game : 3.818 s
+Episode 134 avg. reward = -0.100, Long-term avg. reward = -0.269
+..........AI : 32.800 s, Game : 4.673 s
+Episode 135 avg. reward = 0.400, Long-term avg. reward = -0.262
+..........AI : 26.955 s, Game : 3.513 s
+Episode 136 avg. reward = 0.000, Long-term avg. reward = -0.260
+..........AI : 43.216 s, Game : 6.242 s
+Episode 137 avg. reward = 1.000, Long-term avg. reward = -0.247
+..........AI : 27.423 s, Game : 3.760 s
+Episode 138 avg. reward = -0.100, Long-term avg. reward = -0.246
+..........AI : 21.836 s, Game : 3.132 s
+Episode 139 avg. reward = -0.500, Long-term avg. reward = -0.248
+..........AI : 31.896 s, Game : 4.260 s
+Episode 140 avg. reward = 0.200, Long-term avg. reward = -0.244
+..........AI : 26.435 s, Game : 3.606 s
+Episode 141 avg. reward = -0.100, Long-term avg. reward = -0.242
+..........AI : 24.869 s, Game : 3.505 s
+Episode 142 avg. reward = -0.200, Long-term avg. reward = -0.242
+..........AI : 31.441 s, Game : 4.466 s
+Episode 143 avg. reward = 0.300, Long-term avg. reward = -0.236
+..........AI : 24.931 s, Game : 3.502 s
+Episode 144 avg. reward = -0.200, Long-term avg. reward = -0.236
+..........AI : 20.063 s, Game : 2.675 s
+Episode 145 avg. reward = -0.500, Long-term avg. reward = -0.239
+..........AI : 22.699 s, Game : 3.238 s
+Episode 146 avg. reward = -0.200, Long-term avg. reward = -0.238
+..........AI : 34.362 s, Game : 4.728 s
+Episode 147 avg. reward = 0.400, Long-term avg. reward = -0.232
+..........AI : 14.809 s, Game : 1.997 s
+Episode 148 avg. reward = -0.900, Long-term avg. reward = -0.239
+..........AI : 17.767 s, Game : 2.505 s
+Episode 149 avg. reward = -0.700, Long-term avg. reward = -0.243
+..........AI : 40.396 s, Game : 5.693 s
+Episode 150 avg. reward = 0.600, Long-term avg. reward = -0.235
+..........AI : 20.539 s, Game : 2.805 s
+Episode 151 avg. reward = -0.600, Long-term avg. reward = -0.238
+..........AI : 32.820 s, Game : 4.477 s
+Episode 152 avg. reward = 0.200, Long-term avg. reward = -0.234
+..........AI : 30.846 s, Game : 4.349 s
+Episode 153 avg. reward = 0.100, Long-term avg. reward = -0.231
+..........AI : 25.019 s, Game : 3.381 s
+Episode 154 avg. reward = -0.100, Long-term avg. reward = -0.229
+..........AI : 16.840 s, Game : 2.309 s
+Episode 155 avg. reward = -0.700, Long-term avg. reward = -0.234
+..........AI : 20.818 s, Game : 2.828 s
+Episode 156 avg. reward = -0.500, Long-term avg. reward = -0.237
+..........AI : 32.784 s, Game : 4.568 s
+Episode 157 avg. reward = 0.200, Long-term avg. reward = -0.232
+..........AI : 21.897 s, Game : 3.120 s
+Episode 158 avg. reward = -0.300, Long-term avg. reward = -0.233
+..........AI : 17.646 s, Game : 2.477 s
+Episode 159 avg. reward = -0.700, Long-term avg. reward = -0.238
+..........AI : 22.281 s, Game : 3.256 s
+Episode 160 avg. reward = -0.300, Long-term avg. reward = -0.238
+..........AI : 34.295 s, Game : 4.758 s
+Episode 161 avg. reward = 0.400, Long-term avg. reward = -0.232
+..........AI : 18.467 s, Game : 2.640 s
+Episode 162 avg. reward = -0.500, Long-term avg. reward = -0.235
+..........AI : 20.874 s, Game : 2.901 s
+Episode 163 avg. reward = -0.400, Long-term avg. reward = -0.236
+..........AI : 16.183 s, Game : 2.111 s
+Episode 164 avg. reward = -0.700, Long-term avg. reward = -0.241
+..........AI : 15.193 s, Game : 1.933 s
+Episode 165 avg. reward = -0.800, Long-term avg. reward = -0.246
+..........AI : 22.814 s, Game : 2.867 s
+Episode 166 avg. reward = -0.500, Long-term avg. reward = -0.249
+..........AI : 20.709 s, Game : 2.697 s
+Episode 167 avg. reward = -0.500, Long-term avg. reward = -0.252
+..........AI : 28.196 s, Game : 3.625 s
+Episode 168 avg. reward = -0.200, Long-term avg. reward = -0.251
+..........AI : 14.725 s, Game : 1.826 s
+Episode 169 avg. reward = -0.900, Long-term avg. reward = -0.257
+..........AI : 19.093 s, Game : 2.450 s
+Episode 170 avg. reward = -0.700, Long-term avg. reward = -0.262
+..........AI : 18.932 s, Game : 2.371 s
+Episode 171 avg. reward = -0.600, Long-term avg. reward = -0.265
+..........AI : 33.645 s, Game : 4.066 s
+Episode 172 avg. reward = 0.100, Long-term avg. reward = -0.262
+..........AI : 29.472 s, Game : 3.556 s
+Episode 173 avg. reward = -0.200, Long-term avg. reward = -0.261
+..........AI : 24.669 s, Game : 2.873 s
+Episode 174 avg. reward = -0.400, Long-term avg. reward = -0.262
+..........AI : 23.138 s, Game : 2.905 s
+Episode 175 avg. reward = -0.400, Long-term avg. reward = -0.264
+..........AI : 14.250 s, Game : 1.685 s
+Episode 176 avg. reward = -0.900, Long-term avg. reward = -0.270
+..........AI : 21.193 s, Game : 2.509 s
+Episode 177 avg. reward = -0.500, Long-term avg. reward = -0.272
+..........AI : 22.965 s, Game : 2.936 s
+Episode 178 avg. reward = -0.400, Long-term avg. reward = -0.274
+..........AI : 26.692 s, Game : 3.299 s
+Episode 179 avg. reward = -0.300, Long-term avg. reward = -0.274
+..........AI : 33.703 s, Game : 4.873 s
+Episode 180 avg. reward = 0.300, Long-term avg. reward = -0.268
+..........AI : 17.746 s, Game : 2.607 s
+Episode 181 avg. reward = -0.600, Long-term avg. reward = -0.272
+..........AI : 14.160 s, Game : 1.911 s
+Episode 182 avg. reward = -0.900, Long-term avg. reward = -0.278
+..........AI : 25.662 s, Game : 3.703 s
+Episode 183 avg. reward = -0.100, Long-term avg. reward = -0.276
+..........AI : 23.071 s, Game : 3.261 s
+Episode 184 avg. reward = -0.300, Long-term avg. reward = -0.276
+..........AI : 19.291 s, Game : 2.685 s
+Episode 185 avg. reward = -0.600, Long-term avg. reward = -0.280
+..........AI : 20.101 s, Game : 2.835 s
+Episode 186 avg. reward = -0.500, Long-term avg. reward = -0.282
+..........AI : 24.157 s, Game : 3.397 s
+Episode 187 avg. reward = -0.200, Long-term avg. reward = -0.281
+..........AI : 23.464 s, Game : 3.274 s
+Episode 188 avg. reward = -0.400, Long-term avg. reward = -0.282
+..........AI : 26.544 s, Game : 3.660 s
+Episode 189 avg. reward = -0.100, Long-term avg. reward = -0.280
+..........AI : 15.143 s, Game : 2.064 s
+Episode 190 avg. reward = -0.700, Long-term avg. reward = -0.284
+..........AI : 24.586 s, Game : 3.684 s
+Episode 191 avg. reward = -0.100, Long-term avg. reward = -0.283
+..........AI : 37.223 s, Game : 5.403 s
+Episode 192 avg. reward = 0.500, Long-term avg. reward = -0.275
+..........AI : 25.408 s, Game : 3.565 s
+Episode 193 avg. reward = -0.300, Long-term avg. reward = -0.275
+..........AI : 20.499 s, Game : 2.830 s
+Episode 194 avg. reward = -0.500, Long-term avg. reward = -0.277
+..........AI : 15.218 s, Game : 2.101 s
+Episode 195 avg. reward = -0.700, Long-term avg. reward = -0.282
+..........AI : 21.612 s, Game : 3.059 s
+Episode 196 avg. reward = -0.200, Long-term avg. reward = -0.281
+..........AI : 18.883 s, Game : 2.613 s
+Episode 197 avg. reward = -0.600, Long-term avg. reward = -0.284
+..........AI : 16.653 s, Game : 2.303 s
+Episode 198 avg. reward = -0.700, Long-term avg. reward = -0.288
+..........AI : 16.533 s, Game : 2.446 s
+Episode 199 avg. reward = -0.700, Long-term avg. reward = -0.292
+..........AI : 24.362 s, Game : 3.457 s
+Episode 200 avg. reward = -0.300, Long-term avg. reward = -0.292
+..........AI : 20.470 s, Game : 2.912 s
+Episode 201 avg. reward = -0.400, Long-term avg. reward = -0.293
+..........AI : 19.136 s, Game : 2.729 s
+Episode 202 avg. reward = -0.400, Long-term avg. reward = -0.294
+..........AI : 24.425 s, Game : 3.514 s
+Episode 203 avg. reward = -0.100, Long-term avg. reward = -0.292
+..........AI : 18.751 s, Game : 2.708 s
+Episode 204 avg. reward = -0.600, Long-term avg. reward = -0.296
+..........AI : 19.962 s, Game : 2.933 s
+Episode 205 avg. reward = -0.500, Long-term avg. reward = -0.298
+..........AI : 21.818 s, Game : 3.264 s
+Episode 206 avg. reward = -0.300, Long-term avg. reward = -0.298
+..........AI : 25.739 s, Game : 3.588 s
+Episode 207 avg. reward = -0.200, Long-term avg. reward = -0.297
+..........AI : 22.424 s, Game : 3.402 s
+Episode 208 avg. reward = -0.300, Long-term avg. reward = -0.297
+..........AI : 15.542 s, Game : 2.178 s
+Episode 209 avg. reward = -0.800, Long-term avg. reward = -0.302
+..........AI : 24.933 s, Game : 3.850 s
+Episode 210 avg. reward = -0.200, Long-term avg. reward = -0.301
+..........AI : 22.508 s, Game : 3.283 s
+Episode 211 avg. reward = -0.400, Long-term avg. reward = -0.302
+..........AI : 15.838 s, Game : 2.210 s
+Episode 212 avg. reward = -0.700, Long-term avg. reward = -0.306
+..........AI : 20.512 s, Game : 2.865 s
+Episode 213 avg. reward = -0.400, Long-term avg. reward = -0.307
+..........AI : 17.791 s, Game : 2.458 s
+Episode 214 avg. reward = -0.500, Long-term avg. reward = -0.309
+..........AI : 15.979 s, Game : 2.358 s
+Episode 215 avg. reward = -0.700, Long-term avg. reward = -0.312
+..........AI : 23.084 s, Game : 3.219 s
+Episode 216 avg. reward = -0.300, Long-term avg. reward = -0.312
+..........AI : 19.329 s, Game : 2.745 s
+Episode 217 avg. reward = -0.600, Long-term avg. reward = -0.315
+..........AI : 29.336 s, Game : 4.249 s
+Episode 218 avg. reward = 0.000, Long-term avg. reward = -0.312
+..........AI : 32.782 s, Game : 4.792 s
+Episode 219 avg. reward = 0.200, Long-term avg. reward = -0.307
+..........AI : 19.841 s, Game : 2.825 s
+Episode 220 avg. reward = -0.500, Long-term avg. reward = -0.309
+..........AI : 26.435 s, Game : 3.872 s
+Episode 221 avg. reward = -0.100, Long-term avg. reward = -0.307
+..........AI : 24.057 s, Game : 3.454 s
+Episode 222 avg. reward = -0.200, Long-term avg. reward = -0.306
+..........AI : 20.766 s, Game : 2.941 s
+Episode 223 avg. reward = -0.600, Long-term avg. reward = -0.309
+..........AI : 28.705 s, Game : 4.164 s
+Episode 224 avg. reward = 0.000, Long-term avg. reward = -0.306
+..........AI : 22.177 s, Game : 3.089 s
+Episode 225 avg. reward = -0.400, Long-term avg. reward = -0.307
+..........AI : 26.211 s, Game : 3.667 s
+Episode 226 avg. reward = -0.200, Long-term avg. reward = -0.305
+..........AI : 36.338 s, Game : 5.132 s
+Episode 227 avg. reward = 0.500, Long-term avg. reward = -0.297
+..........AI : 22.512 s, Game : 3.337 s
+Episode 228 avg. reward = -0.400, Long-term avg. reward = -0.298
+..........AI : 38.055 s, Game : 5.534 s
+Episode 229 avg. reward = 0.500, Long-term avg. reward = -0.290
+..........AI : 25.095 s, Game : 3.487 s
+Episode 230 avg. reward = -0.300, Long-term avg. reward = -0.291
+..........AI : 20.173 s, Game : 2.932 s
+Episode 231 avg. reward = -0.500, Long-term avg. reward = -0.293
+..........AI : 15.706 s, Game : 2.239 s
+Episode 232 avg. reward = -0.700, Long-term avg. reward = -0.297
+..........AI : 22.279 s, Game : 3.276 s
+Episode 233 avg. reward = -0.400, Long-term avg. reward = -0.298
+..........AI : 23.976 s, Game : 3.458 s
+Episode 234 avg. reward = -0.200, Long-term avg. reward = -0.297
+..........AI : 22.640 s, Game : 3.240 s
+Episode 235 avg. reward = -0.400, Long-term avg. reward = -0.298
+..........AI : 27.734 s, Game : 3.916 s
+Episode 236 avg. reward = -0.100, Long-term avg. reward = -0.296
+..........AI : 13.877 s, Game : 1.975 s
+Episode 237 avg. reward = -0.900, Long-term avg. reward = -0.302
+..........AI : 18.517 s, Game : 2.621 s
+Episode 238 avg. reward = -0.600, Long-term avg. reward = -0.305
+..........AI : 25.819 s, Game : 3.471 s
+Episode 239 avg. reward = -0.200, Long-term avg. reward = -0.304
+..........AI : 22.655 s, Game : 3.082 s
+Episode 240 avg. reward = -0.400, Long-term avg. reward = -0.305
+..........AI : 18.709 s, Game : 2.555 s
+Episode 241 avg. reward = -0.600, Long-term avg. reward = -0.308
+..........AI : 27.872 s, Game : 3.942 s
+Episode 242 avg. reward = 0.000, Long-term avg. reward = -0.305
+..........AI : 18.551 s, Game : 2.500 s
+Episode 243 avg. reward = -0.600, Long-term avg. reward = -0.308
+..........AI : 15.750 s, Game : 2.176 s
+Episode 244 avg. reward = -0.700, Long-term avg. reward = -0.312
+..........AI : 12.773 s, Game : 1.730 s
+Episode 245 avg. reward = -1.000, Long-term avg. reward = -0.318
+..........AI : 18.786 s, Game : 2.722 s
+Episode 246 avg. reward = -0.600, Long-term avg. reward = -0.321
+..........AI : 20.181 s, Game : 2.981 s
+Episode 247 avg. reward = -0.500, Long-term avg. reward = -0.323
+..........AI : 20.196 s, Game : 2.987 s
+Episode 248 avg. reward = -0.500, Long-term avg. reward = -0.325
+..........AI : 21.883 s, Game : 3.072 s
+Episode 249 avg. reward = -0.500, Long-term avg. reward = -0.327
+..........AI : 20.066 s, Game : 2.927 s
+Episode 250 avg. reward = -0.400, Long-term avg. reward = -0.327
+..........AI : 18.742 s, Game : 2.663 s
+Episode 251 avg. reward = -0.600, Long-term avg. reward = -0.330
+..........AI : 15.729 s, Game : 2.224 s
+Episode 252 avg. reward = -0.800, Long-term avg. reward = -0.335
+..........AI : 22.454 s, Game : 3.217 s
+Episode 253 avg. reward = -0.300, Long-term avg. reward = -0.334
+..........AI : 21.227 s, Game : 3.114 s
+Episode 254 avg. reward = -0.300, Long-term avg. reward = -0.334
+..........AI : 16.599 s, Game : 2.352 s
+Episode 255 avg. reward = -0.700, Long-term avg. reward = -0.338
+..........AI : 27.961 s, Game : 3.999 s
+Episode 256 avg. reward = -0.100, Long-term avg. reward = -0.335
+..........AI : 33.456 s, Game : 4.786 s
+Episode 257 avg. reward = 0.300, Long-term avg. reward = -0.329
+..........AI : 23.801 s, Game : 3.459 s
+Episode 258 avg. reward = -0.300, Long-term avg. reward = -0.329
+..........AI : 15.255 s, Game : 2.133 s
+Episode 259 avg. reward = -0.800, Long-term avg. reward = -0.333
+..........AI : 15.140 s, Game : 2.082 s
+Episode 260 avg. reward = -0.800, Long-term avg. reward = -0.338
+..........AI : 28.897 s, Game : 4.282 s
+Episode 261 avg. reward = 0.100, Long-term avg. reward = -0.334
+..........AI : 18.549 s, Game : 2.805 s
+Episode 262 avg. reward = -0.600, Long-term avg. reward = -0.336
+..........AI : 17.696 s, Game : 2.515 s
+Episode 263 avg. reward = -0.600, Long-term avg. reward = -0.339
+..........AI : 21.800 s, Game : 3.266 s
+Episode 264 avg. reward = -0.400, Long-term avg. reward = -0.340
+..........AI : 28.803 s, Game : 4.225 s
+Episode 265 avg. reward = 0.000, Long-term avg. reward = -0.336
+..........AI : 25.128 s, Game : 3.735 s
+Episode 266 avg. reward = -0.200, Long-term avg. reward = -0.335
+..........AI : 27.518 s, Game : 4.096 s
+Episode 267 avg. reward = 0.000, Long-term avg. reward = -0.331
+..........AI : 25.578 s, Game : 3.728 s
+Episode 268 avg. reward = -0.100, Long-term avg. reward = -0.329
+..........AI : 18.054 s, Game : 2.470 s
+Episode 269 avg. reward = -0.600, Long-term avg. reward = -0.332
+..........AI : 22.618 s, Game : 3.189 s
+Episode 270 avg. reward = -0.400, Long-term avg. reward = -0.333
+..........AI : 19.792 s, Game : 2.775 s
+Episode 271 avg. reward = -0.500, Long-term avg. reward = -0.334
+..........AI : 23.906 s, Game : 3.487 s
+Episode 272 avg. reward = -0.300, Long-term avg. reward = -0.334
+..........AI : 17.675 s, Game : 2.556 s
+Episode 273 avg. reward = -0.600, Long-term avg. reward = -0.337
+..........AI : 28.154 s, Game : 3.996 s
+Episode 274 avg. reward = 0.000, Long-term avg. reward = -0.333
+..........AI : 26.194 s, Game : 3.875 s
+Episode 275 avg. reward = -0.100, Long-term avg. reward = -0.331
+..........AI : 20.234 s, Game : 2.980 s
+Episode 276 avg. reward = -0.400, Long-term avg. reward = -0.332
+..........AI : 34.431 s, Game : 5.055 s
+Episode 277 avg. reward = 0.400, Long-term avg. reward = -0.324
+..........AI : 16.731 s, Game : 2.416 s
+Episode 278 avg. reward = -0.800, Long-term avg. reward = -0.329
+..........AI : 21.957 s, Game : 3.215 s
+Episode 279 avg. reward = -0.400, Long-term avg. reward = -0.330
+..........AI : 25.265 s, Game : 3.761 s
+Episode 280 avg. reward = -0.200, Long-term avg. reward = -0.328
+..........AI : 25.980 s, Game : 3.825 s
+Episode 281 avg. reward = -0.100, Long-term avg. reward = -0.326
+..........AI : 25.246 s, Game : 3.620 s
+Episode 282 avg. reward = 0.000, Long-term avg. reward = -0.323
+..........AI : 15.765 s, Game : 2.272 s
+Episode 283 avg. reward = -0.700, Long-term avg. reward = -0.327
+..........AI : 16.477 s, Game : 2.386 s
+Episode 284 avg. reward = -0.700, Long-term avg. reward = -0.330
+..........AI : 37.422 s, Game : 5.591 s
+Episode 285 avg. reward = 0.600, Long-term avg. reward = -0.321
+..........AI : 17.323 s, Game : 2.457 s
+Episode 286 avg. reward = -0.600, Long-term avg. reward = -0.324
+..........AI : 35.512 s, Game : 5.341 s
+Episode 287 avg. reward = 0.500, Long-term avg. reward = -0.316
+..........AI : 17.726 s, Game : 2.534 s
+Episode 288 avg. reward = -0.600, Long-term avg. reward = -0.318
+..........AI : 22.041 s, Game : 3.226 s
+Episode 289 avg. reward = -0.400, Long-term avg. reward = -0.319
+..........AI : 18.778 s, Game : 2.648 s
+Episode 290 avg. reward = -0.600, Long-term avg. reward = -0.322
+..........AI : 30.072 s, Game : 4.264 s
+Episode 291 avg. reward = 0.100, Long-term avg. reward = -0.318
+..........AI : 25.406 s, Game : 3.873 s
+Episode 292 avg. reward = -0.100, Long-term avg. reward = -0.316
+..........AI : 22.783 s, Game : 3.282 s
+Episode 293 avg. reward = -0.300, Long-term avg. reward = -0.315
+..........AI : 27.940 s, Game : 4.039 s
+Episode 294 avg. reward = 0.000, Long-term avg. reward = -0.312
+..........AI : 23.737 s, Game : 3.396 s
+Episode 295 avg. reward = -0.100, Long-term avg. reward = -0.310
+..........AI : 18.147 s, Game : 2.611 s
+Episode 296 avg. reward = -0.600, Long-term avg. reward = -0.313
+..........AI : 31.897 s, Game : 4.914 s
+Episode 297 avg. reward = 0.200, Long-term avg. reward = -0.308
+..........AI : 47.186 s, Game : 7.126 s
+Episode 298 avg. reward = 1.100, Long-term avg. reward = -0.294
+..........AI : 20.415 s, Game : 2.951 s
+Episode 299 avg. reward = -0.400, Long-term avg. reward = -0.295
+..........AI : 17.079 s, Game : 2.413 s
+Episode 300 avg. reward = -0.600, Long-term avg. reward = -0.298
+..........AI : 19.760 s, Game : 2.848 s
+Episode 301 avg. reward = -0.500, Long-term avg. reward = -0.300
+..........AI : 42.137 s, Game : 6.336 s
+Episode 302 avg. reward = 0.900, Long-term avg. reward = -0.288
+..........AI : 19.364 s, Game : 2.781 s
+Episode 303 avg. reward = -0.500, Long-term avg. reward = -0.290
+..........AI : 17.165 s, Game : 2.575 s
+Episode 304 avg. reward = -0.700, Long-term avg. reward = -0.294
+..........AI : 22.185 s, Game : 3.374 s
+Episode 305 avg. reward = -0.300, Long-term avg. reward = -0.294
+..........AI : 26.511 s, Game : 3.900 s
+Episode 306 avg. reward = -0.100, Long-term avg. reward = -0.292
+..........AI : 23.632 s, Game : 3.495 s
+Episode 307 avg. reward = -0.100, Long-term avg. reward = -0.290
+..........AI : 20.715 s, Game : 3.042 s
+Episode 308 avg. reward = -0.500, Long-term avg. reward = -0.293
+..........AI : 14.378 s, Game : 2.183 s
+Episode 309 avg. reward = -0.900, Long-term avg. reward = -0.299
+..........AI : 14.626 s, Game : 2.124 s
+Episode 310 avg. reward = -0.700, Long-term avg. reward = -0.303
+..........AI : 18.046 s, Game : 2.577 s
+Episode 311 avg. reward = -0.600, Long-term avg. reward = -0.306
+..........AI : 34.808 s, Game : 5.177 s
+Episode 312 avg. reward = 0.400, Long-term avg. reward = -0.299
+..........AI : 14.302 s, Game : 2.145 s
+Episode 313 avg. reward = -0.800, Long-term avg. reward = -0.304
+..........AI : 24.847 s, Game : 3.792 s
+Episode 314 avg. reward = -0.100, Long-term avg. reward = -0.302
+..........AI : 22.982 s, Game : 3.257 s
+Episode 315 avg. reward = -0.200, Long-term avg. reward = -0.301
+..........AI : 22.336 s, Game : 3.318 s
+Episode 316 avg. reward = -0.300, Long-term avg. reward = -0.300
+..........AI : 16.015 s, Game : 2.361 s
+Episode 317 avg. reward = -0.600, Long-term avg. reward = -0.303
+..........AI : 15.687 s, Game : 2.264 s
+Episode 318 avg. reward = -0.700, Long-term avg. reward = -0.307
+..........AI : 17.881 s, Game : 2.586 s
+Episode 319 avg. reward = -0.600, Long-term avg. reward = -0.310
+..........AI : 31.157 s, Game : 4.546 s
+Episode 320 avg. reward = 0.300, Long-term avg. reward = -0.304
+..........AI : 27.573 s, Game : 4.023 s
+Episode 321 avg. reward = 0.000, Long-term avg. reward = -0.301
+..........AI : 45.447 s, Game : 6.670 s
+Episode 322 avg. reward = 1.100, Long-term avg. reward = -0.287
+..........AI : 17.689 s, Game : 2.583 s
+Episode 323 avg. reward = -0.600, Long-term avg. reward = -0.290
+..........AI : 28.882 s, Game : 4.172 s
+Episode 324 avg. reward = 0.100, Long-term avg. reward = -0.286
+..........AI : 18.129 s, Game : 2.717 s
+Episode 325 avg. reward = -0.400, Long-term avg. reward = -0.288
+..........AI : 24.350 s, Game : 3.513 s
+Episode 326 avg. reward = -0.200, Long-term avg. reward = -0.287
+..........AI : 24.271 s, Game : 3.528 s
+Episode 327 avg. reward = -0.200, Long-term avg. reward = -0.286
+..........AI : 25.051 s, Game : 3.709 s
+Episode 328 avg. reward = -0.200, Long-term avg. reward = -0.285
+..........AI : 32.814 s, Game : 4.905 s
+Episode 329 avg. reward = 0.400, Long-term avg. reward = -0.278
+..........AI : 18.790 s, Game : 2.715 s
+Episode 330 avg. reward = -0.600, Long-term avg. reward = -0.281
+..........AI : 27.016 s, Game : 3.923 s
+Episode 331 avg. reward = 0.000, Long-term avg. reward = -0.279
+..........AI : 20.699 s, Game : 2.842 s
+Episode 332 avg. reward = -0.300, Long-term avg. reward = -0.279
+..........AI : 24.491 s, Game : 3.575 s
+Episode 333 avg. reward = -0.100, Long-term avg. reward = -0.277
+..........AI : 28.903 s, Game : 4.231 s
+Episode 334 avg. reward = 0.100, Long-term avg. reward = -0.273
+..........AI : 33.140 s, Game : 4.938 s
+Episode 335 avg. reward = 0.400, Long-term avg. reward = -0.266
+..........AI : 23.833 s, Game : 3.420 s
+Episode 336 avg. reward = -0.300, Long-term avg. reward = -0.267
+..........AI : 20.244 s, Game : 2.979 s
+Episode 337 avg. reward = -0.400, Long-term avg. reward = -0.268
+..........AI : 28.748 s, Game : 4.140 s
+Episode 338 avg. reward = 0.200, Long-term avg. reward = -0.263
+..........AI : 20.700 s, Game : 2.928 s
+Episode 339 avg. reward = -0.400, Long-term avg. reward = -0.265
+..........AI : 23.918 s, Game : 3.366 s
+Episode 340 avg. reward = -0.100, Long-term avg. reward = -0.263
+..........AI : 20.687 s, Game : 2.921 s
+Episode 341 avg. reward = -0.300, Long-term avg. reward = -0.264
+..........AI : 23.364 s, Game : 3.288 s
+Episode 342 avg. reward = -0.300, Long-term avg. reward = -0.264
+..........AI : 27.205 s, Game : 3.897 s
+Episode 343 avg. reward = 0.000, Long-term avg. reward = -0.261
+..........AI : 27.692 s, Game : 3.948 s
+Episode 344 avg. reward = 0.000, Long-term avg. reward = -0.259
+..........AI : 21.435 s, Game : 3.017 s
+Episode 345 avg. reward = -0.400, Long-term avg. reward = -0.260
+..........AI : 27.047 s, Game : 3.945 s
+Episode 346 avg. reward = 0.000, Long-term avg. reward = -0.257
+..........AI : 26.053 s, Game : 3.743 s
+Episode 347 avg. reward = -0.100, Long-term avg. reward = -0.256
+..........AI : 31.734 s, Game : 4.732 s
+Episode 348 avg. reward = 0.100, Long-term avg. reward = -0.252
+..........AI : 16.829 s, Game : 2.474 s
+Episode 349 avg. reward = -0.600, Long-term avg. reward = -0.256
+..........AI : 33.180 s, Game : 4.908 s
+Episode 350 avg. reward = 0.400, Long-term avg. reward = -0.249
+..........AI : 32.919 s, Game : 4.778 s
+Episode 351 avg. reward = 0.400, Long-term avg. reward = -0.243
+..........AI : 23.529 s, Game : 3.313 s
+Episode 352 avg. reward = -0.200, Long-term avg. reward = -0.242
+..........AI : 24.871 s, Game : 3.772 s
+Episode 353 avg. reward = -0.100, Long-term avg. reward = -0.241
+..........AI : 34.278 s, Game : 4.941 s
+Episode 354 avg. reward = 0.400, Long-term avg. reward = -0.234
+..........AI : 18.947 s, Game : 2.679 s
+Episode 355 avg. reward = -0.400, Long-term avg. reward = -0.236
+..........AI : 26.597 s, Game : 3.736 s
+Episode 356 avg. reward = 0.000, Long-term avg. reward = -0.234
+..........AI : 26.834 s, Game : 3.886 s
+Episode 357 avg. reward = 0.000, Long-term avg. reward = -0.231
+..........AI : 21.533 s, Game : 3.119 s
+Episode 358 avg. reward = -0.300, Long-term avg. reward = -0.232
+..........AI : 34.700 s, Game : 5.131 s
+Episode 359 avg. reward = 0.500, Long-term avg. reward = -0.225
+..........AI : 38.890 s, Game : 5.707 s
+Episode 360 avg. reward = 0.700, Long-term avg. reward = -0.216
+..........AI : 28.634 s, Game : 4.135 s
+Episode 361 avg. reward = 0.100, Long-term avg. reward = -0.212
+..........AI : 15.695 s, Game : 2.161 s
+Episode 362 avg. reward = -0.800, Long-term avg. reward = -0.218
+..........AI : 24.541 s, Game : 3.580 s
+Episode 363 avg. reward = -0.100, Long-term avg. reward = -0.217
+..........AI : 39.390 s, Game : 5.840 s
+Episode 364 avg. reward = 0.800, Long-term avg. reward = -0.207
+..........AI : 20.889 s, Game : 3.000 s
+Episode 365 avg. reward = -0.400, Long-term avg. reward = -0.209
+..........AI : 20.181 s, Game : 2.710 s
+Episode 366 avg. reward = -0.500, Long-term avg. reward = -0.212
+..........AI : 33.477 s, Game : 4.878 s
+Episode 367 avg. reward = 0.400, Long-term avg. reward = -0.206
+..........AI : 18.059 s, Game : 2.563 s
+Episode 368 avg. reward = -0.600, Long-term avg. reward = -0.210
+..........AI : 43.601 s, Game : 6.424 s
+Episode 369 avg. reward = 1.100, Long-term avg. reward = -0.197
+..........AI : 14.235 s, Game : 1.891 s
+Episode 370 avg. reward = -0.900, Long-term avg. reward = -0.204
+..........AI : 24.264 s, Game : 3.535 s
+Episode 371 avg. reward = -0.200, Long-term avg. reward = -0.204
+..........AI : 18.190 s, Game : 2.705 s
+Episode 372 avg. reward = -0.500, Long-term avg. reward = -0.206
+..........AI : 31.542 s, Game : 4.545 s
+Episode 373 avg. reward = 0.200, Long-term avg. reward = -0.202
+..........AI : 33.546 s, Game : 4.826 s
+Episode 374 avg. reward = 0.300, Long-term avg. reward = -0.197
+..........AI : 28.305 s, Game : 4.169 s
+Episode 375 avg. reward = 0.000, Long-term avg. reward = -0.195
+..........AI : 28.848 s, Game : 4.236 s
+Episode 376 avg. reward = 0.100, Long-term avg. reward = -0.192
+..........AI : 30.854 s, Game : 4.536 s
+Episode 377 avg. reward = 0.200, Long-term avg. reward = -0.189
+..........AI : 29.264 s, Game : 4.255 s
+Episode 378 avg. reward = 0.200, Long-term avg. reward = -0.185
+..........AI : 24.950 s, Game : 3.646 s
+Episode 379 avg. reward = -0.200, Long-term avg. reward = -0.185
+..........AI : 17.068 s, Game : 2.315 s
+Episode 380 avg. reward = -0.800, Long-term avg. reward = -0.191
+..........AI : 22.675 s, Game : 3.283 s
+Episode 381 avg. reward = -0.400, Long-term avg. reward = -0.193
+..........AI : 15.660 s, Game : 2.161 s
+Episode 382 avg. reward = -0.700, Long-term avg. reward = -0.198
+..........AI : 24.877 s, Game : 3.561 s
+Episode 383 avg. reward = -0.200, Long-term avg. reward = -0.198
+..........AI : 26.414 s, Game : 3.746 s
+Episode 384 avg. reward = -0.100, Long-term avg. reward = -0.197
+..........AI : 29.501 s, Game : 4.337 s
+Episode 385 avg. reward = 0.100, Long-term avg. reward = -0.194
+..........AI : 28.497 s, Game : 4.250 s
+Episode 386 avg. reward = 0.200, Long-term avg. reward = -0.190
+..........AI : 28.269 s, Game : 4.021 s
+Episode 387 avg. reward = 0.000, Long-term avg. reward = -0.188
+..........AI : 30.279 s, Game : 4.391 s
+Episode 388 avg. reward = 0.100, Long-term avg. reward = -0.185
+..........AI : 28.192 s, Game : 4.250 s
+Episode 389 avg. reward = 0.100, Long-term avg. reward = -0.183
+..........AI : 25.457 s, Game : 3.624 s
+Episode 390 avg. reward = -0.200, Long-term avg. reward = -0.183
+..........AI : 34.684 s, Game : 5.116 s
+Episode 391 avg. reward = 0.500, Long-term avg. reward = -0.176
+..........AI : 20.990 s, Game : 2.964 s
+Episode 392 avg. reward = -0.400, Long-term avg. reward = -0.178
+..........AI : 28.438 s, Game : 4.091 s
+Episode 393 avg. reward = 0.100, Long-term avg. reward = -0.175
+..........AI : 21.424 s, Game : 3.037 s
+Episode 394 avg. reward = -0.500, Long-term avg. reward = -0.179
+..........AI : 15.368 s, Game : 2.130 s
+Episode 395 avg. reward = -0.700, Long-term avg. reward = -0.184
+..........AI : 26.476 s, Game : 4.005 s
+Episode 396 avg. reward = 0.100, Long-term avg. reward = -0.181
+..........AI : 26.586 s, Game : 3.713 s
+Episode 397 avg. reward = -0.100, Long-term avg. reward = -0.180
+..........AI : 50.907 s, Game : 7.671 s
+Episode 398 avg. reward = 1.600, Long-term avg. reward = -0.162
+..........AI : 21.859 s, Game : 3.092 s
+Episode 399 avg. reward = -0.300, Long-term avg. reward = -0.164
+..........AI : 35.311 s, Game : 5.209 s
+Episode 400 avg. reward = 0.600, Long-term avg. reward = -0.156
+..........AI : 34.423 s, Game : 4.918 s
+Episode 401 avg. reward = 0.400, Long-term avg. reward = -0.151
+..........AI : 23.915 s, Game : 3.401 s
+Episode 402 avg. reward = -0.200, Long-term avg. reward = -0.151
+..........AI : 27.992 s, Game : 4.083 s
+Episode 403 avg. reward = 0.200, Long-term avg. reward = -0.148
+..........AI : 24.464 s, Game : 3.476 s
+Episode 404 avg. reward = -0.100, Long-term avg. reward = -0.147
+..........AI : 22.723 s, Game : 3.310 s
+Episode 405 avg. reward = -0.300, Long-term avg. reward = -0.149
+..........AI : 31.452 s, Game : 4.502 s
+Episode 406 avg. reward = 0.300, Long-term avg. reward = -0.144
+..........AI : 37.049 s, Game : 5.337 s
+Episode 407 avg. reward = 0.600, Long-term avg. reward = -0.137
+..........AI : 18.434 s, Game : 2.585 s
+Episode 408 avg. reward = -0.500, Long-term avg. reward = -0.140
+..........AI : 26.834 s, Game : 3.812 s
+Episode 409 avg. reward = 0.100, Long-term avg. reward = -0.138
+..........AI : 36.427 s, Game : 5.193 s
+Episode 410 avg. reward = 0.500, Long-term avg. reward = -0.132
+..........AI : 19.644 s, Game : 2.824 s
+Episode 411 avg. reward = -0.400, Long-term avg. reward = -0.134
+..........AI : 24.549 s, Game : 3.572 s
+Episode 412 avg. reward = -0.200, Long-term avg. reward = -0.135
+..........AI : 17.704 s, Game : 2.545 s
+Episode 413 avg. reward = -0.700, Long-term avg. reward = -0.141
+..........AI : 22.437 s, Game : 3.171 s
+Episode 414 avg. reward = -0.300, Long-term avg. reward = -0.142
+..........AI : 26.703 s, Game : 3.740 s
+Episode 415 avg. reward = -0.200, Long-term avg. reward = -0.143
+..........AI : 19.377 s, Game : 2.942 s
+Episode 416 avg. reward = -0.500, Long-term avg. reward = -0.146
+..........AI : 30.089 s, Game : 4.414 s
+Episode 417 avg. reward = 0.200, Long-term avg. reward = -0.143
+..........AI : 25.676 s, Game : 3.766 s
+Episode 418 avg. reward = -0.200, Long-term avg. reward = -0.143
+..........AI : 27.990 s, Game : 4.053 s
+Episode 419 avg. reward = 0.000, Long-term avg. reward = -0.142
+..........AI : 25.831 s, Game : 3.734 s
+Episode 420 avg. reward = -0.100, Long-term avg. reward = -0.142
+..........AI : 30.803 s, Game : 4.506 s
+Episode 421 avg. reward = 0.000, Long-term avg. reward = -0.140
+..........AI : 15.794 s, Game : 2.317 s
+Episode 422 avg. reward = -0.700, Long-term avg. reward = -0.146
+..........AI : 37.579 s, Game : 5.379 s
+Episode 423 avg. reward = 0.500, Long-term avg. reward = -0.139
+..........AI : 23.935 s, Game : 3.521 s
+Episode 424 avg. reward = -0.300, Long-term avg. reward = -0.141
+..........AI : 34.872 s, Game : 5.295 s
+Episode 425 avg. reward = 0.400, Long-term avg. reward = -0.135
+..........AI : 44.778 s, Game : 6.635 s
+Episode 426 avg. reward = 1.000, Long-term avg. reward = -0.124
+..........AI : 28.372 s, Game : 4.126 s
+Episode 427 avg. reward = 0.000, Long-term avg. reward = -0.123
+..........AI : 29.427 s, Game : 4.317 s
+Episode 428 avg. reward = 0.100, Long-term avg. reward = -0.121
+..........AI : 17.406 s, Game : 2.609 s
+Episode 429 avg. reward = -0.600, Long-term avg. reward = -0.125
+..........AI : 24.691 s, Game : 3.560 s
+Episode 430 avg. reward = -0.200, Long-term avg. reward = -0.126
+..........AI : 26.183 s, Game : 3.910 s
+Episode 431 avg. reward = -0.200, Long-term avg. reward = -0.127
+..........AI : 21.747 s, Game : 3.259 s
+Episode 432 avg. reward = -0.300, Long-term avg. reward = -0.129
+..........AI : 44.711 s, Game : 6.662 s
+Episode 433 avg. reward = 1.100, Long-term avg. reward = -0.116
+..........AI : 22.053 s, Game : 3.230 s
+Episode 434 avg. reward = -0.300, Long-term avg. reward = -0.118
+..........AI : 32.762 s, Game : 4.731 s
+Episode 435 avg. reward = 0.200, Long-term avg. reward = -0.115
+..........AI : 22.158 s, Game : 3.218 s
+Episode 436 avg. reward = -0.300, Long-term avg. reward = -0.117
+..........AI : 16.076 s, Game : 2.157 s
+Episode 437 avg. reward = -0.700, Long-term avg. reward = -0.123
+..........AI : 28.778 s, Game : 4.228 s
+Episode 438 avg. reward = 0.200, Long-term avg. reward = -0.119
+..........AI : 16.900 s, Game : 2.394 s
+Episode 439 avg. reward = -0.600, Long-term avg. reward = -0.124
+..........AI : 37.304 s, Game : 5.551 s
+Episode 440 avg. reward = 0.700, Long-term avg. reward = -0.116
+..........AI : 19.780 s, Game : 2.898 s
+Episode 441 avg. reward = -0.500, Long-term avg. reward = -0.120
+..........AI : 29.430 s, Game : 4.472 s
+Episode 442 avg. reward = 0.100, Long-term avg. reward = -0.118
+..........AI : 36.318 s, Game : 5.269 s
+Episode 443 avg. reward = 0.500, Long-term avg. reward = -0.111
+..........AI : 21.029 s, Game : 3.022 s
+Episode 444 avg. reward = -0.400, Long-term avg. reward = -0.114
+..........AI : 27.914 s, Game : 4.252 s
+Episode 445 avg. reward = 0.000, Long-term avg. reward = -0.113
+..........AI : 31.632 s, Game : 4.506 s
+Episode 446 avg. reward = 0.000, Long-term avg. reward = -0.112
+..........AI : 38.859 s, Game : 5.541 s
+Episode 447 avg. reward = 0.800, Long-term avg. reward = -0.103
+..........AI : 34.394 s, Game : 5.119 s
+Episode 448 avg. reward = 0.400, Long-term avg. reward = -0.098
+..........AI : 25.703 s, Game : 3.577 s
+Episode 449 avg. reward = -0.100, Long-term avg. reward = -0.098
+..........AI : 29.591 s, Game : 4.127 s
+Episode 450 avg. reward = 0.100, Long-term avg. reward = -0.096
+..........AI : 39.782 s, Game : 5.698 s
+Episode 451 avg. reward = 0.700, Long-term avg. reward = -0.088
+..........AI : 26.457 s, Game : 3.734 s
+Episode 452 avg. reward = -0.100, Long-term avg. reward = -0.088
+..........AI : 19.069 s, Game : 2.679 s
+Episode 453 avg. reward = -0.500, Long-term avg. reward = -0.092
+..........AI : 44.718 s, Game : 6.509 s
+Episode 454 avg. reward = 0.900, Long-term avg. reward = -0.082
+..........AI : 22.614 s, Game : 3.242 s
+Episode 455 avg. reward = -0.300, Long-term avg. reward = -0.085
+..........AI : 17.879 s, Game : 2.395 s
+Episode 456 avg. reward = -0.600, Long-term avg. reward = -0.090
+..........AI : 23.697 s, Game : 3.416 s
+Episode 457 avg. reward = -0.300, Long-term avg. reward = -0.092
+..........AI : 19.812 s, Game : 2.879 s
+Episode 458 avg. reward = -0.400, Long-term avg. reward = -0.095
+..........AI : 17.191 s, Game : 2.371 s
+Episode 459 avg. reward = -0.700, Long-term avg. reward = -0.101
+..........AI : 29.383 s, Game : 4.143 s
+Episode 460 avg. reward = 0.100, Long-term avg. reward = -0.099
+..........AI : 17.215 s, Game : 2.480 s
+Episode 461 avg. reward = -0.600, Long-term avg. reward = -0.104
+..........AI : 23.744 s, Game : 3.396 s
+Episode 462 avg. reward = -0.100, Long-term avg. reward = -0.104
+..........AI : 19.937 s, Game : 2.873 s
+Episode 463 avg. reward = -0.400, Long-term avg. reward = -0.107
+..........AI : 27.573 s, Game : 3.847 s
+Episode 464 avg. reward = -0.100, Long-term avg. reward = -0.107
+..........AI : 48.886 s, Game : 7.091 s
+Episode 465 avg. reward = 1.400, Long-term avg. reward = -0.092
+..........AI : 32.161 s, Game : 4.475 s
+Episode 466 avg. reward = 0.300, Long-term avg. reward = -0.088
+..........AI : 30.164 s, Game : 4.227 s
+Episode 467 avg. reward = 0.200, Long-term avg. reward = -0.085
+..........AI : 27.817 s, Game : 3.865 s
+Episode 468 avg. reward = 0.000, Long-term avg. reward = -0.084
+..........AI : 29.546 s, Game : 4.233 s
+Episode 469 avg. reward = 0.100, Long-term avg. reward = -0.082
+..........AI : 31.871 s, Game : 4.586 s
+Episode 470 avg. reward = 0.300, Long-term avg. reward = -0.078
+..........AI : 25.362 s, Game : 3.563 s
+Episode 471 avg. reward = -0.100, Long-term avg. reward = -0.079
+..........AI : 12.452 s, Game : 1.640 s
+Episode 472 avg. reward = -0.900, Long-term avg. reward = -0.087
+..........AI : 31.285 s, Game : 4.599 s
+Episode 473 avg. reward = 0.200, Long-term avg. reward = -0.084
+..........AI : 18.787 s, Game : 2.687 s
+Episode 474 avg. reward = -0.500, Long-term avg. reward = -0.088
+..........AI : 32.995 s, Game : 4.679 s
+Episode 475 avg. reward = 0.300, Long-term avg. reward = -0.084
+..........AI : 21.786 s, Game : 3.210 s
+Episode 476 avg. reward = -0.400, Long-term avg. reward = -0.087
+..........AI : 34.920 s, Game : 5.136 s
+Episode 477 avg. reward = 0.400, Long-term avg. reward = -0.083
+..........AI : 22.698 s, Game : 3.237 s
+Episode 478 avg. reward = -0.300, Long-term avg. reward = -0.085
+..........AI : 22.496 s, Game : 3.202 s
+Episode 479 avg. reward = -0.200, Long-term avg. reward = -0.086
+..........AI : 24.210 s, Game : 3.394 s
+Episode 480 avg. reward = -0.200, Long-term avg. reward = -0.087
+..........AI : 24.086 s, Game : 3.415 s
+Episode 481 avg. reward = -0.200, Long-term avg. reward = -0.088
+..........AI : 19.895 s, Game : 2.796 s
+Episode 482 avg. reward = -0.400, Long-term avg. reward = -0.091
+..........AI : 45.411 s, Game : 6.509 s
+Episode 483 avg. reward = 0.900, Long-term avg. reward = -0.081
+..........AI : 21.292 s, Game : 2.902 s
+Episode 484 avg. reward = -0.400, Long-term avg. reward = -0.085
+..........AI : 37.402 s, Game : 5.248 s
+Episode 485 avg. reward = 0.500, Long-term avg. reward = -0.079
+..........AI : 61.957 s, Game : 8.898 s
+Episode 486 avg. reward = 2.000, Long-term avg. reward = -0.058
+..........AI : 49.829 s, Game : 7.350 s
+Episode 487 avg. reward = 1.400, Long-term avg. reward = -0.043
+..........AI : 21.884 s, Game : 3.086 s
+Episode 488 avg. reward = -0.400, Long-term avg. reward = -0.047
+..........AI : 34.999 s, Game : 5.115 s
+Episode 489 avg. reward = 0.400, Long-term avg. reward = -0.042
+..........AI : 39.335 s, Game : 5.619 s
+Episode 490 avg. reward = 0.700, Long-term avg. reward = -0.035
+..........AI : 20.956 s, Game : 2.915 s
+Episode 491 avg. reward = -0.400, Long-term avg. reward = -0.039
+..........AI : 48.557 s, Game : 6.805 s
+Episode 492 avg. reward = 1.200, Long-term avg. reward = -0.026
+..........AI : 15.153 s, Game : 2.057 s
+Episode 493 avg. reward = -0.800, Long-term avg. reward = -0.034
+..........AI : 43.649 s, Game : 6.076 s
+Episode 494 avg. reward = 0.800, Long-term avg. reward = -0.026
+..........AI : 22.054 s, Game : 3.109 s
+Episode 495 avg. reward = -0.300, Long-term avg. reward = -0.028
+..........AI : 37.018 s, Game : 5.325 s
+Episode 496 avg. reward = 0.400, Long-term avg. reward = -0.024
+..........AI : 37.003 s, Game : 5.330 s
+Episode 497 avg. reward = 0.500, Long-term avg. reward = -0.019
+..........AI : 23.518 s, Game : 3.298 s
+Episode 498 avg. reward = -0.300, Long-term avg. reward = -0.022
+..........AI : 39.506 s, Game : 5.581 s
+Episode 499 avg. reward = 0.700, Long-term avg. reward = -0.014
+..........AI : 26.285 s, Game : 3.693 s
+Episode 500 avg. reward = -0.100, Long-term avg. reward = -0.015
+..........AI : 32.733 s, Game : 4.794 s
+Episode 501 avg. reward = 0.200, Long-term avg. reward = -0.013
+..........AI : 44.552 s, Game : 6.341 s
+Episode 502 avg. reward = 1.000, Long-term avg. reward = -0.003
+..........AI : 29.080 s, Game : 4.146 s
+Episode 503 avg. reward = 0.000, Long-term avg. reward = -0.003
+..........AI : 51.107 s, Game : 7.277 s
+Episode 504 avg. reward = 1.400, Long-term avg. reward = 0.011
+..........AI : 26.150 s, Game : 3.683 s
+Episode 505 avg. reward = -0.100, Long-term avg. reward = 0.010
+..........AI : 26.902 s, Game : 3.916 s
+Episode 506 avg. reward = -0.100, Long-term avg. reward = 0.009
+..........AI : 45.386 s, Game : 6.354 s
+Episode 507 avg. reward = 1.100, Long-term avg. reward = 0.020
+..........AI : 53.983 s, Game : 7.734 s
+Episode 508 avg. reward = 1.500, Long-term avg. reward = 0.035
+..........AI : 12.869 s, Game : 1.770 s
+Episode 509 avg. reward = -0.900, Long-term avg. reward = 0.025
+..........AI : 45.961 s, Game : 6.849 s
+Episode 510 avg. reward = 0.900, Long-term avg. reward = 0.034
+..........AI : 19.983 s, Game : 2.875 s
+Episode 511 avg. reward = -0.400, Long-term avg. reward = 0.030
+..........AI : 41.953 s, Game : 6.051 s
+Episode 512 avg. reward = 0.900, Long-term avg. reward = 0.038
+..........AI : 25.797 s, Game : 3.730 s
+Episode 513 avg. reward = -0.200, Long-term avg. reward = 0.036
+..........AI : 40.209 s, Game : 5.796 s
+Episode 514 avg. reward = 0.800, Long-term avg. reward = 0.044
+..........AI : 33.413 s, Game : 4.957 s
+Episode 515 avg. reward = 0.300, Long-term avg. reward = 0.046
+..........AI : 22.062 s, Game : 3.021 s
+Episode 516 avg. reward = -0.300, Long-term avg. reward = 0.043
+..........AI : 32.377 s, Game : 4.861 s
+Episode 517 avg. reward = 0.300, Long-term avg. reward = 0.045
+..........AI : 48.080 s, Game : 6.657 s
+Episode 518 avg. reward = 1.000, Long-term avg. reward = 0.055
+..........AI : 19.650 s, Game : 2.770 s
+Episode 519 avg. reward = -0.500, Long-term avg. reward = 0.049
+..........AI : 38.223 s, Game : 5.710 s
+Episode 520 avg. reward = 0.600, Long-term avg. reward = 0.055
+..........AI : 27.134 s, Game : 3.783 s
+Episode 521 avg. reward = -0.100, Long-term avg. reward = 0.053
+..........AI : 23.513 s, Game : 3.298 s
+Episode 522 avg. reward = -0.200, Long-term avg. reward = 0.051
+..........AI : 26.876 s, Game : 3.897 s
+Episode 523 avg. reward = -0.100, Long-term avg. reward = 0.049
+..........AI : 39.285 s, Game : 5.730 s
+Episode 524 avg. reward = 0.700, Long-term avg. reward = 0.056
+..........AI : 44.388 s, Game : 6.221 s
+Episode 525 avg. reward = 1.000, Long-term avg. reward = 0.065
+..........AI : 10.747 s, Game : 1.523 s
+Episode 526 avg. reward = -1.000, Long-term avg. reward = 0.054
+..........AI : 20.630 s, Game : 3.043 s
+Episode 527 avg. reward = -0.400, Long-term avg. reward = 0.050
+..........AI : 28.568 s, Game : 4.067 s
+Episode 528 avg. reward = 0.100, Long-term avg. reward = 0.050
+..........AI : 12.439 s, Game : 1.752 s
+Episode 529 avg. reward = -1.000, Long-term avg. reward = 0.040
+..........AI : 18.978 s, Game : 2.649 s
+Episode 530 avg. reward = -0.400, Long-term avg. reward = 0.036
+..........AI : 17.683 s, Game : 2.670 s
+Episode 531 avg. reward = -0.600, Long-term avg. reward = 0.029
+..........AI : 26.608 s, Game : 3.817 s
+Episode 532 avg. reward = -0.100, Long-term avg. reward = 0.028
+..........AI : 34.724 s, Game : 4.932 s
+Episode 533 avg. reward = 0.500, Long-term avg. reward = 0.033
+..........AI : 20.066 s, Game : 2.978 s
+Episode 534 avg. reward = -0.400, Long-term avg. reward = 0.028
+..........AI : 19.341 s, Game : 2.893 s
+Episode 535 avg. reward = -0.400, Long-term avg. reward = 0.024
+..........AI : 39.338 s, Game : 5.987 s
+Episode 536 avg. reward = 0.800, Long-term avg. reward = 0.032
+..........AI : 50.373 s, Game : 7.230 s
+Episode 537 avg. reward = 1.400, Long-term avg. reward = 0.045
+..........AI : 22.601 s, Game : 3.376 s
+Episode 538 avg. reward = -0.300, Long-term avg. reward = 0.042
+..........AI : 22.810 s, Game : 3.236 s
+Episode 539 avg. reward = -0.200, Long-term avg. reward = 0.040
+..........AI : 21.818 s, Game : 3.155 s
+Episode 540 avg. reward = -0.400, Long-term avg. reward = 0.035
+..........AI : 32.975 s, Game : 4.702 s
+Episode 541 avg. reward = 0.200, Long-term avg. reward = 0.037
+..........AI : 33.607 s, Game : 4.887 s
+Episode 542 avg. reward = 0.400, Long-term avg. reward = 0.040
+..........AI : 43.114 s, Game : 6.449 s
+Episode 543 avg. reward = 1.000, Long-term avg. reward = 0.050
+..........AI : 29.877 s, Game : 4.357 s
+Episode 544 avg. reward = 0.100, Long-term avg. reward = 0.051
+..........AI : 26.693 s, Game : 3.984 s
+Episode 545 avg. reward = 0.000, Long-term avg. reward = 0.050
+..........AI : 21.410 s, Game : 3.019 s
+Episode 546 avg. reward = -0.400, Long-term avg. reward = 0.046
+..........AI : 29.891 s, Game : 4.255 s
+Episode 547 avg. reward = 0.200, Long-term avg. reward = 0.047
+..........AI : 29.995 s, Game : 4.331 s
+Episode 548 avg. reward = 0.200, Long-term avg. reward = 0.049
+..........AI : 45.774 s, Game : 6.724 s
+Episode 549 avg. reward = 1.300, Long-term avg. reward = 0.061
+..........AI : 50.243 s, Game : 7.319 s
+Episode 550 avg. reward = 1.200, Long-term avg. reward = 0.073
+..........AI : 17.310 s, Game : 2.211 s
+Episode 551 avg. reward = -0.600, Long-term avg. reward = 0.066
+..........AI : 43.297 s, Game : 5.949 s
+Episode 552 avg. reward = 0.900, Long-term avg. reward = 0.074
+..........AI : 50.219 s, Game : 6.988 s
+Episode 553 avg. reward = 1.100, Long-term avg. reward = 0.084
+..........AI : 53.522 s, Game : 7.465 s
+Episode 554 avg. reward = 1.300, Long-term avg. reward = 0.097
+..........AI : 38.685 s, Game : 5.619 s
+Episode 555 avg. reward = 0.600, Long-term avg. reward = 0.102
+..........AI : 67.766 s, Game : 9.393 s
+Episode 556 avg. reward = 2.200, Long-term avg. reward = 0.123
+..........AI : 34.120 s, Game : 4.626 s
+Episode 557 avg. reward = 0.400, Long-term avg. reward = 0.125
+..........AI : 25.590 s, Game : 3.661 s
+Episode 558 avg. reward = -0.100, Long-term avg. reward = 0.123
+..........AI : 32.427 s, Game : 4.914 s
+Episode 559 avg. reward = 0.200, Long-term avg. reward = 0.124
+..........AI : 39.362 s, Game : 5.394 s
+Episode 560 avg. reward = 0.500, Long-term avg. reward = 0.128
+..........AI : 46.822 s, Game : 6.759 s
+Episode 561 avg. reward = 1.200, Long-term avg. reward = 0.138
+..........AI : 31.826 s, Game : 4.682 s
+Episode 562 avg. reward = 0.200, Long-term avg. reward = 0.139
+..........AI : 34.497 s, Game : 4.790 s
+Episode 563 avg. reward = 0.400, Long-term avg. reward = 0.142
+..........AI : 42.547 s, Game : 5.988 s
+Episode 564 avg. reward = 0.800, Long-term avg. reward = 0.148
+..........AI : 39.541 s, Game : 5.729 s
+Episode 565 avg. reward = 0.600, Long-term avg. reward = 0.153
+..........AI : 32.104 s, Game : 4.470 s
+Episode 566 avg. reward = 0.300, Long-term avg. reward = 0.154
+..........AI : 16.033 s, Game : 2.265 s
+Episode 567 avg. reward = -0.700, Long-term avg. reward = 0.146
+..........AI : 24.129 s, Game : 3.485 s
+Episode 568 avg. reward = -0.100, Long-term avg. reward = 0.143
+..........AI : 25.902 s, Game : 3.621 s
+Episode 569 avg. reward = -0.100, Long-term avg. reward = 0.141
+..........AI : 17.875 s, Game : 2.436 s
+Episode 570 avg. reward = -0.600, Long-term avg. reward = 0.133
+..........AI : 54.012 s, Game : 7.910 s
+Episode 571 avg. reward = 1.700, Long-term avg. reward = 0.149
+..........AI : 34.382 s, Game : 4.984 s
+Episode 572 avg. reward = 0.200, Long-term avg. reward = 0.149
+..........AI : 72.329 s, Game : 10.803 s
+Episode 573 avg. reward = 2.600, Long-term avg. reward = 0.174
+..........AI : 24.145 s, Game : 3.389 s
+Episode 574 avg. reward = -0.300, Long-term avg. reward = 0.169
+..........AI : 25.334 s, Game : 3.606 s
+Episode 575 avg. reward = -0.200, Long-term avg. reward = 0.166
+..........AI : 29.862 s, Game : 4.368 s
+Episode 576 avg. reward = 0.200, Long-term avg. reward = 0.166
+..........AI : 31.162 s, Game : 4.434 s
+Episode 577 avg. reward = 0.200, Long-term avg. reward = 0.166
+..........AI : 45.413 s, Game : 6.541 s
+Episode 578 avg. reward = 1.100, Long-term avg. reward = 0.176
+..........AI : 39.145 s, Game : 5.712 s
+Episode 579 avg. reward = 0.700, Long-term avg. reward = 0.181
+..........AI : 43.762 s, Game : 6.433 s
+Episode 580 avg. reward = 0.900, Long-term avg. reward = 0.188
+..........AI : 19.818 s, Game : 2.919 s
+Episode 581 avg. reward = -0.500, Long-term avg. reward = 0.181
+..........AI : 16.258 s, Game : 2.118 s
+Episode 582 avg. reward = -0.800, Long-term avg. reward = 0.171
+..........AI : 34.915 s, Game : 4.965 s
+Episode 583 avg. reward = 0.400, Long-term avg. reward = 0.174
+..........AI : 35.814 s, Game : 5.182 s
+Episode 584 avg. reward = 0.600, Long-term avg. reward = 0.178
+..........AI : 38.123 s, Game : 5.361 s
+Episode 585 avg. reward = 0.600, Long-term avg. reward = 0.182
+..........AI : 42.819 s, Game : 6.117 s
+Episode 586 avg. reward = 0.800, Long-term avg. reward = 0.188
+..........AI : 20.449 s, Game : 2.792 s
+Episode 587 avg. reward = -0.500, Long-term avg. reward = 0.181
+..........AI : 28.872 s, Game : 4.093 s
+Episode 588 avg. reward = 0.100, Long-term avg. reward = 0.181
+..........AI : 16.781 s, Game : 2.284 s
+Episode 589 avg. reward = -0.700, Long-term avg. reward = 0.172
+..........AI : 20.848 s, Game : 2.976 s
+Episode 590 avg. reward = -0.500, Long-term avg. reward = 0.165
+..........AI : 22.845 s, Game : 3.418 s
+Episode 591 avg. reward = -0.200, Long-term avg. reward = 0.161
+..........AI : 45.677 s, Game : 6.148 s
+Episode 592 avg. reward = 0.900, Long-term avg. reward = 0.169
+..........AI : 35.104 s, Game : 4.950 s
+Episode 593 avg. reward = 0.400, Long-term avg. reward = 0.171
+..........AI : 38.402 s, Game : 5.117 s
+Episode 594 avg. reward = 0.600, Long-term avg. reward = 0.175
+..........AI : 32.491 s, Game : 4.328 s
+Episode 595 avg. reward = 0.300, Long-term avg. reward = 0.177
+..........AI : 19.842 s, Game : 2.770 s
+Episode 596 avg. reward = -0.500, Long-term avg. reward = 0.170
+..........AI : 38.802 s, Game : 5.184 s
+Episode 597 avg. reward = 0.400, Long-term avg. reward = 0.172
+..........AI : 34.521 s, Game : 4.630 s
+Episode 598 avg. reward = 0.100, Long-term avg. reward = 0.171
+..........AI : 24.854 s, Game : 3.682 s
+Episode 599 avg. reward = -0.200, Long-term avg. reward = 0.168
+..........AI : 30.572 s, Game : 4.324 s
+Episode 600 avg. reward = 0.200, Long-term avg. reward = 0.168
+..........AI : 18.010 s, Game : 2.416 s
+Episode 601 avg. reward = -0.600, Long-term avg. reward = 0.160
+..........AI : 45.935 s, Game : 6.472 s
+Episode 602 avg. reward = 0.900, Long-term avg. reward = 0.168
+..........AI : 37.546 s, Game : 5.182 s
+Episode 603 avg. reward = 0.600, Long-term avg. reward = 0.172
+..........AI : 49.409 s, Game : 6.721 s
+Episode 604 avg. reward = 1.200, Long-term avg. reward = 0.182
+..........AI : 22.884 s, Game : 3.153 s
+Episode 605 avg. reward = -0.300, Long-term avg. reward = 0.178
+..........AI : 29.832 s, Game : 4.246 s
+Episode 606 avg. reward = 0.100, Long-term avg. reward = 0.177
+..........AI : 34.563 s, Game : 4.746 s
+Episode 607 avg. reward = 0.400, Long-term avg. reward = 0.179
+..........AI : 21.170 s, Game : 3.111 s
+Episode 608 avg. reward = -0.400, Long-term avg. reward = 0.173
+..........AI : 33.600 s, Game : 4.664 s
+Episode 609 avg. reward = 0.300, Long-term avg. reward = 0.174
+..........AI : 18.738 s, Game : 2.707 s
+Episode 610 avg. reward = -0.500, Long-term avg. reward = 0.168
+..........AI : 28.433 s, Game : 4.254 s
+Episode 611 avg. reward = 0.100, Long-term avg. reward = 0.167
+..........AI : 30.095 s, Game : 4.328 s
+Episode 612 avg. reward = 0.200, Long-term avg. reward = 0.167
+..........AI : 31.564 s, Game : 4.602 s
+Episode 613 avg. reward = 0.200, Long-term avg. reward = 0.168
+..........AI : 41.624 s, Game : 6.372 s
+Episode 614 avg. reward = 1.000, Long-term avg. reward = 0.176
+..........AI : 39.385 s, Game : 5.734 s
+Episode 615 avg. reward = 0.600, Long-term avg. reward = 0.180
+..........AI : 24.124 s, Game : 3.388 s
+Episode 616 avg. reward = -0.200, Long-term avg. reward = 0.176
+..........AI : 82.880 s, Game : 12.326 s
+Episode 617 avg. reward = 3.200, Long-term avg. reward = 0.207
+..........AI : 26.931 s, Game : 3.827 s
+Episode 618 avg. reward = 0.000, Long-term avg. reward = 0.205
+..........AI : 21.926 s, Game : 3.251 s
+Episode 619 avg. reward = -0.300, Long-term avg. reward = 0.200
+..........AI : 49.906 s, Game : 7.402 s
+Episode 620 avg. reward = 1.300, Long-term avg. reward = 0.211
+..........AI : 28.095 s, Game : 4.033 s
+Episode 621 avg. reward = 0.000, Long-term avg. reward = 0.208
+..........AI : 29.058 s, Game : 4.278 s
+Episode 622 avg. reward = 0.100, Long-term avg. reward = 0.207
+..........AI : 19.005 s, Game : 2.639 s
+Episode 623 avg. reward = -0.600, Long-term avg. reward = 0.199
+..........AI : 38.913 s, Game : 5.779 s
+Episode 624 avg. reward = 0.700, Long-term avg. reward = 0.204
+..........AI : 58.372 s, Game : 8.398 s
+Episode 625 avg. reward = 1.600, Long-term avg. reward = 0.218
+..........AI : 37.542 s, Game : 5.563 s
+Episode 626 avg. reward = 0.800, Long-term avg. reward = 0.224
+..........AI : 26.221 s, Game : 3.725 s
+Episode 627 avg. reward = -0.100, Long-term avg. reward = 0.221
+..........AI : 40.038 s, Game : 6.013 s
+Episode 628 avg. reward = 0.800, Long-term avg. reward = 0.227
+..........AI : 21.344 s, Game : 3.216 s
+Episode 629 avg. reward = -0.300, Long-term avg. reward = 0.221
+..........AI : 36.778 s, Game : 5.160 s
+Episode 630 avg. reward = 0.500, Long-term avg. reward = 0.224
+..........AI : 23.894 s, Game : 3.438 s
+Episode 631 avg. reward = -0.100, Long-term avg. reward = 0.221
+..........AI : 27.636 s, Game : 3.935 s
+Episode 632 avg. reward = 0.100, Long-term avg. reward = 0.220
+..........AI : 36.168 s, Game : 5.233 s
+Episode 633 avg. reward = 0.500, Long-term avg. reward = 0.223
+..........AI : 30.925 s, Game : 4.506 s
+Episode 634 avg. reward = 0.300, Long-term avg. reward = 0.223
+..........AI : 21.688 s, Game : 3.182 s
+Episode 635 avg. reward = -0.400, Long-term avg. reward = 0.217
+..........AI : 37.350 s, Game : 5.510 s
+Episode 636 avg. reward = 0.500, Long-term avg. reward = 0.220
+..........AI : 24.225 s, Game : 3.378 s
+Episode 637 avg. reward = -0.300, Long-term avg. reward = 0.215
+..........AI : 58.198 s, Game : 8.359 s
+Episode 638 avg. reward = 1.900, Long-term avg. reward = 0.232
+..........AI : 27.504 s, Game : 4.015 s
+Episode 639 avg. reward = 0.100, Long-term avg. reward = 0.230
+..........AI : 20.237 s, Game : 2.912 s
+Episode 640 avg. reward = -0.300, Long-term avg. reward = 0.225
+..........AI : 27.053 s, Game : 3.853 s
+Episode 641 avg. reward = -0.100, Long-term avg. reward = 0.222
+..........AI : 58.091 s, Game : 8.654 s
+Episode 642 avg. reward = 1.800, Long-term avg. reward = 0.237
+..........AI : 19.812 s, Game : 2.785 s
+Episode 643 avg. reward = -0.400, Long-term avg. reward = 0.231
+..........AI : 21.797 s, Game : 3.189 s
+Episode 644 avg. reward = -0.400, Long-term avg. reward = 0.225
+..........AI : 31.413 s, Game : 4.667 s
+Episode 645 avg. reward = 0.100, Long-term avg. reward = 0.224
+..........AI : 22.332 s, Game : 3.227 s
+Episode 646 avg. reward = -0.200, Long-term avg. reward = 0.219
+..........AI : 34.335 s, Game : 4.865 s
+Episode 647 avg. reward = 0.400, Long-term avg. reward = 0.221
+..........AI : 36.824 s, Game : 5.533 s
+Episode 648 avg. reward = 0.800, Long-term avg. reward = 0.227
+..........AI : 46.535 s, Game : 6.558 s
+Episode 649 avg. reward = 1.000, Long-term avg. reward = 0.235
+..........AI : 23.968 s, Game : 3.517 s
+Episode 650 avg. reward = -0.200, Long-term avg. reward = 0.230
+..........AI : 62.626 s, Game : 9.363 s
+Episode 651 avg. reward = 2.100, Long-term avg. reward = 0.249
+..........AI : 104.760 s, Game : 15.366 s
+Episode 652 avg. reward = 4.800, Long-term avg. reward = 0.294
+..........AI : 27.670 s, Game : 3.813 s
+Episode 653 avg. reward = -0.100, Long-term avg. reward = 0.291
+..........AI : 40.113 s, Game : 5.740 s
+Episode 654 avg. reward = 0.700, Long-term avg. reward = 0.295
+..........AI : 41.048 s, Game : 5.905 s
+Episode 655 avg. reward = 0.800, Long-term avg. reward = 0.300
+..........AI : 43.766 s, Game : 6.613 s
+Episode 656 avg. reward = 1.100, Long-term avg. reward = 0.308
+..........AI : 33.940 s, Game : 4.940 s
+Episode 657 avg. reward = 0.300, Long-term avg. reward = 0.308
+..........AI : 52.919 s, Game : 7.502 s
+Episode 658 avg. reward = 1.300, Long-term avg. reward = 0.318
+..........AI : 49.116 s, Game : 7.102 s
+Episode 659 avg. reward = 1.400, Long-term avg. reward = 0.328
+..........AI : 26.518 s, Game : 3.972 s
+Episode 660 avg. reward = 0.000, Long-term avg. reward = 0.325
+..........AI : 31.594 s, Game : 4.267 s
+Episode 661 avg. reward = 0.100, Long-term avg. reward = 0.323
+..........AI : 64.713 s, Game : 9.199 s
+Episode 662 avg. reward = 2.200, Long-term avg. reward = 0.342
+..........AI : 26.000 s, Game : 3.713 s
+Episode 663 avg. reward = -0.100, Long-term avg. reward = 0.337
+..........AI : 60.915 s, Game : 9.198 s
+Episode 664 avg. reward = 2.000, Long-term avg. reward = 0.354
+..........AI : 28.644 s, Game : 3.952 s
+Episode 665 avg. reward = 0.000, Long-term avg. reward = 0.350
+..........AI : 44.608 s, Game : 6.518 s
+Episode 666 avg. reward = 1.000, Long-term avg. reward = 0.357
+..........AI : 28.450 s, Game : 4.005 s
+Episode 667 avg. reward = 0.100, Long-term avg. reward = 0.354
+..........AI : 50.825 s, Game : 7.268 s
+Episode 668 avg. reward = 1.300, Long-term avg. reward = 0.364
+..........AI : 44.908 s, Game : 6.478 s
+Episode 669 avg. reward = 1.000, Long-term avg. reward = 0.370
+..........AI : 41.578 s, Game : 5.864 s
+Episode 670 avg. reward = 0.800, Long-term avg. reward = 0.374
+..........AI : 14.654 s, Game : 2.188 s
+Episode 671 avg. reward = -0.700, Long-term avg. reward = 0.364
+..........AI : 21.285 s, Game : 3.036 s
+Episode 672 avg. reward = -0.400, Long-term avg. reward = 0.356
+..........AI : 35.008 s, Game : 5.135 s
+Episode 673 avg. reward = 0.400, Long-term avg. reward = 0.356
+..........AI : 22.455 s, Game : 3.084 s
+Episode 674 avg. reward = -0.400, Long-term avg. reward = 0.349
+..........AI : 40.452 s, Game : 5.710 s
+Episode 675 avg. reward = 0.900, Long-term avg. reward = 0.354
+..........AI : 39.175 s, Game : 5.922 s
+Episode 676 avg. reward = 0.700, Long-term avg. reward = 0.358
+..........AI : 25.014 s, Game : 3.568 s
+Episode 677 avg. reward = -0.100, Long-term avg. reward = 0.353
+..........AI : 37.224 s, Game : 5.455 s
+Episode 678 avg. reward = 0.600, Long-term avg. reward = 0.356
+..........AI : 29.355 s, Game : 4.406 s
+Episode 679 avg. reward = 0.000, Long-term avg. reward = 0.352
+..........AI : 40.832 s, Game : 5.986 s
+Episode 680 avg. reward = 0.800, Long-term avg. reward = 0.357
+..........AI : 36.194 s, Game : 5.378 s
+Episode 681 avg. reward = 0.500, Long-term avg. reward = 0.358
+..........AI : 43.918 s, Game : 6.564 s
+Episode 682 avg. reward = 1.000, Long-term avg. reward = 0.364
+..........AI : 51.202 s, Game : 7.652 s
+Episode 683 avg. reward = 1.500, Long-term avg. reward = 0.376
+..........AI : 50.565 s, Game : 7.353 s
+Episode 684 avg. reward = 1.300, Long-term avg. reward = 0.385
+..........AI : 68.571 s, Game : 10.285 s
+Episode 685 avg. reward = 2.600, Long-term avg. reward = 0.407
+..........AI : 45.357 s, Game : 6.906 s
+Episode 686 avg. reward = 1.200, Long-term avg. reward = 0.415
+..........AI : 37.804 s, Game : 5.437 s
+Episode 687 avg. reward = 0.600, Long-term avg. reward = 0.417
+..........AI : 49.192 s, Game : 7.147 s
+Episode 688 avg. reward = 1.200, Long-term avg. reward = 0.425
+..........AI : 71.511 s, Game : 10.769 s
+Episode 689 avg. reward = 2.700, Long-term avg. reward = 0.448
+..........AI : 42.201 s, Game : 6.146 s
+Episode 690 avg. reward = 0.800, Long-term avg. reward = 0.451
+..........AI : 28.625 s, Game : 4.059 s
+Episode 691 avg. reward = 0.100, Long-term avg. reward = 0.448
+..........AI : 30.476 s, Game : 4.667 s
+Episode 692 avg. reward = 0.200, Long-term avg. reward = 0.445
+..........AI : 37.738 s, Game : 5.429 s
+Episode 693 avg. reward = 0.600, Long-term avg. reward = 0.447
+..........AI : 32.259 s, Game : 4.724 s
+Episode 694 avg. reward = 0.500, Long-term avg. reward = 0.447
+..........AI : 25.480 s, Game : 3.707 s
+Episode 695 avg. reward = -0.100, Long-term avg. reward = 0.442
+..........AI : 34.908 s, Game : 4.901 s
+Episode 696 avg. reward = 0.500, Long-term avg. reward = 0.442
+..........AI : 27.394 s, Game : 3.989 s
+Episode 697 avg. reward = 0.000, Long-term avg. reward = 0.438
+..........AI : 21.312 s, Game : 3.228 s
+Episode 698 avg. reward = -0.400, Long-term avg. reward = 0.429
+..........AI : 25.656 s, Game : 3.783 s
+Episode 699 avg. reward = -0.100, Long-term avg. reward = 0.424
+..........AI : 23.133 s, Game : 3.219 s
+Episode 700 avg. reward = -0.300, Long-term avg. reward = 0.417
+..........AI : 24.520 s, Game : 3.646 s
+Episode 701 avg. reward = 0.000, Long-term avg. reward = 0.413
+..........AI : 42.788 s, Game : 6.177 s
+Episode 702 avg. reward = 1.000, Long-term avg. reward = 0.419
+..........AI : 47.792 s, Game : 6.826 s
+Episode 703 avg. reward = 1.500, Long-term avg. reward = 0.429
+..........AI : 29.367 s, Game : 4.336 s
+Episode 704 avg. reward = 0.200, Long-term avg. reward = 0.427
+..........AI : 31.797 s, Game : 4.582 s
+Episode 705 avg. reward = 0.500, Long-term avg. reward = 0.428
+..........AI : 29.920 s, Game : 4.345 s
+Episode 706 avg. reward = 0.200, Long-term avg. reward = 0.426
+..........AI : 49.404 s, Game : 7.529 s
+Episode 707 avg. reward = 1.400, Long-term avg. reward = 0.435
+..........AI : 32.725 s, Game : 4.721 s
+Episode 708 avg. reward = 0.300, Long-term avg. reward = 0.434
+..........AI : 44.559 s, Game : 6.532 s
+Episode 709 avg. reward = 1.200, Long-term avg. reward = 0.442
+..........AI : 27.916 s, Game : 4.011 s
+Episode 710 avg. reward = 0.100, Long-term avg. reward = 0.438
+..........AI : 26.695 s, Game : 3.969 s
+Episode 711 avg. reward = 0.000, Long-term avg. reward = 0.434
+..........AI : 26.706 s, Game : 3.704 s
+Episode 712 avg. reward = -0.100, Long-term avg. reward = 0.429
+..........AI : 33.952 s, Game : 4.884 s
+Episode 713 avg. reward = 0.500, Long-term avg. reward = 0.429
+..........AI : 45.671 s, Game : 6.491 s
+Episode 714 avg. reward = 1.300, Long-term avg. reward = 0.438
+..........AI : 61.647 s, Game : 9.246 s
+Episode 715 avg. reward = 2.400, Long-term avg. reward = 0.458
+..........AI : 45.259 s, Game : 6.673 s
+Episode 716 avg. reward = 1.300, Long-term avg. reward = 0.466
+..........AI : 22.384 s, Game : 3.126 s
+Episode 717 avg. reward = -0.300, Long-term avg. reward = 0.458
+..........AI : 39.425 s, Game : 5.436 s
+Episode 718 avg. reward = 0.700, Long-term avg. reward = 0.461
+..........AI : 17.720 s, Game : 2.583 s
+Episode 719 avg. reward = -0.500, Long-term avg. reward = 0.451
+..........AI : 28.246 s, Game : 4.283 s
+Episode 720 avg. reward = 0.200, Long-term avg. reward = 0.449
+..........AI : 39.218 s, Game : 5.853 s
+Episode 721 avg. reward = 0.800, Long-term avg. reward = 0.452
+..........AI : 42.110 s, Game : 6.264 s
+Episode 722 avg. reward = 1.000, Long-term avg. reward = 0.458
+..........AI : 12.558 s, Game : 1.793 s
+Episode 723 avg. reward = -0.900, Long-term avg. reward = 0.444
+..........AI : 22.314 s, Game : 3.226 s
+Episode 724 avg. reward = -0.400, Long-term avg. reward = 0.436
+..........AI : 53.995 s, Game : 7.621 s
+Episode 725 avg. reward = 1.500, Long-term avg. reward = 0.446
+..........AI : 23.326 s, Game : 3.182 s
+Episode 726 avg. reward = -0.300, Long-term avg. reward = 0.439
+..........AI : 26.508 s, Game : 3.815 s
+Episode 727 avg. reward = -0.200, Long-term avg. reward = 0.432
+..........AI : 26.917 s, Game : 4.023 s
+Episode 728 avg. reward = 0.100, Long-term avg. reward = 0.429
+..........AI : 22.709 s, Game : 3.052 s
+Episode 729 avg. reward = -0.300, Long-term avg. reward = 0.422
+..........AI : 28.557 s, Game : 3.999 s
+Episode 730 avg. reward = 0.100, Long-term avg. reward = 0.419
+..........AI : 32.851 s, Game : 4.785 s
+Episode 731 avg. reward = 0.400, Long-term avg. reward = 0.418
+..........AI : 25.962 s, Game : 3.793 s
+Episode 732 avg. reward = 0.000, Long-term avg. reward = 0.414
+..........AI : 43.275 s, Game : 6.601 s
+Episode 733 avg. reward = 1.100, Long-term avg. reward = 0.421
+..........AI : 18.073 s, Game : 2.490 s
+Episode 734 avg. reward = -0.600, Long-term avg. reward = 0.411
+..........AI : 47.113 s, Game : 6.844 s
+Episode 735 avg. reward = 1.300, Long-term avg. reward = 0.420
+..........AI : 42.194 s, Game : 6.148 s
+Episode 736 avg. reward = 1.000, Long-term avg. reward = 0.426
+..........AI : 14.415 s, Game : 2.116 s
+Episode 737 avg. reward = -0.800, Long-term avg. reward = 0.413
+..........AI : 26.975 s, Game : 3.859 s
+Episode 738 avg. reward = 0.000, Long-term avg. reward = 0.409
+..........AI : 38.172 s, Game : 5.629 s
+Episode 739 avg. reward = 0.700, Long-term avg. reward = 0.412
+..........AI : 38.401 s, Game : 5.848 s
+Episode 740 avg. reward = 0.900, Long-term avg. reward = 0.417
+..........AI : 52.937 s, Game : 7.683 s
+Episode 741 avg. reward = 1.700, Long-term avg. reward = 0.430
+..........AI : 27.925 s, Game : 4.164 s
+Episode 742 avg. reward = 0.200, Long-term avg. reward = 0.427
+..........AI : 28.073 s, Game : 4.147 s
+Episode 743 avg. reward = 0.100, Long-term avg. reward = 0.424
+..........AI : 28.585 s, Game : 4.373 s
+Episode 744 avg. reward = 0.200, Long-term avg. reward = 0.422
+..........AI : 48.727 s, Game : 7.308 s
+Episode 745 avg. reward = 1.400, Long-term avg. reward = 0.432
+..........AI : 52.455 s, Game : 7.827 s
+Episode 746 avg. reward = 1.700, Long-term avg. reward = 0.444
+..........AI : 59.921 s, Game : 8.860 s
+Episode 747 avg. reward = 2.100, Long-term avg. reward = 0.461
+..........AI : 15.399 s, Game : 2.058 s
+Episode 748 avg. reward = -0.700, Long-term avg. reward = 0.449
+..........AI : 32.303 s, Game : 4.702 s
+Episode 749 avg. reward = 0.400, Long-term avg. reward = 0.449
+..........AI : 50.454 s, Game : 7.468 s
+Episode 750 avg. reward = 1.400, Long-term avg. reward = 0.458
+..........AI : 16.903 s, Game : 2.534 s
+Episode 751 avg. reward = -0.600, Long-term avg. reward = 0.448
+..........AI : 14.158 s, Game : 2.017 s
+Episode 752 avg. reward = -0.800, Long-term avg. reward = 0.435
+..........AI : 40.548 s, Game : 6.012 s
+Episode 753 avg. reward = 0.900, Long-term avg. reward = 0.440
+..........AI : 23.660 s, Game : 3.465 s
+Episode 754 avg. reward = -0.200, Long-term avg. reward = 0.434
+..........AI : 31.586 s, Game : 4.746 s
+Episode 755 avg. reward = 0.500, Long-term avg. reward = 0.434
+..........AI : 34.121 s, Game : 4.985 s
+Episode 756 avg. reward = 0.400, Long-term avg. reward = 0.434
+..........AI : 64.696 s, Game : 9.594 s
+Episode 757 avg. reward = 2.300, Long-term avg. reward = 0.453
+..........AI : 29.989 s, Game : 4.331 s
+Episode 758 avg. reward = 0.300, Long-term avg. reward = 0.451
+..........AI : 20.068 s, Game : 2.758 s
+Episode 759 avg. reward = -0.500, Long-term avg. reward = 0.442
+..........AI : 25.873 s, Game : 3.686 s
+Episode 760 avg. reward = 0.000, Long-term avg. reward = 0.437
+..........AI : 58.547 s, Game : 8.963 s
+Episode 761 avg. reward = 2.000, Long-term avg. reward = 0.453
+..........AI : 54.145 s, Game : 7.979 s
+Episode 762 avg. reward = 1.700, Long-term avg. reward = 0.465
+..........AI : 39.336 s, Game : 5.978 s
+Episode 763 avg. reward = 0.900, Long-term avg. reward = 0.470
+..........AI : 40.489 s, Game : 5.950 s
+Episode 764 avg. reward = 0.800, Long-term avg. reward = 0.473
+..........AI : 27.158 s, Game : 3.938 s
+Episode 765 avg. reward = 0.000, Long-term avg. reward = 0.468
+..........AI : 47.983 s, Game : 7.092 s
+Episode 766 avg. reward = 1.400, Long-term avg. reward = 0.477
+..........AI : 26.349 s, Game : 3.836 s
+Episode 767 avg. reward = 0.000, Long-term avg. reward = 0.473
+..........AI : 25.394 s, Game : 3.830 s
+Episode 768 avg. reward = 0.000, Long-term avg. reward = 0.468
+..........AI : 39.741 s, Game : 6.026 s
+Episode 769 avg. reward = 0.800, Long-term avg. reward = 0.471
+..........AI : 46.551 s, Game : 6.891 s
+Episode 770 avg. reward = 1.300, Long-term avg. reward = 0.480
+..........AI : 34.809 s, Game : 5.234 s
+Episode 771 avg. reward = 0.700, Long-term avg. reward = 0.482
+..........AI : 82.699 s, Game : 11.415 s
+Episode 772 avg. reward = 3.300, Long-term avg. reward = 0.510
+..........AI : 27.282 s, Game : 3.849 s
+Episode 773 avg. reward = 0.100, Long-term avg. reward = 0.506
+..........AI : 65.981 s, Game : 9.752 s
+Episode 774 avg. reward = 2.300, Long-term avg. reward = 0.524
+..........AI : 56.050 s, Game : 8.095 s
+Episode 775 avg. reward = 1.900, Long-term avg. reward = 0.538
+..........AI : 43.681 s, Game : 6.395 s
+Episode 776 avg. reward = 1.000, Long-term avg. reward = 0.542
+..........AI : 55.053 s, Game : 7.909 s
+Episode 777 avg. reward = 1.700, Long-term avg. reward = 0.554
+..........AI : 18.334 s, Game : 2.701 s
+Episode 778 avg. reward = -0.600, Long-term avg. reward = 0.542
+..........AI : 45.434 s, Game : 6.511 s
+Episode 779 avg. reward = 1.000, Long-term avg. reward = 0.547
+..........AI : 63.048 s, Game : 9.218 s
+Episode 780 avg. reward = 2.100, Long-term avg. reward = 0.562
+..........AI : 36.392 s, Game : 5.440 s
+Episode 781 avg. reward = 0.700, Long-term avg. reward = 0.564
+..........AI : 45.502 s, Game : 6.495 s
+Episode 782 avg. reward = 1.000, Long-term avg. reward = 0.568
+..........AI : 48.835 s, Game : 7.117 s
+Episode 783 avg. reward = 1.400, Long-term avg. reward = 0.576
+..........AI : 42.847 s, Game : 6.315 s
+Episode 784 avg. reward = 0.900, Long-term avg. reward = 0.580
+..........AI : 29.033 s, Game : 4.283 s
+Episode 785 avg. reward = 0.100, Long-term avg. reward = 0.575
+..........AI : 39.037 s, Game : 5.744 s
+Episode 786 avg. reward = 0.800, Long-term avg. reward = 0.577
+..........AI : 36.789 s, Game : 5.305 s
+Episode 787 avg. reward = 0.600, Long-term avg. reward = 0.577
+..........AI : 37.640 s, Game : 5.619 s
+Episode 788 avg. reward = 0.800, Long-term avg. reward = 0.580
+..........AI : 38.489 s, Game : 5.571 s
+Episode 789 avg. reward = 0.800, Long-term avg. reward = 0.582
+..........AI : 54.253 s, Game : 8.028 s
+Episode 790 avg. reward = 1.800, Long-term avg. reward = 0.594
+..........AI : 32.635 s, Game : 4.814 s
+Episode 791 avg. reward = 0.300, Long-term avg. reward = 0.591
+..........AI : 33.905 s, Game : 4.947 s
+Episode 792 avg. reward = 0.500, Long-term avg. reward = 0.590
+..........AI : 31.389 s, Game : 4.504 s
+Episode 793 avg. reward = 0.300, Long-term avg. reward = 0.587
+..........AI : 32.156 s, Game : 4.974 s
+Episode 794 avg. reward = 0.400, Long-term avg. reward = 0.585
+..........AI : 58.943 s, Game : 8.710 s
+Episode 795 avg. reward = 2.100, Long-term avg. reward = 0.600
+..........AI : 43.782 s, Game : 6.398 s
+Episode 796 avg. reward = 1.100, Long-term avg. reward = 0.605
+..........AI : 74.669 s, Game : 11.128 s
+Episode 797 avg. reward = 3.100, Long-term avg. reward = 0.630
+..........AI : 68.284 s, Game : 9.988 s
+Episode 798 avg. reward = 2.700, Long-term avg. reward = 0.651
+..........AI : 34.805 s, Game : 4.938 s
+Episode 799 avg. reward = 0.400, Long-term avg. reward = 0.649
+..........AI : 28.880 s, Game : 4.184 s
+Episode 800 avg. reward = 0.300, Long-term avg. reward = 0.645
+..........AI : 32.959 s, Game : 4.922 s
+Episode 801 avg. reward = 0.600, Long-term avg. reward = 0.645
+..........AI : 45.413 s, Game : 7.132 s
+Episode 802 avg. reward = 1.100, Long-term avg. reward = 0.649
+..........AI : 44.320 s, Game : 6.422 s
+Episode 803 avg. reward = 1.100, Long-term avg. reward = 0.654
+..........AI : 31.574 s, Game : 4.807 s
+Episode 804 avg. reward = 0.400, Long-term avg. reward = 0.651
+..........AI : 59.570 s, Game : 8.829 s
+Episode 805 avg. reward = 2.100, Long-term avg. reward = 0.666
+..........AI : 31.031 s, Game : 4.559 s
+Episode 806 avg. reward = 0.300, Long-term avg. reward = 0.662
+..........AI : 16.325 s, Game : 2.274 s
+Episode 807 avg. reward = -0.600, Long-term avg. reward = 0.649
+..........AI : 40.611 s, Game : 5.862 s
+Episode 808 avg. reward = 0.800, Long-term avg. reward = 0.651
+..........AI : 37.393 s, Game : 5.317 s
+Episode 809 avg. reward = 0.700, Long-term avg. reward = 0.651
+..........AI : 66.424 s, Game : 9.313 s
+Episode 810 avg. reward = 2.400, Long-term avg. reward = 0.669
+..........AI : 30.248 s, Game : 4.146 s
+Episode 811 avg. reward = 0.200, Long-term avg. reward = 0.664
+..........AI : 35.781 s, Game : 5.095 s
+Episode 812 avg. reward = 0.700, Long-term avg. reward = 0.665
+..........AI : 22.941 s, Game : 3.227 s
+Episode 813 avg. reward = -0.300, Long-term avg. reward = 0.655
+..........AI : 29.597 s, Game : 4.295 s
+Episode 814 avg. reward = 0.200, Long-term avg. reward = 0.650
+..........AI : 25.226 s, Game : 3.702 s
+Episode 815 avg. reward = -0.100, Long-term avg. reward = 0.643
+..........AI : 39.026 s, Game : 5.637 s
+Episode 816 avg. reward = 0.800, Long-term avg. reward = 0.644
+..........AI : 27.197 s, Game : 3.621 s
+Episode 817 avg. reward = -0.200, Long-term avg. reward = 0.636
+..........AI : 64.078 s, Game : 9.277 s
+Episode 818 avg. reward = 2.400, Long-term avg. reward = 0.654
+..........AI : 32.044 s, Game : 4.516 s
+Episode 819 avg. reward = 0.300, Long-term avg. reward = 0.650
+..........AI : 71.731 s, Game : 10.389 s
+Episode 820 avg. reward = 3.000, Long-term avg. reward = 0.674
+..........AI : 26.538 s, Game : 3.758 s
+Episode 821 avg. reward = 0.000, Long-term avg. reward = 0.667
+..........AI : 16.274 s, Game : 2.237 s
+Episode 822 avg. reward = -0.600, Long-term avg. reward = 0.654
+..........AI : 26.390 s, Game : 3.532 s
+Episode 823 avg. reward = -0.100, Long-term avg. reward = 0.647
+..........AI : 58.270 s, Game : 7.886 s
+Episode 824 avg. reward = 1.800, Long-term avg. reward = 0.658
+..........AI : 34.436 s, Game : 4.858 s
+Episode 825 avg. reward = 0.500, Long-term avg. reward = 0.657
+..........AI : 46.718 s, Game : 6.889 s
+Episode 826 avg. reward = 1.300, Long-term avg. reward = 0.663
+..........AI : 20.914 s, Game : 2.992 s
+Episode 827 avg. reward = -0.300, Long-term avg. reward = 0.653
+..........AI : 31.896 s, Game : 4.449 s
+Episode 828 avg. reward = 0.500, Long-term avg. reward = 0.652
+..........AI : 38.469 s, Game : 5.436 s
+Episode 829 avg. reward = 0.800, Long-term avg. reward = 0.653
+..........AI : 31.481 s, Game : 4.550 s
+Episode 830 avg. reward = 0.300, Long-term avg. reward = 0.650
+..........AI : 31.779 s, Game : 4.498 s
+Episode 831 avg. reward = 0.300, Long-term avg. reward = 0.646
+..........AI : 21.726 s, Game : 3.102 s
+Episode 832 avg. reward = -0.300, Long-term avg. reward = 0.637
+..........AI : 48.223 s, Game : 6.875 s
+Episode 833 avg. reward = 1.400, Long-term avg. reward = 0.644
+..........AI : 23.669 s, Game : 3.526 s
+Episode 834 avg. reward = 0.000, Long-term avg. reward = 0.638
+..........AI : 46.793 s, Game : 6.881 s
+Episode 835 avg. reward = 1.300, Long-term avg. reward = 0.645
+..........AI : 26.347 s, Game : 3.868 s
+Episode 836 avg. reward = 0.000, Long-term avg. reward = 0.638
+..........AI : 35.115 s, Game : 5.124 s
+Episode 837 avg. reward = 0.600, Long-term avg. reward = 0.638
+..........AI : 75.172 s, Game : 11.061 s
+Episode 838 avg. reward = 2.900, Long-term avg. reward = 0.660
+..........AI : 21.190 s, Game : 3.068 s
+Episode 839 avg. reward = -0.300, Long-term avg. reward = 0.651
+..........AI : 36.016 s, Game : 5.070 s
+Episode 840 avg. reward = 0.600, Long-term avg. reward = 0.650
+..........AI : 30.487 s, Game : 4.559 s
+Episode 841 avg. reward = 0.200, Long-term avg. reward = 0.646
+..........AI : 27.001 s, Game : 3.734 s
+Episode 842 avg. reward = -0.100, Long-term avg. reward = 0.638
+..........AI : 17.580 s, Game : 2.511 s
+Episode 843 avg. reward = -0.600, Long-term avg. reward = 0.626
+..........AI : 15.118 s, Game : 2.114 s
+Episode 844 avg. reward = -0.700, Long-term avg. reward = 0.613
+..........AI : 58.450 s, Game : 8.937 s
+Episode 845 avg. reward = 2.100, Long-term avg. reward = 0.628
+..........AI : 28.926 s, Game : 4.293 s
+Episode 846 avg. reward = 0.200, Long-term avg. reward = 0.623
+..........AI : 37.313 s, Game : 5.275 s
+Episode 847 avg. reward = 0.700, Long-term avg. reward = 0.624
+..........AI : 45.866 s, Game : 6.547 s
+Episode 848 avg. reward = 0.900, Long-term avg. reward = 0.627
+..........AI : 56.540 s, Game : 8.333 s
+Episode 849 avg. reward = 2.000, Long-term avg. reward = 0.641
+..........AI : 49.404 s, Game : 7.099 s
+Episode 850 avg. reward = 1.400, Long-term avg. reward = 0.648
+..........AI : 37.385 s, Game : 5.443 s
+Episode 851 avg. reward = 0.700, Long-term avg. reward = 0.649
+..........AI : 21.259 s, Game : 3.049 s
+Episode 852 avg. reward = -0.300, Long-term avg. reward = 0.639
+..........AI : 53.432 s, Game : 7.802 s
+Episode 853 avg. reward = 1.500, Long-term avg. reward = 0.648
+..........AI : 24.657 s, Game : 3.594 s
+Episode 854 avg. reward = -0.200, Long-term avg. reward = 0.639
+..........AI : 41.055 s, Game : 5.937 s
+Episode 855 avg. reward = 0.900, Long-term avg. reward = 0.642
+..........AI : 28.144 s, Game : 4.027 s
+Episode 856 avg. reward = 0.000, Long-term avg. reward = 0.636
+..........AI : 39.799 s, Game : 5.725 s
+Episode 857 avg. reward = 0.700, Long-term avg. reward = 0.636
+..........AI : 32.039 s, Game : 4.629 s
+Episode 858 avg. reward = 0.200, Long-term avg. reward = 0.632
+..........AI : 39.444 s, Game : 5.872 s
+Episode 859 avg. reward = 0.900, Long-term avg. reward = 0.634
+..........AI : 79.093 s, Game : 11.639 s
+Episode 860 avg. reward = 3.200, Long-term avg. reward = 0.660
+..........AI : 32.498 s, Game : 4.738 s
+Episode 861 avg. reward = 0.300, Long-term avg. reward = 0.657
+..........AI : 84.264 s, Game : 12.558 s
+Episode 862 avg. reward = 3.400, Long-term avg. reward = 0.684
+..........AI : 62.410 s, Game : 9.180 s
+Episode 863 avg. reward = 2.300, Long-term avg. reward = 0.700
+..........AI : 36.143 s, Game : 5.306 s
+Episode 864 avg. reward = 0.700, Long-term avg. reward = 0.700
+..........AI : 32.078 s, Game : 4.743 s
+Episode 865 avg. reward = 0.400, Long-term avg. reward = 0.697
+..........AI : 47.604 s, Game : 6.923 s
+Episode 866 avg. reward = 1.400, Long-term avg. reward = 0.704
+..........AI : 35.434 s, Game : 5.008 s
+Episode 867 avg. reward = 0.400, Long-term avg. reward = 0.701
+..........AI : 70.809 s, Game : 10.286 s
+Episode 868 avg. reward = 2.800, Long-term avg. reward = 0.722
+..........AI : 28.665 s, Game : 3.976 s
+Episode 869 avg. reward = 0.000, Long-term avg. reward = 0.715
+..........AI : 33.381 s, Game : 4.869 s
+Episode 870 avg. reward = 0.500, Long-term avg. reward = 0.713
+..........AI : 49.237 s, Game : 6.770 s
+Episode 871 avg. reward = 1.400, Long-term avg. reward = 0.720
+..........AI : 54.851 s, Game : 7.982 s
+Episode 872 avg. reward = 1.800, Long-term avg. reward = 0.730
+..........AI : 35.399 s, Game : 5.137 s
+Episode 873 avg. reward = 0.600, Long-term avg. reward = 0.729
+..........AI : 27.244 s, Game : 3.794 s
+Episode 874 avg. reward = 0.000, Long-term avg. reward = 0.722
+..........AI : 36.572 s, Game : 5.243 s
+Episode 875 avg. reward = 0.600, Long-term avg. reward = 0.721
+..........AI : 43.382 s, Game : 6.134 s
+Episode 876 avg. reward = 0.800, Long-term avg. reward = 0.721
+..........AI : 70.488 s, Game : 10.130 s
+Episode 877 avg. reward = 2.800, Long-term avg. reward = 0.742
+..........AI : 15.468 s, Game : 2.067 s
+Episode 878 avg. reward = -0.700, Long-term avg. reward = 0.728
+..........AI : 44.895 s, Game : 6.340 s
+Episode 879 avg. reward = 1.100, Long-term avg. reward = 0.731
+..........AI : 44.036 s, Game : 6.482 s
+Episode 880 avg. reward = 1.200, Long-term avg. reward = 0.736
+..........AI : 88.781 s, Game : 13.287 s
+Episode 881 avg. reward = 3.800, Long-term avg. reward = 0.767
+..........AI : 59.252 s, Game : 8.828 s
+Episode 882 avg. reward = 2.100, Long-term avg. reward = 0.780
+..........AI : 36.479 s, Game : 5.263 s
+Episode 883 avg. reward = 0.600, Long-term avg. reward = 0.778
+..........AI : 31.018 s, Game : 4.355 s
+Episode 884 avg. reward = 0.100, Long-term avg. reward = 0.772
+..........AI : 52.575 s, Game : 7.490 s
+Episode 885 avg. reward = 1.600, Long-term avg. reward = 0.780
+..........AI : 49.873 s, Game : 7.395 s
+Episode 886 avg. reward = 1.600, Long-term avg. reward = 0.788
+..........AI : 22.669 s, Game : 3.019 s
+Episode 887 avg. reward = -0.300, Long-term avg. reward = 0.777
+..........AI : 60.258 s, Game : 8.284 s
+Episode 888 avg. reward = 1.900, Long-term avg. reward = 0.788
+..........AI : 59.889 s, Game : 8.383 s
+Episode 889 avg. reward = 1.900, Long-term avg. reward = 0.799
+..........AI : 55.976 s, Game : 7.509 s
+Episode 890 avg. reward = 1.600, Long-term avg. reward = 0.807
+..........AI : 53.347 s, Game : 7.400 s
+Episode 891 avg. reward = 1.600, Long-term avg. reward = 0.815
+..........AI : 72.079 s, Game : 10.004 s
+Episode 892 avg. reward = 2.600, Long-term avg. reward = 0.833
+..........AI : 101.121 s, Game : 14.600 s
+Episode 893 avg. reward = 4.400, Long-term avg. reward = 0.869
+..........AI : 59.395 s, Game : 8.774 s
+Episode 894 avg. reward = 2.200, Long-term avg. reward = 0.882
+..........AI : 44.466 s, Game : 6.483 s
+Episode 895 avg. reward = 1.200, Long-term avg. reward = 0.885
+..........AI : 20.916 s, Game : 3.310 s
+Episode 896 avg. reward = -0.100, Long-term avg. reward = 0.876
+..........AI : 41.281 s, Game : 6.082 s
+Episode 897 avg. reward = 0.900, Long-term avg. reward = 0.876
+..........AI : 59.936 s, Game : 8.846 s
+Episode 898 avg. reward = 2.300, Long-term avg. reward = 0.890
+..........AI : 26.094 s, Game : 3.964 s
+Episode 899 avg. reward = 0.100, Long-term avg. reward = 0.882
+..........AI : 42.863 s, Game : 6.406 s
+Episode 900 avg. reward = 1.100, Long-term avg. reward = 0.884
+..........AI : 46.972 s, Game : 7.022 s
+Episode 901 avg. reward = 1.300, Long-term avg. reward = 0.888
+..........AI : 47.107 s, Game : 6.959 s
+Episode 902 avg. reward = 1.200, Long-term avg. reward = 0.892
+..........AI : 37.168 s, Game : 5.272 s
+Episode 903 avg. reward = 0.600, Long-term avg. reward = 0.889
+..........AI : 31.215 s, Game : 4.561 s
+Episode 904 avg. reward = 0.400, Long-term avg. reward = 0.884
+..........AI : 39.913 s, Game : 5.877 s
+Episode 905 avg. reward = 0.900, Long-term avg. reward = 0.884
+..........AI : 37.782 s, Game : 5.528 s
+Episode 906 avg. reward = 0.800, Long-term avg. reward = 0.883
+..........AI : 24.710 s, Game : 3.659 s
+Episode 907 avg. reward = 0.000, Long-term avg. reward = 0.874
+..........AI : 61.447 s, Game : 9.124 s
+Episode 908 avg. reward = 2.100, Long-term avg. reward = 0.887
+..........AI : 18.005 s, Game : 2.555 s
+Episode 909 avg. reward = -0.500, Long-term avg. reward = 0.873
+..........AI : 34.214 s, Game : 4.785 s
+Episode 910 avg. reward = 0.400, Long-term avg. reward = 0.868
+..........AI : 28.264 s, Game : 4.084 s
+Episode 911 avg. reward = 0.300, Long-term avg. reward = 0.862
+..........AI : 36.609 s, Game : 5.293 s
+Episode 912 avg. reward = 0.600, Long-term avg. reward = 0.860
+..........AI : 31.436 s, Game : 4.822 s
+Episode 913 avg. reward = 0.500, Long-term avg. reward = 0.856
+..........AI : 33.199 s, Game : 4.703 s
+Episode 914 avg. reward = 0.400, Long-term avg. reward = 0.851
+..........AI : 32.255 s, Game : 4.842 s
+Episode 915 avg. reward = 0.500, Long-term avg. reward = 0.848
+..........AI : 34.830 s, Game : 5.073 s
+Episode 916 avg. reward = 0.600, Long-term avg. reward = 0.846
+..........AI : 42.263 s, Game : 6.078 s
+Episode 917 avg. reward = 0.900, Long-term avg. reward = 0.846
+..........AI : 26.582 s, Game : 3.695 s
+Episode 918 avg. reward = -0.100, Long-term avg. reward = 0.837
+..........AI : 41.718 s, Game : 6.210 s
+Episode 919 avg. reward = 1.200, Long-term avg. reward = 0.840
+..........AI : 22.935 s, Game : 3.368 s
+Episode 920 avg. reward = -0.200, Long-term avg. reward = 0.830
+..........AI : 31.068 s, Game : 4.333 s
+Episode 921 avg. reward = 0.200, Long-term avg. reward = 0.824
+..........AI : 43.807 s, Game : 6.124 s
+Episode 922 avg. reward = 1.000, Long-term avg. reward = 0.825
+..........AI : 30.033 s, Game : 4.050 s
+Episode 923 avg. reward = 0.000, Long-term avg. reward = 0.817
+..........AI : 55.740 s, Game : 7.947 s
+Episode 924 avg. reward = 1.800, Long-term avg. reward = 0.827
+..........AI : 54.150 s, Game : 7.844 s
+Episode 925 avg. reward = 1.600, Long-term avg. reward = 0.835
+..........AI : 20.954 s, Game : 3.017 s
+Episode 926 avg. reward = -0.300, Long-term avg. reward = 0.823
+..........AI : 58.147 s, Game : 8.371 s
+Episode 927 avg. reward = 1.900, Long-term avg. reward = 0.834
+..........AI : 48.612 s, Game : 7.012 s
+Episode 928 avg. reward = 1.400, Long-term avg. reward = 0.840
+..........AI : 37.509 s, Game : 5.546 s
+Episode 929 avg. reward = 0.700, Long-term avg. reward = 0.838
+..........AI : 28.598 s, Game : 3.948 s
+Episode 930 avg. reward = 0.100, Long-term avg. reward = 0.831
+..........AI : 58.625 s, Game : 8.590 s
+Episode 931 avg. reward = 2.000, Long-term avg. reward = 0.843
+..........AI : 41.524 s, Game : 5.706 s
+Episode 932 avg. reward = 0.800, Long-term avg. reward = 0.842
+..........AI : 54.474 s, Game : 7.610 s
+Episode 933 avg. reward = 1.600, Long-term avg. reward = 0.850
+..........AI : 33.474 s, Game : 4.564 s
+Episode 934 avg. reward = 0.400, Long-term avg. reward = 0.845
+..........AI : 51.407 s, Game : 7.445 s
+Episode 935 avg. reward = 1.500, Long-term avg. reward = 0.852
+..........AI : 32.449 s, Game : 4.648 s
+Episode 936 avg. reward = 0.400, Long-term avg. reward = 0.847
+..........AI : 58.030 s, Game : 8.646 s
+Episode 937 avg. reward = 2.000, Long-term avg. reward = 0.859
+..........AI : 74.975 s, Game : 10.408 s
+Episode 938 avg. reward = 2.800, Long-term avg. reward = 0.878
+..........AI : 55.056 s, Game : 7.391 s
+Episode 939 avg. reward = 1.600, Long-term avg. reward = 0.885
+..........AI : 36.587 s, Game : 4.729 s
+Episode 940 avg. reward = 0.300, Long-term avg. reward = 0.880
+..........AI : 86.843 s, Game : 12.501 s
+Episode 941 avg. reward = 3.900, Long-term avg. reward = 0.910
+..........AI : 51.635 s, Game : 7.631 s
+Episode 942 avg. reward = 1.700, Long-term avg. reward = 0.918
+..........AI : 71.603 s, Game : 10.567 s
+Episode 943 avg. reward = 2.800, Long-term avg. reward = 0.937
+..........AI : 38.938 s, Game : 5.590 s
+Episode 944 avg. reward = 0.900, Long-term avg. reward = 0.936
+..........AI : 33.706 s, Game : 4.834 s
+Episode 945 avg. reward = 0.500, Long-term avg. reward = 0.932
+..........AI : 45.605 s, Game : 6.311 s
+Episode 946 avg. reward = 1.200, Long-term avg. reward = 0.934
+..........AI : 63.247 s, Game : 8.799 s
+Episode 947 avg. reward = 2.100, Long-term avg. reward = 0.946
+..........AI : 53.634 s, Game : 7.988 s
+Episode 948 avg. reward = 1.800, Long-term avg. reward = 0.955
+..........AI : 40.879 s, Game : 6.035 s
+Episode 949 avg. reward = 0.900, Long-term avg. reward = 0.954
+..........AI : 31.980 s, Game : 4.630 s
+Episode 950 avg. reward = 0.300, Long-term avg. reward = 0.948
+..........AI : 26.653 s, Game : 3.908 s
+Episode 951 avg. reward = 0.000, Long-term avg. reward = 0.938
+..........AI : 30.041 s, Game : 4.048 s
+Episode 952 avg. reward = 0.100, Long-term avg. reward = 0.930
+..........AI : 28.476 s, Game : 4.039 s
+Episode 953 avg. reward = 0.200, Long-term avg. reward = 0.922
+..........AI : 53.415 s, Game : 7.661 s
+Episode 954 avg. reward = 1.700, Long-term avg. reward = 0.930
+..........AI : 42.665 s, Game : 6.120 s
+Episode 955 avg. reward = 1.100, Long-term avg. reward = 0.932
+..........AI : 42.008 s, Game : 6.070 s
+Episode 956 avg. reward = 0.900, Long-term avg. reward = 0.932
+..........AI : 44.566 s, Game : 6.428 s
+Episode 957 avg. reward = 1.200, Long-term avg. reward = 0.934
+..........AI : 48.213 s, Game : 7.083 s
+Episode 958 avg. reward = 1.400, Long-term avg. reward = 0.939
+..........AI : 42.148 s, Game : 6.144 s
+Episode 959 avg. reward = 1.100, Long-term avg. reward = 0.941
+..........AI : 47.195 s, Game : 6.877 s
+Episode 960 avg. reward = 1.200, Long-term avg. reward = 0.943
+..........AI : 67.942 s, Game : 10.028 s
+Episode 961 avg. reward = 2.600, Long-term avg. reward = 0.960
+..........AI : 32.161 s, Game : 4.677 s
+Episode 962 avg. reward = 0.400, Long-term avg. reward = 0.954
+..........AI : 60.461 s, Game : 9.037 s
+Episode 963 avg. reward = 2.100, Long-term avg. reward = 0.966
+..........AI : 54.108 s, Game : 8.066 s
+Episode 964 avg. reward = 1.600, Long-term avg. reward = 0.972
+..........AI : 73.490 s, Game : 11.028 s
+Episode 965 avg. reward = 3.200, Long-term avg. reward = 0.994
+..........AI : 45.698 s, Game : 6.890 s
+Episode 966 avg. reward = 1.200, Long-term avg. reward = 0.996
+..........AI : 45.817 s, Game : 6.780 s
+Episode 967 avg. reward = 1.200, Long-term avg. reward = 0.998
+..........AI : 39.329 s, Game : 5.868 s
+Episode 968 avg. reward = 0.900, Long-term avg. reward = 0.997
+..........AI : 58.930 s, Game : 8.772 s
+Episode 969 avg. reward = 2.100, Long-term avg. reward = 1.008
+..........AI : 80.522 s, Game : 12.097 s
+Episode 970 avg. reward = 3.500, Long-term avg. reward = 1.033
+..........AI : 53.569 s, Game : 7.836 s
+Episode 971 avg. reward = 1.800, Long-term avg. reward = 1.041
+..........AI : 52.879 s, Game : 7.687 s
+Episode 972 avg. reward = 1.700, Long-term avg. reward = 1.047
+..........AI : 53.846 s, Game : 8.031 s
+Episode 973 avg. reward = 1.700, Long-term avg. reward = 1.054
+..........AI : 43.431 s, Game : 6.334 s
+Episode 974 avg. reward = 1.100, Long-term avg. reward = 1.054
+..........AI : 43.238 s, Game : 6.455 s
+Episode 975 avg. reward = 1.000, Long-term avg. reward = 1.054
+..........AI : 75.949 s, Game : 11.523 s
+Episode 976 avg. reward = 3.300, Long-term avg. reward = 1.076
+..........AI : 52.561 s, Game : 7.649 s
+Episode 977 avg. reward = 1.700, Long-term avg. reward = 1.083
+..........AI : 65.808 s, Game : 9.769 s
+Episode 978 avg. reward = 2.600, Long-term avg. reward = 1.098
+..........AI : 50.648 s, Game : 7.164 s
+Episode 979 avg. reward = 1.500, Long-term avg. reward = 1.102
+..........AI : 43.180 s, Game : 5.892 s
+Episode 980 avg. reward = 0.800, Long-term avg. reward = 1.099
+..........AI : 65.211 s, Game : 9.610 s
+Episode 981 avg. reward = 2.300, Long-term avg. reward = 1.111
+..........AI : 39.239 s, Game : 5.826 s
+Episode 982 avg. reward = 0.900, Long-term avg. reward = 1.109
+..........AI : 66.092 s, Game : 9.842 s
+Episode 983 avg. reward = 2.300, Long-term avg. reward = 1.121
+..........AI : 41.056 s, Game : 5.842 s
+Episode 984 avg. reward = 0.900, Long-term avg. reward = 1.118
+..........AI : 37.282 s, Game : 5.378 s
+Episode 985 avg. reward = 0.700, Long-term avg. reward = 1.114
+..........AI : 72.727 s, Game : 10.710 s
+Episode 986 avg. reward = 3.000, Long-term avg. reward = 1.133
+..........AI : 43.204 s, Game : 6.164 s
+Episode 987 avg. reward = 1.100, Long-term avg. reward = 1.133
+..........AI : 52.227 s, Game : 7.419 s
+Episode 988 avg. reward = 1.700, Long-term avg. reward = 1.138
+..........AI : 72.149 s, Game : 11.086 s
+Episode 989 avg. reward = 3.100, Long-term avg. reward = 1.158
+..........AI : 46.419 s, Game : 6.658 s
+Episode 990 avg. reward = 1.200, Long-term avg. reward = 1.158
+..........AI : 55.217 s, Game : 8.121 s
+Episode 991 avg. reward = 1.900, Long-term avg. reward = 1.166
+..........AI : 54.257 s, Game : 7.892 s
+Episode 992 avg. reward = 1.900, Long-term avg. reward = 1.173
+..........AI : 33.931 s, Game : 5.004 s
+Episode 993 avg. reward = 0.500, Long-term avg. reward = 1.166
+..........AI : 59.957 s, Game : 8.984 s
+Episode 994 avg. reward = 2.200, Long-term avg. reward = 1.177
+..........AI : 50.413 s, Game : 7.359 s
+Episode 995 avg. reward = 1.700, Long-term avg. reward = 1.182
+..........AI : 46.510 s, Game : 6.742 s
+Episode 996 avg. reward = 1.300, Long-term avg. reward = 1.183
+..........AI : 51.056 s, Game : 7.696 s
+Episode 997 avg. reward = 1.600, Long-term avg. reward = 1.187
+..........AI : 38.746 s, Game : 5.509 s
+Episode 998 avg. reward = 0.600, Long-term avg. reward = 1.182
+..........AI : 109.954 s, Game : 16.060 s
+Episode 999 avg. reward = 5.200, Long-term avg. reward = 1.222
+..........AI : 54.152 s, Game : 7.769 s
+Episode 1000 avg. reward = 1.700, Long-term avg. reward = 1.226
+..........AI : 58.058 s, Game : 8.356 s
+Episode 1001 avg. reward = 2.000, Long-term avg. reward = 1.234
+..........AI : 46.133 s, Game : 6.407 s
+Episode 1002 avg. reward = 1.200, Long-term avg. reward = 1.234
+..........AI : 72.085 s, Game : 10.310 s
+Episode 1003 avg. reward = 2.800, Long-term avg. reward = 1.250
+..........AI : 86.983 s, Game : 12.706 s
+Episode 1004 avg. reward = 4.000, Long-term avg. reward = 1.277
+..........AI : 50.220 s, Game : 7.438 s
+Episode 1005 avg. reward = 1.400, Long-term avg. reward = 1.278
+..........AI : 51.757 s, Game : 7.287 s
+Episode 1006 avg. reward = 1.600, Long-term avg. reward = 1.282
+..........AI : 31.285 s, Game : 4.520 s
+Episode 1007 avg. reward = 0.200, Long-term avg. reward = 1.271
+..........AI : 65.798 s, Game : 9.804 s
+Episode 1008 avg. reward = 2.700, Long-term avg. reward = 1.285
+..........AI : 30.009 s, Game : 4.062 s
+Episode 1009 avg. reward = 0.100, Long-term avg. reward = 1.273
+..........AI : 35.389 s, Game : 4.860 s
+Episode 1010 avg. reward = 0.500, Long-term avg. reward = 1.265
+..........AI : 63.069 s, Game : 8.796 s
+Episode 1011 avg. reward = 2.100, Long-term avg. reward = 1.274
+..........AI : 49.712 s, Game : 6.504 s
+Episode 1012 avg. reward = 1.200, Long-term avg. reward = 1.273
+..........AI : 62.056 s, Game : 8.831 s
+Episode 1013 avg. reward = 2.100, Long-term avg. reward = 1.281
+..........AI : 34.196 s, Game : 4.646 s
+Episode 1014 avg. reward = 0.300, Long-term avg. reward = 1.271
+..........AI : 65.119 s, Game : 9.487 s
+Episode 1015 avg. reward = 2.600, Long-term avg. reward = 1.285
+..........AI : 48.411 s, Game : 6.899 s
+Episode 1016 avg. reward = 1.400, Long-term avg. reward = 1.286
+..........AI : 38.807 s, Game : 5.780 s
+Episode 1017 avg. reward = 0.900, Long-term avg. reward = 1.282
+..........AI : 40.766 s, Game : 5.763 s
+Episode 1018 avg. reward = 0.800, Long-term avg. reward = 1.277
+..........AI : 49.872 s, Game : 7.238 s
+Episode 1019 avg. reward = 1.400, Long-term avg. reward = 1.278
+..........AI : 68.357 s, Game : 10.067 s
+Episode 1020 avg. reward = 2.800, Long-term avg. reward = 1.294
+..........AI : 16.256 s, Game : 2.436 s
+Episode 1021 avg. reward = -0.700, Long-term avg. reward = 1.274
+..........AI : 38.146 s, Game : 5.051 s
+Episode 1022 avg. reward = 0.600, Long-term avg. reward = 1.267
+..........AI : 32.331 s, Game : 4.480 s
+Episode 1023 avg. reward = 0.200, Long-term avg. reward = 1.256
+..........AI : 56.590 s, Game : 8.307 s
+Episode 1024 avg. reward = 1.900, Long-term avg. reward = 1.263
+..........AI : 73.858 s, Game : 10.660 s
+Episode 1025 avg. reward = 2.800, Long-term avg. reward = 1.278
+..........AI : 59.800 s, Game : 8.690 s
+Episode 1026 avg. reward = 2.100, Long-term avg. reward = 1.286
+..........AI : 37.537 s, Game : 5.553 s
+Episode 1027 avg. reward = 0.900, Long-term avg. reward = 1.282
+..........AI : 48.823 s, Game : 7.182 s
+Episode 1028 avg. reward = 1.400, Long-term avg. reward = 1.284
+..........AI : 38.499 s, Game : 5.755 s
+Episode 1029 avg. reward = 0.800, Long-term avg. reward = 1.279
+..........AI : 59.415 s, Game : 8.396 s
+Episode 1030 avg. reward = 1.800, Long-term avg. reward = 1.284
+..........AI : 47.026 s, Game : 6.846 s
+Episode 1031 avg. reward = 1.300, Long-term avg. reward = 1.284
+..........AI : 59.320 s, Game : 8.285 s
+Episode 1032 avg. reward = 2.100, Long-term avg. reward = 1.292
+..........AI : 54.032 s, Game : 7.329 s
+Episode 1033 avg. reward = 1.400, Long-term avg. reward = 1.293
+..........AI : 114.313 s, Game : 16.845 s
+Episode 1034 avg. reward = 5.500, Long-term avg. reward = 1.335
+..........AI : 75.255 s, Game : 11.153 s
+Episode 1035 avg. reward = 3.100, Long-term avg. reward = 1.353
+..........AI : 67.060 s, Game : 9.518 s
+Episode 1036 avg. reward = 2.500, Long-term avg. reward = 1.365
+..........AI : 59.582 s, Game : 8.939 s
+Episode 1037 avg. reward = 2.100, Long-term avg. reward = 1.372
+..........AI : 85.363 s, Game : 12.510 s
+Episode 1038 avg. reward = 3.700, Long-term avg. reward = 1.395
+..........AI : 47.566 s, Game : 6.933 s
+Episode 1039 avg. reward = 1.400, Long-term avg. reward = 1.395
+..........AI : 32.893 s, Game : 4.885 s
+Episode 1040 avg. reward = 0.500, Long-term avg. reward = 1.386
+..........AI : 56.640 s, Game : 8.100 s
+Episode 1041 avg. reward = 1.800, Long-term avg. reward = 1.390
+..........AI : 39.939 s, Game : 5.794 s
+Episode 1042 avg. reward = 0.800, Long-term avg. reward = 1.385
+..........AI : 54.279 s, Game : 7.562 s
+Episode 1043 avg. reward = 1.600, Long-term avg. reward = 1.387
+..........AI : 63.456 s, Game : 9.342 s
+Episode 1044 avg. reward = 2.300, Long-term avg. reward = 1.396
+..........AI : 66.220 s, Game : 9.452 s
+Episode 1045 avg. reward = 2.400, Long-term avg. reward = 1.406
+..........AI : 72.544 s, Game : 10.521 s
+Episode 1046 avg. reward = 2.900, Long-term avg. reward = 1.421
+..........AI : 73.292 s, Game : 11.024 s
+Episode 1047 avg. reward = 3.100, Long-term avg. reward = 1.438
+..........AI : 51.477 s, Game : 7.279 s
+Episode 1048 avg. reward = 1.500, Long-term avg. reward = 1.438
+..........AI : 54.770 s, Game : 7.931 s
+Episode 1049 avg. reward = 1.800, Long-term avg. reward = 1.442
+..........AI : 122.601 s, Game : 17.093 s
+Episode 1050 avg. reward = 5.700, Long-term avg. reward = 1.484
+..........AI : 19.218 s, Game : 2.625 s
+Episode 1051 avg. reward = -0.500, Long-term avg. reward = 1.465
+..........AI : 16.422 s, Game : 2.216 s
+Episode 1052 avg. reward = -0.600, Long-term avg. reward = 1.444
+..........AI : 63.278 s, Game : 9.098 s
+Episode 1053 avg. reward = 2.300, Long-term avg. reward = 1.453
+..........AI : 35.690 s, Game : 4.916 s
+Episode 1054 avg. reward = 0.600, Long-term avg. reward = 1.444
+..........AI : 39.142 s, Game : 5.519 s
+Episode 1055 avg. reward = 0.800, Long-term avg. reward = 1.438
+..........AI : 129.956 s, Game : 18.776 s
+Episode 1056 avg. reward = 6.400, Long-term avg. reward = 1.487
+..........AI : 66.933 s, Game : 9.506 s
+Episode 1057 avg. reward = 2.400, Long-term avg. reward = 1.496
+..........AI : 40.611 s, Game : 5.427 s
+Episode 1058 avg. reward = 0.800, Long-term avg. reward = 1.489
+..........AI : 35.324 s, Game : 4.952 s
+Episode 1059 avg. reward = 0.700, Long-term avg. reward = 1.481
+..........AI : 60.506 s, Game : 8.526 s
+Episode 1060 avg. reward = 2.100, Long-term avg. reward = 1.488
+..........AI : 79.426 s, Game : 11.409 s
+Episode 1061 avg. reward = 3.400, Long-term avg. reward = 1.507
+..........AI : 28.407 s, Game : 4.128 s
+Episode 1062 avg. reward = 0.100, Long-term avg. reward = 1.493
+..........AI : 80.989 s, Game : 11.701 s
+Episode 1063 avg. reward = 3.300, Long-term avg. reward = 1.511
+..........AI : 42.859 s, Game : 6.311 s
+Episode 1064 avg. reward = 1.000, Long-term avg. reward = 1.506
+..........AI : 85.037 s, Game : 12.315 s
+Episode 1065 avg. reward = 3.700, Long-term avg. reward = 1.528
+..........AI : 83.392 s, Game : 12.333 s
+Episode 1066 avg. reward = 3.600, Long-term avg. reward = 1.548
+..........AI : 72.131 s, Game : 10.613 s
+Episode 1067 avg. reward = 2.900, Long-term avg. reward = 1.562
+..........AI : 55.478 s, Game : 8.270 s
+Episode 1068 avg. reward = 1.800, Long-term avg. reward = 1.564
+..........AI : 33.286 s, Game : 4.784 s
+Episode 1069 avg. reward = 0.400, Long-term avg. reward = 1.553
+..........AI : 85.724 s, Game : 12.380 s
+Episode 1070 avg. reward = 3.700, Long-term avg. reward = 1.574
+..........AI : 58.346 s, Game : 8.319 s
+Episode 1071 avg. reward = 1.800, Long-term avg. reward = 1.576
+..........AI : 57.297 s, Game : 8.293 s
+Episode 1072 avg. reward = 1.900, Long-term avg. reward = 1.580
+..........AI : 35.792 s, Game : 5.121 s
+Episode 1073 avg. reward = 0.600, Long-term avg. reward = 1.570
+..........AI : 34.386 s, Game : 4.970 s
+Episode 1074 avg. reward = 0.500, Long-term avg. reward = 1.559
+..........AI : 40.999 s, Game : 6.157 s
+Episode 1075 avg. reward = 1.100, Long-term avg. reward = 1.554
+..........AI : 61.694 s, Game : 9.399 s
+Episode 1076 avg. reward = 2.300, Long-term avg. reward = 1.562
+..........AI : 72.978 s, Game : 10.706 s
+Episode 1077 avg. reward = 2.900, Long-term avg. reward = 1.575
+..........AI : 56.593 s, Game : 8.416 s
+Episode 1078 avg. reward = 1.900, Long-term avg. reward = 1.579
+..........AI : 60.986 s, Game : 9.099 s
+Episode 1079 avg. reward = 2.200, Long-term avg. reward = 1.585
+..........AI : 57.206 s, Game : 8.577 s
+Episode 1080 avg. reward = 2.000, Long-term avg. reward = 1.589
+..........AI : 87.138 s, Game : 12.817 s
+Episode 1081 avg. reward = 3.900, Long-term avg. reward = 1.612
+..........AI : 79.110 s, Game : 11.434 s
+Episode 1082 avg. reward = 3.400, Long-term avg. reward = 1.630
+..........AI : 39.443 s, Game : 5.811 s
+Episode 1083 avg. reward = 0.800, Long-term avg. reward = 1.622
+..........AI : 92.093 s, Game : 13.560 s
+Episode 1084 avg. reward = 4.100, Long-term avg. reward = 1.646
+..........AI : 52.064 s, Game : 7.526 s
+Episode 1085 avg. reward = 1.600, Long-term avg. reward = 1.646
+..........AI : 63.700 s, Game : 9.531 s
+Episode 1086 avg. reward = 2.300, Long-term avg. reward = 1.652
+..........AI : 54.771 s, Game : 8.356 s
+Episode 1087 avg. reward = 2.000, Long-term avg. reward = 1.656
+..........AI : 74.467 s, Game : 11.169 s
+Episode 1088 avg. reward = 3.200, Long-term avg. reward = 1.671
+..........AI : 61.572 s, Game : 8.846 s
+Episode 1089 avg. reward = 2.100, Long-term avg. reward = 1.676
+..........AI : 64.464 s, Game : 9.360 s
+Episode 1090 avg. reward = 2.500, Long-term avg. reward = 1.684
+..........AI : 75.045 s, Game : 10.916 s
+Episode 1091 avg. reward = 2.900, Long-term avg. reward = 1.696
+..........AI : 50.964 s, Game : 7.287 s
+Episode 1092 avg. reward = 1.500, Long-term avg. reward = 1.694
+..........AI : 101.204 s, Game : 14.012 s
+Episode 1093 avg. reward = 4.400, Long-term avg. reward = 1.721
+..........AI : 108.903 s, Game : 15.339 s
+Episode 1094 avg. reward = 4.900, Long-term avg. reward = 1.753
+..........AI : 43.863 s, Game : 5.865 s
+Episode 1095 avg. reward = 0.900, Long-term avg. reward = 1.744
+..........AI : 66.538 s, Game : 9.884 s
+Episode 1096 avg. reward = 2.600, Long-term avg. reward = 1.753
+..........AI : 70.445 s, Game : 10.265 s
+Episode 1097 avg. reward = 2.700, Long-term avg. reward = 1.762
+..........AI : 41.280 s, Game : 5.690 s
+Episode 1098 avg. reward = 0.800, Long-term avg. reward = 1.753
+..........AI : 37.883 s, Game : 5.508 s
+Episode 1099 avg. reward = 0.900, Long-term avg. reward = 1.744
+..........AI : 47.481 s, Game : 6.871 s
+Episode 1100 avg. reward = 1.200, Long-term avg. reward = 1.739
+..........AI : 43.402 s, Game : 6.168 s
+Episode 1101 avg. reward = 1.100, Long-term avg. reward = 1.732
+..........AI : 52.469 s, Game : 7.551 s
+Episode 1102 avg. reward = 1.600, Long-term avg. reward = 1.731
+..........AI : 67.138 s, Game : 9.546 s
+Episode 1103 avg. reward = 2.300, Long-term avg. reward = 1.737
+..........AI : 49.649 s, Game : 7.009 s
+Episode 1104 avg. reward = 1.400, Long-term avg. reward = 1.733
+..........AI : 59.194 s, Game : 8.864 s
+Episode 1105 avg. reward = 2.000, Long-term avg. reward = 1.736
+..........AI : 48.761 s, Game : 7.123 s
+Episode 1106 avg. reward = 1.500, Long-term avg. reward = 1.734
+..........AI : 84.019 s, Game : 12.763 s
+Episode 1107 avg. reward = 3.600, Long-term avg. reward = 1.752
+..........AI : 114.204 s, Game : 17.007 s
+Episode 1108 avg. reward = 5.500, Long-term avg. reward = 1.790
+..........AI : 43.963 s, Game : 6.492 s
+Episode 1109 avg. reward = 1.200, Long-term avg. reward = 1.784
+..........AI : 45.167 s, Game : 6.663 s
+Episode 1110 avg. reward = 1.400, Long-term avg. reward = 1.780
+..........AI : 64.169 s, Game : 9.333 s
+Episode 1111 avg. reward = 2.300, Long-term avg. reward = 1.785
+..........AI : 54.908 s, Game : 8.051 s
+Episode 1112 avg. reward = 1.800, Long-term avg. reward = 1.786
+..........AI : 45.064 s, Game : 6.467 s
+Episode 1113 avg. reward = 1.200, Long-term avg. reward = 1.780
+..........AI : 29.186 s, Game : 4.268 s
+Episode 1114 avg. reward = 0.100, Long-term avg. reward = 1.763
+..........AI : 50.242 s, Game : 7.209 s
+Episode 1115 avg. reward = 1.400, Long-term avg. reward = 1.759
+..........AI : 71.053 s, Game : 10.457 s
+Episode 1116 avg. reward = 2.900, Long-term avg. reward = 1.771
+..........AI : 54.630 s, Game : 7.815 s
+Episode 1117 avg. reward = 1.700, Long-term avg. reward = 1.770
+..........AI : 38.165 s, Game : 5.428 s
+Episode 1118 avg. reward = 0.900, Long-term avg. reward = 1.761
+..........AI : 105.923 s, Game : 15.165 s
+Episode 1119 avg. reward = 5.100, Long-term avg. reward = 1.795
+..........AI : 21.901 s, Game : 3.085 s
+Episode 1120 avg. reward = -0.300, Long-term avg. reward = 1.774
+..........AI : 47.955 s, Game : 6.757 s
+Episode 1121 avg. reward = 1.300, Long-term avg. reward = 1.769
+..........AI : 83.505 s, Game : 11.373 s
+Episode 1122 avg. reward = 3.300, Long-term avg. reward = 1.784
+..........AI : 35.049 s, Game : 4.584 s
+Episode 1123 avg. reward = 0.300, Long-term avg. reward = 1.769
+..........AI : 39.512 s, Game : 5.363 s
+Episode 1124 avg. reward = 0.700, Long-term avg. reward = 1.759
+..........AI : 51.943 s, Game : 7.631 s
+Episode 1125 avg. reward = 1.800, Long-term avg. reward = 1.759
+..........AI : 48.700 s, Game : 6.853 s
+Episode 1126 avg. reward = 1.300, Long-term avg. reward = 1.755
+..........AI : 38.757 s, Game : 5.673 s
+Episode 1127 avg. reward = 0.900, Long-term avg. reward = 1.746
+..........AI : 33.405 s, Game : 4.761 s
+Episode 1128 avg. reward = 0.400, Long-term avg. reward = 1.733
+..........AI : 21.876 s, Game : 3.050 s
+Episode 1129 avg. reward = -0.300, Long-term avg. reward = 1.712
+..........AI : 64.666 s, Game : 9.460 s
+Episode 1130 avg. reward = 2.400, Long-term avg. reward = 1.719
+..........AI : 75.233 s, Game : 11.056 s
+Episode 1131 avg. reward = 3.200, Long-term avg. reward = 1.734
+..........AI : 48.520 s, Game : 7.091 s
+Episode 1132 avg. reward = 1.500, Long-term avg. reward = 1.732
+..........AI : 55.596 s, Game : 8.310 s
+Episode 1133 avg. reward = 2.000, Long-term avg. reward = 1.734
+..........AI : 55.991 s, Game : 8.268 s
+Episode 1134 avg. reward = 1.900, Long-term avg. reward = 1.736
+..........AI : 24.250 s, Game : 3.655 s
+Episode 1135 avg. reward = -0.100, Long-term avg. reward = 1.718
+..........AI : 77.070 s, Game : 11.258 s
+Episode 1136 avg. reward = 3.100, Long-term avg. reward = 1.731
+..........AI : 96.727 s, Game : 14.257 s
+Episode 1137 avg. reward = 4.400, Long-term avg. reward = 1.758
+..........AI : 46.351 s, Game : 6.707 s
+Episode 1138 avg. reward = 1.200, Long-term avg. reward = 1.752
+..........AI : 65.598 s, Game : 9.688 s
+Episode 1139 avg. reward = 2.600, Long-term avg. reward = 1.761
+..........AI : 66.434 s, Game : 9.770 s
+Episode 1140 avg. reward = 2.500, Long-term avg. reward = 1.768
+..........AI : 140.266 s, Game : 20.929 s
+Episode 1141 avg. reward = 7.200, Long-term avg. reward = 1.823
+..........AI : 57.674 s, Game : 7.979 s
+Episode 1142 avg. reward = 1.800, Long-term avg. reward = 1.822
+..........AI : 67.576 s, Game : 9.727 s
+Episode 1143 avg. reward = 2.400, Long-term avg. reward = 1.828
+..........AI : 54.212 s, Game : 8.103 s
+Episode 1144 avg. reward = 1.800, Long-term avg. reward = 1.828
+..........AI : 95.118 s, Game : 13.870 s
+Episode 1145 avg. reward = 4.100, Long-term avg. reward = 1.851
+..........AI : 59.347 s, Game : 8.681 s
+Episode 1146 avg. reward = 2.100, Long-term avg. reward = 1.853
+..........AI : 90.283 s, Game : 13.458 s
+Episode 1147 avg. reward = 4.000, Long-term avg. reward = 1.875
+..........AI : 80.063 s, Game : 11.650 s
+Episode 1148 avg. reward = 3.400, Long-term avg. reward = 1.890
+..........AI : 62.898 s, Game : 9.140 s
+Episode 1149 avg. reward = 2.100, Long-term avg. reward = 1.892
+..........AI : 70.335 s, Game : 10.373 s
+Episode 1150 avg. reward = 2.800, Long-term avg. reward = 1.901
+..........AI : 59.193 s, Game : 8.421 s
+Episode 1151 avg. reward = 2.200, Long-term avg. reward = 1.904
+..........AI : 38.163 s, Game : 5.506 s
+Episode 1152 avg. reward = 0.700, Long-term avg. reward = 1.892
+..........AI : 70.181 s, Game : 10.069 s
+Episode 1153 avg. reward = 2.700, Long-term avg. reward = 1.900
+..........AI : 34.059 s, Game : 4.946 s
+Episode 1154 avg. reward = 0.400, Long-term avg. reward = 1.885
+..........AI : 34.191 s, Game : 4.744 s
+Episode 1155 avg. reward = 0.400, Long-term avg. reward = 1.870
+..........AI : 48.246 s, Game : 7.058 s
+Episode 1156 avg. reward = 1.500, Long-term avg. reward = 1.867
+..........AI : 70.499 s, Game : 10.092 s
+Episode 1157 avg. reward = 2.700, Long-term avg. reward = 1.875
+..........AI : 67.681 s, Game : 10.042 s
+Episode 1158 avg. reward = 2.700, Long-term avg. reward = 1.883
+..........AI : 91.417 s, Game : 13.340 s
+Episode 1159 avg. reward = 3.900, Long-term avg. reward = 1.903
+..........AI : 64.327 s, Game : 9.497 s
+Episode 1160 avg. reward = 2.400, Long-term avg. reward = 1.908
+..........AI : 36.565 s, Game : 5.346 s
+Episode 1161 avg. reward = 0.500, Long-term avg. reward = 1.894
+..........AI : 88.015 s, Game : 12.791 s
+Episode 1162 avg. reward = 3.900, Long-term avg. reward = 1.914
+..........AI : 83.884 s, Game : 12.465 s
+Episode 1163 avg. reward = 3.900, Long-term avg. reward = 1.934
+..........AI : 54.500 s, Game : 8.033 s
+Episode 1164 avg. reward = 1.800, Long-term avg. reward = 1.933
+..........AI : 52.481 s, Game : 7.401 s
+Episode 1165 avg. reward = 1.700, Long-term avg. reward = 1.930
+..........AI : 53.606 s, Game : 7.811 s
+Episode 1166 avg. reward = 1.700, Long-term avg. reward = 1.928
+..........AI : 43.604 s, Game : 6.097 s
+Episode 1167 avg. reward = 0.900, Long-term avg. reward = 1.918
+..........AI : 82.468 s, Game : 11.767 s
+Episode 1168 avg. reward = 3.200, Long-term avg. reward = 1.931
+..........AI : 67.257 s, Game : 9.496 s
+Episode 1169 avg. reward = 2.500, Long-term avg. reward = 1.936
+..........AI : 85.952 s, Game : 12.895 s
+Episode 1170 avg. reward = 3.900, Long-term avg. reward = 1.956
+..........AI : 40.549 s, Game : 5.945 s
+Episode 1171 avg. reward = 0.900, Long-term avg. reward = 1.945
+..........AI : 45.170 s, Game : 7.060 s
+Episode 1172 avg. reward = 1.400, Long-term avg. reward = 1.940
+..........AI : 47.116 s, Game : 6.955 s
+Episode 1173 avg. reward = 1.400, Long-term avg. reward = 1.935
+..........AI : 110.598 s, Game : 16.224 s
+Episode 1174 avg. reward = 5.100, Long-term avg. reward = 1.966
+..........AI : 162.887 s, Game : 22.852 s
+Episode 1175 avg. reward = 8.200, Long-term avg. reward = 2.029
+..........AI : 41.012 s, Game : 5.712 s
+Episode 1176 avg. reward = 0.800, Long-term avg. reward = 2.016
+..........AI : 72.371 s, Game : 10.319 s
+Episode 1177 avg. reward = 2.600, Long-term avg. reward = 2.022
+..........AI : 76.259 s, Game : 11.337 s
+Episode 1178 avg. reward = 3.200, Long-term avg. reward = 2.034
+..........AI : 60.597 s, Game : 8.720 s
+Episode 1179 avg. reward = 1.900, Long-term avg. reward = 2.033
+..........AI : 53.800 s, Game : 8.042 s
+Episode 1180 avg. reward = 1.700, Long-term avg. reward = 2.029
+..........AI : 78.983 s, Game : 11.750 s
+Episode 1181 avg. reward = 3.500, Long-term avg. reward = 2.044
+..........AI : 55.152 s, Game : 8.179 s
+Episode 1182 avg. reward = 1.700, Long-term avg. reward = 2.040
+..........AI : 61.664 s, Game : 9.261 s
+Episode 1183 avg. reward = 2.400, Long-term avg. reward = 2.044
+..........AI : 80.307 s, Game : 11.640 s
+Episode 1184 avg. reward = 3.300, Long-term avg. reward = 2.057
+..........AI : 109.467 s, Game : 15.846 s
+Episode 1185 avg. reward = 5.200, Long-term avg. reward = 2.088
+..........AI : 124.904 s, Game : 17.816 s
+Episode 1186 avg. reward = 6.000, Long-term avg. reward = 2.127
+..........AI : 32.854 s, Game : 4.829 s
+Episode 1187 avg. reward = 0.300, Long-term avg. reward = 2.109
+..........AI : 150.078 s, Game : 21.869 s
+Episode 1188 avg. reward = 7.100, Long-term avg. reward = 2.159
+..........AI : 81.182 s, Game : 11.607 s
+Episode 1189 avg. reward = 2.900, Long-term avg. reward = 2.166
+..........AI : 81.224 s, Game : 11.688 s
+Episode 1190 avg. reward = 3.100, Long-term avg. reward = 2.176
+..........AI : 103.021 s, Game : 14.881 s
+Episode 1191 avg. reward = 4.400, Long-term avg. reward = 2.198
+..........AI : 152.585 s, Game : 22.654 s
+Episode 1192 avg. reward = 7.500, Long-term avg. reward = 2.251
+..........AI : 30.979 s, Game : 4.507 s
+Episode 1193 avg. reward = 0.100, Long-term avg. reward = 2.229
+..........AI : 63.998 s, Game : 9.736 s
+Episode 1194 avg. reward = 2.300, Long-term avg. reward = 2.230
+..........AI : 56.651 s, Game : 8.050 s
+Episode 1195 avg. reward = 1.800, Long-term avg. reward = 2.226
+..........AI : 138.584 s, Game : 19.174 s
+Episode 1196 avg. reward = 6.200, Long-term avg. reward = 2.265
+..........AI : 47.728 s, Game : 6.161 s
+Episode 1197 avg. reward = 0.900, Long-term avg. reward = 2.252
+..........AI : 37.955 s, Game : 4.947 s
+Episode 1198 avg. reward = 0.600, Long-term avg. reward = 2.235
+..........AI : 74.777 s, Game : 10.406 s
+Episode 1199 avg. reward = 2.600, Long-term avg. reward = 2.239
+..........AI : 40.698 s, Game : 5.497 s
+Episode 1200 avg. reward = 0.700, Long-term avg. reward = 2.224
+..........AI : 64.086 s, Game : 8.221 s
+Episode 1201 avg. reward = 1.700, Long-term avg. reward = 2.218
+..........AI : 94.664 s, Game : 12.410 s
+Episode 1202 avg. reward = 3.400, Long-term avg. reward = 2.230
+..........AI : 147.223 s, Game : 18.980 s
+Episode 1203 avg. reward = 5.900, Long-term avg. reward = 2.267
+..........AI : 63.655 s, Game : 8.394 s
+Episode 1204 avg. reward = 1.700, Long-term avg. reward = 2.261
+..........AI : 113.535 s, Game : 14.955 s
+Episode 1205 avg. reward = 4.400, Long-term avg. reward = 2.283
+..........AI : 59.434 s, Game : 7.874 s
+Episode 1206 avg. reward = 1.600, Long-term avg. reward = 2.276
+..........AI : 57.815 s, Game : 7.550 s
+Episode 1207 avg. reward = 1.500, Long-term avg. reward = 2.268
+..........AI : 66.988 s, Game : 8.825 s
+Episode 1208 avg. reward = 2.000, Long-term avg. reward = 2.265
+..........AI : 93.718 s, Game : 12.177 s
+Episode 1209 avg. reward = 3.400, Long-term avg. reward = 2.277
+..........AI : 44.520 s, Game : 5.716 s
+Episode 1210 avg. reward = 0.800, Long-term avg. reward = 2.262
+..........AI : 48.463 s, Game : 7.116 s
+Episode 1211 avg. reward = 1.300, Long-term avg. reward = 2.252
+..........AI : 61.288 s, Game : 8.282 s
+Episode 1212 avg. reward = 1.800, Long-term avg. reward = 2.248
+..........AI : 75.420 s, Game : 10.260 s
+Episode 1213 avg. reward = 2.700, Long-term avg. reward = 2.252
+..........AI : 77.946 s, Game : 10.750 s
+Episode 1214 avg. reward = 2.800, Long-term avg. reward = 2.258
+..........AI : 48.738 s, Game : 6.743 s
+Episode 1215 avg. reward = 1.300, Long-term avg. reward = 2.248
+..........AI : 44.132 s, Game : 6.112 s
+Episode 1216 avg. reward = 0.800, Long-term avg. reward = 2.234
+..........AI : 55.596 s, Game : 7.949 s
+Episode 1217 avg. reward = 1.800, Long-term avg. reward = 2.229
+..........AI : 104.628 s, Game : 14.173 s
+Episode 1218 avg. reward = 4.300, Long-term avg. reward = 2.250
+..........AI : 73.634 s, Game : 10.610 s
+Episode 1219 avg. reward = 2.600, Long-term avg. reward = 2.254
+..........AI : 49.006 s, Game : 6.901 s
+Episode 1220 avg. reward = 1.200, Long-term avg. reward = 2.243
+..........AI : 90.307 s, Game : 12.610 s
+Episode 1221 avg. reward = 3.600, Long-term avg. reward = 2.257
+..........AI : 41.091 s, Game : 5.319 s
+Episode 1222 avg. reward = 0.400, Long-term avg. reward = 2.238
+..........AI : 67.682 s, Game : 9.141 s
+Episode 1223 avg. reward = 2.200, Long-term avg. reward = 2.238
+..........AI : 51.325 s, Game : 6.986 s
+Episode 1224 avg. reward = 1.200, Long-term avg. reward = 2.227
+..........AI : 63.312 s, Game : 9.030 s
+Episode 1225 avg. reward = 2.000, Long-term avg. reward = 2.225
+..........AI : 112.409 s, Game : 15.537 s
+Episode 1226 avg. reward = 5.000, Long-term avg. reward = 2.253
+..........AI : 51.085 s, Game : 7.079 s
+Episode 1227 avg. reward = 1.400, Long-term avg. reward = 2.244
+..........AI : 36.778 s, Game : 4.944 s
+Episode 1228 avg. reward = 0.400, Long-term avg. reward = 2.226
+..........AI : 67.743 s, Game : 9.486 s
+Episode 1229 avg. reward = 2.400, Long-term avg. reward = 2.228
+..........AI : 110.790 s, Game : 15.912 s
+Episode 1230 avg. reward = 4.800, Long-term avg. reward = 2.253
+..........AI : 68.987 s, Game : 9.932 s
+Episode 1231 avg. reward = 2.400, Long-term avg. reward = 2.255
+..........AI : 26.079 s, Game : 3.731 s
+Episode 1232 avg. reward = 0.000, Long-term avg. reward = 2.232
+..........AI : 30.610 s, Game : 4.346 s
+Episode 1233 avg. reward = 0.100, Long-term avg. reward = 2.211
+..........AI : 54.350 s, Game : 7.698 s
+Episode 1234 avg. reward = 1.700, Long-term avg. reward = 2.206
+..........AI : 32.745 s, Game : 4.658 s
+Episode 1235 avg. reward = 0.300, Long-term avg. reward = 2.187
+..........AI : 69.787 s, Game : 9.921 s
+Episode 1236 avg. reward = 2.400, Long-term avg. reward = 2.189
+..........AI : 40.748 s, Game : 5.776 s
+Episode 1237 avg. reward = 0.700, Long-term avg. reward = 2.174
+..........AI : 73.585 s, Game : 10.586 s
+Episode 1238 avg. reward = 2.600, Long-term avg. reward = 2.178
+..........AI : 30.671 s, Game : 4.157 s
+Episode 1239 avg. reward = 0.200, Long-term avg. reward = 2.158
+..........AI : 49.638 s, Game : 6.904 s
+Episode 1240 avg. reward = 1.200, Long-term avg. reward = 2.149
+..........AI : 120.905 s, Game : 17.346 s
+Episode 1241 avg. reward = 5.400, Long-term avg. reward = 2.181
+..........AI : 75.757 s, Game : 10.496 s
+Episode 1242 avg. reward = 2.600, Long-term avg. reward = 2.186
+..........AI : 60.219 s, Game : 8.067 s
+Episode 1243 avg. reward = 1.600, Long-term avg. reward = 2.180
+..........AI : 117.925 s, Game : 16.510 s
+Episode 1244 avg. reward = 5.300, Long-term avg. reward = 2.211
+..........AI : 134.601 s, Game : 18.631 s
+Episode 1245 avg. reward = 6.000, Long-term avg. reward = 2.249
+..........AI : 50.679 s, Game : 7.178 s
+Episode 1246 avg. reward = 1.300, Long-term avg. reward = 2.239
+..........AI : 90.451 s, Game : 12.668 s
+Episode 1247 avg. reward = 3.700, Long-term avg. reward = 2.254
+..........AI : 136.489 s, Game : 19.082 s
+Episode 1248 avg. reward = 6.100, Long-term avg. reward = 2.292
+..........AI : 141.998 s, Game : 20.294 s
+Episode 1249 avg. reward = 6.700, Long-term avg. reward = 2.336
+..........AI : 117.612 s, Game : 15.705 s
+Episode 1250 avg. reward = 4.800, Long-term avg. reward = 2.361
+..........AI : 70.338 s, Game : 9.385 s
+Episode 1251 avg. reward = 2.300, Long-term avg. reward = 2.360
+..........AI : 99.999 s, Game : 13.492 s
+Episode 1252 avg. reward = 3.800, Long-term avg. reward = 2.375
+..........AI : 234.362 s, Game : 33.524 s
+Episode 1253 avg. reward = 12.000, Long-term avg. reward = 2.471
+..........AI : 46.512 s, Game : 6.317 s
+Episode 1254 avg. reward = 1.100, Long-term avg. reward = 2.457
+..........AI : 51.473 s, Game : 7.121 s
+Episode 1255 avg. reward = 1.400, Long-term avg. reward = 2.447
+..........AI : 99.006 s, Game : 13.086 s
+Episode 1256 avg. reward = 3.600, Long-term avg. reward = 2.458
+..........AI : 90.099 s, Game : 13.193 s
+Episode 1257 avg. reward = 3.900, Long-term avg. reward = 2.473
+..........AI : 65.348 s, Game : 9.509 s
+Episode 1258 avg. reward = 2.500, Long-term avg. reward = 2.473
+..........AI : 115.282 s, Game : 17.092 s
+Episode 1259 avg. reward = 5.200, Long-term avg. reward = 2.500
+..........AI : 58.583 s, Game : 8.230 s
+Episode 1260 avg. reward = 1.700, Long-term avg. reward = 2.492
+..........AI : 42.393 s, Game : 6.445 s
+Episode 1261 avg. reward = 1.200, Long-term avg. reward = 2.479
+..........AI : 103.831 s, Game : 15.003 s
+Episode 1262 avg. reward = 4.600, Long-term avg. reward = 2.501
+..........AI : 82.750 s, Game : 11.965 s
+Episode 1263 avg. reward = 3.400, Long-term avg. reward = 2.510
+..........AI : 27.152 s, Game : 4.000 s
+Episode 1264 avg. reward = 0.000, Long-term avg. reward = 2.484
+..........AI : 92.657 s, Game : 13.622 s
+Episode 1265 avg. reward = 4.200, Long-term avg. reward = 2.502
+..........AI : 72.823 s, Game : 10.048 s
+Episode 1266 avg. reward = 2.400, Long-term avg. reward = 2.501
+..........AI : 97.329 s, Game : 14.251 s
+Episode 1267 avg. reward = 4.400, Long-term avg. reward = 2.520
+..........AI : 83.176 s, Game : 12.315 s
+Episode 1268 avg. reward = 3.500, Long-term avg. reward = 2.529
+..........AI : 62.303 s, Game : 9.421 s
+Episode 1269 avg. reward = 2.300, Long-term avg. reward = 2.527
+..........AI : 93.532 s, Game : 12.927 s
+Episode 1270 avg. reward = 3.600, Long-term avg. reward = 2.538
+..........AI : 50.473 s, Game : 7.284 s
+Episode 1271 avg. reward = 1.400, Long-term avg. reward = 2.526
+..........AI : 47.305 s, Game : 6.674 s
+Episode 1272 avg. reward = 1.100, Long-term avg. reward = 2.512
+..........AI : 77.627 s, Game : 11.018 s
+Episode 1273 avg. reward = 3.000, Long-term avg. reward = 2.517
+..........AI : 101.518 s, Game : 13.990 s
+Episode 1274 avg. reward = 4.000, Long-term avg. reward = 2.532
+..........AI : 58.233 s, Game : 8.317 s
+Episode 1275 avg. reward = 1.700, Long-term avg. reward = 2.524
+..........AI : 62.694 s, Game : 8.987 s
+Episode 1276 avg. reward = 2.300, Long-term avg. reward = 2.521
+..........AI : 83.232 s, Game : 11.226 s
+Episode 1277 avg. reward = 3.000, Long-term avg. reward = 2.526
+..........AI : 49.018 s, Game : 6.803 s
+Episode 1278 avg. reward = 1.200, Long-term avg. reward = 2.513
+..........AI : 63.132 s, Game : 8.526 s
+Episode 1279 avg. reward = 1.800, Long-term avg. reward = 2.506
+..........AI : 81.218 s, Game : 11.349 s
+Episode 1280 avg. reward = 3.200, Long-term avg. reward = 2.513
+..........AI : 41.728 s, Game : 5.635 s
+Episode 1281 avg. reward = 0.600, Long-term avg. reward = 2.494
+..........AI : 57.462 s, Game : 8.624 s
+Episode 1282 avg. reward = 1.700, Long-term avg. reward = 2.486
+..........AI : 52.592 s, Game : 7.793 s
+Episode 1283 avg. reward = 1.500, Long-term avg. reward = 2.476
+..........AI : 84.832 s, Game : 12.287 s
+Episode 1284 avg. reward = 3.400, Long-term avg. reward = 2.485
+..........AI : 48.769 s, Game : 6.624 s
+Episode 1285 avg. reward = 1.100, Long-term avg. reward = 2.471
+..........AI : 83.543 s, Game : 11.827 s
+Episode 1286 avg. reward = 3.000, Long-term avg. reward = 2.476
+..........AI : 93.997 s, Game : 13.014 s
+Episode 1287 avg. reward = 3.900, Long-term avg. reward = 2.491
+..........AI : 82.367 s, Game : 11.420 s
+Episode 1288 avg. reward = 3.000, Long-term avg. reward = 2.496
+..........AI : 31.588 s, Game : 4.290 s
+Episode 1289 avg. reward = 0.300, Long-term avg. reward = 2.474
+..........AI : 44.065 s, Game : 6.228 s
+Episode 1290 avg. reward = 0.800, Long-term avg. reward = 2.457
+..........AI : 55.505 s, Game : 7.341 s
+Episode 1291 avg. reward = 1.600, Long-term avg. reward = 2.449
+..........AI : 89.158 s, Game : 12.727 s
+Episode 1292 avg. reward = 3.600, Long-term avg. reward = 2.460
+..........AI : 84.845 s, Game : 12.280 s
+Episode 1293 avg. reward = 3.600, Long-term avg. reward = 2.471
+..........AI : 82.160 s, Game : 11.915 s
+Episode 1294 avg. reward = 3.300, Long-term avg. reward = 2.480
+..........AI : 48.200 s, Game : 6.849 s
+Episode 1295 avg. reward = 1.300, Long-term avg. reward = 2.468
+..........AI : 76.670 s, Game : 11.320 s
+Episode 1296 avg. reward = 3.000, Long-term avg. reward = 2.473
+..........AI : 90.297 s, Game : 13.331 s
+Episode 1297 avg. reward = 3.800, Long-term avg. reward = 2.487
+..........AI : 118.732 s, Game : 16.523 s
+Episode 1298 avg. reward = 5.200, Long-term avg. reward = 2.514
+..........AI : 60.561 s, Game : 8.545 s
+Episode 1299 avg. reward = 2.000, Long-term avg. reward = 2.509
+..........AI : 118.996 s, Game : 16.699 s
+Episode 1300 avg. reward = 5.300, Long-term avg. reward = 2.536
+..........AI : 45.327 s, Game : 6.631 s
+Episode 1301 avg. reward = 1.000, Long-term avg. reward = 2.521
+..........AI : 56.942 s, Game : 8.160 s
+Episode 1302 avg. reward = 1.800, Long-term avg. reward = 2.514
+..........AI : 58.899 s, Game : 8.384 s
+Episode 1303 avg. reward = 1.800, Long-term avg. reward = 2.507
+..........AI : 81.427 s, Game : 11.457 s
+Episode 1304 avg. reward = 3.200, Long-term avg. reward = 2.514
+..........AI : 61.634 s, Game : 8.927 s
+Episode 1305 avg. reward = 2.000, Long-term avg. reward = 2.509
+..........AI : 35.721 s, Game : 5.244 s
+Episode 1306 avg. reward = 0.500, Long-term avg. reward = 2.488
+..........AI : 102.612 s, Game : 14.245 s
+Episode 1307 avg. reward = 4.200, Long-term avg. reward = 2.506
+..........AI : 141.392 s, Game : 19.572 s
+Episode 1308 avg. reward = 6.200, Long-term avg. reward = 2.542
+..........AI : 68.272 s, Game : 9.134 s
+Episode 1309 avg. reward = 2.000, Long-term avg. reward = 2.537
+..........AI : 42.401 s, Game : 5.967 s
+Episode 1310 avg. reward = 0.800, Long-term avg. reward = 2.520
+..........AI : 97.754 s, Game : 13.395 s
+Episode 1311 avg. reward = 3.900, Long-term avg. reward = 2.533
+..........AI : 49.537 s, Game : 6.745 s
+Episode 1312 avg. reward = 1.300, Long-term avg. reward = 2.521
+..........AI : 46.301 s, Game : 6.385 s
+Episode 1313 avg. reward = 1.000, Long-term avg. reward = 2.506
+..........AI : 57.757 s, Game : 8.344 s
+Episode 1314 avg. reward = 1.800, Long-term avg. reward = 2.499
+..........AI : 70.114 s, Game : 9.740 s
+Episode 1315 avg. reward = 2.400, Long-term avg. reward = 2.498
+..........AI : 59.561 s, Game : 8.133 s
+Episode 1316 avg. reward = 1.800, Long-term avg. reward = 2.491
+..........AI : 100.923 s, Game : 14.210 s
+Episode 1317 avg. reward = 4.200, Long-term avg. reward = 2.508
+..........AI : 38.489 s, Game : 5.078 s
+Episode 1318 avg. reward = 0.600, Long-term avg. reward = 2.489
+..........AI : 42.480 s, Game : 6.028 s
+Episode 1319 avg. reward = 0.700, Long-term avg. reward = 2.471
+..........AI : 111.600 s, Game : 15.246 s
+Episode 1320 avg. reward = 4.600, Long-term avg. reward = 2.492
+..........AI : 54.633 s, Game : 6.939 s
+Episode 1321 avg. reward = 1.300, Long-term avg. reward = 2.480
+..........AI : 58.278 s, Game : 7.727 s
+Episode 1322 avg. reward = 1.600, Long-term avg. reward = 2.472
+..........AI : 68.525 s, Game : 9.229 s
+Episode 1323 avg. reward = 2.200, Long-term avg. reward = 2.469
+..........AI : 57.541 s, Game : 8.090 s
+Episode 1324 avg. reward = 1.700, Long-term avg. reward = 2.461
+..........AI : 56.046 s, Game : 7.627 s
+Episode 1325 avg. reward = 1.400, Long-term avg. reward = 2.451
+..........AI : 65.797 s, Game : 9.058 s
+Episode 1326 avg. reward = 2.000, Long-term avg. reward = 2.446
+..........AI : 69.317 s, Game : 9.101 s
+Episode 1327 avg. reward = 2.000, Long-term avg. reward = 2.442
+..........AI : 36.934 s, Game : 4.857 s
+Episode 1328 avg. reward = 0.300, Long-term avg. reward = 2.420
+..........AI : 44.305 s, Game : 6.014 s
+Episode 1329 avg. reward = 0.900, Long-term avg. reward = 2.405
+..........AI : 74.681 s, Game : 9.950 s
+Episode 1330 avg. reward = 2.400, Long-term avg. reward = 2.405
+..........AI : 107.921 s, Game : 15.448 s
+Episode 1331 avg. reward = 4.800, Long-term avg. reward = 2.429
+..........AI : 79.074 s, Game : 10.575 s
+Episode 1332 avg. reward = 2.600, Long-term avg. reward = 2.431
+..........AI : 115.053 s, Game : 15.408 s
+Episode 1333 avg. reward = 4.700, Long-term avg. reward = 2.453
+..........AI : 132.092 s, Game : 18.595 s
+Episode 1334 avg. reward = 6.000, Long-term avg. reward = 2.489
+..........AI : 56.447 s, Game : 7.978 s
+Episode 1335 avg. reward = 1.800, Long-term avg. reward = 2.482
