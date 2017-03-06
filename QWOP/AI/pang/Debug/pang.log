@@ -1,0 +1,19 @@
+﻿  002.cpp
+c:\users\fsps6\downloads\pang-gpu\pang\ai\pang - c++\pang\game.h(121): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\fsps6\downloads\pang-gpu\pang\ai\pang - c++\pang\game.h(122): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\fsps6\downloads\pang-gpu\pang\ai\pang - c++\pang\game.h(123): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\fsps6\downloads\pang-gpu\pang\ai\pang - c++\pang\game.h(124): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\fsps6\downloads\pang-gpu\pang\ai\pang - c++\pang\game.h(164): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\fsps6\downloads\pang-gpu\pang\ai\pang - c++\pang\game.h(165): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\fsps6\downloads\pang-gpu\pang\ai\pang - c++\pang\game.h(170): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\fsps6\downloads\pang-gpu\pang\ai\pang - c++\pang\game.h(171): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+c:\users\fsps6\downloads\pang-gpu\pang\ai\pang - c++\pang\game.h(174): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\fsps6\downloads\pang-gpu\pang\ai\pang - c++\pang\game.h(175): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+c:\users\fsps6\downloads\pang-gpu\pang\ai\pang - c++\pang\game.h(181): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+c:\users\fsps6\downloads\pang-gpu\pang\ai\pang - c++\pang\game.h(252): warning C4018: '<': signed/unsigned mismatch
+c:\users\fsps6\downloads\pang-gpu\pang\ai\pang - c++\pang\game.h(302): warning C4244: 'argument': conversion from 'double' to 'char', possible loss of data
+c:\users\fsps6\downloads\pang-gpu\pang\ai\pang - c++\pang\game.h(304): warning C4244: 'argument': conversion from 'double' to 'char', possible loss of data
+c:\users\fsps6\downloads\pang-gpu\pang\ai\pang - c++\pang\eric.h(73): warning C4018: '<': signed/unsigned mismatch
+c:\users\fsps6\downloads\pang-gpu\pang\ai\pang - c++\pang\eric.h(82): warning C4800: 'int': forcing value to bool 'true' or 'false' (performance warning)
+  pang.vcxproj -> C:\Users\fsps6\Downloads\pang-GPU\pang\AI\pang - C++\Debug\pang.exe
+  pang.vcxproj -> C:\Users\fsps6\Downloads\pang-GPU\pang\AI\pang - C++\Debug\pang.pdb (Partial PDB)

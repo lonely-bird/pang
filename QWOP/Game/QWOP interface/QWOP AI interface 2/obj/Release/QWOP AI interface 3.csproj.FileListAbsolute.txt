@@ -1,0 +1,11 @@
+C:\Users\fsps6\OneDrive\Sync\C# Code\Lolipop AI\pang-GPU\QWOP\Game\QWOP interface\QWOP AI interface 2\bin\Release\QWOP AI interface 2.exe.config
+C:\Users\fsps6\OneDrive\Sync\C# Code\Lolipop AI\pang-GPU\QWOP\Game\QWOP interface\QWOP AI interface 2\obj\Release\QWOP_AI_interface_2.Properties.Resources.resources
+C:\Users\fsps6\OneDrive\Sync\C# Code\Lolipop AI\pang-GPU\QWOP\Game\QWOP interface\QWOP AI interface 2\obj\Release\QWOP AI interface 3.csproj.GenerateResource.Cache
+C:\Users\fsps6\OneDrive\Sync\C# Code\Lolipop AI\pang-GPU\QWOP\Game\QWOP interface\QWOP AI interface 2\bin\Release\QWOP AI interface 2.exe
+C:\Users\fsps6\OneDrive\Sync\C# Code\Lolipop AI\pang-GPU\QWOP\Game\QWOP interface\QWOP AI interface 2\bin\Release\QWOP AI interface 2.pdb
+C:\Users\fsps6\OneDrive\Sync\C# Code\Lolipop AI\pang-GPU\QWOP\Game\QWOP interface\QWOP AI interface 2\bin\Release\Motivation.dll
+C:\Users\fsps6\OneDrive\Sync\C# Code\Lolipop AI\pang-GPU\QWOP\Game\QWOP interface\QWOP AI interface 2\bin\Release\Motivation.pdb
+C:\Users\fsps6\OneDrive\Sync\C# Code\Lolipop AI\pang-GPU\QWOP\Game\QWOP interface\QWOP AI interface 2\bin\Release\Motivation.xml
+C:\Users\fsps6\OneDrive\Sync\C# Code\Lolipop AI\pang-GPU\QWOP\Game\QWOP interface\QWOP AI interface 2\obj\Release\QWOP AI interface 2.exe
+C:\Users\fsps6\OneDrive\Sync\C# Code\Lolipop AI\pang-GPU\QWOP\Game\QWOP interface\QWOP AI interface 2\obj\Release\QWOP AI interface 2.pdb
+C:\Users\fsps6\OneDrive\Sync\C# Code\Lolipop AI\pang-GPU\QWOP\Game\QWOP interface\QWOP AI interface 2\obj\Release\QWOP AI interface 3.csprojResolveAssemblyReference.cache

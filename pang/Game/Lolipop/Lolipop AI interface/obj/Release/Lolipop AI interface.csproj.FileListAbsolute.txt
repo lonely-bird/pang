@@ -60,3 +60,13 @@ C:\Users\user007\Desktop\pang-GPU\pang\Game\Lolipop\Lolipop AI interface\bin\Rel
 C:\Users\user007\Desktop\pang-GPU\pang\Game\Lolipop\Lolipop AI interface\bin\Release\Lolipop AI interface.pdb
 C:\Users\user007\Desktop\pang-GPU\pang\Game\Lolipop\Lolipop AI interface\obj\Release\Lolipop_AI_interface.Properties.Resources.resources
 C:\Users\user007\Desktop\pang-GPU\pang\Game\Lolipop\Lolipop AI interface\obj\Release\Lolipop AI interface.csproj.GenerateResource.Cache
+C:\Users\fsps6\OneDrive\Sync\C# Code\Lolipop AI\pang-GPU\pang\Game\Lolipop\Lolipop AI interface\bin\Release\Lolipop AI interface.exe.config
+C:\Users\fsps6\OneDrive\Sync\C# Code\Lolipop AI\pang-GPU\pang\Game\Lolipop\Lolipop AI interface\obj\Release\Lolipop AI interface.exe
+C:\Users\fsps6\OneDrive\Sync\C# Code\Lolipop AI\pang-GPU\pang\Game\Lolipop\Lolipop AI interface\obj\Release\Lolipop AI interface.pdb
+C:\Users\fsps6\OneDrive\Sync\C# Code\Lolipop AI\pang-GPU\pang\Game\Lolipop\Lolipop AI interface\bin\Release\Lolipop AI interface.exe
+C:\Users\fsps6\OneDrive\Sync\C# Code\Lolipop AI\pang-GPU\pang\Game\Lolipop\Lolipop AI interface\bin\Release\Lolipop AI interface.pdb
+C:\Users\fsps6\OneDrive\Sync\C# Code\Lolipop AI\pang-GPU\pang\Game\Lolipop\Lolipop AI interface\bin\Release\Motivation.dll
+C:\Users\fsps6\OneDrive\Sync\C# Code\Lolipop AI\pang-GPU\pang\Game\Lolipop\Lolipop AI interface\bin\Release\Motivation.pdb
+C:\Users\fsps6\OneDrive\Sync\C# Code\Lolipop AI\pang-GPU\pang\Game\Lolipop\Lolipop AI interface\bin\Release\Motivation.xml
+C:\Users\fsps6\OneDrive\Sync\C# Code\Lolipop AI\pang-GPU\pang\Game\Lolipop\Lolipop AI interface\obj\Release\Lolipop_AI_interface.Properties.Resources.resources
+C:\Users\fsps6\OneDrive\Sync\C# Code\Lolipop AI\pang-GPU\pang\Game\Lolipop\Lolipop AI interface\obj\Release\Lolipop AI interface.csproj.GenerateResource.Cache

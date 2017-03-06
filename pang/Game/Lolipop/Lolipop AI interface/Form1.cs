@@ -12,6 +12,7 @@ using System.Net;
 using System.Net.Sockets;
 using System.IO;
 using System.Threading;
+using System.Drawing.Imaging;
 
 namespace Lolipop_AI_interface
 {
@@ -54,14 +55,22 @@ namespace Lolipop_AI_interface
                     {
                         while (true)
                         {
-                            Thread.Sleep(500);
+                            Thread.Sleep(20);
                             Do(() =>
                             {
                                 var bmp = new Bitmap(pbx.Width, pbx.Height);
                                 this.Text = bmp.Size.ToString();
-                                game.drawImage(bmp);
-                                pbx.Image.Dispose();
+                                game.drawImage(bmp,true);
+                                //{
+                                //    BitmapData bd = bmp.LockBits(new Rectangle(0, 0, bmp.Width, bmp.Height), ImageLockMode.ReadWrite, PixelFormat.Format32bppArgb);
+                                //    unsafe
+                                //    {
+                                //        byte *p=(byte*)bd.Scan0.ToPointer
+                                //    }
+                                //}
+                                var img = pbx.Image;
                                 pbx.Image = bmp;
+                                img.Dispose();
                             });
                         }
                     }).Start();

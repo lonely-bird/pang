@@ -11,11 +11,13 @@ using Motivation;
 using System.Drawing.Imaging;
 using System.Diagnostics;
 using System.Threading;
+using System.Runtime.InteropServices;
 
 namespace QWOP_AI_interface_3
 {
     public partial class Form1 : Form
     {
+        private double FPS = 60.0;
         private void scanPointsOverAndOver()
         {
             socketHandler.Start();
@@ -78,6 +80,7 @@ namespace QWOP_AI_interface_3
                     {
                         CHBpressKey = new MyCheckBox("Press Key");
                         CHBpressKey.CheckedChanged += CHBpressKey_CheckedChanged;
+                        CHBpressKey.Checked = true;
                         TLPbtn.AddControl(CHBpressKey, 0, 2);
                     }
                     {
@@ -120,28 +123,7 @@ namespace QWOP_AI_interface_3
                           {
                               var bmp = getFeedBackImage();
                               if (bmp == null) LBL.Text = "Unavailable";
-                              else
-                              {
-                                  BitmapData bd = bmp.LockBits(new Rectangle(new Point(0, 0), bmp.Size), ImageLockMode.ReadOnly, PixelFormat.Format32bppArgb);
-                                  int sum = 0;
-                                  unsafe
-                                  {
-                                      byte* p = (byte*)bd.Scan0.ToPointer();
-                                      for (int i = 0; i < bd.Height; i++)
-                                      {
-                                          for (int j = 0; j < bd.Width; j++)
-                                          {
-                                              byte* q = p + (j * 4);
-                                              sum += q[2];
-                                              sum += q[1];
-                                              sum += q[0];
-                                          }
-                                          p += bd.Stride;
-                                      }
-                                  }
-                                  bmp.UnlockBits(bd);
-                                  LBL.Text = (IsLive(sum) ? "Alive" : "Dead")+"\r\n"+sum.ToString();
-                              }
+                              else LBL.Text = (IsLive(bmp) ? "Alive" : "Dead");
                               var preImg = PBX.Image;
                               PBX.Image = bmp;
                               if (preImg != null) preImg.Dispose();
@@ -151,17 +133,62 @@ namespace QWOP_AI_interface_3
                 thread.IsBackground = true;
                 thread.Start();
             }
+            //{
+            //    Thread thread = new Thread(() =>
+            //      {
+            //      });
+            //    thread.IsBackground = true;
+            //    thread.Start();
+            //}
+            //{
+            //    Thread thread = new Thread(() =>
+            //      {
+            //          while (true)
+            //          {
+            //              if (pressQ) SendKeys.SendWait("Q");
+            //              if (pressW) SendKeys.SendWait("W");
+            //              if (pressO) SendKeys.SendWait("O");
+            //              if (pressP) SendKeys.SendWait("P");
+            //          }
+            //      });
+            //    thread.IsBackground = true;
+            //    thread.Start();
+            //}
+        }
+        private bool IsLive(Bitmap bmp)
+        {
+            int sum = 0;
+            {
+                BitmapData bd = bmp.LockBits(new Rectangle(new Point(0, 0), bmp.Size), ImageLockMode.ReadOnly, PixelFormat.Format32bppArgb);
+                unsafe
+                {
+                    byte* p = (byte*)bd.Scan0.ToPointer();
+                    for (int i = 0; i < bd.Height*2/3; i++)
+                    {
+                        for (int j = bd.Width/4; j < bd.Width*3/4; j++)
+                        {
+                            byte* q = p + (j * 4);
+                            sum += q[0];
+                            sum += q[1];
+                            sum += q[2];
+                        }
+                        p += bd.Stride;
+                    }
+                }
+                bmp.UnlockBits(bd);
+            }
+            Do(() => { this.Text = sum.ToString(); });
+            return sum < (600000 + 1100000) / 2;
         }
         private bool IsLive(int sum) { return sum < (1160000+1140000)/*(2685000 + 2090000)*/ / 2; }
         private void CHBpressKey_CheckedChanged(object sender, EventArgs e)
         {
             pressKey = (sender as MyCheckBox).Checked;
         }
-
         private Bitmap getFeedBackImage()
         {
             if (Database.scopeLocation == Database.failedPoint) return null;
-            Bitmap bmp = new Bitmap(Database.scopeSize.Width, Database.scopeSize.Height);
+            Bitmap bmp = new Bitmap(Database.feedBackSize.Width, Database.feedBackSize.Height);
             using (Graphics g = Graphics.FromImage(bmp))
             {
                 g.CopyFromScreen(Database.scopeLocation, new Point(0, 0), Database.feedBackSize);
@@ -173,30 +200,25 @@ namespace QWOP_AI_interface_3
         private string getFeedBack()
         {
             StringBuilder answer = new StringBuilder();
-            int sum = 0;
+            bool isLive;
             {
                 Bitmap bmp = getFeedBackImage();
+                isLive = IsLive(bmp);
                 BitmapData bd = bmp.LockBits(new Rectangle(new Point(0, 0), bmp.Size), ImageLockMode.ReadOnly, PixelFormat.Format32bppArgb);
                 unsafe
                 {
-                    answer.Append(bd.Width);
-                    answer.Append(' ');
-                    answer.Append(bd.Height);
                     byte* p = (byte*)bd.Scan0.ToPointer();
                     for (int i = 0; i < bd.Height; i++)
                     {
                         for (int j = 0; j < bd.Width; j++)
                         {
                             byte* q = p + (j * 4);
-                            answer.Append(' ');
                             answer.Append(q[2]);
                             answer.Append(' ');
                             answer.Append(q[1]);
                             answer.Append(' ');
                             answer.Append(q[0]);
-                            sum += q[2];
-                            sum += q[1];
-                            sum += q[0];
+                            answer.Append(' ');
                         }
                         p += bd.Stride;
                     }
@@ -204,33 +226,83 @@ namespace QWOP_AI_interface_3
                 bmp.UnlockBits(bd);
                 bmp.Dispose();
             }
-            Do(() => { this.Text = sum.ToString(); });
-            bool isLive = IsLive(sum);
-            answer.Append(' ');
             answer.Append(isLive ? 1 : 0);
             return answer.ToString();
         }
-        private void SocketHandler_msgReceived(char msg, System.IO.StreamWriter writer)
+        private bool pressQ
         {
-            switch (msg)
+            set
             {
-                case 'R':
-                case 'Q':
-                case 'W':
-                case 'O':
-                case 'P': break;
-                default: Log($"Invalid key: {msg}"); break;
+                keybd_event((byte)Keys.Q, 0, value ? 0 : 2, 0);
             }
-            if (pressKey) SendKeys.SendWait(msg.ToString());
+        }
+        private bool pressW
+        {
+            set
+            {
+                keybd_event((byte)Keys.W, 0, value ? 0 : 2, 0);
+            }
+        }
+        private bool pressO
+        {
+            set
+            {
+                keybd_event((byte)Keys.O, 0, value ? 0 : 2, 0);
+            }
+        }
+        private bool pressP
+        {
+            set
+            {
+                keybd_event((byte)Keys.P, 0, value ? 0 : 2, 0);
+            }
+        }
+        private DateTime lastTimePressKey = DateTime.Now;
+        private void SocketHandler_msgReceived(string msgStr, System.IO.StreamWriter writer)
+        {
+            if (!pressKey) return;
+            //Log($"Receive: {msgStr}");
+            Debug.Assert(msgStr.Length == 2);
+            if (msgStr == "RR")
+            {
+                Log("Restarting the game...");
+                SendKeys.SendWait("R");
+                for (bool isLive = false; !isLive;)
+                {
+                    Bitmap bmp = getFeedBackImage();
+                    isLive = IsLive(bmp);
+                    bmp.Dispose();
+                    Thread.Sleep(50);
+                }
+                Log("Game restarted");
+                lastTimePressKey = DateTime.Now;
+            }
+            else
+            {
+                if (msgStr[0] != 'Q' && msgStr[0] != 'W') Log($"msgStr[0] must be Q or W! msgStr[0]: {msgStr[0]}");
+                else if (msgStr[1] != 'O' && msgStr[1] != 'P') Log($"msgStr[1] must be O or P! msgStr[1]: {msgStr[1]}");
+                for (int i = 0; i < msgStr.Length; i++)
+                {
+                    char msg = msgStr[i];
+                    switch (msg)
+                    {
+                        case 'Q': pressQ = true; pressW = false; break;
+                        case 'W': pressQ = false; pressW = true; break;
+                        case 'O': pressO = true; pressP = false; break;
+                        case 'P': pressO = false; pressP = true; break;
+                        default: Log($"Invalid key: {msg}"); break;
+                    }
+                }
+            }
+            lastTimePressKey = lastTimePressKey.AddSeconds(1.0 / FPS);
+            Thread.Sleep((int)Math.Max(0.0, (lastTimePressKey - DateTime.Now).TotalMilliseconds));
             writer.WriteLine(getFeedBack());
             writer.Flush();
         }
-
         private void SocketHandler_logAppended(string log)
         {
             Log(log);
         }
-
         private void BTNscan_Click(object sender, EventArgs e)
         {
             try
@@ -243,7 +315,6 @@ namespace QWOP_AI_interface_3
                 Log(error.ToString());
             }
         }
-
         private void scanScopeLocation()
         {
             Log("Scanning scope location...");
@@ -311,5 +382,43 @@ namespace QWOP_AI_interface_3
         private PictureBox PBX;
         private MyLabel LBL;
         SocketHandler socketHandler;
+
+        //键盘Hook结构函数
+        [StructLayout(LayoutKind.Sequential)]
+        public class KeyBoardHookStruct
+        {
+            public int vkCode;
+            public int scanCode;
+            public int flags;
+            public int time;
+            public int dwExtraInfo;
+        }
+        #region DllImport
+        //设置钩子
+        //[DllImport("user32.dll", CharSet = CharSet.Auto, CallingConvention = CallingConvention.StdCall)]
+        //public static extern int SetWindowsHookEx(int idHook, HookProc lpfn, IntPtr hInstance, int threadId);
+        [DllImport("user32.dll", CharSet = CharSet.Auto, CallingConvention = CallingConvention.StdCall)]
+        //抽掉钩子
+        public static extern bool UnhookWindowsHookEx(int idHook);
+        [DllImport("user32.dll", CharSet = CharSet.Auto, CallingConvention = CallingConvention.StdCall)]
+        //调用下一个钩子
+        public static extern int CallNextHookEx(int idHook, int nCode, IntPtr wParam, IntPtr lParam);
+        //取得模块句柄 
+        [DllImport("kernel32.dll", CharSet = CharSet.Auto, CallingConvention = CallingConvention.StdCall)]
+        private static extern IntPtr GetModuleHandle(string lpModuleName);
+
+        //寻找目标进程窗口
+        [DllImport("USER32.DLL")]
+        public static extern IntPtr FindWindow(string lpClassName,
+            string lpWindowName);
+        //设置进程窗口到最前 
+        [DllImport("USER32.DLL")]
+        public static extern bool SetForegroundWindow(IntPtr hWnd);
+        //模拟键盘事件 
+        [DllImport("User32.dll")]
+        public static extern void keybd_event(Byte bVk, Byte bScan, Int32 dwFlags, Int32 dwExtraInfo);
+        #endregion
+        //keybd_event(VK_Q, 0, 0, 0);//按下小键盘7
+        //keybd_event(VK_Q, 0, KEYEVENTF_KEYUP, 0); //松开小键盘7
     }
 }

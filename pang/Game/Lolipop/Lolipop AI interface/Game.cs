@@ -20,7 +20,7 @@ namespace Lolipop_AI_interface
         bool darryMode = false;
         class GameVisualizer
         {
-            public void drawImage(Image bmp, int gameState, double location,Interval rangeY, Rectangle scope, Queue<GameObstacle>obstacles,double velocity)
+            public void drawImage(Image bmp, int gameState, double location,Interval rangeY, Rectangle scope, Queue<GameObstacle>obstacles,double velocity,bool humanFriendly)
             {
                 Color backgroundColor = Color.FromArgb(255, 255, 255)
                     ,podColor=Color.FromArgb(0,0,0)
@@ -60,7 +60,7 @@ namespace Lolipop_AI_interface
                         x += o.distance + o.width;
                     }
                     {
-                        var r = rectangleOf(locationOf(new PointF(0, (float)location)), 1);
+                        var r = rectangleOf(locationOf(new PointF(0, (float)location)),humanFriendly?10: 1);
                         g.FillRectangle(new SolidBrush(podColor), r.X, r.Y, r.Width, r.Height);
                     }
                     {
@@ -76,9 +76,9 @@ namespace Lolipop_AI_interface
             }
         }
         GameVisualizer visualizer = new GameVisualizer();
-        public void drawImage(Image bmp)
+        public void drawImage(Image bmp,bool humanFriendly=false)
         {
-            visualizer.drawImage(bmp,gameState, location,rangeY, new Rectangle(-1, rangeY.minimum - 1, obstacleCount * obstacleDistance.maximum + 3, rangeY.maximum - rangeY.minimum + 3), obstacles,velocity);
+            visualizer.drawImage(bmp,gameState, location,rangeY, new Rectangle(-1, rangeY.minimum - 1, obstacleCount * obstacleDistance.maximum + 3, rangeY.maximum - rangeY.minimum + 3), obstacles,velocity, humanFriendly);
         }
         class GameObstacle
         {

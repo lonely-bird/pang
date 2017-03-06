@@ -48,11 +48,17 @@ namespace QWOP_AI_interface_3
                             {
                                 while (true)
                                 {
+                                    //AppendLog("Receiving...");
                                     string s = reader.ReadLine();
+                                    //AppendLog("Received");
                                     if (s.Length > 0)
                                     {
+                                        if (s.Length != 2) AppendLog($"s.Length must be 2! s: {s}");
                                         //AppendLog(s);
-                                        for (int i = 0; i < s.Length; i++) msgReceived?.Invoke(s[i], writer);
+                                        //for (int i = 0; i < s.Length; i++)
+                                        //AppendLog("Sending...");
+                                        msgReceived?.Invoke(s, writer);
+                                        //AppendLog("Sent");
                                     }
                                 }
                             }
@@ -129,7 +135,7 @@ namespace QWOP_AI_interface_3
         }
         public delegate void logAppendedHandler(string log);
         public event logAppendedHandler logAppended;
-        public delegate void msgReceivedHandler(char msg, StreamWriter writer);
+        public delegate void msgReceivedHandler(string msg, StreamWriter writer);
         public event msgReceivedHandler msgReceived;
         void AppendLog(string log)
         {
