@@ -13,13 +13,13 @@
 #include <utility>
 #include <vector>
 
-std::valarray<double> to_features(const emulator::Image &img) {
-    std::valarray<double> r(img.width() * img.height() * 2);
+std::vector<double> to_features(const emulator::Image &img) {
+    std::vector<double> r;
     for(int y = 0; y < img.height(); y++)
         for(int x = 0; x < img.width(); x++) {
             emulator::Color c = img[y][x];
-            r[(y * img.width() + x) * 2 + 0] = c.red / 255.0;
-            r[(y * img.width() + x) * 2 + 1] = c.green / 255.0;
+            r.push_back(c.red / 255.0);
+            r.push_back(c.green / 255.0);
         }
     return std::move(r);
 }
