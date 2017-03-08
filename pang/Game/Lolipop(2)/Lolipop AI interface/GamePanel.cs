@@ -16,7 +16,7 @@ namespace Lolipop_AI_interface
     public partial class GamePanel : Panel
     {
         private int port;
-        public GamePanel(int _port)
+        public GamePanel(int _port,double fps)
         {
             this.Dock = DockStyle.Fill;
             port = _port;
@@ -58,7 +58,7 @@ namespace Lolipop_AI_interface
                     {
                         while (true)
                         {
-                            Thread.Sleep(20);
+                            Thread.Sleep((int)(1000.0 / fps));
                             Do(() =>
                             {
                                 var bmp = (humanFriendly ? new Bitmap(pbx.Width, pbx.Height) : new Bitmap(game.imageFeedBackSize.Width, game.imageFeedBackSize.Height));

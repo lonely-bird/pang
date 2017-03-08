@@ -19,9 +19,9 @@ namespace Client_Simulate
 {
     public partial class Form1 : Form
     {
-        private const int port = 6002, socketCount = 1;
-        public static double FPS = 200.0;
-        private List<SocketHandler> socketHandlers = new List<SocketHandler>();
+        private const int port = 6000, aiPort=7000, socketCount = 1;
+        public static double FPS = 150.0;
+        private List<MessageSender> socketHandlers = new List<MessageSender>();
         //private void Txb_KeyDown(object sender, KeyEventArgs e)
         //{
         //    if (e.KeyCode == Keys.Enter)
@@ -44,14 +44,34 @@ namespace Client_Simulate
 
         private void Form1_Shown(object sender, EventArgs e)
         {
-            this.Size = new Size(500, 500);
+            this.Size = new Size(400, 500);
             this.FormClosing += Form1_FormClosing;
-            this.KeyDown += Form1_KeyDown;
-            this.KeyUp += Form1_KeyUp;
             {
-                LBL = new MyLabel("");
-                status = "Q, W, O: control\r\nP: restart all";
-                this.Controls.Add(LBL);
+                TLP = new MyTableLayoutPanel(3, 1, "PAA", "P");
+                {
+                    {
+                        LBL = new MyLabel("");
+                        status = "Q, W, O: control\r\nP: restart all";
+                        TLP.AddControl(LBL, 0, 0);
+                    }
+                    {
+                        TXB = new MyTextBox(false);
+                        TXB.KeyDown += Form1_KeyDown;
+                        TXB.KeyUp += Form1_KeyUp;
+                        TXB.TextChanged += (object s, EventArgs e1) => { TXB.Text = null; };
+                        TLP.AddControl(TXB, 1, 0);
+                    }
+                    {
+                        IFD = new MyInputField();
+                        IFD.AddField("Play speed (FPS)", FPS.ToString()).TextChanged += (object s, EventArgs e1) => {
+                            double t;
+                            if (!double.TryParse((s as TextBox).Text, out t)) MessageBox.Show("格式不正確");
+                            else FPS = t;
+                        };
+                        TLP.AddControl(IFD, 2, 0);
+                    }
+                }
+                this.Controls.Add(TLP);
             }
             {
                 Thread thread = new Thread(() =>
@@ -81,10 +101,38 @@ namespace Client_Simulate
             {
                 status += $"\r\nArduino doesn't connected, restart the program to try again\r\nError:\r\n{error}";
             }
-            for (int i = 0; i < socketCount; i++)
+            for (int i = 1; i <= socketCount; i++)
             {
-                socketHandlers.Add(new SocketHandler(port + i));
+                socketHandlers.Add(new MessageSender(port + i));
             }
+            socketHandlers.Add(new MessageSender(port));
+            MessageReceiver receiver = new MessageReceiver(aiPort);
+            receiver.msgReceived += Receiver_msgReceived;
+            receiver.Start();
+        }
+        private static Random random = new Random();
+        private double AIreactPeriod = 0.0;
+        private Queue<DateTime> AIlastReactTime=new Queue<DateTime>();
+        private void Receiver_msgReceived(string msg, StreamWriter writer)
+        {
+            string feedBack;
+            char action = msg[0];
+            //status = $"msg: {msg}";
+            if (action != '0' && action != '1')
+            {
+                action = (char)('0' + random.Next(0, 2));
+            }
+            Debug.Assert(action == '0' || action == '1');
+            SetKeyState(socketCount, 1-(action - '0'));
+            while ((feedBack = socketHandlers[socketCount].answer/*Invoking to avoid incompleted string?*/) == null) status = "Trying to get AI's feedback...";
+            //status = "feed back received";
+            writer.WriteLine(feedBack);
+            writer.Flush();
+            //status = "feed back returned to AI";
+            AIlastReactTime.Enqueue(DateTime.Now);
+            while (AIlastReactTime.Count > 5) AIlastReactTime.Dequeue();
+            AIreactPeriod = (AIlastReactTime.Last()-AIlastReactTime.First()).TotalSeconds/(AIlastReactTime.Count-1);
+            status = $"AI speed: {(1.0 / AIreactPeriod).ToString("F1")} Hz";
         }
 
         private void Comport_DataReceived(object sender, SerialDataReceivedEventArgs e)
@@ -158,7 +206,7 @@ namespace Client_Simulate
             {
                 if (socketHandlers[i].keyState == -1) return;
             }
-            for (int i = 0; i < socketCount; i++)
+            for (int i = 0; i <= socketCount; i++)
             {
                 //socketHandlers[i].keyState = keyStates[i];
                 socketHandlers[i].enabled = true;
@@ -166,11 +214,15 @@ namespace Client_Simulate
         }
         private void ResetAll()
         {
-            for (int i = 0; i < socketCount; i++)
+            for (int i = 0; i <= socketCount; i++) socketHandlers[i].keyState = -1;
+            Thread.Sleep(50);
+            for (int i = 0; i <= socketCount; i++)
             {
                 socketHandlers[i].SendMessage("R");
-                socketHandlers[i].keyState = -1;
             }
+            socketHandlers[socketCount].keyState = 0;
+            AIlastReactTime.Clear();
+            AIlastReactTime.Enqueue(DateTime.Now);
         }
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
@@ -178,6 +230,9 @@ namespace Client_Simulate
         }
         private SerialPort comport;
         private MyLabel LBL;
+        private MyInputField IFD;
+        private MyTextBox TXB;
+        private MyTableLayoutPanel TLP;
         private string status = "Not ready";
     }
 }

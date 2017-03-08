@@ -9,7 +9,7 @@ struct Socket
 	SOCKET sConnect;
 	char Buffer[10000000/*D*80*/];
 	queue<char>Recv;
-	static const int PORT = 6001;
+	static const int PORT = 7000;
 	static const char* Server_Address;
 	static const int TransitDataSize = 1024;
 	static const char* MessagePartitionSymbol;
@@ -66,6 +66,8 @@ private:
 		/*printf("s=%s\n", s);
 		printf("%d %d\n", (int)buffer.size(), INP * 3 + 2);*/
 		//printf("buffer.size()=%d\n", (int)buffer.size());
+		while ((int)buffer.size() < INP * 3 + 2)buffer.push_back(0);
+		while ((int)buffer.size() > INP * 3 + 2)buffer.pop_back();
 		assert((int)buffer.size() == INP * 3 + 2);
 		bool done = (buffer.back()!=0);
 		buffer.pop_back();
