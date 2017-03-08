@@ -19,8 +19,8 @@ namespace Client_Simulate
 {
     public partial class Form1 : Form
     {
-        private const int port = 6000, aiPort=7000, socketCount = 1;
-        public static double FPS = 150.0;
+        private const int port = 6000, aiPort=7000, socketCount = 3;
+        public static double FPS = 200.0;
         private List<MessageSender> socketHandlers = new List<MessageSender>();
         //private void Txb_KeyDown(object sender, KeyEventArgs e)
         //{
@@ -130,7 +130,7 @@ namespace Client_Simulate
             writer.Flush();
             //status = "feed back returned to AI";
             AIlastReactTime.Enqueue(DateTime.Now);
-            while (AIlastReactTime.Count > 5) AIlastReactTime.Dequeue();
+            while ((DateTime.Now- AIlastReactTime.First()).TotalSeconds > 0.5) AIlastReactTime.Dequeue();
             AIreactPeriod = (AIlastReactTime.Last()-AIlastReactTime.First()).TotalSeconds/(AIlastReactTime.Count-1);
             status = $"AI speed: {(1.0 / AIreactPeriod).ToString("F1")} Hz";
         }

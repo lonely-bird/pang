@@ -28,6 +28,7 @@ namespace Lolipop_AI_interface
                 TLPmain = new MyTableLayoutPanel(1, 2, "A", "PP");
                 {
                     TLPctrl = new MyTableLayoutPanel(2, 1, "PP", "P");
+                    TLPctrl.AutoSize = false;
                     {
                         TLPctrl.AddControl(Game.controlPanel, 0, 0);
                     }
@@ -58,7 +59,7 @@ namespace Lolipop_AI_interface
                     {
                         while (true)
                         {
-                            Thread.Sleep((int)(1000.0 / fps));
+                            Thread.Sleep((int)Math.Ceiling(1000.0 / fps));
                             Do(() =>
                             {
                                 var bmp = (humanFriendly ? new Bitmap(pbx.Width, pbx.Height) : new Bitmap(game.imageFeedBackSize.Width, game.imageFeedBackSize.Height));

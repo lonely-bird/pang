@@ -19,7 +19,7 @@ namespace Lolipop_AI_interface
     public partial class Form1 : Form
     {
         private const int port = 6000;
-        private const int panelCount = 2;
+        private const int panelCount = 4;
         private const double fps = 50;
         private MyTableLayoutPanel TLP;
         public Form1()
