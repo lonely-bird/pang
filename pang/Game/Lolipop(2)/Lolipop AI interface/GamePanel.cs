@@ -25,9 +25,10 @@ namespace Lolipop_AI_interface
             //MessageBox.Show(Color.FromArgb(127,127,127).ToString());
             //this.Size = new Size(1200, 750);
             {
-                TLPmain = new MyTableLayoutPanel(1, 2, "A", "PP");
+                TLPmain = new MyTableLayoutPanel(1, 2, "A", "PP100");
                 {
                     TLPctrl = new MyTableLayoutPanel(2, 1, "PP", "P");
+                    TLPctrl.AutoSize = false;
                     {
                         TLPctrl.AddControl(Game.controlPanel, 0, 0);
                     }
@@ -58,7 +59,7 @@ namespace Lolipop_AI_interface
                     {
                         while (true)
                         {
-                            Thread.Sleep((int)(1000.0 / fps));
+                            Thread.Sleep((int)Math.Ceiling(1000.0 / fps));
                             Do(() =>
                             {
                                 var bmp = (humanFriendly ? new Bitmap(pbx.Width, pbx.Height) : new Bitmap(game.imageFeedBackSize.Width, game.imageFeedBackSize.Height));
@@ -98,7 +99,7 @@ namespace Lolipop_AI_interface
         }
         private void Pbx_DoubleClick(object sender, EventArgs e)
         {
-            TLPmain.ColumnStyles[0].Width = (TLPmain.ColumnStyles[0].Width == 1 ? 0.01f : 1);
+            TLPmain.ColumnStyles[0].Width = (TLPmain.ColumnStyles[0].Width == 1 ? 100 : 1);
         }
         private void SocketHandler_msgReceived(char msg, StreamWriter writer)
         {

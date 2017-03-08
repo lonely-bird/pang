@@ -115,7 +115,7 @@ public:
 		{
 			static char tmp[100];
 			sprintf(tmp, "%.3f", prefer);
-			//Send += tmp;
+			Send += tmp;
 		}
 		for (int i = 0; MessagePartitionSymbol[i]; i++)
 			Send+=MessagePartitionSymbol[i];
