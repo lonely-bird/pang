@@ -25,17 +25,17 @@ namespace Lolipop_AI_interface
             //MessageBox.Show(Color.FromArgb(127,127,127).ToString());
             //this.Size = new Size(1200, 750);
             {
-                MyTableLayoutPanel tlp = new MyTableLayoutPanel(1, 2, "A", "PP");
+                TLPmain = new MyTableLayoutPanel(1, 2, "A", "PP");
                 {
-                    TLP = new MyTableLayoutPanel(2, 1, "PP", "P");
+                    TLPctrl = new MyTableLayoutPanel(2, 1, "PP", "P");
                     {
-                        TLP.AddControl(Game.controlPanel, 0, 0);
+                        TLPctrl.AddControl(Game.controlPanel, 0, 0);
                     }
                     {
                         TXB = new MyTextBox(true);
-                        TLP.AddControl(TXB, 1, 0);
+                        TLPctrl.AddControl(TXB, 1, 0);
                     }
-                    tlp.AddControl(TLP, 0, 0);
+                    TLPmain.AddControl(TLPctrl, 0, 0);
                 }
                 {
                     PictureBox pbx = new PictureBox();
@@ -53,6 +53,7 @@ namespace Lolipop_AI_interface
                       {
                           humanFriendly ^= true;
                       };
+                    pbx.DoubleClick += Pbx_DoubleClick;
                     new Thread(() =>
                     {
                         while (true)
@@ -76,9 +77,9 @@ namespace Lolipop_AI_interface
                             });
                         }
                     }).Start();
-                    tlp.AddControl(pbx, 0, 1);
+                    TLPmain.AddControl(pbx, 0, 1);
                 }
-                this.Controls.Add(tlp);
+                this.Controls.Add(TLPmain);
             }
             socketHandler.logAppended += SocketHandler_logAppended;
             socketHandler.msgReceived += SocketHandler_msgReceived;
@@ -94,6 +95,10 @@ namespace Lolipop_AI_interface
             });
             thread.IsBackground = true;
             thread.Start();
+        }
+        private void Pbx_DoubleClick(object sender, EventArgs e)
+        {
+            TLPmain.ColumnStyles[0].Width = (TLPmain.ColumnStyles[0].Width == 1 ? 0.01f : 1);
         }
         private void SocketHandler_msgReceived(char msg, StreamWriter writer)
         {
@@ -128,7 +133,7 @@ namespace Lolipop_AI_interface
             else TXB.AppendText(log + "\r\n");
         }
         MyTextBox TXB;
-        MyTableLayoutPanel TLP;
+        MyTableLayoutPanel TLPmain,TLPctrl;
         SocketHandler socketHandler;
         Game game;
     }

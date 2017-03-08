@@ -19,13 +19,16 @@ namespace Lolipop_AI_interface
     public partial class Form1 : Form
     {
         private const int port = 6001;
+        private const int panelCount = 2;
         private MyTableLayoutPanel TLP;
         public Form1()
         {
             this.WindowState = FormWindowState.Maximized;
             {
-                TLP = new MyTableLayoutPanel(2,2,"PP","PP");
-                for(int i=0;i<4;i++)
+                TLP = new MyTableLayoutPanel((panelCount+1)/2,2,new Func<int,string>((int n)=>{
+                    string ans = "";for (int i = 0; i < n; i++) ans += "P";return ans;
+                })((panelCount + 1) / 2),"PP");
+                for(int i=0;i< panelCount; i++)
                 {
                     TLP.AddControl(new GamePanel(port + i), i / 2, i % 2);
                 }

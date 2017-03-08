@@ -1,0 +1,21 @@
+﻿  002.cpp
+c:\users\fsps6\onedrive\sync\c# code\lolipop ai\pang-gpu\pang\game\lolipop(2)\pang\pang.h(184): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+c:\users\fsps6\onedrive\sync\c# code\lolipop ai\pang-gpu\pang\game\lolipop(2)\pang\pang.h(184): warning C4267: 'initializing': conversion from 'size_t' to 'const int', possible loss of data
+c:\users\fsps6\onedrive\sync\c# code\lolipop ai\pang-gpu\pang\game\lolipop(2)\pang\game.h(121): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\fsps6\onedrive\sync\c# code\lolipop ai\pang-gpu\pang\game\lolipop(2)\pang\game.h(122): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\fsps6\onedrive\sync\c# code\lolipop ai\pang-gpu\pang\game\lolipop(2)\pang\game.h(123): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\fsps6\onedrive\sync\c# code\lolipop ai\pang-gpu\pang\game\lolipop(2)\pang\game.h(124): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\fsps6\onedrive\sync\c# code\lolipop ai\pang-gpu\pang\game\lolipop(2)\pang\game.h(164): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\fsps6\onedrive\sync\c# code\lolipop ai\pang-gpu\pang\game\lolipop(2)\pang\game.h(165): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\fsps6\onedrive\sync\c# code\lolipop ai\pang-gpu\pang\game\lolipop(2)\pang\game.h(170): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\fsps6\onedrive\sync\c# code\lolipop ai\pang-gpu\pang\game\lolipop(2)\pang\game.h(171): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+c:\users\fsps6\onedrive\sync\c# code\lolipop ai\pang-gpu\pang\game\lolipop(2)\pang\game.h(174): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\fsps6\onedrive\sync\c# code\lolipop ai\pang-gpu\pang\game\lolipop(2)\pang\game.h(175): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+c:\users\fsps6\onedrive\sync\c# code\lolipop ai\pang-gpu\pang\game\lolipop(2)\pang\game.h(181): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+c:\users\fsps6\onedrive\sync\c# code\lolipop ai\pang-gpu\pang\game\lolipop(2)\pang\game.h(302): warning C4244: 'argument': conversion from 'double' to 'char', possible loss of data
+c:\users\fsps6\onedrive\sync\c# code\lolipop ai\pang-gpu\pang\game\lolipop(2)\pang\game.h(304): warning C4244: 'argument': conversion from 'double' to 'char', possible loss of data
+  Generating code
+  All 1119 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  Finished generating code
+  pang.vcxproj -> C:\Users\fsps6\OneDrive\Sync\C# Code\Lolipop AI\pang-GPU\pang\Game\Lolipop(2)\x64\Release\pang.exe
+  pang.vcxproj -> C:\Users\fsps6\OneDrive\Sync\C# Code\Lolipop AI\pang-GPU\pang\Game\Lolipop(2)\x64\Release\pang.pdb (Full PDB)

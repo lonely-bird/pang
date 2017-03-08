@@ -18,7 +18,11 @@ namespace Client_Simulate
         {
             port = _port;
             Socket socket = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
-            socket.Connect(new IPEndPoint(GetMyIpAddress(), port));
+            {
+            retry_index:;
+                try { socket.Connect(new IPEndPoint(GetMyIpAddress(), port)); }
+                catch (Exception) { goto retry_index; }
+            }
             stream = new NetworkStream(socket);
             reader = new StreamReader(stream);
             writer = new StreamWriter(stream);

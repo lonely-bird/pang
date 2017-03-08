@@ -19,8 +19,8 @@ namespace Client_Simulate
 {
     public partial class Form1 : Form
     {
-        private const int port = 6002, socketCount = 3;
-        public static double FPS = 50.0;
+        private const int port = 6002, socketCount = 1;
+        public static double FPS = 200.0;
         private List<SocketHandler> socketHandlers = new List<SocketHandler>();
         //private void Txb_KeyDown(object sender, KeyEventArgs e)
         //{
