@@ -18,8 +18,9 @@ namespace Lolipop_AI_interface
 {
     public partial class Form1 : Form
     {
-        private const int port = 6001;
+        private const int port = 6000;
         private const int panelCount = 2;
+        private const double fps = 50;
         private MyTableLayoutPanel TLP;
         public Form1()
         {
@@ -30,7 +31,7 @@ namespace Lolipop_AI_interface
                 })((panelCount + 1) / 2),"PP");
                 for(int i=0;i< panelCount; i++)
                 {
-                    TLP.AddControl(new GamePanel(port + i), i / 2, i % 2);
+                    TLP.AddControl(new GamePanel(port + i,i==0?20: fps), i / 2, i % 2);
                 }
                 this.Controls.Add(TLP);
             }

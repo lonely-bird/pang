@@ -18,9 +18,9 @@ void printLocation()
 void init()
 {
 	printLocation();
-	int resume;
+	int resume=1;
 	printf("Load previous model.sav? [0/1]\n");
-	scanf("%d", &resume);
+	//scanf("%d", &resume);
     if(resume)
     {
 		{
@@ -99,18 +99,18 @@ void work()
 		if (uni() < explore_rate)action = uni() < 0.5;
 		static int acnt = 0;
 		if (++acnt % 5000 == 0) printf("(%.3f)", aprob);
-
+/*
         xs.push_back(x);
         hs.push_back(h);
-        dlogps.push_back(action - aprob);
+        dlogps.push_back(action - aprob);*/
 
         int reward;bool done;
 		tie(observation, reward, done) = env.step(action, aprob);
         reward_sum += reward;
 
-        drs.push_back(min(reward,0));
+        //drs.push_back(min(reward,0));
 		//puts("b");
-        if(!done)
+        if(!done&&false)
         {
 			//puts("!done");
             episode_number++;
