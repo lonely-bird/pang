@@ -44,35 +44,9 @@ namespace Client_Simulate
 
         private void Form1_Shown(object sender, EventArgs e)
         {
-            this.Size = new Size(400, 500);
-            this.FormClosing += Form1_FormClosing;
-            {
-                TLP = new MyTableLayoutPanel(3, 1, "PAA", "P");
-                {
-                    {
-                        LBL = new MyLabel("");
-                        status = "Q, W, O: control\r\nP: restart all";
-                        TLP.AddControl(LBL, 0, 0);
-                    }
-                    {
-                        TXB = new MyTextBox(false);
-                        TXB.KeyDown += Form1_KeyDown;
-                        TXB.KeyUp += Form1_KeyUp;
-                        TXB.TextChanged += (object s, EventArgs e1) => { TXB.Text = null; };
-                        TLP.AddControl(TXB, 1, 0);
-                    }
-                    {
-                        IFD = new MyInputField();
-                        IFD.AddField("Play speed (FPS)", FPS.ToString()).TextChanged += (object s, EventArgs e1) => {
-                            double t;
-                            if (!double.TryParse((s as TextBox).Text, out t)) MessageBox.Show("格式不正確");
-                            else FPS = t;
-                        };
-                        TLP.AddControl(IFD, 2, 0);
-                    }
-                }
-                this.Controls.Add(TLP);
-            }
+            this.Size = new Size(400, 800);
+            this.Location = new Point(0, 0);
+            InitializeControls();
             {
                 Thread thread = new Thread(() =>
                 {
@@ -85,6 +59,25 @@ namespace Client_Simulate
                         Thread.Sleep(10);
                     }
                 });
+                thread.IsBackground = true;
+                thread.Start();
+            }
+            {
+                Thread thread = new Thread(() =>
+                  {
+                      while (true)
+                      {
+                          PBX.Invoke(new Action(() => { PBX.Image = (AIaction == '0' ? Properties.Resources.buttonLight : Properties.Resources.buttonDark); }));
+                          TB.Invoke(new Action(() =>
+                          {
+                              int target = ((int)Math.Round(AIpressButtonPossibility * 1000.0) - TB.Value);
+                              if (target > 0) TB.Value += (int)Math.Ceiling(target * 0.2);
+                              if (target < 0) TB.Value += (int)Math.Floor(target * 0.2);
+                              Application.DoEvents();
+                          }));
+                          Thread.Sleep(20);
+                      };
+                  });
                 thread.IsBackground = true;
                 thread.Start();
             }
@@ -110,20 +103,121 @@ namespace Client_Simulate
             receiver.msgReceived += Receiver_msgReceived;
             receiver.Start();
         }
-        private static Random random = new Random();
-        private double AIreactPeriod = 0.0;
-        private Queue<DateTime> AIlastReactTime=new Queue<DateTime>();
-        private void Receiver_msgReceived(string msg, StreamWriter writer)
+        
+        private void InitializeControls()
         {
-            string feedBack;
-            char action = msg[0];
+            this.FormClosing += Form1_FormClosing;
+            {
+                TLP = new MyTableLayoutPanel(5, 1, "PAAAA", "P");
+                {
+                    {
+                        LBL = new MyLabel("");
+                        status = "Q, W, O: control\r\nP: restart all";
+                        TLP.AddControl(LBL, 0, 0);
+                    }
+                    {
+                        MyTableLayoutPanel tlp = new MyTableLayoutPanel(1, 2, "A", "AA");
+                        {
+                            PBX = new PictureBox();
+                            PBX.Dock = DockStyle.Fill;
+                            PBX.SizeMode = PictureBoxSizeMode.AutoSize;
+                            PBX.Image = Properties.Resources.buttonDark;
+                            tlp.AddControl(PBX, 0, 0);
+                        }
+                        {
+                            Panel pnl = new Panel();
+                            pnl.Dock = DockStyle.Fill;
+                            pnl.AutoSize = true;
+                            pnl.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+                            PictureBox pbx = new PictureBox();
+                            pbx.Dock = DockStyle.Fill;
+                            pbx.SizeMode = PictureBoxSizeMode.Zoom;
+                            pbx.Image = Properties.Resources.computer;
+                            MyLabel lbl = new MyLabel("");
+                            lbl.Font = new Font("Consolas", 8, FontStyle.Bold);
+                            lbl.Dock = DockStyle.None;
+                            lbl.ForeColor = Color.FromArgb(64, 0, 0, 0);
+                            lbl.BackColor = Color.Transparent;
+                            lbl.Parent = pbx;
+                            //{
+                            //    Bitmap bmp = new Bitmap(1, 1);
+                            //    bmp.SetPixel(0, 0, Color.Transparent);
+                            //    lbl.BackgroundImage = bmp;
+                            //}
+                            //pnl.Controls.Add(lbl);
+                            pnl.Controls.Add(pbx);
+                            tlp.AddControl(pnl, 0, 1);
+                            Thread thread = new Thread(() =>
+                              {
+                                  Thread.Sleep(3000);
+                                  while (true)
+                                  {
+                                      Thread.Sleep(20);
+                                      StringBuilder s = new StringBuilder();
+                                      for (int i = 0; i < 10; i++)
+                                      {
+                                          for (int j = 0; j < 30; j++)
+                                          {
+                                              s.Append(random.Next(0, 2) == 0 ? '0' : '1');
+                                          }
+                                          s.Append("\r\n");
+                                      }
+                                      lbl.Invoke(new Action(() => { lbl.Text = s.ToString(); }));
+                                  }
+                              });
+                            thread.IsBackground = true;
+                            thread.Start();
+                        }
+                        TLP.AddControl(tlp, 1, 0);
+                    }
+                    {
+                        TB = new TrackBar();
+                        TB.Dock = DockStyle.Fill;
+                        TB.Minimum = 0;
+                        TB.Maximum = 1000;
+                        TLP.AddControl(TB, 2, 0);
+                    }
+                    {
+                        TXB = new MyTextBox(false);
+                        TXB.KeyDown += Form1_KeyDown;
+                        TXB.KeyUp += Form1_KeyUp;
+                        TXB.TextChanged += (object s, EventArgs e1) => { TXB.Text = null; };
+                        TLP.AddControl(TXB, 3, 0);
+                    }
+                    {
+                        IFD = new MyInputField();
+                        IFD.AddField("Play speed (FPS)", FPS.ToString()).TextChanged += (object s, EventArgs e1) => {
+                            double t;
+                            if (!double.TryParse((s as TextBox).Text, out t)) MessageBox.Show("格式不正確");
+                            else FPS = t;
+                        };
+                        TLP.AddControl(IFD, 4, 0);
+                    }
+                }
+                this.Controls.Add(TLP);
+            }
+        }
+        private void ExtractInfo(string msg,out char action,out double possibility)
+        {
+            action = msg[0];
             //status = $"msg: {msg}";
             if (action != '0' && action != '1')
             {
                 action = (char)('0' + random.Next(0, 2));
             }
             Debug.Assert(action == '0' || action == '1');
-            SetKeyState(socketCount, 1-(action - '0'));
+            possibility = 1.0-double.Parse(msg.Substring(1));
+        }
+        private static Random random = new Random();
+        private double AIreactPeriod = 0.0;
+        private Queue<DateTime> AIlastReactTime=new Queue<DateTime>();
+        private char AIaction='0';
+        private double AIpressButtonPossibility=0.5;
+        private void Receiver_msgReceived(string msg, StreamWriter writer)
+        {
+            ExtractInfo(msg, out AIaction, out AIpressButtonPossibility);
+            SetKeyState(socketCount, 1-(AIaction - '0'));
+            string feedBack;
             while ((feedBack = socketHandlers[socketCount].answer/*Invoking to avoid incompleted string?*/) == null) status = "Trying to get AI's feedback...";
             //status = "feed back received";
             writer.WriteLine(feedBack);
@@ -132,7 +226,7 @@ namespace Client_Simulate
             AIlastReactTime.Enqueue(DateTime.Now);
             while ((DateTime.Now- AIlastReactTime.First()).TotalSeconds > 0.5) AIlastReactTime.Dequeue();
             AIreactPeriod = (AIlastReactTime.Last()-AIlastReactTime.First()).TotalSeconds/(AIlastReactTime.Count-1);
-            status = $"AI speed: {(1.0 / AIreactPeriod).ToString("F1")} Hz";
+            status = $"AI speed: {(1.0 / AIreactPeriod).ToString("F1")} Hz";//+msg;
         }
 
         private void Comport_DataReceived(object sender, SerialDataReceivedEventArgs e)
@@ -233,6 +327,8 @@ namespace Client_Simulate
         private MyInputField IFD;
         private MyTextBox TXB;
         private MyTableLayoutPanel TLP;
+        private PictureBox PBX;
+        private TrackBar TB;
         private string status = "Not ready";
     }
 }

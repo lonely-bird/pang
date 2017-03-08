@@ -24,7 +24,15 @@ namespace Lolipop_AI_interface
         private MyTableLayoutPanel TLP;
         public Form1()
         {
-            this.WindowState = FormWindowState.Maximized;
+            this.Shown += Form1_Shown;
+            //this.WindowState = FormWindowState.Maximized;
+        }
+
+        private void Form1_Shown(object sender, EventArgs e)
+        {
+            this.Size = new Size(800, 800);
+            this.Location = new Point(400, 0);
+            //this.TopMost = true;
             {
                 TLP = new MyTableLayoutPanel((panelCount+1)/2,2,new Func<int,string>((int n)=>{
                     string ans = "";for (int i = 0; i < n; i++) ans += "P";return ans;
@@ -37,6 +45,7 @@ namespace Lolipop_AI_interface
             }
             this.FormClosing += Form1_FormClosing;
         }
+
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
             System.Diagnostics.Process.GetCurrentProcess().Kill();
