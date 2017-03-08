@@ -12,7 +12,6 @@ namespace Lolipop_AI_interface
 {
     class SocketHandler
     {
-        public static int port = 5;
         public void Start()
         {
             AppendLog("Your IP is: " + GetMyIpAddress().ToString());
@@ -22,7 +21,7 @@ namespace Lolipop_AI_interface
             AppendLog("Listening...");
             StartListening();
         }
-        void StartListening()
+        private void StartListening()
         {
             int msg_count = 0;
             bool stopping = false;
@@ -109,14 +108,13 @@ namespace Lolipop_AI_interface
             listeningThreadMonitor.Start();
             listeningThread.Start();
         }
-        void InitializeSocket()
+        private void InitializeSocket()
         {
             socket = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
             socket.Bind(new IPEndPoint(IPAddress.Any, port));
             socket.Listen(10);
         }
-        Socket socket;
-        IPAddress GetMyIpAddress()
+        private IPAddress GetMyIpAddress()
         {
             foreach (IPAddress ipAddress in Dns.GetHostEntry(Dns.GetHostName()).AddressList)
             {
@@ -127,95 +125,21 @@ namespace Lolipop_AI_interface
             }
             throw new Exception("Can't detect your IP address");
         }
+        private void AppendLog(string log)
+        {
+            logAppended?.Invoke(log);
+        }
+        public SocketHandler(int _port)
+        {
+            port = _port;
+            msgReceived += (msg, writer) => { ++dataConnectionCounter; };
+        }
+        private int port;
+        private Socket socket;
         public delegate void logAppendedHandler(string log);
         public event logAppendedHandler logAppended;
         public delegate void msgReceivedHandler(char msg, StreamWriter writer);
         public event msgReceivedHandler msgReceived;
-        void AppendLog(string log)
-        {
-            logAppended?.Invoke(log);
-        }
         public int dataConnectionCounter = 0;
-        public SocketHandler()
-        {
-            msgReceived += (msg, writer) => { ++dataConnectionCounter; };
-        }
     }
-    /*class ChatBox
-    {
-        int port = 20;
-
-        public static void Main(String[] args)
-        {
-            ChatBox chatBox = new ChatBox();
-            if (args.Length == 0)
-                chatBox.ServerMain();
-            else
-                chatBox.ClientMain(args[0]);
-        }
-
-        public void ServerMain()
-        {
-            IPEndPoint ipep = new IPEndPoint(IPAddress.Any, port);
-            Socket newsock = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
-            newsock.Bind(ipep);
-            newsock.Listen(10);
-            Socket client = newsock.Accept();
-            new TcpListener(client); // create a new thread and then receive message.
-            newsock.Close();
-        }
-
-        public void ClientMain(String ip)
-        {
-            IPEndPoint ipep = new IPEndPoint(IPAddress.Parse(ip), port);
-            Socket server = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
-            server.Connect(ipep);
-            new TcpListener(server);
-            server.Shutdown(SocketShutdown.Both);
-            server.Close();
-        }
-
-    }
-
-    public class TcpListener
-    {
-        Socket socket;
-        Thread inThread, outThread;
-        NetworkStream stream;
-        StreamReader reader;
-        StreamWriter writer;
-
-        public TcpListener(Socket s)
-        {
-            socket = s;
-            stream = new NetworkStream(s);
-            reader = new StreamReader(stream);
-            writer = new StreamWriter(stream);
-            inThread = new Thread(new ThreadStart(inLoop));
-            inThread.Start();
-            outThread = new Thread(new ThreadStart(outLoop));
-            outThread.Start();
-            inThread.Join(); // 等待 inThread 執行續完成，才離開此函數。 
-                             // (注意、按照 inLoop 的邏輯，這個函數永遠不會跳出，因為 inLoop 是個無窮迴圈)。
-        }
-
-        public void inLoop()
-        {
-            while (true)
-            {
-                String line = reader.ReadLine();
-                Console.WriteLine("收到：" + line);
-            }
-        }
-
-        public void outLoop()
-        {
-            while (true)
-            {
-                String line = Console.ReadLine();
-                writer.WriteLine(line);
-                writer.Flush();
-            }
-        }
-    }*/
 }
