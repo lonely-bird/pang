@@ -1,4 +1,5 @@
 ﻿  002.cpp
+<<<<<<< HEAD
 c:\users\user007\desktop\pang-gpu\pang\ai\pang - c++\pang\pang.h(184): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
 c:\users\user007\desktop\pang-gpu\pang\ai\pang - c++\pang\pang.h(184): warning C4267: 'initializing': conversion from 'size_t' to 'const int', possible loss of data
 c:\users\user007\desktop\pang-gpu\pang\ai\pang - c++\pang\game.h(121): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
@@ -19,3 +20,27 @@ c:\users\user007\desktop\pang-gpu\pang\ai\pang - c++\pang\game.h(304): warning C
   Finished generating code
   pang.vcxproj -> C:\Users\user007\Desktop\pang-GPU\pang\AI\pang - C++\x64\Release\pang.exe
   pang.vcxproj -> C:\Users\user007\Desktop\pang-GPU\pang\AI\pang - C++\x64\Release\pang.pdb (Full PDB)
+=======
+d:\users\fsps6\onedrive\sync\c# code\lolipop ai\pang-gpu\pang\ai\pang - c++\pang\pang.h(184): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+d:\users\fsps6\onedrive\sync\c# code\lolipop ai\pang-gpu\pang\ai\pang - c++\pang\pang.h(184): warning C4267: 'initializing': conversion from 'size_t' to 'const int', possible loss of data
+d:\users\fsps6\onedrive\sync\c# code\lolipop ai\pang-gpu\pang\ai\pang - c++\pang\game.h(121): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+d:\users\fsps6\onedrive\sync\c# code\lolipop ai\pang-gpu\pang\ai\pang - c++\pang\game.h(122): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+d:\users\fsps6\onedrive\sync\c# code\lolipop ai\pang-gpu\pang\ai\pang - c++\pang\game.h(123): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+d:\users\fsps6\onedrive\sync\c# code\lolipop ai\pang-gpu\pang\ai\pang - c++\pang\game.h(124): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+d:\users\fsps6\onedrive\sync\c# code\lolipop ai\pang-gpu\pang\ai\pang - c++\pang\game.h(164): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+d:\users\fsps6\onedrive\sync\c# code\lolipop ai\pang-gpu\pang\ai\pang - c++\pang\game.h(165): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+d:\users\fsps6\onedrive\sync\c# code\lolipop ai\pang-gpu\pang\ai\pang - c++\pang\game.h(170): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+d:\users\fsps6\onedrive\sync\c# code\lolipop ai\pang-gpu\pang\ai\pang - c++\pang\game.h(171): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+d:\users\fsps6\onedrive\sync\c# code\lolipop ai\pang-gpu\pang\ai\pang - c++\pang\game.h(174): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+d:\users\fsps6\onedrive\sync\c# code\lolipop ai\pang-gpu\pang\ai\pang - c++\pang\game.h(175): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+d:\users\fsps6\onedrive\sync\c# code\lolipop ai\pang-gpu\pang\ai\pang - c++\pang\game.h(181): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+d:\users\fsps6\onedrive\sync\c# code\lolipop ai\pang-gpu\pang\ai\pang - c++\pang\game.h(302): warning C4244: 'argument': conversion from 'double' to 'char', possible loss of data
+d:\users\fsps6\onedrive\sync\c# code\lolipop ai\pang-gpu\pang\ai\pang - c++\pang\game.h(304): warning C4244: 'argument': conversion from 'double' to 'char', possible loss of data
+  Generating code
+  1122 of 1127 functions (99.6%) were compiled, the rest were copied from previous compilation.
+    6 functions were new in current compilation
+    0 functions had inline decision re-evaluated but remain unchanged
+  Finished generating code
+  pang.vcxproj -> D:\Users\fsps6\OneDrive\Sync\C# Code\Lolipop AI\pang-GPU\pang\AI\pang - C++\x64\Release\pang.exe
+  pang.vcxproj -> D:\Users\fsps6\OneDrive\Sync\C# Code\Lolipop AI\pang-GPU\pang\AI\pang - C++\x64\Release\pang.pdb (Full PDB)
+>>>>>>> c657fb1dae5a9228af561a12197509ae05216335

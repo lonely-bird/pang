@@ -1,0 +1,20 @@
+﻿  002.cpp
+c:\users\user007\desktop\pang-gpu\pang\ai\pang - c++\pang\game.h(121): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\user007\desktop\pang-gpu\pang\ai\pang - c++\pang\game.h(122): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\user007\desktop\pang-gpu\pang\ai\pang - c++\pang\game.h(123): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\user007\desktop\pang-gpu\pang\ai\pang - c++\pang\game.h(124): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\user007\desktop\pang-gpu\pang\ai\pang - c++\pang\game.h(164): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\user007\desktop\pang-gpu\pang\ai\pang - c++\pang\game.h(165): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\user007\desktop\pang-gpu\pang\ai\pang - c++\pang\game.h(170): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\user007\desktop\pang-gpu\pang\ai\pang - c++\pang\game.h(171): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+c:\users\user007\desktop\pang-gpu\pang\ai\pang - c++\pang\game.h(174): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\user007\desktop\pang-gpu\pang\ai\pang - c++\pang\game.h(175): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+c:\users\user007\desktop\pang-gpu\pang\ai\pang - c++\pang\game.h(181): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+c:\users\user007\desktop\pang-gpu\pang\ai\pang - c++\pang\game.h(252): warning C4018: '<': signed/unsigned mismatch
+c:\users\user007\desktop\pang-gpu\pang\ai\pang - c++\pang\game.h(302): warning C4244: 'argument': conversion from 'double' to 'char', possible loss of data
+c:\users\user007\desktop\pang-gpu\pang\ai\pang - c++\pang\game.h(304): warning C4244: 'argument': conversion from 'double' to 'char', possible loss of data
+  Generating code
+  All 1148 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  Finished generating code
+  pang.vcxproj -> C:\Users\user007\Desktop\pang-GPU\pang\AI\pang - C++\Release\pang.exe
+  pang.vcxproj -> C:\Users\user007\Desktop\pang-GPU\pang\AI\pang - C++\Release\pang.pdb (Full PDB)

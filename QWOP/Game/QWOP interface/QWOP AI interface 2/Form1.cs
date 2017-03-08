@@ -133,6 +133,7 @@ namespace QWOP_AI_interface_3
                 thread.IsBackground = true;
                 thread.Start();
             }
+<<<<<<< HEAD
             {
                 Thread thread = new Thread(() =>
                   {
@@ -140,6 +141,15 @@ namespace QWOP_AI_interface_3
                 thread.IsBackground = true;
                 thread.Start();
             }
+=======
+            //{
+            //    Thread thread = new Thread(() =>
+            //      {
+            //      });
+            //    thread.IsBackground = true;
+            //    thread.Start();
+            //}
+>>>>>>> c657fb1dae5a9228af561a12197509ae05216335
             //{
             //    Thread thread = new Thread(() =>
             //      {
@@ -251,6 +261,7 @@ namespace QWOP_AI_interface_3
             }
         }
         private bool pressP
+<<<<<<< HEAD
         {
             set
             {
@@ -294,6 +305,51 @@ namespace QWOP_AI_interface_3
                     }
                 }
             }
+=======
+        {
+            set
+            {
+                keybd_event((byte)Keys.P, 0, value ? 0 : 2, 0);
+            }
+        }
+        private DateTime lastTimePressKey = DateTime.Now;
+        private void SocketHandler_msgReceived(string msgStr, System.IO.StreamWriter writer)
+        {
+            if (!pressKey) return;
+            //Log($"Receive: {msgStr}");
+            Debug.Assert(msgStr.Length == 2);
+            if (msgStr == "RR")
+            {
+                Log("Restarting the game...");
+                SendKeys.SendWait("R");
+                for (bool isLive = false; !isLive;)
+                {
+                    Bitmap bmp = getFeedBackImage();
+                    isLive = IsLive(bmp);
+                    bmp.Dispose();
+                    Thread.Sleep(50);
+                }
+                Log("Game restarted");
+                lastTimePressKey = DateTime.Now;
+            }
+            else
+            {
+                if (msgStr[0] != 'Q' && msgStr[0] != 'W') Log($"msgStr[0] must be Q or W! msgStr[0]: {msgStr[0]}");
+                else if (msgStr[1] != 'O' && msgStr[1] != 'P') Log($"msgStr[1] must be O or P! msgStr[1]: {msgStr[1]}");
+                for (int i = 0; i < msgStr.Length; i++)
+                {
+                    char msg = msgStr[i];
+                    switch (msg)
+                    {
+                        case 'Q': pressQ = true; pressW = false; break;
+                        case 'W': pressQ = false; pressW = true; break;
+                        case 'O': pressO = true; pressP = false; break;
+                        case 'P': pressO = false; pressP = true; break;
+                        default: Log($"Invalid key: {msg}"); break;
+                    }
+                }
+            }
+>>>>>>> c657fb1dae5a9228af561a12197509ae05216335
             lastTimePressKey = lastTimePressKey.AddSeconds(1.0 / FPS);
             Thread.Sleep((int)Math.Max(0.0, (lastTimePressKey - DateTime.Now).TotalMilliseconds));
             writer.WriteLine(getFeedBack());

@@ -18,7 +18,7 @@ namespace Lolipop_AI_interface
 {
     public partial class Form1 : Form
     {
-        SocketHandler socketHandler = new SocketHandler();
+        SocketHandler socketHandler = new SocketHandler(5);
         Game game = new Game();
         MyTableLayoutPanel TLP;
         Bitmap bmp = new Bitmap(750, 750);
@@ -32,7 +32,7 @@ namespace Lolipop_AI_interface
                 {
                     TLP = new MyTableLayoutPanel(2, 1, "AP", "P");
                     {
-                        TLP.AddControl(game.controlPanel, 0, 0);
+                        TLP.AddControl(Game.controlPanel, 0, 0);
                     }
                     {
                         TXB = new MyTextBox(true);
@@ -44,7 +44,7 @@ namespace Lolipop_AI_interface
                     PictureBox pbx = new PictureBox();
                     pbx.Image = new Bitmap(pbx.Width, pbx.Height);
                     pbx.Dock = DockStyle.Fill;
-                    pbx.SizeMode = PictureBoxSizeMode.Normal;
+                    pbx.SizeMode = PictureBoxSizeMode.Zoom;
                     /*pbx.SizeChanged += (sender, e) =>
                     {
                         SocketHandler_logAppended(pbx.Size.ToString());
@@ -58,9 +58,13 @@ namespace Lolipop_AI_interface
                             Thread.Sleep(20);
                             Do(() =>
                             {
-                                var bmp = new Bitmap(pbx.Width, pbx.Height);
+                                var bmp = new Bitmap(game.imageFeedBackSize.Width,game.imageFeedBackSize.Height); //new Bitmap(pbx.Width, pbx.Height);
                                 this.Text = bmp.Size.ToString();
+<<<<<<< HEAD
                                 game.drawImage(bmp,true);
+=======
+                                game.drawImage(bmp,false);
+>>>>>>> c657fb1dae5a9228af561a12197509ae05216335
                                 //{
                                 //    BitmapData bd = bmp.LockBits(new Rectangle(0, 0, bmp.Width, bmp.Height), ImageLockMode.ReadWrite, PixelFormat.Format32bppArgb);
                                 //    unsafe

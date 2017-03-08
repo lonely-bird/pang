@@ -51,3 +51,17 @@ C:\Users\fsps6\Downloads\pang-GPU\pang\Game\Lolipop\Lolipop AI interface\bin\Deb
 C:\Users\fsps6\Downloads\pang-GPU\pang\Game\Lolipop\Lolipop AI interface\obj\Debug\Lolipop_AI_interface.Properties.Resources.resources
 C:\Users\fsps6\Downloads\pang-GPU\pang\Game\Lolipop\Lolipop AI interface\obj\Debug\Lolipop AI interface.csproj.GenerateResource.Cache
 C:\Users\fsps6\Downloads\pang-GPU\pang\Game\Lolipop\Lolipop AI interface\obj\Debug\Lolipop AI interface.csprojResolveAssemblyReference.cache
+<<<<<<< HEAD
+=======
+C:\Users\fsps6\OneDrive\Sync\C# Code\Lolipop AI\pang-GPU\pang\Game\Lolipop\Lolipop AI interface\bin\Debug\Lolipop AI interface.exe.config
+C:\Users\fsps6\OneDrive\Sync\C# Code\Lolipop AI\pang-GPU\pang\Game\Lolipop\Lolipop AI interface\obj\Debug\Lolipop AI interface.exe
+C:\Users\fsps6\OneDrive\Sync\C# Code\Lolipop AI\pang-GPU\pang\Game\Lolipop\Lolipop AI interface\obj\Debug\Lolipop AI interface.pdb
+C:\Users\fsps6\OneDrive\Sync\C# Code\Lolipop AI\pang-GPU\pang\Game\Lolipop\Lolipop AI interface\bin\Debug\Lolipop AI interface.exe
+C:\Users\fsps6\OneDrive\Sync\C# Code\Lolipop AI\pang-GPU\pang\Game\Lolipop\Lolipop AI interface\bin\Debug\Lolipop AI interface.pdb
+C:\Users\fsps6\OneDrive\Sync\C# Code\Lolipop AI\pang-GPU\pang\Game\Lolipop\Lolipop AI interface\bin\Debug\Motivation.dll
+C:\Users\fsps6\OneDrive\Sync\C# Code\Lolipop AI\pang-GPU\pang\Game\Lolipop\Lolipop AI interface\bin\Debug\Motivation.pdb
+C:\Users\fsps6\OneDrive\Sync\C# Code\Lolipop AI\pang-GPU\pang\Game\Lolipop\Lolipop AI interface\bin\Debug\Motivation.xml
+C:\Users\fsps6\OneDrive\Sync\C# Code\Lolipop AI\pang-GPU\pang\Game\Lolipop\Lolipop AI interface\obj\Debug\Lolipop AI interface.csprojResolveAssemblyReference.cache
+C:\Users\fsps6\OneDrive\Sync\C# Code\Lolipop AI\pang-GPU\pang\Game\Lolipop\Lolipop AI interface\obj\Debug\Lolipop_AI_interface.Properties.Resources.resources
+C:\Users\fsps6\OneDrive\Sync\C# Code\Lolipop AI\pang-GPU\pang\Game\Lolipop\Lolipop AI interface\obj\Debug\Lolipop AI interface.csproj.GenerateResource.Cache
+>>>>>>> c657fb1dae5a9228af561a12197509ae05216335
