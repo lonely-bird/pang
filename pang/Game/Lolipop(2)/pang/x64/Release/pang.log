@@ -15,9 +15,7 @@ c:\users\fsps6\onedrive\sync\c# code\lolipop ai\pang-gpu\pang\game\lolipop(2)\pa
 c:\users\fsps6\onedrive\sync\c# code\lolipop ai\pang-gpu\pang\game\lolipop(2)\pang\game.h(302): warning C4244: 'argument': conversion from 'double' to 'char', possible loss of data
 c:\users\fsps6\onedrive\sync\c# code\lolipop ai\pang-gpu\pang\game\lolipop(2)\pang\game.h(304): warning C4244: 'argument': conversion from 'double' to 'char', possible loss of data
   Generating code
-  26 of 1040 functions ( 2.5%) were compiled, the rest were copied from previous compilation.
-    3 functions were new in current compilation
-    22 functions had inline decision re-evaluated but remain unchanged
+  All 1040 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
   Finished generating code
   pang.vcxproj -> C:\Users\fsps6\OneDrive\Sync\C# Code\Lolipop AI\pang-GPU\pang\Game\Lolipop(2)\x64\Release\pang.exe
   pang.vcxproj -> C:\Users\fsps6\OneDrive\Sync\C# Code\Lolipop AI\pang-GPU\pang\Game\Lolipop(2)\x64\Release\pang.pdb (Full PDB)
