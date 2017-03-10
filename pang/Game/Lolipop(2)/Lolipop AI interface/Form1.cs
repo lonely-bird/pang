@@ -19,8 +19,9 @@ namespace Lolipop_AI_interface
     public partial class Form1 : Form
     {
         private const int port = 6000;
-        private const int panelCount = 4;
+        private const int panelCount = 2;
         private const double fps = 50;
+        public static int public_random;
         private MyTableLayoutPanel TLP;
         public Form1()
         {
@@ -34,16 +35,30 @@ namespace Lolipop_AI_interface
             this.Location = new Point(400, 0);
             //this.TopMost = true;
             {
-                TLP = new MyTableLayoutPanel((panelCount+1)/2,2,new Func<int,string>((int n)=>{
-                    string ans = "";for (int i = 0; i < n; i++) ans += "P";return ans;
-                })((panelCount + 1) / 2),"PP");
-                for(int i=0;i< panelCount; i++)
+                TLP = new MyTableLayoutPanel((panelCount + 1) / 2, Math.Min(panelCount, 2), new Func<int, string>((int n) =>
                 {
-                    TLP.AddControl(new GamePanel(port + i,i==0?20: fps), i / 2, i % 2);
+                    string ans = ""; for (int i = 0; i < n; i++) ans += "P"; return ans;
+                })((panelCount + 1) / 2), panelCount == 1 ? "P" : "PP");
+                for (int i = 0; i < panelCount; i++)
+                {
+                    TLP.AddControl(new GamePanel(port + i, i == 0 ? 20 : fps), i / 2, i % 2);
                 }
                 this.Controls.Add(TLP);
             }
             this.FormClosing += Form1_FormClosing;
+            {
+                Thread thread = new Thread(() =>
+                  {
+                      Random rand = new Random();
+                      while (true)
+                      {
+                          public_random = rand.Next(int.MaxValue);
+                          Thread.Sleep(500);
+                      }
+                  });
+                thread.IsBackground = true;
+                thread.Start();
+            }
         }
 
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)

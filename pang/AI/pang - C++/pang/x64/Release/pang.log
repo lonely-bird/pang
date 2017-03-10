@@ -1,5 +1,8 @@
 ﻿  002.cpp
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> da259bca6d0ecf0eb9bebee7329642f8aef81baf
 c:\users\user007\desktop\pang-gpu\pang\ai\pang - c++\pang\pang.h(184): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
 c:\users\user007\desktop\pang-gpu\pang\ai\pang - c++\pang\pang.h(184): warning C4267: 'initializing': conversion from 'size_t' to 'const int', possible loss of data
 c:\users\user007\desktop\pang-gpu\pang\ai\pang - c++\pang\game.h(121): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
@@ -15,6 +18,7 @@ c:\users\user007\desktop\pang-gpu\pang\ai\pang - c++\pang\game.h(175): warning C
 c:\users\user007\desktop\pang-gpu\pang\ai\pang - c++\pang\game.h(181): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
 c:\users\user007\desktop\pang-gpu\pang\ai\pang - c++\pang\game.h(302): warning C4244: 'argument': conversion from 'double' to 'char', possible loss of data
 c:\users\user007\desktop\pang-gpu\pang\ai\pang - c++\pang\game.h(304): warning C4244: 'argument': conversion from 'double' to 'char', possible loss of data
+<<<<<<< HEAD
   Generating code
   All 1127 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
   Finished generating code
@@ -36,11 +40,16 @@ d:\users\fsps6\onedrive\sync\c# code\lolipop ai\pang-gpu\pang\ai\pang - c++\pang
 d:\users\fsps6\onedrive\sync\c# code\lolipop ai\pang-gpu\pang\ai\pang - c++\pang\game.h(181): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
 d:\users\fsps6\onedrive\sync\c# code\lolipop ai\pang-gpu\pang\ai\pang - c++\pang\game.h(302): warning C4244: 'argument': conversion from 'double' to 'char', possible loss of data
 d:\users\fsps6\onedrive\sync\c# code\lolipop ai\pang-gpu\pang\ai\pang - c++\pang\game.h(304): warning C4244: 'argument': conversion from 'double' to 'char', possible loss of data
+=======
+>>>>>>> da259bca6d0ecf0eb9bebee7329642f8aef81baf
   Generating code
-  1122 of 1127 functions (99.6%) were compiled, the rest were copied from previous compilation.
-    6 functions were new in current compilation
-    0 functions had inline decision re-evaluated but remain unchanged
+  All 1127 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
   Finished generating code
+<<<<<<< HEAD
   pang.vcxproj -> D:\Users\fsps6\OneDrive\Sync\C# Code\Lolipop AI\pang-GPU\pang\AI\pang - C++\x64\Release\pang.exe
   pang.vcxproj -> D:\Users\fsps6\OneDrive\Sync\C# Code\Lolipop AI\pang-GPU\pang\AI\pang - C++\x64\Release\pang.pdb (Full PDB)
 >>>>>>> c657fb1dae5a9228af561a12197509ae05216335
+=======
+  pang.vcxproj -> C:\Users\user007\Desktop\pang-GPU\pang\AI\pang - C++\x64\Release\pang.exe
+  pang.vcxproj -> C:\Users\user007\Desktop\pang-GPU\pang\AI\pang - C++\x64\Release\pang.pdb (Full PDB)
+>>>>>>> da259bca6d0ecf0eb9bebee7329642f8aef81baf

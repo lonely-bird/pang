@@ -19,7 +19,7 @@ namespace Client_Simulate
 {
     public partial class Form1 : Form
     {
-        private const int port = 6000, aiPort=7000, socketCount = 3;
+        private const int port = 6000, aiPort=7000, socketCount = 1;
         public static double FPS = 200.0;
         private List<MessageSender> socketHandlers = new List<MessageSender>();
         //private void Txb_KeyDown(object sender, KeyEventArgs e)
@@ -228,16 +228,28 @@ namespace Client_Simulate
             AIreactPeriod = (AIlastReactTime.Last()-AIlastReactTime.First()).TotalSeconds/(AIlastReactTime.Count-1);
             status = $"AI speed: {(1.0 / AIreactPeriod).ToString("F1")} Hz";//+msg;
         }
-
+        bool IsSerialFormatCorrect(string s)
+        {
+            if (s.Length < 17) return false;
+            for(int i=0;i<4;i++)
+            {
+                if (s[i * 3 + 0] != '3') return false;
+                if (s[i * 3 + 1] != '0'&& s[i * 3 + 1] != '1') return false;
+                if (s[i * 3 + 2] != '-') return false;
+            }
+            if (s.Substring(4 * 3, 5) != "0D-0A") return false;
+            return true;
+        }
         private void Comport_DataReceived(object sender, SerialDataReceivedEventArgs e)
         {
             Byte[] buffer = new Byte[1024];
             Int32 length = (sender as SerialPort).Read(buffer, 0, buffer.Length);
             Array.Resize(ref buffer, length);
+            string s = BitConverter.ToString(buffer);
+            if (!IsSerialFormatCorrect(s)) return;
             LBL.Invoke(new Action(() =>
             {
                 //LBL.Text = BitConverter.ToString(buffer);
-                string s = BitConverter.ToString(buffer);
                 this.Text = s;
                 for (int i = 0, j = 0; i < s.Length; i++)
                 {

@@ -8,10 +8,32 @@ void init()
 	scanf("%d", &resume);
     if(resume)
     {
-        assert(freopen("model.sav","r",stdin));
-        REP(i,H) REP(j,D) scanf("%lf",&model.W1[i][j]);
-        REP(i,H) scanf("%lf",&model.W2[i]);
-        fclose(stdin);
+		{
+			auto tmp = freopen("model.sav", "r", stdin);
+			assert(tmp);
+		}
+		char c=getchar();
+		if (c == 'A')
+		{
+			REP(i, H) REP(j, D)
+			{
+				unsigned long long *t = (unsigned long long*)&model.W1[i][j];
+				scanf("%llu", t);// &model.W1[i][j]);
+			}
+			REP(i, H)
+			{
+				unsigned long long *t = (unsigned long long*)&model.W2[i];
+				scanf("%llu", t);// &model.W2[i]);
+			}
+			fclose(stdin);
+		}
+		else
+		{
+			freopen("model.sav", "r", stdin);
+			REP(i, H) REP(j, D) scanf("%lf", &model.W1[i][j]);
+			REP(i, H) scanf("%lf", &model.W2[i]);
+			fclose(stdin);
+		}
     }
     else
     {
@@ -155,8 +177,9 @@ void work()
                 {
 					FILE* pFile = fopen("model.sav", "w");
 					assert(pFile);
-                    REP(i,H) REP(j,D) fprintf(pFile,"%.16f ",model.W1[i][j]);
-                    REP(i,H) fprintf(pFile,"%.16f ",model.W2[i]);
+					fprintf(pFile, "A");
+					REP(i, H) REP(j, D)fprintf(pFile, "%llu ", *((unsigned long long*)&model.W1[i][j])); //fprintf(pFile,"%.50f ",model.W1[i][j]);
+					REP(i, H)fprintf(pFile, "%llu ", *((unsigned long long*)&model.W2[i])); //fprintf(pFile,"%.50f ",model.W2[i]);
                     fclose(pFile);
                 }
 				model.Perturbate();

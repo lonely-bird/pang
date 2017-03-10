@@ -27,12 +27,28 @@ void init()
 			auto tmp = freopen("model.sav", "r", stdin);
 			assert(tmp);
 		}
-		//puts("a");
-        REP(i,H) REP(j,D) scanf("%lf",&model.W1[i][j]);
-		//puts("b");
-        REP(i,H) scanf("%lf",&model.W2[i]);
-		//puts("c");
-        fclose(stdin);
+		char c = getchar();
+		if (c == 'A')
+		{
+			REP(i, H) REP(j, D)
+			{
+				unsigned long long *t = (unsigned long long*)&model.W1[i][j];
+				scanf("%llu", t);// &model.W1[i][j]);
+			}
+			REP(i, H)
+			{
+				unsigned long long *t = (unsigned long long*)&model.W2[i];
+				scanf("%llu", t);// &model.W2[i]);
+			}
+			fclose(stdin);
+		}
+		else
+		{
+			freopen("model.sav", "r", stdin);
+			REP(i, H) REP(j, D) scanf("%lf", &model.W1[i][j]);
+			REP(i, H) scanf("%lf", &model.W2[i]);
+			fclose(stdin);
+		}
 		puts("model.sav loaded!");
 		//puts("d");
     }
@@ -42,6 +58,7 @@ void init()
         grad_buffer.reset(0);
         rmsprop_cache.reset(0);
     }
+	//puts("a");
 }
 
 Eric env;
@@ -68,6 +85,7 @@ double emphasize(double v)
 }
 void work()
 {
+	//puts("c");
     vector<int> observation = env.reset();
     vector<int> prev_x;
     vector<VI> xs;
@@ -178,9 +196,10 @@ void work()
                 {
 					FILE* pFile = fopen("model.sav", "w");
 					assert(pFile);
-                    REP(i,H) REP(j,D) fprintf(pFile,"%.16f ",model.W1[i][j]);
-                    REP(i,H) fprintf(pFile,"%.16f ",model.W2[i]);
-                    fclose(pFile);
+					fprintf(pFile, "A");
+					REP(i, H) REP(j, D)fprintf(pFile, "%llu ", *((unsigned long long*)&model.W1[i][j])); //fprintf(pFile,"%.50f ",model.W1[i][j]);
+					REP(i, H)fprintf(pFile, "%llu ", *((unsigned long long*)&model.W2[i])); //fprintf(pFile,"%.50f ",model.W2[i]);
+					fclose(pFile);
                 }
 				model.Perturbate();
 				if (explore_rate >= 0.05)explore_rate *= 0.98;
@@ -195,5 +214,6 @@ void work()
 int main()
 {
     init();
+	//puts("b");
     work();
 }

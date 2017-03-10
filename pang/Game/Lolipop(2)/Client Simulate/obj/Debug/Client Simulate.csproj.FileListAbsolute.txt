@@ -8,4 +8,3 @@ C:\Users\fsps6\OneDrive\Sync\C# Code\Lolipop AI\pang-GPU\pang\Game\Lolipop(2)\Cl
 C:\Users\fsps6\OneDrive\Sync\C# Code\Lolipop AI\pang-GPU\pang\Game\Lolipop(2)\Client Simulate\obj\Debug\Client Simulate.csproj.GenerateResource.Cache
 C:\Users\fsps6\OneDrive\Sync\C# Code\Lolipop AI\pang-GPU\pang\Game\Lolipop(2)\Client Simulate\obj\Debug\Client Simulate.exe
 C:\Users\fsps6\OneDrive\Sync\C# Code\Lolipop AI\pang-GPU\pang\Game\Lolipop(2)\Client Simulate\obj\Debug\Client Simulate.pdb
-C:\Users\fsps6\OneDrive\Sync\C# Code\Lolipop AI\pang-GPU\pang\Game\Lolipop(2)\Client Simulate\obj\Debug\Client Simulate.csprojResolveAssemblyReference.cache

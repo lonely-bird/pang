@@ -19,10 +19,10 @@ namespace Lolipop_AI_interface
     {
         private  bool darryMode = false;
         private Interval rangeY = new Interval(0, 1000);
-        private Interval obstacleDistance = new Interval(150, 250);//new Interval(100, 150);
+        private Interval obstacleDistance = new Interval(100, 250);//new Interval(100, 150);
         private Interval obstacleWidth = new Interval(100, 200);
-        private Interval obstacleY = new Interval(0, 500);//new Interval(0, 700);
-        private Interval obstacleHeight = new Interval(250, 500);//new Interval(150, 300);
+        //private Interval obstacleY = new Interval(0, 500);//new Interval(0, 700);
+        private Interval obstacleHeight = new Interval(150, 500);//new Interval(150, 300);
         private double gravity = -0.1, liftForce = 0.1;
         private  double max_upward_speed = 15, alpha = 0.3;
         private  int obstacleCount = 1;
@@ -36,9 +36,9 @@ namespace Lolipop_AI_interface
                 minimum = mn;
                 maximum = mx;
             }
-            public int getRandomValue()
+            public int getRandomValue(Game game)
             {
-                return random.Next(minimum, maximum + 1);
+                return game.random.Next(minimum, maximum + 1);
             }
             public override string ToString()
             {
@@ -94,8 +94,9 @@ namespace Lolipop_AI_interface
                         x += o.distance + o.width;
                     }
                     {
-                        var r = rectangleOf(locationOf(new PointF(0, (float)location)),humanFriendly?10: 1);
-                        g.FillRectangle(new SolidBrush(podColor), r.X, r.Y, r.Width, r.Height);
+                        var r = rectangleOf(locationOf(new PointF(0, (float)location)),humanFriendly?8: 1);
+                        if (humanFriendly) g.DrawEllipse(new Pen(podColor, 5), r.X, r.Y, r.Width, r.Height);
+                        else g.FillRectangle(new SolidBrush(podColor), r.X, r.Y, r.Width, r.Height);
                     }
                     {
                         PointF o = new PointF(0, (float)((scope.Height / 2.0) / scope.Height * bmp.Height));
@@ -114,17 +115,18 @@ namespace Lolipop_AI_interface
             public int distance, width, upper_y, lower_y;
             public GameObstacle(Game game)
             {
-                distance = game.obstacleDistance.getRandomValue();
-                width = game.obstacleWidth.getRandomValue();
-                lower_y = game.obstacleY.getRandomValue();
-                upper_y = lower_y + game.obstacleHeight.getRandomValue();
+                distance = game.obstacleDistance.getRandomValue(game);
+                width = game.obstacleWidth.getRandomValue(game);
+                int h= game.obstacleHeight.getRandomValue(game);
+                lower_y =new Interval(0,game.rangeY.maximum-h).getRandomValue(game);
+                upper_y = lower_y + h;
             }
         }
-        public Game(SocketHandler socketHandler)
+        public Game(SocketHandler socketHandler,Random _random)
         {
             InitializeControlPanel(socketHandler);
             showImageFeedBack.CheckedChanged += ShowImageFeedBack_CheckedChanged;
-            Reset();
+            Reset(_random);
             Update(true);
         }
         //static Game()
@@ -135,8 +137,9 @@ namespace Lolipop_AI_interface
         {
             visualizer.drawImage(bmp, gameState, location, rangeY, new Rectangle(-1, rangeY.minimum - 1, obstacleCount * obstacleDistance.maximum + 3, rangeY.maximum - rangeY.minimum + 3), obstacles, velocity, humanFriendly);
         }
-        public void Reset()
+        public void Reset(Random _random)
         {
+            random = _random;
             gameState = 1;
             newReward = 0;
             location = (double)(rangeY.minimum + rangeY.maximum) / 2.0;
@@ -306,7 +309,7 @@ namespace Lolipop_AI_interface
                             generalSettings.AddField("存活區的範圍", rangeY.ToString()).TextChanged += (o, e) => { try { rangeY = Interval.Parse((o as MyTextBox).Text); } catch (Exception) { MessageBox.Show("格式不正確"); } };
                             generalSettings.AddField("障礙物距離的範圍", obstacleDistance.ToString()).TextChanged += (o, e) => { try { obstacleDistance = Interval.Parse((o as MyTextBox).Text); } catch (Exception) { MessageBox.Show("格式不正確"); } };
                             generalSettings.AddField("障礙物寬度(通過時間)的範圍", obstacleWidth.ToString()).TextChanged += (o, e) => { try { obstacleWidth = Interval.Parse((o as MyTextBox).Text); } catch (Exception) { MessageBox.Show("格式不正確"); } };
-                            generalSettings.AddField("障礙物通道底部高度的範圍", obstacleY.ToString()).TextChanged += (o, e) => { try { obstacleY = Interval.Parse((o as MyTextBox).Text); } catch (Exception) { MessageBox.Show("格式不正確"); } };
+                            //generalSettings.AddField("障礙物通道底部高度的範圍", obstacleY.ToString()).TextChanged += (o, e) => { try { obstacleY = Interval.Parse((o as MyTextBox).Text); } catch (Exception) { MessageBox.Show("格式不正確"); } };
                             generalSettings.AddField("障礙物通道寬度的範圍", obstacleHeight.ToString()).TextChanged += (o, e) => { try { obstacleHeight = Interval.Parse((o as MyTextBox).Text); } catch (Exception) { MessageBox.Show("格式不正確"); } };
                             pnl.Controls.Add(generalSettings);
                         }
@@ -330,6 +333,6 @@ namespace Lolipop_AI_interface
         {
             get { return gameState; }
         }
-        private static Random random = new Random();
+        private Random random = new Random();
     }
 }

@@ -21,11 +21,11 @@ namespace Lolipop_AI_interface
             this.Dock = DockStyle.Fill;
             port = _port;
             socketHandler = new SocketHandler(port);
-            game = new Game(socketHandler);
+            game = new Game(socketHandler,new Random( Form1.public_random));
             //MessageBox.Show(Color.FromArgb(127,127,127).ToString());
             //this.Size = new Size(1200, 750);
             {
-                TLPmain = new MyTableLayoutPanel(1, 2, "A", "PP100");
+                TLPmain = new MyTableLayoutPanel(1, 2, "A", "S1P");
                 {
                     TLPctrl = new MyTableLayoutPanel(2, 1, "PP", "P");
                     TLPctrl.AutoSize = false;
@@ -99,7 +99,8 @@ namespace Lolipop_AI_interface
         }
         private void Pbx_DoubleClick(object sender, EventArgs e)
         {
-            TLPmain.ColumnStyles[0].Width = (TLPmain.ColumnStyles[0].Width == 1 ? 100 : 1);
+            TLPmain.ColumnStyles[0] = (TLPmain.ColumnStyles[0].SizeType == SizeType.Absolute ?
+                new ColumnStyle(SizeType.Percent, 1) : new ColumnStyle(SizeType.Absolute, 1));
         }
         private void SocketHandler_msgReceived(char msg, StreamWriter writer)
         {
@@ -112,7 +113,7 @@ namespace Lolipop_AI_interface
                  */
                 switch (msg)
                 {
-                    case 'R': game.Reset(); break;
+                    case 'R': game.Reset(new Random(Form1.public_random)); break;
                     case '0': game.Update(false); break;
                     case '1': game.Update(true); break;
                     default: throw new ArgumentException();
