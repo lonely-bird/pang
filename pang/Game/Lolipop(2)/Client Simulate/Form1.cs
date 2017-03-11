@@ -41,7 +41,6 @@ namespace Client_Simulate
         {
             this.Shown += Form1_Shown;
         }
-
         private void Form1_Shown(object sender, EventArgs e)
         {
             this.Size = new Size(400, 800);
@@ -103,7 +102,6 @@ namespace Client_Simulate
             receiver.msgReceived += Receiver_msgReceived;
             receiver.Start();
         }
-        
         private void InitializeControls()
         {
             this.FormClosing += Form1_FormClosing;
@@ -205,7 +203,7 @@ namespace Client_Simulate
             {
                 action = (char)('0' + random.Next(0, 2));
             }
-            Debug.Assert(action == '0' || action == '1');
+            Trace.Assert(action == '0' || action == '1');
             possibility = 1.0-double.Parse(msg.Substring(1));
         }
         private static Random random = new Random();
@@ -216,11 +214,15 @@ namespace Client_Simulate
         private void Receiver_msgReceived(string msg, StreamWriter writer)
         {
             ExtractInfo(msg, out AIaction, out AIpressButtonPossibility);
+            Trace.Assert(AIaction == '0' || AIaction == '1');
             SetKeyState(socketCount, 1-(AIaction - '0'));
-            string feedBack;
-            while ((feedBack = socketHandlers[socketCount].answer/*Invoking to avoid incompleted string?*/) == null) status = "Trying to get AI's feedback...";
+            string feedBack = socketHandlers[socketCount].answer;
+            //while ((feedBack = socketHandlers[socketCount].answer/*Invoking to avoid incompleted string?*/) == null)
+            //{
+            //    status = "Trying to get AI's feedback...";
+            //}
             //status = "feed back received";
-            writer.WriteLine(feedBack);
+            writer.WriteLine(feedBack == null ? "null" : feedBack);
             writer.Flush();
             //status = "feed back returned to AI";
             AIlastReactTime.Enqueue(DateTime.Now);
@@ -228,7 +230,7 @@ namespace Client_Simulate
             AIreactPeriod = (AIlastReactTime.Last()-AIlastReactTime.First()).TotalSeconds/(AIlastReactTime.Count-1);
             status = $"AI speed: {(1.0 / AIreactPeriod).ToString("F1")} Hz";//+msg;
         }
-        bool IsSerialFormatCorrect(string s)
+        private bool IsSerialFormatCorrect(string s)
         {
             if (s.Length < 17) return false;
             for(int i=0;i<4;i++)

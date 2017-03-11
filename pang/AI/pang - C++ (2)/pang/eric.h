@@ -9,7 +9,7 @@ struct Socket
 	SOCKET sConnect;
 	char Buffer[10000000/*D*80*/];
 	queue<char>Recv;
-	static const int PORT = 7000;
+	static const int PORT = 8003;
 	static const char* Server_Address;
 	static const int TransitDataSize = 1024;
 	static const char* MessagePartitionSymbol;
@@ -110,11 +110,11 @@ public:
 		string Send = "";
 		if (Action >= 'A' && Action <= 'Z') Send+= (char)Action;
 		else Send += (char)(Action + '0');
-		{
+		/*{
 			static char tmp[100];
 			sprintf(tmp, "%.3f", prefer);
 			Send += tmp;
-		}
+		}*/
 		for (int i = 0; MessagePartitionSymbol[i]; i++)
 			Send+=MessagePartitionSymbol[i];
 		if (useBuildInGame)
@@ -192,7 +192,8 @@ public:
 	}
 	Socket()
 	{
-		if (!Connect()) { printf("Connection Error!\n"); assert(0); }
+		while (!Connect()) { printf("Connection Error!\n"); Sleep(500); }
+		printf("Connected!\n");
 	}
 	~Socket()
 	{

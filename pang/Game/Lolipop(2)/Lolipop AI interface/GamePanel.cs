@@ -30,7 +30,7 @@ namespace Lolipop_AI_interface
                     TLPctrl = new MyTableLayoutPanel(2, 1, "PP", "P");
                     TLPctrl.AutoSize = false;
                     {
-                        TLPctrl.AddControl(Game.controlPanel, 0, 0);
+                        TLPctrl.AddControl(game.controlPanel, 0, 0);
                     }
                     {
                         TXB = new MyTextBox(true);
@@ -55,16 +55,17 @@ namespace Lolipop_AI_interface
                           humanFriendly ^= true;
                       };
                     pbx.DoubleClick += Pbx_DoubleClick;
-                    new Thread(() =>
                     {
-                        while (true)
+                        Thread thread=new Thread(() =>
                         {
-                            Thread.Sleep((int)Math.Ceiling(1000.0 / fps));
-                            Do(() =>
+                            while (true)
                             {
+                                Thread.Sleep((int)Math.Ceiling(1000.0 / fps));
                                 var bmp = (humanFriendly ? new Bitmap(pbx.Width, pbx.Height) : new Bitmap(game.imageFeedBackSize.Width, game.imageFeedBackSize.Height));
-                                this.Text = bmp.Size.ToString();
                                 game.drawImage(bmp, humanFriendly);
+                                Do(() =>
+                                {
+                                    //this.Text = bmp.Size.ToString();
                                 //{
                                 //    BitmapData bd = bmp.LockBits(new Rectangle(0, 0, bmp.Width, bmp.Height), ImageLockMode.ReadWrite, PixelFormat.Format32bppArgb);
                                 //    unsafe
@@ -73,11 +74,14 @@ namespace Lolipop_AI_interface
                                 //    }
                                 //}
                                 var img = pbx.Image;
-                                pbx.Image = bmp;
-                                img.Dispose();
-                            });
-                        }
-                    }).Start();
+                                    pbx.Image = bmp;
+                                    img.Dispose();
+                                });
+                            }
+                        });
+                        thread.IsBackground = true;
+                        thread.Start();
+                    }
                     TLPmain.AddControl(pbx, 0, 1);
                 }
                 this.Controls.Add(TLPmain);
@@ -85,17 +89,19 @@ namespace Lolipop_AI_interface
             socketHandler.logAppended += SocketHandler_logAppended;
             socketHandler.msgReceived += SocketHandler_msgReceived;
             socketHandler.Start();
-            Thread thread = new Thread(() =>
             {
-                int pre_count = 0;
-                while (true)
+                Thread thread = new Thread(() =>
                 {
-                    Thread.Sleep(5000);
-                    if (socketHandler.dataConnectionCounter != pre_count) SocketHandler_logAppended((pre_count = socketHandler.dataConnectionCounter).ToString() + " communications");
-                }
-            });
-            thread.IsBackground = true;
-            thread.Start();
+                    int pre_count = 0;
+                    while (true)
+                    {
+                        Thread.Sleep(5000);
+                        if (socketHandler.dataConnectionCounter != pre_count) SocketHandler_logAppended((pre_count = socketHandler.dataConnectionCounter).ToString() + " communications");
+                    }
+                });
+                thread.IsBackground = true;
+                thread.Start();
+            }
         }
         private void Pbx_DoubleClick(object sender, EventArgs e)
         {
