@@ -1,0 +1,110 @@
+﻿Merge commit 'da259bca6d0ecf0eb9bebee7329642f8aef81baf'
+
+# Conflicts:
+#	pang/AI/pang - C++/.vs/pang/v14/.suo
+#	pang/AI/pang - C++/pang.VC.db
+#	pang/AI/pang - C++/pang/x64/Release/002.obj
+#	pang/AI/pang - C++/pang/x64/Release/pang.log
+#	pang/AI/pang - C++/pang/x64/Release/pang.tlog/pang.lastbuildstate
+#	pang/AI/pang - C++/pang/x64/Release/vc140.pdb
+#	pang/AI/pang - C++/x64/Release/6001/model.sav
+#	pang/AI/pang - C++/x64/Release/6001/rec.txt
+#	pang/AI/pang - C++/x64/Release/pang.iobj
+#	pang/AI/pang - C++/x64/Release/pang.ipdb
+#	pang/AI/pang - C++/x64/Release/pang.pdb
+#
+# It looks like you may be committing a merge.
+# If this is not correct, please remove the file
+#	.git/MERGE_HEAD
+# and try again.
+
+
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+# On branch master
+# Your branch is up-to-date with 'origin/master'.
+#
+# All conflicts fixed but you are still merging.
+#
+# Changes to be committed:
+#	modified:   pang/AI/pang - C++/pang/002.cpp
+#	modified:   pang/AI/pang - C++/pang/x64/Release/pang.log
+#	modified:   pang/AI/pang - C++/pang/x64/Release/pang.tlog/pang.lastbuildstate
+#	copied:     pang/Game/Lolipop(2)/pang/model.sav -> pang/AI/pang - C++/x64/Release/6001/model - Copy (3).sav
+#	new file:   pang/AI/pang - C++/x64/Release/6001/model - Copy (4).sav
+#	new file:   pang/AI/pang - C++/x64/Release/6001/model - Copy (5).sav
+#	new file:   pang/AI/pang - C++/x64/Release/6001/model - Copy (6).sav
+#	modified:   pang/AI/pang - C++/x64/Release/6001/model.sav
+#	modified:   pang/AI/pang - C++/x64/Release/6001/pang.exe
+#	new file:   pang/AI/pang - C++/x64/Release/6001/rec - Copy (2).txt
+#	modified:   pang/AI/pang - C++/x64/Release/6001/rec - Copy.txt
+#	modified:   pang/AI/pang - C++/x64/Release/6001/rec.txt
+#	modified:   pang/AI/pang - C++/x64/Release/pang.exe
+#	modified:   pang/Game/Lolipop(2)/.vs/Lolipop AI interface/v14/.suo
+#	modified:   pang/Game/Lolipop(2)/Client Simulate/Form1.cs
+#	modified:   pang/Game/Lolipop(2)/Client Simulate/bin/Debug/Client Simulate.exe
+#	modified:   pang/Game/Lolipop(2)/Client Simulate/bin/Debug/Client Simulate.pdb
+#	modified:   pang/Game/Lolipop(2)/Client Simulate/bin/Release/Client Simulate.exe
+#	modified:   pang/Game/Lolipop(2)/Client Simulate/bin/Release/Client Simulate.pdb
+#	modified:   pang/Game/Lolipop(2)/Client Simulate/obj/Debug/Client Simulate.csproj.FileListAbsolute.txt
+#	modified:   pang/Game/Lolipop(2)/Client Simulate/obj/Debug/Client Simulate.csproj.GenerateResource.Cache
+#	modified:   pang/Game/Lolipop(2)/Client Simulate/obj/Debug/Client Simulate.exe
+#	modified:   pang/Game/Lolipop(2)/Client Simulate/obj/Debug/Client Simulate.pdb
+#	modified:   pang/Game/Lolipop(2)/Client Simulate/obj/Release/Client Simulate.csproj.FileListAbsolute.txt
+#	modified:   pang/Game/Lolipop(2)/Client Simulate/obj/Release/Client Simulate.csproj.GenerateResource.Cache
+#	modified:   pang/Game/Lolipop(2)/Client Simulate/obj/Release/Client Simulate.exe
+#	modified:   pang/Game/Lolipop(2)/Client Simulate/obj/Release/Client Simulate.pdb
+#	new file:   pang/Game/Lolipop(2)/Debug/pang.exe
+#	new file:   pang/Game/Lolipop(2)/Debug/pang.ilk
+#	new file:   pang/Game/Lolipop(2)/Debug/pang.pdb
+#	modified:   pang/Game/Lolipop(2)/Lolipop AI interface.VC.db
+#	modified:   pang/Game/Lolipop(2)/Lolipop AI interface.sln
+#	modified:   pang/Game/Lolipop(2)/Lolipop AI interface/Form1.cs
+#	modified:   pang/Game/Lolipop(2)/Lolipop AI interface/Game.cs
+#	modified:   pang/Game/Lolipop(2)/Lolipop AI interface/GamePanel.cs
+#	modified:   pang/Game/Lolipop(2)/Lolipop AI interface/bin/Debug/Lolipop AI interface.exe
+#	modified:   pang/Game/Lolipop(2)/Lolipop AI interface/bin/Debug/Lolipop AI interface.pdb
+#	modified:   pang/Game/Lolipop(2)/Lolipop AI interface/bin/Release/Lolipop AI interface.exe
+#	modified:   pang/Game/Lolipop(2)/Lolipop AI interface/bin/Release/Lolipop AI interface.pdb
+#	modified:   pang/Game/Lolipop(2)/Lolipop AI interface/obj/Debug/Lolipop AI interface.exe
+#	modified:   pang/Game/Lolipop(2)/Lolipop AI interface/obj/Debug/Lolipop AI interface.pdb
+#	modified:   pang/Game/Lolipop(2)/Lolipop AI interface/obj/Release/Lolipop AI interface.csproj.FileListAbsolute.txt
+#	modified:   pang/Game/Lolipop(2)/Lolipop AI interface/obj/Release/Lolipop AI interface.exe
+#	modified:   pang/Game/Lolipop(2)/Lolipop AI interface/obj/Release/Lolipop AI interface.pdb
+#	modified:   pang/Game/Lolipop(2)/pang/002.cpp
+#	new file:   pang/Game/Lolipop(2)/pang/Debug/002.obj
+#	new file:   pang/Game/Lolipop(2)/pang/Debug/pang.log
+#	new file:   pang/Game/Lolipop(2)/pang/Debug/pang.tlog/CL.command.1.tlog
+#	new file:   pang/Game/Lolipop(2)/pang/Debug/pang.tlog/CL.read.1.tlog
+#	new file:   pang/Game/Lolipop(2)/pang/Debug/pang.tlog/CL.write.1.tlog
+#	new file:   pang/Game/Lolipop(2)/pang/Debug/pang.tlog/link.command.1.tlog
+#	new file:   pang/Game/Lolipop(2)/pang/Debug/pang.tlog/link.read.1.tlog
+#	new file:   pang/Game/Lolipop(2)/pang/Debug/pang.tlog/link.write.1.tlog
+#	new file:   pang/Game/Lolipop(2)/pang/Debug/pang.tlog/pang.lastbuildstate
+#	new file:   pang/Game/Lolipop(2)/pang/Debug/vc140.idb
+#	new file:   pang/Game/Lolipop(2)/pang/Debug/vc140.pdb
+#	new file:   pang/Game/Lolipop(2)/pang/model - Copy (4).sav
+#	new file:   pang/Game/Lolipop(2)/pang/model - Copy (5).sav
+#	new file:   pang/Game/Lolipop(2)/pang/model - Copy (6).sav
+#	modified:   pang/Game/Lolipop(2)/pang/model.sav
+#	new file:   pang/Game/Lolipop(2)/pang/rec - Copy (2).txt
+#	new file:   pang/Game/Lolipop(2)/pang/rec - Copy.txt
+#	modified:   pang/Game/Lolipop(2)/pang/rec.txt
+#	modified:   pang/Game/Lolipop(2)/pang/x64/Debug/002.obj
+#	modified:   pang/Game/Lolipop(2)/pang/x64/Debug/pang.tlog/CL.read.1.tlog
+#	modified:   pang/Game/Lolipop(2)/pang/x64/Debug/pang.tlog/link.read.1.tlog
+#	modified:   pang/Game/Lolipop(2)/pang/x64/Debug/vc140.idb
+#	modified:   pang/Game/Lolipop(2)/pang/x64/Debug/vc140.pdb
+#	modified:   pang/Game/Lolipop(2)/pang/x64/Release/002.obj
+#	modified:   pang/Game/Lolipop(2)/pang/x64/Release/pang.log
+#	modified:   pang/Game/Lolipop(2)/pang/x64/Release/pang.tlog/link.read.1.tlog
+#	modified:   pang/Game/Lolipop(2)/pang/x64/Release/vc140.pdb
+#	modified:   pang/Game/Lolipop(2)/x64/Debug/pang.exe
+#	modified:   pang/Game/Lolipop(2)/x64/Debug/pang.ilk
+#	modified:   pang/Game/Lolipop(2)/x64/Debug/pang.pdb
+#	modified:   pang/Game/Lolipop(2)/x64/Release/pang.exe
+#	modified:   pang/Game/Lolipop(2)/x64/Release/pang.iobj
+#	modified:   pang/Game/Lolipop(2)/x64/Release/pang.ipdb
+#	modified:   pang/Game/Lolipop(2)/x64/Release/pang.pdb
+#
+
