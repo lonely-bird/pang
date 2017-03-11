@@ -55,52 +55,58 @@ private:
 	}
 	bool ParseFeedback(const char* const s, const int& len, tuple<vector<int>, int, bool>& result)
 	{
-		vector<int> buffer;
-		for (int p = 0; s[p] != MessagePartitionSymbol[0];)
+		if (s == "null")
 		{
-			int num = StringToInteger(s, len, p);
-			buffer.push_back(num);
-		}
-		/*for (int i = 1200-20; i < buffer.size(); i++)printf("%d ", buffer[i]);
-		printf("buffer.size=%d\n", (int)buffer.size());*/
-		/*printf("s=%s\n", s);
-		printf("%d %d\n", (int)buffer.size(), INP * 3 + 2);*/
-		//printf("buffer.size()=%d\n", (int)buffer.size());
-		while ((int)buffer.size() < INP * 3 + 2)buffer.push_back(0);
-		while ((int)buffer.size() > INP * 3 + 2)buffer.pop_back();
-		assert((int)buffer.size() == INP * 3 + 2);
-		bool done = (buffer.back()!=0);
-		buffer.pop_back();
-		int reward = buffer.back();
-		buffer.pop_back();
-		assert(buffer.size() % 3 == 0);
-		vector<int> TMP;
-		for (int i = 0; i < (int)buffer.size(); i += 3)
-		{
-			TMP.push_back(buffer[i] < 255);
-			TMP.push_back(buffer[i + 1] < 255);
-		}
-		//printf("TMP.size=%d\n", (int)TMP.size());
-		/*static vector<int>pre;
-		int n = TMP.size();
-		if (pre.empty())
-		{
-			for (int i = 0; i < n; i++)TMP.push_back(TMP[i]),pre.push_back(TMP[i]);
+			result = std::make_tuple(vector<int>(), -1, false);
 		}
 		else
 		{
-			assert(pre.size() == TMP.size());
-			for (int i = 0; i < n; i++)TMP.push_back(pre[i]);
-			pre.clear();
-			for (int i = 0; i < n; i++)pre.push_back(TMP[i]);
-		}*/
-		if (done != 1) reward *= -1;
-
-		result = std::make_tuple(TMP, reward, done);
-		if (reward != 0)
-		{
-			if(reward>0)printf("%d", reward);
-			else assert(reward == -1);
+			vector<int> buffer;
+			for (int p = 0; s[p] != MessagePartitionSymbol[0];)
+			{
+				int num = StringToInteger(s, len, p);
+				buffer.push_back(num);
+			}
+			/*for (int i = 1200-20; i < buffer.size(); i++)printf("%d ", buffer[i]);
+			printf("buffer.size=%d\n", (int)buffer.size());*/
+			/*printf("s=%s\n", s);
+			printf("%d %d\n", (int)buffer.size(), INP * 3 + 2);*/
+			//printf("buffer.size()=%d\n", (int)buffer.size());
+			while ((int)buffer.size() < INP * 3 + 2)buffer.push_back(0);
+			while ((int)buffer.size() > INP * 3 + 2)buffer.pop_back();
+			assert((int)buffer.size() == INP * 3 + 2);
+			bool done = (buffer.back() != 0);
+			buffer.pop_back();
+			int reward = buffer.back();
+			buffer.pop_back();
+			assert(buffer.size() % 3 == 0);
+			vector<int> TMP;
+			for (int i = 0; i < (int)buffer.size(); i += 3)
+			{
+				TMP.push_back(buffer[i] < 255);
+				TMP.push_back(buffer[i + 1] < 255);
+			}
+			//printf("TMP.size=%d\n", (int)TMP.size());
+			/*static vector<int>pre;
+			int n = TMP.size();
+			if (pre.empty())
+			{
+				for (int i = 0; i < n; i++)TMP.push_back(TMP[i]),pre.push_back(TMP[i]);
+			}
+			else
+			{
+				assert(pre.size() == TMP.size());
+				for (int i = 0; i < n; i++)TMP.push_back(pre[i]);
+				pre.clear();
+				for (int i = 0; i < n; i++)pre.push_back(TMP[i]);
+			}*/
+			if (done != 1) reward *= -1;
+			result = std::make_tuple(TMP, reward, done);
+			if (reward != 0)
+			{
+				if (reward>0)printf("%d", reward);
+				else assert(reward == -1);
+			}
 		}
 		/*if (done != 1)printf("done=%d\n", done);*/
 		return true;

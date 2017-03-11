@@ -29,12 +29,17 @@ namespace Client_Simulate
             {
                 Thread thread = new Thread(() =>
                 {
-                    for (DateTime startTime = DateTime.Now; ;)
+                    //int count = 0;
+                    for (DateTime goalTime = DateTime.Now/*, startTime = DateTime.Now*/; ;)
                     {
                         if (keyState == 0) SendMessage("1");
-                        if (keyState == 1) SendMessage("0");
-                        startTime = startTime.AddSeconds(1.0 / Form1.FPS);
-                        Thread.Sleep((int)Math.Max(0.0, (startTime - DateTime.Now).TotalMilliseconds));
+                        else if (keyState == 1) SendMessage("0");
+                        else Trace.Assert(keyState == -1);
+                        goalTime = goalTime.AddMilliseconds(1000.0 / Form1.FPS);
+                        //if ((DateTime.Now - startTime).TotalSeconds < 3.0 && (DateTime.Now - goalTime).TotalSeconds > 1.0) goalTime = DateTime.Now.AddSeconds(-1.0);
+                        Trace.Assert((DateTime.Now - goalTime).TotalSeconds <= 3.0, "Your computer is too slow!!!");
+                        Thread.Sleep((int)Math.Max(0.0, (goalTime - DateTime.Now).TotalMilliseconds));
+                        //if(count++%10==0)status = $"{goalTime}";
                     }
                 });
                 thread.IsBackground = true;
@@ -44,7 +49,7 @@ namespace Client_Simulate
         public string answer = null;
         public void SendMessage(string msg)
         {
-            Debug.Assert(msg == "R" || msg == "0" || msg == "1");
+            Trace.Assert(msg == "R" || msg == "0" || msg == "1");
             if (msg == "R")
             {
                 status = "Not ready";
@@ -58,12 +63,12 @@ namespace Client_Simulate
             //this.Invoke(new Action(() => { this.Text = "Send:" + msg; }));
             writer.WriteLine(msg);
             writer.Flush();
+            if (msg == "R") score = 0;
             try
             {
                 answer = reader.ReadLine();
                 string[] s = answer.Split(' ');
-                if (msg == "R") score = 0;
-                else
+                if (msg != "R")
                 {
                     score += Math.Max(int.Parse(s[s.Length - 2]), 0);
                 }

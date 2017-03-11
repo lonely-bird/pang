@@ -17,22 +17,22 @@ namespace Lolipop_AI_interface
     //}
     class Game
     {
-        private  bool darryMode = false;
+        private bool darryMode = false;
         private Interval rangeY = new Interval(0, 1000);
-        private Interval obstacleDistance = new Interval(100, 250);//new Interval(100, 150);
+        private Interval obstacleDistance = new Interval(150, 250);//new Interval(100, 150);
         private Interval obstacleWidth = new Interval(100, 200);
         //private Interval obstacleY = new Interval(0, 500);//new Interval(0, 700);
         private Interval obstacleHeight = new Interval(150, 500);//new Interval(150, 300);
         private double gravity = -0.1, liftForce = 0.1;
-        private  double max_upward_speed = 15, alpha = 0.3;
-        private  int obstacleCount = 1;
+        private double max_upward_speed = 15, alpha = 0.3;
+        private int obstacleCount = 1;
         public Size imageFeedBackSize = new Size(10, 40); //new Size(586, 705);
         private class Interval
         {
             public int minimum, maximum;
             public Interval(int mn, int mx)
             {
-                Debug.Assert(mn <= mx);
+                Trace.Assert(mn <= mx);
                 minimum = mn;
                 maximum = mx;
             }
@@ -47,24 +47,24 @@ namespace Lolipop_AI_interface
             public static Interval Parse(string s)
             {
                 string[] a = s.Split(',');
-                Debug.Assert(a.Length == 2);
+                Trace.Assert(a.Length == 2);
                 int mn = int.Parse(a[0]), mx = int.Parse(a[1]);
                 return new Interval(mn, mx);
             }
         }
         private class GameVisualizer
         {
-            public void drawImage(Image bmp, int gameState, double location,Interval rangeY, Rectangle scope, Queue<GameObstacle>obstacles,double velocity,bool humanFriendly)
+            public void drawImage(Image bmp, int gameState, double location, Interval rangeY, Rectangle scope, Queue<GameObstacle> obstacles, double velocity, bool humanFriendly)
             {
                 Color backgroundColor = Color.FromArgb(255, 255, 255)
-                    ,podColor=Color.FromArgb(0,0,0)
-                    ,obstacleColor=Color.FromArgb(255,0,0)
-                    ,boundColor=Color.FromArgb(255,255,0);
+                    , podColor = Color.FromArgb(0, 0, 0)
+                    , obstacleColor = Color.FromArgb(255, 0, 0)
+                    , boundColor = Color.FromArgb(255, 255, 0);
                 var locationOf = new Func<PointF, PointF>((PointF p) =>
                    {
                        float ratioX = (p.X - scope.X) / scope.Width
                        , ratioY = (p.Y - scope.Y) / scope.Height;
-                       return new PointF(1+(bmp.Width-1)*ratioX,bmp.Height*ratioY);
+                       return new PointF(1 + (bmp.Width - 1) * ratioX, bmp.Height * ratioY);
                    });
                 var rectangleOf = new Func<PointF, float, RectangleF>((PointF p, float l) =>
                     {
@@ -72,14 +72,14 @@ namespace Lolipop_AI_interface
                     });
                 var getRectangle = new Func<PointF, PointF, RectangleF>((PointF a, PointF b) =>
                 {
-                    Debug.Assert(a.X <= b.X && a.Y <= b.Y);
+                    Trace.Assert(a.X <= b.X && a.Y <= b.Y);
                     return new RectangleF(a.X, a.Y, b.X - a.X, b.Y - a.Y);
                 });
                 using (Graphics g = Graphics.FromImage(bmp))
                 {
                     g.Clear(backgroundColor);
-                    g.DrawLine(new Pen(boundColor,1), locationOf(new PointF(scope.X, rangeY.maximum)), locationOf(new PointF(scope.X + scope.Width, rangeY.maximum)));
-                    g.DrawLine(new Pen(boundColor,1), locationOf(new PointF(scope.X, rangeY.minimum)), locationOf(new PointF(scope.X + scope.Width, rangeY.minimum)));
+                    g.DrawLine(new Pen(boundColor, 1), locationOf(new PointF(scope.X, rangeY.maximum)), locationOf(new PointF(scope.X + scope.Width, rangeY.maximum)));
+                    g.DrawLine(new Pen(boundColor, 1), locationOf(new PointF(scope.X, rangeY.minimum)), locationOf(new PointF(scope.X + scope.Width, rangeY.minimum)));
                     int x = 0;
                     foreach (var o in obstacles)
                     {
@@ -94,7 +94,7 @@ namespace Lolipop_AI_interface
                         x += o.distance + o.width;
                     }
                     {
-                        var r = rectangleOf(locationOf(new PointF(0, (float)location)),humanFriendly?8: 1);
+                        var r = rectangleOf(locationOf(new PointF(0, (float)location)), humanFriendly ? 8 : 1);
                         if (humanFriendly) g.DrawEllipse(new Pen(podColor, 5), r.X, r.Y, r.Width, r.Height);
                         else g.FillRectangle(new SolidBrush(podColor), r.X, r.Y, r.Width, r.Height);
                     }
@@ -102,7 +102,7 @@ namespace Lolipop_AI_interface
                         PointF o = new PointF(0, (float)((scope.Height / 2.0) / scope.Height * bmp.Height));
                         PointF p = new PointF(0, (float)((scope.Height / 2.0 + velocity * 50.0) / scope.Height * bmp.Height));
                         //var r = rectangleOf(p, 1);
-                        g.DrawLine(new Pen(podColor, 1), o,p);
+                        g.DrawLine(new Pen(podColor, 1), o, p);
                     }
                     //g.DrawLine(new Pen(Color.FromArgb(0, 0, 0)), new Point(), new Point(bmp.Width, bmp.Height));
                     if (gameState == 0) g.DrawString("Game Over", new Font("Consolas", 40, FontStyle.Bold), new SolidBrush(Color.FromArgb(0, 0, 255)), new PointF(0.2f * bmp.Width, 0.2f * bmp.Height));
@@ -117,12 +117,12 @@ namespace Lolipop_AI_interface
             {
                 distance = game.obstacleDistance.getRandomValue(game);
                 width = game.obstacleWidth.getRandomValue(game);
-                int h= game.obstacleHeight.getRandomValue(game);
-                lower_y =new Interval(0,game.rangeY.maximum-h).getRandomValue(game);
+                int h = game.obstacleHeight.getRandomValue(game);
+                lower_y = new Interval(0, game.rangeY.maximum - h).getRandomValue(game);
                 upper_y = lower_y + h;
             }
         }
-        public Game(SocketHandler socketHandler,Random _random)
+        public Game(SocketHandler socketHandler, Random _random)
         {
             InitializeControlPanel(socketHandler);
             showImageFeedBack.CheckedChanged += ShowImageFeedBack_CheckedChanged;
@@ -174,7 +174,7 @@ namespace Lolipop_AI_interface
                 newReward++;
             }
             while (obstacles.Count < obstacleCount) obstacles.Enqueue(new GameObstacle(this));
-            Debug.Assert(obstacles.Count > 0);
+            Trace.Assert(obstacles.Count > 0);
             if (obstacles.First().distance == 0) obstacles.First().width--;
             else obstacles.First().distance--;
 
@@ -188,7 +188,7 @@ namespace Lolipop_AI_interface
         {
             if (imageFeedBack.Checked)
             {
-                Bitmap bmp = new Bitmap(imageFeedBackSize.Width,imageFeedBackSize.Height);
+                Bitmap bmp = new Bitmap(imageFeedBackSize.Width, imageFeedBackSize.Height);
                 drawImage(bmp);
                 BitmapData bd = bmp.LockBits(new Rectangle(0, 0, bmp.Width, bmp.Height), ImageLockMode.ReadOnly, PixelFormat.Format32bppArgb);
                 StringBuilder answer = new StringBuilder();
@@ -321,10 +321,10 @@ namespace Lolipop_AI_interface
         private delegate void ImageFeedBackProducedEventHandler(Bitmap bmp);
         private event ImageFeedBackProducedEventHandler ImageFeedBackProduced;
         private GameVisualizer visualizer = new GameVisualizer();
-        public static MyTableLayoutPanel controlPanel;
-        private static MyInputField generalSettings;
-        private static MyCheckBox imageFeedBack;
-        private static MyCheckBox showImageFeedBack;
+        public MyTableLayoutPanel controlPanel;
+        private MyInputField generalSettings;
+        private MyCheckBox imageFeedBack;
+        private MyCheckBox showImageFeedBack;
         private Queue<GameObstacle> obstacles = new Queue<GameObstacle>();
         private int gameState = 0;
         private double location, velocity, acceleration;

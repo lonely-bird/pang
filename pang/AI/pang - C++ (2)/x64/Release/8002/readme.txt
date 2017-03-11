@@ -1,0 +1,1 @@
+AI with model trained 1000 times
